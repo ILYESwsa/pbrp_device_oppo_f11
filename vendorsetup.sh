@@ -1,86 +1,40 @@
+#!/bin/bash
+# AERA build settings for OPPO F11 (CPH1911). Usage: export AERA_BUILD_DEVICE=CPH1911
 
 FDEVICE="CPH1911"
 
-fox_get_target_device() {
-local chkdev
-  if echo "$BASH_SOURCE" | grep -q "/$FDEVICE/"; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-  elif set | grep BASH_ARGV | grep -w \"$FDEVICE\"; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-  elif echo "${BASH_SOURCE[0]}" | grep -q "/$FDEVICE/"; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-  elif echo "$0" | grep -q "$FDEVICE"; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-  fi
+aera_get_target_device() {
+    local chkdev
+    chkdev=$(echo "$BASH_SOURCE" | grep -w "$FDEVICE")
+    if [ -n "$chkdev" ]; then
+        AERA_BUILD_DEVICE="$FDEVICE"
+    else
+        chkdev=$(set | grep BASH_ARGV | grep -w "$FDEVICE")
+        [ -n "$chkdev" ] && AERA_BUILD_DEVICE="$FDEVICE"
+    fi
 }
 
-if [ -z "$FOX_BUILD_DEVICE" ]; then
-	fox_get_target_device
+if [ -z "$1" ] && [ -z "$AERA_BUILD_DEVICE" ]; then
+    aera_get_target_device
 fi
 
-if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
+if [ "$1" = "$FDEVICE" ] || [ "$AERA_BUILD_DEVICE" = "$FDEVICE" ]; then
+    export LC_ALL=C
+    export AERA_PRODUCT_PREFIX=AERA
+    export AERA_BUILD_STATUS=Unofficial
+    export AERA_BUILD_TYPE=Alpha
+    export AERA_VANILLA_BUILD=1
+    export AERA_TARGET_DEVICES="CPH1911"
+    export AERA_RECOVERY_BOOT_PARTITION="/dev/block/by-name/recovery"
+    export AERA_RECOVERY_SYSTEM_PARTITION="/dev/block/by-name/system"
+    export AERA_RECOVERY_VENDOR_PARTITION="/dev/block/by-name/vendor"
 
-# Flashlight
-export OF_FLASHLIGHT_ENABLE="1"
-export OF_FL_PATH1="/system/flashlight"
-export OF_USE_GREEN_LED="0"
-
-export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
-
-# no special MIUI/Samsung stuff
-#export OF_DISABLE_MIUI_SPECIFIC_FEATURES="1"
-#export OF_NO_MIUI_PATCH_WARNING=1
-#export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
-#export OF_DISABLE_MIUI_OTA_BY_DEFAULT="1"
-export FOX_VANILLA_BUILD="1" #this var enables all above
-
-export FOX_ENABLE_APP_MANAGER="1"
-export OF_ALLOW_DISABLE_NAVBAR="0"
-export OF_USE_LEGACY_BATTERY_SERVICES="1"
-export FOX_USE_XZ_UTILS="1"
-
-#reduce the size for booting
-export FOX_REMOVE_BASH="1"
-export FOX_EXCLUDE_NANO_EDITOR="1"
-#export FOX_DRASTIC_SIZE_REDUCTION="1"
-#export FOX_USE_NANO_EDITOR="1"
-
-# for oppo/realme ozip decryption
-export OF_SUPPORT_OZIP_DECRYPTION=1
-
-export OF_DONT_KEEP_LOG_HISTORY="1"
-export OF_FBE_METADATA_MOUNT_IGNORE="1"
-
-# about
-export OF_MAINTAINER="Omar"
-export FOX_BUILD_TYPE="Unofficial"
-export FOX_TARGET_DEVICES="CPH1911,OP4863,CPH1969,CPH1913"
-export TARGET_DEVICE_ALT="OP4863, CPH1911, CPH1969, CPH1913"
-#export FOX_MAINTAINER_PATCH_VERSION="04"
-export FOX_VARIANT="Unified"
-
-#f11 notch
-export OF_HIDE_NOTCH="1"
-export OF_STATUS_H="82"
-#export OF_CLOCK_POS="1"
-
-export OF_SCREEN_H="2340"
-export OF_STATUS_INDENT_LEFT=75
-export OF_STATUS_INDENT_RIGHT=75
-export FOX_SETTINGS_ROOT_DIRECTORY="/persist/OFRP"
-export FOX_MISCELLANEOUS_ROOT_DIRECTORY="/data/media/OFRP"
-export OF_QUICK_BACKUP_LIST="/boot;/data;"
-export OF_DEFAULT_TIMEZONE="WET-2"
-export FOX_LOCAL_CALLBACK_SCRIPT="device/oppo/CPH1911/recovery/root/my_callback.sh"
-export OF_ADVANCED_SECURITY=1
-#Decryption and format data
-export FOX_ALLOW_EARLY_SETTINGS_LOAD="1"
-export OF_NO_RELOAD_AFTER_DECRYPTION="1"
-export OF_FIX_DECRYPTION_ON_DATA_MEDIA="1"
-export OF_UNBIND_SDCARD_F2FS="1"
-
+    export AERA_USE_TAR_BINARY=1
+    export AERA_USE_SED_BINARY=1
+    export AERA_USE_XZ_UTILS=1
+    export AERA_USE_BASH_SHELL=1
+    export AERA_ASH_IS_BASH=1
+    export AERA_ENABLE_APP_MANAGER=1
+    export AERA_DELETE_AROMAFM=1
+    unset AERA_MAINTAINER_PATCH_VERSION
 fi
-
-#"OF_NO_RELOAD_AFTER_DECRYPTION"
-#OF_SKIP_FBE_DECRYPTION_SDKVERSION=34
-#OF_SPLASH_MAX_SIZE

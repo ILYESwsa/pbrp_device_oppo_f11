@@ -1,37 +1,19 @@
 #
-# Copyright (C) 2023 The Android Open Source Project
-# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
-#
 # SPDX-License-Identifier: Apache-2.0
 #
+# AERA (aera-16.0) product for OPPO F11. Lunch: twrp_CPH1911-bp2a-eng
 
-# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common Twrp stuff.
+# Common recovery configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
-# for pbrp
-#$(call inherit-product, vendor/pb/config/common.mk)
 
-# Inherit from CPH2001 device
-# $(call inherit-product, device/oppo/CPH1989/device.mk)
+$(call inherit-product, device/oppo/CPH1911/device.mk)
 
 PRODUCT_DEVICE := CPH1911
 PRODUCT_NAME := twrp_CPH1911
 PRODUCT_BRAND := oppo
 PRODUCT_MODEL := F11
 PRODUCT_MANUFACTURER := oppo
-
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
-PRODUCT_SHIPPING_API_LEVEL := 28
-
-# Forcefully add mtp support (adb is already there)
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="CPH1911-user 11 RP1A.200720.011 1705377488980 release-keys"
-
-BUILD_FINGERPRINT := OPPO/CPH1911/OP4883:11/RP1A.200720.011/1705377488980:user/release-keys
+PRODUCT_RELEASE_NAME := CPH1911
