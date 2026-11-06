@@ -1,0 +1,21 @@
+== Fri Nov  6 13:02:47 UTC 2026 run=42221029483 sha=bfbcd85d9b758a17ae4a13adc9414fdc71a2c911
+               total        used        free      shared  buff/cache   available
+Mem:           15987         702         224          48       15060       14861
+Swap:              0           0           0
+/dev/root       146G   94G   53G  65% /
+== oom/kill messages
+== last 250 lines of build.log
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       146G   94G   53G  65% /
+tmpfs           7.9G  172K  7.9G   1% /dev/shm
+tmpfs           3.2G 1020K  3.2G   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+efivarfs        128M   34K  128M   1% /sys/firmware/efi/efivars
+/dev/sda15      105M  6.1M   99M   6% /boot/efi
+tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+               total        used        free      shared  buff/cache   available
+Mem:           15987         715         247          48       15025       14877
+Swap:              0           0           0
+18G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/.repo
+59G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera
+== out/error.log
