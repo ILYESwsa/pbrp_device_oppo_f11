@@ -5,6 +5,9 @@ on:
     branches: [aera-16.0]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
@@ -61,18 +64,29 @@ jobs:
         with:
           path: aera/device/oppo/CPH1911
 
+      - name: Prepare ci-logs branch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -s -o /dev/null -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/git/refs" \
+            -d "{\"ref\":\"refs/heads/ci-logs\",\"sha\":\"$GITHUB_SHA\"}" || true
+
       - name: Build recovery image
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          PUSH="bash $GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-push-log.sh"
+          trap "$PUSH" EXIT
+          trap "$PUSH; exit 143" TERM
           cd "$GITHUB_WORKSPACE/aera"
           export ALLOW_MISSING_DEPENDENCIES=true
           source build/envsetup.sh
           lunch twrp_CPH1911-bp2a-eng
-          # mka is a shell function, so it cannot be wrapped with nice; lower this shell's priority instead (children inherit it)
-          renice -n 15 -p $$ >/dev/null
-          ionice -c3 -p $$ || true
-          # Low priority + 2 jobs so the runner agent is never starved (earlier run died with "lost communication")
-          ( while true; do sleep 300; date; free -m | sed -n 1,3p; df -h / | tail -1; done ) &
+          # Snapshot memory + build log to the ci-logs branch every 2 minutes
+          ( while true; do sleep 120; $PUSH; done ) &
           mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
 
       - name: Upload recovery image
