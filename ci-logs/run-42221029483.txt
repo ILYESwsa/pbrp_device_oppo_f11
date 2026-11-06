@@ -1,51 +1,10 @@
-== Fri Nov  6 13:44:06 UTC 2026 run=42221029483 sha=bfbcd85d9b758a17ae4a13adc9414fdc71a2c911
+== Fri Nov  6 13:46:07 UTC 2026 run=42221029483 sha=bfbcd85d9b758a17ae4a13adc9414fdc71a2c911
                total        used        free      shared  buff/cache   available
-Mem:           15987        2325       12504          17        1157       13297
-Swap:          28671         233       28438
-/dev/root       146G  128G   19G  88% /
+Mem:           15987        6255        3078          19        6653        9366
+Swap:          28671         226       28445
+/dev/root       146G  129G   17G  89% /
 == oom/kill messages
 == last 250 lines of build.log
-13:03:30 ************************************************************
-13:03:30 You are building on a machine with 15.6GB of RAM
-13:03:30 
-13:03:30 The minimum required amount of free memory is around 16GB,
-13:03:30 and even with that, some configurations may not work.
-13:03:30 
-13:03:30 If you run into segfaults or other errors, try reducing your
-13:03:30 -j value.
-13:03:30 ************************************************************
-Running product configuration...
-============================================
-PLATFORM_VERSION_CODENAME=REL
-PLATFORM_VERSION=16
-TARGET_PRODUCT=twrp_CPH1911
-TARGET_BUILD_VARIANT=eng
-TARGET_ARCH=arm64
-TARGET_ARCH_VARIANT=armv8-a
-TARGET_CPU_VARIANT=generic
-TARGET_2ND_ARCH=arm
-TARGET_2ND_ARCH_VARIANT=armv8-a
-TARGET_2ND_CPU_VARIANT=generic
-HOST_OS=linux
-HOST_OS_EXTRA=Linux-6.8.0-1070-azure-x86_64-Ubuntu-22.04.5-LTS
-HOST_CROSS_OS=windows
-BUILD_ID=BP2A.250605.031.A2
-OUT_DIR=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out
-SOONG_ONLY=false
-============================================
-[100% 1/1] bootstrap blueprint
-Running globs...
-[  1% 2/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-deptools/pkg/github.com/google/blueprint/deptools.a
-[  2% 3/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-gobtools/pkg/github.com/google/blueprint/gobtools.a
-[  3% 4/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-metrics/pkg/github.com/google/blueprint/metrics.a
-[  3% 5/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-optional/pkg/github.com/google/blueprint/optional.a
-[  4% 6/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/androidmk-parser/pkg/android/soong/androidmk/parser.a
-[  5% 7/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pathtools/pkg/github.com/google/blueprint/pathtools.a
-[  6% 8/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pool/pkg/github.com/google/blueprint/pool.a
-[  6% 9/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-syncmap/pkg/github.com/google/blueprint/syncmap.a
-[  7% 10/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-uniquelist/pkg/github.com/google/blueprint/uniquelist.a
-[  8% 11/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-depset/pkg/github.com/google/blueprint/depset.a
-[  9% 12/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-flags/pkg/github.com/google/go-cmp/cmp/internal/flags.a
 [  9% 13/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-parser/pkg/github.com/google/blueprint/parser.a
 [ 10% 14/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-diff/pkg/github.com/google/go-cmp/cmp/internal/diff.a
 [ 11% 15/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-bpmodify/pkg/github.com/google/blueprint/bpmodify.a
@@ -176,4 +135,124 @@ Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' de
 /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911.ninja is missing, regenerating...
 [100% 132/132] initializing legacy Make module parser ...
 [ 91% 133/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/installs-twrp_CPH1911.mk ...
+[ 92% 134/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/Android-twrp_CPH1911.mk ...
+[ 93% 135/145] including build/make/target/board/android-info.mk ...
+[ 93% 136/145] including art/Android.mk ...
+[ 94% 137/145] including bootable/recovery/Android.mk ...
+bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/vendor/bin/hw 
+[ 95% 138/145] including device/oppo/CPH1911/Android.mk ...
+[ 95% 139/145] including device/qcom/twrp-common/Android.mk ...
+[ 96% 140/145] including external/magisk-prebuilt/Android.mk ...
+[ 97% 141/145] including hardware/qcom/wlan/Android.mk ...
+[ 97% 142/145] including vendor/twrp/Android.mk ...
+[ 98% 143/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/late-twrp_CPH1911.mk ...
+[ 99% 144/145] finishing legacy Make module parsing ...
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/catbox-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+[100% 145/145] writing legacy Make module rules ...
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-package.ninja is missing, regenerating...
+[ 98% 146/148] initializing packaging system ...
+[ 99% 147/148] including distdir.mk ...
+[100% 148/148] writing packaging rules ...
+Starting ninja...
+[  0% 149/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-deptools/linux_glibc_x86_64/pkg/github.com/google/blueprint/deptools.a (priority: 76)
+[  0% 150/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/android-archive-zip/linux_glibc_x86_64/pkg/android/soong/third_party/zip.a (priority: 76)
+[  0% 151/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pathtools/linux_glibc_x86_64/pkg/github.com/google/blueprint/pathtools.a (priority: 75)
+[  0% 152/29185] //external/icu/libandroidicuinit:libandroidicuinit clang++ android_icu_init.cpp [linux_glibc] (priority: 75)
+[  0% 153/29185] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library [linux_glibc] (priority: 75)
+[  0% 154/29185] //external/icu/libandroidicuinit:libandroidicuinit clang++ IcuRegistration.cpp [linux_glibc] (priority: 75)
+[  0% 155/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-jar/linux_glibc_x86_64/pkg/android/soong/jar.a (priority: 75)
+[  0% 156/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-response/linux_glibc_x86_64/pkg/android/soong/response.a (priority: 75)
+[  0% 157/29185] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-detrand/linux_glibc_x86_64/pkg/google.golang.org/protobuf/internal/detrand.a (priority: 74)
+[  0% 158/29185] //external/icu/libandroidicuinit:libandroidicuinit static link libandroidicuinit.a [linux_glibc] (priority: 74)
+[  0% 159/29185] //prebuilts/clang/host/linux-x86:libc++ generate toc libc++.so [linux_glibc] (priority: 74)
+[  0% 160/29185] //external/icu/icu4c/source/common:libicuuc clang++ appendable.cpp [linux_glibc] (priority: 74)
+[  0% 161/29185] //external/icu/icu4c/source:libicuuc_stubdata clang++ stubdata/stubdata.cpp [linux_glibc] (priority: 75)
+[  0% 162/29185] //external/icu/icu4c/source/common:libicuuc clang++ bmpset.cpp [linux_glibc] (priority: 74)
+[  0% 163/29185] //external/icu/icu4c/source/common:libicuuc clang++ brkeng.cpp [linux_glibc] (priority: 74)
+[  0% 164/29185] //external/icu/icu4c/source/common:libicuuc clang++ bytesinkutil.cpp [linux_glibc] (priority: 74)
+[  0% 165/29185] //external/icu/icu4c/source/common:libicuuc clang++ brkiter.cpp [linux_glibc] (priority: 74)
+[  0% 166/29185] //external/icu/icu4c/source/common:libicuuc clang++ bytestream.cpp [linux_glibc] (priority: 74)
+[  0% 167/29185] //external/icu/icu4c/source/common:libicuuc clang++ bytestrie.cpp [linux_glibc] (priority: 74)
+[  0% 168/29185] //external/icu/icu4c/source/common:libicuuc clang++ bytestriebuilder.cpp [linux_glibc] (priority: 74)
+[  0% 169/29185] //external/icu/icu4c/source/common:libicuuc clang++ bytestrieiterator.cpp [linux_glibc] (priority: 74)
+[  0% 170/29185] //external/icu/icu4c/source/common:libicuuc clang++ caniter.cpp [linux_glibc] (priority: 74)
+[  0% 171/29185] //external/icu/icu4c/source/common:libicuuc clang++ characterproperties.cpp [linux_glibc] (priority: 74)
+[  0% 172/29185] //external/icu/icu4c/source/common:libicuuc clang++ chariter.cpp [linux_glibc] (priority: 74)
+[  0% 173/29185] //external/icu/icu4c/source/common:libicuuc clang++ charstr.cpp [linux_glibc] (priority: 74)
+[  0% 174/29185] //external/icu/icu4c/source/common:libicuuc clang++ cmemory.cpp [linux_glibc] (priority: 74)
+[  0% 175/29185] //external/icu/icu4c/source/common:libicuuc clang++ cstring.cpp [linux_glibc] (priority: 74)
+[  0% 176/29185] //external/icu/icu4c/source/common:libicuuc clang++ cwchar.cpp [linux_glibc] (priority: 74)
+[  0% 177/29185] //external/icu/icu4c/source/common:libicuuc clang++ cstr.cpp [linux_glibc] (priority: 74)
+[  0% 178/29185] //external/icu/icu4c/source/common:libicuuc clang++ dictionarydata.cpp [linux_glibc] (priority: 74)
+[  0% 179/29185] //external/icu/icu4c/source/common:libicuuc clang++ dtintrv.cpp [linux_glibc] (priority: 74)
+[  0% 180/29185] //external/icu/icu4c/source/common:libicuuc clang++ dictbe.cpp [linux_glibc] (priority: 74)
+[  0% 181/29185] //external/icu/icu4c/source/common:libicuuc clang++ edits.cpp [linux_glibc] (priority: 74)
+[  0% 182/29185] //external/icu/icu4c/source/common:libicuuc clang++ errorcode.cpp [linux_glibc] (priority: 74)
+[  0% 183/29185] //external/icu/icu4c/source/common:libicuuc clang++ emojiprops.cpp [linux_glibc] (priority: 74)
+[  0% 184/29185] //external/icu/icu4c/source/common:libicuuc clang++ filteredbrk.cpp [linux_glibc] (priority: 74)
+[  0% 185/29185] //external/icu/icu4c/source/common:libicuuc clang++ filterednormalizer2.cpp [linux_glibc] (priority: 74)
+[  0% 186/29185] //external/icu/icu4c/source/common:libicuuc clang++ icuplug.cpp [linux_glibc] (priority: 74)
+[  0% 187/29185] //external/icu/icu4c/source/common:libicuuc clang++ icudataver.cpp [linux_glibc] (priority: 74)
+[  0% 188/29185] //external/icu/icu4c/source/common:libicuuc clang++ loadednormalizer2impl.cpp [linux_glibc] (priority: 74)
+[  0% 189/29185] //external/icu/icu4c/source/common:libicuuc clang++ localebuilder.cpp [linux_glibc] (priority: 74)
+[  0% 190/29185] //external/icu/icu4c/source/common:libicuuc clang++ localematcher.cpp [linux_glibc] (priority: 74)
+[  0% 191/29185] //external/icu/icu4c/source/common:libicuuc clang++ localeprioritylist.cpp [linux_glibc] (priority: 74)
+[  0% 192/29185] //external/icu/icu4c/source/common:libicuuc clang++ locavailable.cpp [linux_glibc] (priority: 74)
+[  0% 193/29185] //external/icu/icu4c/source/common:libicuuc clang++ locbased.cpp [linux_glibc] (priority: 74)
+[  0% 194/29185] //external/icu/icu4c/source/common:libicuuc clang++ locdispnames.cpp [linux_glibc] (priority: 74)
+[  0% 195/29185] //external/icu/icu4c/source/common:libicuuc clang++ locdistance.cpp [linux_glibc] (priority: 74)
+[  0% 196/29185] //external/icu/icu4c/source/common:libicuuc clang++ locdspnm.cpp [linux_glibc] (priority: 74)
+[  0% 197/29185] //external/icu/icu4c/source/common:libicuuc clang++ locid.cpp [linux_glibc] (priority: 74)
+[  0% 198/29185] //external/icu/icu4c/source/common:libicuuc clang++ loclikely.cpp [linux_glibc] (priority: 74)
+[  0% 199/29185] //external/icu/icu4c/source/common:libicuuc clang++ locmap.cpp [linux_glibc] (priority: 74)
+[  0% 200/29185] //external/icu/icu4c/source/common:libicuuc clang++ loclikelysubtags.cpp [linux_glibc] (priority: 74)
+[  0% 201/29185] //external/icu/icu4c/source/common:libicuuc clang++ locresdata.cpp [linux_glibc] (priority: 74)
+[  0% 202/29185] //external/icu/icu4c/source/common:libicuuc clang++ locutil.cpp [linux_glibc] (priority: 74)
+[  0% 203/29185] //external/icu/icu4c/source/common:libicuuc clang++ lsr.cpp [linux_glibc] (priority: 74)
+[  0% 204/29185] //external/icu/icu4c/source/common:libicuuc clang++ lstmbe.cpp [linux_glibc] (priority: 74)
+[  0% 205/29185] //external/icu/icu4c/source/common:libicuuc clang++ messagepattern.cpp [linux_glibc] (priority: 74)
+[  0% 206/29185] //external/icu/icu4c/source/common:libicuuc clang++ mlbe.cpp [linux_glibc] (priority: 74)
+[  0% 207/29185] //external/icu/icu4c/source/common:libicuuc clang++ normalizer2.cpp [linux_glibc] (priority: 74)
+[  0% 208/29185] //external/icu/icu4c/source/common:libicuuc clang++ normlzr.cpp [linux_glibc] (priority: 74)
+[  0% 209/29185] //external/icu/icu4c/source/common:libicuuc clang++ parsepos.cpp [linux_glibc] (priority: 74)
+[  0% 210/29185] //external/icu/icu4c/source/common:libicuuc clang++ normalizer2impl.cpp [linux_glibc] (priority: 74)
+[  0% 211/29185] //external/icu/icu4c/source/common:libicuuc clang++ patternprops.cpp [linux_glibc] (priority: 74)
+[  0% 212/29185] //external/icu/icu4c/source/common:libicuuc clang++ pluralmap.cpp [linux_glibc] (priority: 74)
+[  0% 213/29185] //external/icu/icu4c/source/common:libicuuc clang++ propname.cpp [linux_glibc] (priority: 74)
+[  0% 214/29185] //external/icu/icu4c/source/common:libicuuc clang++ propsvec.cpp [linux_glibc] (priority: 74)
+[  0% 215/29185] //external/icu/icu4c/source/common:libicuuc clang++ punycode.cpp [linux_glibc] (priority: 74)
+[  0% 216/29185] //external/icu/icu4c/source/common:libicuuc clang++ putil.cpp [linux_glibc] (priority: 74)
+[  0% 217/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbi.cpp [linux_glibc] (priority: 74)
+[  0% 218/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbi_cache.cpp [linux_glibc] (priority: 74)
+[  0% 219/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbidata.cpp [linux_glibc] (priority: 74)
+[  0% 220/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbinode.cpp [linux_glibc] (priority: 74)
+[  0% 221/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbirb.cpp [linux_glibc] (priority: 74)
+[  0% 222/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbiscan.cpp [linux_glibc] (priority: 74)
+[  0% 223/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbisetb.cpp [linux_glibc] (priority: 74)
+[  0% 224/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbistbl.cpp [linux_glibc] (priority: 74)
+[  0% 225/29185] //external/icu/icu4c/source/common:libicuuc clang++ rbbitblb.cpp [linux_glibc] (priority: 74)
+[  0% 226/29185] //external/icu/icu4c/source/common:libicuuc clang++ resbund.cpp [linux_glibc] (priority: 74)
+[  0% 227/29185] //external/icu/icu4c/source/common:libicuuc clang++ resbund_cnv.cpp [linux_glibc] (priority: 74)
+[  0% 228/29185] //external/icu/icu4c/source/common:libicuuc clang++ restrace.cpp [linux_glibc] (priority: 74)
+[  0% 229/29185] //external/icu/icu4c/source/common:libicuuc clang++ resource.cpp [linux_glibc] (priority: 74)
+[  0% 230/29185] //external/icu/icu4c/source/common:libicuuc clang++ schriter.cpp [linux_glibc] (priority: 74)
+[  0% 231/29185] //external/icu/icu4c/source/common:libicuuc clang++ ruleiter.cpp [linux_glibc] (priority: 74)
+[  0% 232/29185] //external/icu/icu4c/source/common:libicuuc clang++ servlk.cpp [linux_glibc] (priority: 74)
+[  0% 233/29185] //external/icu/icu4c/source/common:libicuuc clang++ serv.cpp [linux_glibc] (priority: 74)
+[  0% 234/29185] //external/icu/icu4c/source/common:libicuuc clang++ servlkf.cpp [linux_glibc] (priority: 74)
+[  0% 235/29185] //external/icu/icu4c/source/common:libicuuc clang++ servls.cpp [linux_glibc] (priority: 74)
+[  0% 236/29185] //external/icu/icu4c/source/common:libicuuc clang++ servnotf.cpp [linux_glibc] (priority: 74)
+[  0% 237/29185] //external/icu/icu4c/source/common:libicuuc clang++ servrbf.cpp [linux_glibc] (priority: 74)
+[  0% 238/29185] //external/icu/icu4c/source/common:libicuuc clang++ servslkf.cpp [linux_glibc] (priority: 74)
+[  0% 239/29185] //external/icu/icu4c/source/common:libicuuc clang++ sharedobject.cpp [linux_glibc] (priority: 74)
+[  0% 240/29185] //external/icu/icu4c/source/common:libicuuc clang++ simpleformatter.cpp [linux_glibc] (priority: 74)
+[  0% 241/29185] //external/icu/icu4c/source/common:libicuuc clang++ static_unicode_sets.cpp [linux_glibc] (priority: 74)
 == out/error.log
