@@ -1,21 +1,23 @@
 #
-# Copyright (C) 2023 The Android Open Source Project
-# Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
-#
 # SPDX-License-Identifier: Apache-2.0
+#
+# OPPO F11 (CPH1911, MT6771) - TWRP 14.1 port of the android-12.1 tree.
+# First goal: boot. Decryption is OFF on purpose.
 #
 
 DEVICE_PATH := device/oppo/CPH1911
 
-# For building with minimal manifest
+# Build hacks needed by recovery-only trees
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
+TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a73
 
 TARGET_2ND_ARCH := arm
@@ -24,22 +26,25 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-TARGET_CPU_ABI_LIST_64_BIT := $(TARGET_CPU_ABI)
-TARGET_CPU_ABI_LIST_32_BIT := $(TARGET_2ND_CPU_ABI),$(TARGET_2ND_CPU_ABI2)
-TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI_LIST_64_BIT),$(TARGET_CPU_ABI_LIST_32_BIT)
-
-# APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
-
-# Bootloader
+# Bootloader / platform
 TARGET_BOOTLOADER_BOARD_NAME := mt6771
-TARGET_BOARD_PLATFORM_GPU := Mali-G72 MP3
 TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_PLATFORM := mt6771
+TARGET_BOARD_PLATFORM_GPU := Mali-G72 MP3
 
-# Kernel
+# Kernel: prebuilt gzip kernel with appended dtb (4.14), boot header v2
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_BOOTIMG_HEADER_VERSION := 2
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+
 BOARD_KERNEL_BASE := 0x40078000
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x14f88000
 BOARD_KERNEL_TAGS_OFFSET := 0x13f88000
@@ -48,148 +53,76 @@ BOARD_DTB_OFFSET := 0x13f88000
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
-BOARD_MKBOOTIMG_ARGS += --cmdline $(BOARD_KERNEL_CMDLINE)
-BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 
-BOARD_KERNEL_IMAGE_NAME := kernel
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := CPH1989_defconfig
-TARGET_KERNEL_SOURCE := kernel/oppo/CPH1989
-
-# Kernel - prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/$(BOARD_KERNEL_IMAGE_NAME)
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
-BOARD_KERNEL_SEPARATED_DTBO := $(BOARD_PREBUILT_DTBOIMAGE)
-endif
-
+# AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
+# Partitions (legacy non-A/B: separate recovery partition)
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR := vendor
-# TARGET_COPY_OUT_ODM := odm
-# TARGET_COPY_OUT_SYSTEM := system
-
-# Platform
-TARGET_BOARD_PLATFORM := mt6771
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# File systems
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-# BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-
-# Recovery
-BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := false
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_USES_MTP := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-
-
-# Metadata
 BOARD_ROOT_EXTRA_FOLDERS := metadata my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 
-# screen dimentions and status bar
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_DENSITY := 480
-TW_FRAMERATE := 60
-TW_STATUS_ICONS_ALIGN := center
+BOARD_USES_MTP := true
+RECOVERY_SDCARD_ON_DATA := true
 
-# Hack: prevent anti rollback
+# OS version / patch level (no decryption, so spoofing is harmless)
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 16.1.0
+PLATFORM_VERSION := 14
+PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_USE_FSCRYPT_POLICY := 1
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_PREPARE_DATA_MEDIA_EARLY := true
-
-#status bar hight
-#TW_Y_OFFSET := 57
-#TW_H_OFFSET := -57
-
-# TWRP Configuration
-TW_DEVICE_VERSION := Omar&SeifHecker2099
+# TWRP
+TW_DEVICE_VERSION := Omar&SeifHecker2099 (14.1 port)
 TW_THEME := portrait_hdpi
-# decrease size
+TW_FRAMERATE := 60
+TW_STATUS_ICONS_ALIGN := center
 TW_EXTRA_LANGUAGES := false
+TW_DEFAULT_LANGUAGE := en
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_DEFAULT_BRIGHTNESS := 800
 TW_MAX_BRIGHTNESS := 2047
-# TW_INCLUDE_LOGICAL := my_product my_heytap my_company my_preload my_stock my_carrier my_region my_engineering my_manifest
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
-#TW_EXCLUDE_NANO := false
-TW_USE_TOOLBOX := true
-TW_OZIP_DECRYPT_KEY := ACAC1E13A72431AE4A1B22BBA1C1C6A2
-
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TW_INTERNAL_STORAGE_PATH := "/data/media/0"  
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_USE_LEGACY_BATTERY_SERVICES := true
-RECOVERY_SDCARD_ON_DATA := true
+TW_USE_UFS := true
+TW_OZIP_DECRYPT_KEY := ACAC1E13A72431AE4A1B22BBA1C1C6A2
+TW_EXCLUDE_APEX := true
+TW_USE_TOOLBOX := true
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-TW_EXCLUDE_APEX := true
 TARGET_USES_MKE2FS := true
-TW_USE_UFS := true
-# TW_UMS_LUNFILE := "/sys/class/misc/ufs_lun/lun"
-TW_DEFAULT_LANGUAGE := en
-#essential for booting 12.1
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_RESETPROP := true
 
-# PBRP specific build flags
-PB_TORCH_PATH := "/proc/qcom_flash"
-PB_TORCH_MAX_BRIGHTNESS := 1
+# Decryption: OFF (boot-only bring-up)
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO_FBE := false
 
-#skyhawk
-SHRP_DEVICE_CODE := CPH1911
-SHRP_MAINTAINER := Omar
-SHRP_DARK := true
-SHRP_EDL_MODE := 0
-SHRP_EXTERNAL := /external_sd
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb-otg
-SHRP_FLASH := 1
-SHRP_FONP_1 := "/system/flashlight/brightness"
-SHRP_FLASH_MAX_BRIGHTNESS := 1
-SHRP_REC := "/dev/block/by-name/recovery"
-SHRP_EXPRESS := true
-SHRP_DEVICE_TYPE := "A/B"
-SHRP_REC_TYPE := "Unified"
+# Wi-Fi is not part of this recovery.
 
-
-SHRP_NOTCH := false
-SHRP_STATUSBAR_RIGHT_PADDING := 42
-SHRP_STATUSBAR_LEFT_PADDING := 42
-
-# MTK Hardware 
- BOARD_HAS_MTK_HARDWARE := true 
- BOARD_USES_MTK_HARDWARE := true 
- MTK_HARDWARE := true
+# Boot-mode test switch: `make ... F11_RAMBOOT_TEST=1` adds twrpfastboot=1 (only for `fastboot boot`, never for flashing)
+ifeq ($(F11_RAMBOOT_TEST),1)
+    BOARD_KERNEL_CMDLINE += twrpfastboot=1
+endif

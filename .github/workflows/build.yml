@@ -1,0 +1,164 @@
+name: Build TWRP 14.1 recovery (CPH1911)
+
+on:
+  push:
+    branches: [android-14.1]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    env:
+      LC_ALL: C
+    steps:
+      - name: Free disk space and add swap
+        shell: bash
+        run: |
+          df -h
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache /usr/local/share/boost \
+            /usr/share/swift /usr/local/.ghcup /usr/local/share/powershell /usr/local/share/chromium \
+            /usr/share/miniconda /opt/microsoft /opt/az /usr/lib/google-cloud-sdk /usr/lib/jvm /usr/lib/firefox \
+            /usr/local/aws-cli /usr/local/aws-sam-cli /usr/local/julia* /usr/local/n /opt/google /usr/local/graalvm
+          sudo docker image prune -af || true
+          sudo apt-get clean
+          sudo swapoff -a || true
+          sudo rm -f /swapfile /mnt/swapfile
+          ROOT_FREE=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
+          MNT_FREE=$(df --output=avail -BG /mnt 2>/dev/null | tail -1 | tr -dc 0-9)
+          echo "free GB after cleanup: /=${ROOT_FREE:-0} /mnt=${MNT_FREE:-0}"
+          # Put the source tree + out/ on whichever disk has more room
+          if [ "${MNT_FREE:-0}" -gt "${ROOT_FREE:-0}" ]; then
+            sudo mkdir -p /mnt/twrp && sudo chown "$(id -u):$(id -g)" /mnt/twrp
+            rm -rf "$GITHUB_WORKSPACE/twrp"; ln -sfn /mnt/twrp "$GITHUB_WORKSPACE/twrp"
+            BIG=/mnt; BIGFREE=$MNT_FREE
+          else
+            mkdir -p "$GITHUB_WORKSPACE/twrp"
+            BIG=/; BIGFREE=$ROOT_FREE
+          fi
+          echo "source tree on: $BIG ($BIGFREE GB free)"
+          df -h
+
+      - name: Install build dependencies
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev \
+            libc6-dev-i386 libncurses5 lib32z1-dev x11proto-core-dev libx11-dev libgl1-mesa-dev \
+            libxml2-utils xsltproc unzip fontconfig python3 python-is-python3 bc rsync lz4 \
+            libssl-dev cpio xz-utils
+          mkdir -p ~/bin
+          curl -s https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
+          chmod a+x ~/bin/repo
+          echo "$HOME/bin" >> "$GITHUB_PATH"
+          git config --global user.name "ci"
+          git config --global user.email "ci@users.noreply.github.com"
+          git config --global color.ui false
+
+      - name: Restore source cache
+        id: synccache
+        uses: actions/cache/restore@v4
+        with:
+          path: twrp/.repo
+          key: twrp-sync-141-v1
+
+      - name: Sync TWRP 14.1 sources
+        shell: bash
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/twrp"
+          cd "$GITHUB_WORKSPACE/twrp"
+          repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-14.1 --depth=1
+          repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+          df -h /
+
+      - name: Save source cache
+        if: steps.synccache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: twrp/.repo
+          key: twrp-sync-141-v1
+
+      - name: Checkout device tree
+        uses: actions/checkout@v4
+        with:
+          path: twrp/device/oppo/CPH1911
+
+      - name: Prepare ci-logs branch
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -s -o /dev/null -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/git/refs" \
+            -d "{\"ref\":\"refs/heads/ci-logs\",\"sha\":\"$GITHUB_SHA\"}" || true
+
+      - name: Disk and memory diagnostics
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { df -h; swapon --show; free -m; du -sh "$GITHUB_WORKSPACE/twrp/.repo" 2>/dev/null; du -sh --exclude=.repo "$GITHUB_WORKSPACE/twrp" 2>/dev/null; } > "$GITHUB_WORKSPACE/build.log" 2>&1
+          bash "$GITHUB_WORKSPACE/twrp/device/oppo/CPH1911/.github/ci-push-log.sh"
+
+      - name: Add disk swap for soong_build
+        shell: bash
+        run: |
+          # soong_build was OOM-killed at ~13.6 GB RSS on this 16 GB runner; zram does not help (it lives in RAM),
+          # so use real disk swap, on /mnt (separate device) when it has room, else on the source disk.
+          sudo swapoff -a || true
+          sudo rm -f /swapfile /mnt/swapfile
+          ROOT_FREE=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
+          MNT_FREE=$(df --output=avail -BG /mnt 2>/dev/null | tail -1 | tr -dc 0-9)
+          echo "free GB: /=$ROOT_FREE /mnt=${MNT_FREE:-0}"
+          if [ "${MNT_FREE:-0}" -ge 26 ]; then SWF=/mnt/swapfile; FREE=$MNT_FREE; SZ=$(( FREE - 2 )); else SWF=/swapfile; FREE=$ROOT_FREE; SZ=$(( FREE - 14 )); fi
+          [ "$SZ" -gt 28 ] && SZ=28
+          if [ "$SZ" -ge 8 ]; then
+            sudo fallocate -l ${SZ}G $SWF && sudo chmod 600 $SWF && sudo mkswap $SWF >/dev/null && sudo swapon $SWF
+          fi
+          sudo systemctl stop docker.socket docker containerd snapd mysql postgresql apache2 nginx php8.1-fpm 2>/dev/null || true
+          sync; echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+          sudo sysctl vm.swappiness=100
+          df -h; swapon --show; free -h
+
+      - name: Build recovery image
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH="bash $GITHUB_WORKSPACE/twrp/device/oppo/CPH1911/.github/ci-push-log.sh"
+          trap "$PUSH" EXIT
+          trap "$PUSH; exit 143" TERM
+          cd "$GITHUB_WORKSPACE/twrp"
+          export ALLOW_MISSING_DEPENDENCIES=true
+          # Keep soong_build's Go heap small (it was OOM-killed at ~14 GB RSS)
+          export GOGC=40 GOMEMLIMIT=11GiB GOMAXPROCS=2
+          source build/envsetup.sh
+          (lunch twrp_CPH1911-ap2a-eng || lunch twrp_CPH1911-ap1a-eng || lunch twrp_CPH1911-eng)
+          # Snapshot memory + build log to the ci-logs branch every 2 minutes
+          ( while true; do sleep 120; $PUSH; done ) &
+          mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
+
+      - name: Upload recovery image
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-CPH1911
+          path: twrp/out/target/product/CPH1911/recovery.img
+          if-no-files-found: error
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: |
+            build.log
+            twrp/out/error.log
+          if-no-files-found: warn
