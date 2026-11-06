@@ -1,258 +1,258 @@
-== Fri Nov  6 18:22:41 UTC 2026 run=42248928952 sha=aa77bbfab1a3f5ec68346762aced449fb0ba5396
+== Fri Nov  6 18:24:42 UTC 2026 run=42248928952 sha=aa77bbfab1a3f5ec68346762aced449fb0ba5396
                total        used        free      shared  buff/cache   available
-Mem:           15988        6420         606          30        8961        9191
+Mem:           15988        6608         186          30        9194        9003
 Swap:          28671         216       28455
 /dev/root       146G  134G   12G  93% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 57% 16653/29185] //external/scudo:libscudo clang++ standalone/mem_map_linux.cpp (priority: 13)
-[ 57% 16654/29185] //external/scudo:libscudo clang++ standalone/report_linux.cpp (priority: 13)
-[ 57% 16655/29185] //external/scudo:libscudo clang++ standalone/report.cpp (priority: 13)
-[ 57% 16656/29185] //external/scudo:libscudo clang++ standalone/timing.cpp (priority: 13)
-[ 57% 16657/29185] //external/scudo:libscudo clang++ standalone/string_utils.cpp (priority: 13)
-[ 57% 16658/29185] //external/scudo:libscudo clang++ standalone/crc32_hw.cpp (priority: 13)
-[ 57% 16659/29185] //external/scudo:libscudo clang++ standalone/checksum.cpp (priority: 13)
-[ 57% 16660/29185] //external/scudo:libscudo clang++ standalone/common.cpp (priority: 13)
-[ 57% 16661/29185] //external/scudo:libscudo clang++ standalone/condition_variable_linux.cpp (priority: 13)
-[ 57% 16662/29185] //external/scudo:libscudo clang++ standalone/flags.cpp (priority: 13)
-[ 57% 16663/29185] //external/scudo:libscudo clang++ standalone/flags_parser.cpp (priority: 13)
-[ 57% 16664/29185] //external/scudo:libscudo clang++ standalone/linux.cpp (priority: 13)
-[ 57% 16665/29185] //external/scudo:libscudo clang++ standalone/mem_map.cpp (priority: 13)
-[ 57% 16666/29185] //external/scudo:libscudo clang++ standalone/mem_map_linux.cpp (priority: 13)
-[ 57% 16667/29185] //external/scudo:libscudo clang++ standalone/release.cpp (priority: 13)
-[ 57% 16668/29185] //external/scudo:libscudo clang++ standalone/report.cpp (priority: 13)
-[ 57% 16669/29185] //external/scudo:libscudo clang++ standalone/report_linux.cpp (priority: 13)
-[ 57% 16670/29185] //external/scudo:libscudo clang++ standalone/string_utils.cpp (priority: 13)
-[ 57% 16671/29185] //external/scudo:libscudo clang++ standalone/timing.cpp (priority: 13)
-[ 57% 16672/29185] //external/scudo:libscudo clang++ standalone/wrappers_c_bionic.cpp (priority: 13)
-[ 57% 16673/29185] //external/scudo:libscudo clang++ standalone/crc32_hw.cpp (priority: 13)
-[ 57% 16674/29185] //external/selinux/libselinux:libselinux clang src/android/android.c (priority: 13)
-[ 57% 16675/29185] //external/selinux/libselinux:libselinux clang src/android/android_seapp.c (priority: 13)
-[ 57% 16676/29185] //external/scudo:libscudo clang++ standalone/wrappers_c_bionic.cpp (priority: 13)
-[ 57% 16677/29185] //external/selinux/libselinux:libselinux clang src/avc.c (priority: 13)
-[ 57% 16678/29185] //external/selinux/libselinux:libselinux clang src/avc_internal.c (priority: 13)
-[ 57% 16679/29185] //external/selinux/libselinux:libselinux clang src/avc_sidtab.c (priority: 13)
-[ 57% 16680/29185] //external/selinux/libselinux:libselinux clang src/booleans.c (priority: 13)
-[ 57% 16681/29185] //external/selinux/libselinux:libselinux clang src/callbacks.c (priority: 13)
-[ 57% 16682/29185] //external/selinux/libselinux:libselinux clang src/canonicalize_context.c (priority: 13)
-[ 57% 16683/29185] //external/selinux/libselinux:libselinux clang src/checkAccess.c (priority: 13)
-[ 57% 16684/29185] //external/selinux/libselinux:libselinux clang src/check_context.c (priority: 13)
-[ 57% 16685/29185] //external/selinux/libselinux:libselinux clang src/compute_av.c (priority: 13)
-[ 57% 16686/29185] //external/selinux/libselinux:libselinux clang src/compute_create.c (priority: 13)
-[ 57% 16687/29185] //external/selinux/libselinux:libselinux clang src/compute_member.c (priority: 13)
-[ 57% 16688/29185] //external/selinux/libselinux:libselinux clang src/context.c (priority: 13)
-[ 57% 16689/29185] //external/selinux/libselinux:libselinux clang src/disable.c (priority: 13)
-[ 57% 16690/29185] //external/selinux/libselinux:libselinux clang src/deny_unknown.c (priority: 13)
-[ 57% 16691/29185] //external/selinux/libselinux:libselinux clang src/enabled.c (priority: 13)
-[ 57% 16692/29185] //external/selinux/libselinux:libselinux clang src/fgetfilecon.c (priority: 13)
-[ 57% 16693/29185] //external/selinux/libselinux:libselinux clang src/freecon.c (priority: 13)
-[ 57% 16694/29185] //external/selinux/libselinux:libselinux clang src/fsetfilecon.c (priority: 13)
-[ 57% 16695/29185] //external/selinux/libselinux:libselinux clang src/get_initial_context.c (priority: 13)
-[ 57% 16696/29185] //external/selinux/libselinux:libselinux clang src/getenforce.c (priority: 13)
-[ 57% 16697/29185] //external/selinux/libselinux:libselinux clang src/getfilecon.c (priority: 13)
-[ 57% 16698/29185] //external/selinux/libselinux:libselinux clang src/getpeercon.c (priority: 13)
-[ 57% 16699/29185] //external/selinux/libselinux:libselinux clang src/hashtab.c (priority: 13)
-[ 57% 16700/29185] //external/selinux/libselinux:libselinux clang src/init.c (priority: 13)
-[ 57% 16701/29185] //external/selinux/libselinux:libselinux clang src/label.c (priority: 13)
-[ 57% 16702/29185] //external/selinux/libselinux:libselinux clang src/label_backends_android.c (priority: 13)
-[ 57% 16703/29185] //external/selinux/libselinux:libselinux clang src/label_support.c (priority: 13)
-[ 57% 16704/29185] //external/selinux/libselinux:libselinux clang src/lgetfilecon.c (priority: 13)
-[ 57% 16705/29185] //external/selinux/libselinux:libselinux clang src/load_policy.c (priority: 13)
-[ 57% 16706/29185] //external/selinux/libselinux:libselinux clang src/label_file.c (priority: 13)
-[ 57% 16707/29185] //external/selinux/libselinux:libselinux clang src/lsetfilecon.c (priority: 13)
-[ 57% 16708/29185] //external/selinux/libselinux:libselinux clang src/mapping.c (priority: 13)
-[ 57% 16709/29185] //external/selinux/libselinux:libselinux clang src/matchpathcon.c (priority: 13)
-[ 57% 16710/29185] //external/selinux/libselinux:libselinux clang src/policyvers.c (priority: 13)
-[ 57% 16711/29185] //external/selinux/libselinux:libselinux clang src/procattr.c (priority: 13)
-[ 57% 16712/29185] //external/selinux/libselinux:libselinux clang src/regex.c (priority: 13)
-[ 57% 16713/29185] //external/selinux/libselinux:libselinux clang src/reject_unknown.c (priority: 13)
-[ 57% 16714/29185] //external/selinux/libselinux:libselinux clang src/selinux_internal.c (priority: 13)
-[ 57% 16715/29185] //external/selinux/libselinux:libselinux clang src/setenforce.c (priority: 13)
-[ 57% 16716/29185] //external/selinux/libselinux:libselinux clang src/sestatus.c (priority: 13)
-[ 57% 16717/29185] //external/selinux/libselinux:libselinux clang src/setfilecon.c (priority: 13)
-[ 57% 16718/29185] //external/selinux/libselinux:libselinux clang src/setrans_client.c (priority: 13)
-[ 57% 16719/29185] //external/selinux/libselinux:libselinux clang src/stringrep.c (priority: 13)
-[ 57% 16720/29185] //external/selinux/libselinux:libselinux clang src/sha1.c (priority: 13)
-[ 57% 16721/29185] //external/selinux/libselinux:libselinux clang src/android/android.c (priority: 13)
-[ 57% 16722/29185] //external/selinux/libselinux:libselinux clang src/android/android_device.c (priority: 13)
-[ 57% 16723/29185] //external/selinux/libselinux:libselinux clang src/android/android_seapp.c (priority: 13)
-[ 57% 16724/29185] //external/selinux/libselinux:libselinux clang src/avc.c (priority: 13)
-[ 57% 16725/29185] //external/selinux/libselinux:libselinux clang src/avc_internal.c (priority: 13)
-[ 57% 16726/29185] //external/selinux/libselinux:libselinux clang src/avc_sidtab.c (priority: 13)
-[ 57% 16727/29185] //external/selinux/libselinux:libselinux clang src/booleans.c (priority: 13)
-[ 57% 16728/29185] //external/selinux/libselinux:libselinux clang src/callbacks.c (priority: 13)
-[ 57% 16729/29185] //external/selinux/libselinux:libselinux clang src/canonicalize_context.c (priority: 13)
-[ 57% 16730/29185] //external/selinux/libselinux:libselinux clang src/checkAccess.c (priority: 13)
-[ 57% 16731/29185] //external/selinux/libselinux:libselinux clang src/check_context.c (priority: 13)
-[ 57% 16732/29185] //external/selinux/libselinux:libselinux clang src/compute_av.c (priority: 13)
-[ 57% 16733/29185] //external/selinux/libselinux:libselinux clang src/compute_member.c (priority: 13)
-[ 57% 16734/29185] //external/selinux/libselinux:libselinux clang src/compute_create.c (priority: 13)
-[ 57% 16735/29185] //external/selinux/libselinux:libselinux clang src/deny_unknown.c (priority: 13)
-[ 57% 16736/29185] //external/selinux/libselinux:libselinux clang src/context.c (priority: 13)
-[ 57% 16737/29185] //external/selinux/libselinux:libselinux clang src/disable.c (priority: 13)
-[ 57% 16738/29185] //external/selinux/libselinux:libselinux clang src/enabled.c (priority: 13)
-[ 57% 16739/29185] //external/selinux/libselinux:libselinux clang src/freecon.c (priority: 13)
-[ 57% 16740/29185] //external/selinux/libselinux:libselinux clang src/fgetfilecon.c (priority: 13)
-[ 57% 16741/29185] //external/selinux/libselinux:libselinux clang src/fsetfilecon.c (priority: 13)
-[ 57% 16742/29185] //external/selinux/libselinux:libselinux clang src/get_initial_context.c (priority: 13)
-[ 57% 16743/29185] //external/selinux/libselinux:libselinux clang src/getenforce.c (priority: 13)
-[ 57% 16744/29185] //external/selinux/libselinux:libselinux clang src/getfilecon.c (priority: 13)
-[ 57% 16745/29185] //external/selinux/libselinux:libselinux clang src/getpeercon.c (priority: 13)
-[ 57% 16746/29185] //external/selinux/libselinux:libselinux clang src/hashtab.c (priority: 13)
-[ 57% 16747/29185] //external/selinux/libselinux:libselinux clang src/init.c (priority: 13)
-[ 57% 16748/29185] //external/selinux/libselinux:libselinux clang src/label.c (priority: 13)
-[ 57% 16749/29185] //external/selinux/libselinux:libselinux clang src/label_backends_android.c (priority: 13)
-[ 57% 16750/29185] //external/selinux/libselinux:libselinux clang src/label_support.c (priority: 13)
-[ 57% 16751/29185] //external/selinux/libselinux:libselinux clang src/lgetfilecon.c (priority: 13)
-[ 57% 16752/29185] //external/selinux/libselinux:libselinux clang src/label_file.c (priority: 13)
-[ 57% 16753/29185] //external/selinux/libselinux:libselinux clang src/load_policy.c (priority: 13)
-[ 57% 16754/29185] //external/selinux/libselinux:libselinux clang src/lsetfilecon.c (priority: 13)
-[ 57% 16755/29185] //external/selinux/libselinux:libselinux clang src/mapping.c (priority: 13)
-[ 57% 16756/29185] //external/selinux/libselinux:libselinux clang src/matchpathcon.c (priority: 13)
-[ 57% 16757/29185] //external/selinux/libselinux:libselinux clang src/policyvers.c (priority: 13)
-[ 57% 16758/29185] //external/selinux/libselinux:libselinux clang src/procattr.c (priority: 13)
-[ 57% 16759/29185] //external/selinux/libselinux:libselinux clang src/regex.c (priority: 13)
-[ 57% 16760/29185] //external/selinux/libselinux:libselinux clang src/selinux_internal.c (priority: 13)
-[ 57% 16761/29185] //external/selinux/libselinux:libselinux clang src/reject_unknown.c (priority: 13)
-[ 57% 16762/29185] //external/selinux/libselinux:libselinux clang src/setenforce.c (priority: 13)
-[ 57% 16763/29185] //external/selinux/libselinux:libselinux clang src/sestatus.c (priority: 13)
-[ 57% 16764/29185] //external/selinux/libselinux:libselinux clang src/setfilecon.c (priority: 13)
-[ 57% 16765/29185] //external/selinux/libselinux:libselinux clang src/setrans_client.c (priority: 13)
-[ 57% 16766/29185] //external/selinux/libselinux:libselinux clang src/sha1.c (priority: 13)
-[ 57% 16767/29185] //external/selinux/libselinux:libselinux clang src/stringrep.c (priority: 13)
-[ 57% 16768/29185] //external/selinux/libselinux:libselinux link libselinux.so (priority: 13)
-[ 57% 16769/29185] //external/selinux/libselinux:libselinux clang src/android/android_device.c (priority: 13)
-[ 57% 16770/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_decompress.cpp (priority: 13)
-[ 57% 16771/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_compress.cpp (priority: 13)
-[ 57% 16772/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_format.cpp (priority: 13)
-[ 57% 16773/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/cow_reader.cpp (priority: 13)
-[ 57% 16774/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/parser_v2.cpp (priority: 13)
-[ 57% 16775/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/snapshot_reader.cpp (priority: 13)
-[ 57% 16776/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/parser_v3.cpp (priority: 13)
-[ 57% 16777/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/writer_base.cpp (priority: 13)
-[ 57% 16778/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/writer_v2.cpp (priority: 13)
-[ 57% 16779/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow static link libsnapshot_cow.a (priority: 13)
-[ 57% 16780/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_cow clang++ libsnapshot_cow/writer_v3.cpp (priority: 13)
-[ 57% 16781/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ proto/android/snapshot/snapshot.pb.cc (priority: 13)
-[ 57% 16782/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ device_info.cpp (priority: 13)
-[ 57% 16783/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ snapshot_stats.cpp (priority: 13)
-[ 57% 16784/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ snapshot.cpp (priority: 13)
-[ 57% 16785/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ snapshot_stub.cpp (priority: 13)
-[ 57% 16786/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ snapshot_metadata_updater.cpp (priority: 13)
-[ 57% 16787/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ partition_cow_creator.cpp (priority: 13)
-[ 57% 16788/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ return.cpp (priority: 13)
-[ 57% 16789/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ utility.cpp (priority: 13)
-[ 57% 16790/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init static link libsnapshot_init.a (priority: 13)
-[ 57% 16791/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_init clang++ scratch_super.cpp (priority: 13)
-[ 57% 16792/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ proto/android/snapshot/snapshot.pb.cc (priority: 13)
-[ 57% 16793/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ device_info.cpp (priority: 13)
-[ 57% 16794/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ snapshot_stats.cpp (priority: 13)
-[ 57% 16795/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ snapshot_stub.cpp (priority: 13)
-[ 57% 16796/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ snapshot.cpp (priority: 13)
-[ 57% 16797/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ snapshot_metadata_updater.cpp (priority: 13)
-[ 57% 16798/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ return.cpp (priority: 13)
-[ 57% 16799/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ partition_cow_creator.cpp (priority: 13)
-[ 57% 16800/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ utility.cpp (priority: 13)
-[ 57% 16801/29185] //system/core/fs_mgr/libsnapshot:libsnapshot_nobinder clang++ scratch_super.cpp (priority: 13)
-[ 57% 16802/29185] //system/extras/squashfs_utils:libsquashfs_utils clang squashfs_utils.c (priority: 13)
-[ 57% 16803/29185] //bionic/libc:libstdc++ clang++ bionic/__cxa_guard.cpp (priority: 13)
-[ 57% 16804/29185] //bionic/libc:libstdc++ clang++ bionic/__cxa_pure_virtual.cpp (priority: 13)
-[ 57% 16805/29185] //bionic/libc:libstdc++ clang++ bionic/new.cpp (priority: 13)
-[ 57% 16806/29185] //system/core/libsuspend:libsuspend clang autosuspend.c (priority: 13)
-[ 57% 16807/29185] //system/core/libsuspend:libsuspend clang++ autosuspend_wakeup_count.cpp (priority: 13)
-[ 57% 16808/29185] //system/core/fs_mgr/libsnapshot/snapuserd:libsnapuserd_client clang++ snapuserd_client.cpp (priority: 13)
-[ 57% 16809/29185] //system/core/libsync:libsync header-abi-dumper sync.c (priority: 13)
-[ 57% 16810/29185] //system/core/libsync:libsync strip libsync.so [arm] (priority: 13)
-[ 57% 16811/29185] //system/core/libsync:libsync clang sync.c [arm] (priority: 13)
-[ 57% 16812/29185] //system/core/libsync:libsync header-abi-dumper sync.c [arm] (priority: 13)
-[ 57% 16813/29185] //bionic/libc/system_properties:libsystemproperties clang++ context_node.cpp (priority: 13)
-[ 57% 16814/29185] //bionic/libc/system_properties:libsystemproperties clang++ contexts_split.cpp (priority: 13)
-[ 57% 16815/29185] //bionic/libc/system_properties:libsystemproperties clang++ contexts_serialized.cpp (priority: 13)
-[ 57% 16816/29185] //bionic/libc/system_properties:libsystemproperties clang++ prop_info.cpp (priority: 13)
-[ 57% 16817/29185] //bionic/libc/system_properties:libsystemproperties clang++ prop_area.cpp (priority: 13)
-[ 57% 16818/29185] //system/core/libsysutils:libsysutils strip libsysutils.so (priority: 13)
-[ 57% 16819/29185] //external/tinyxml2:libtinyxml2 strip libtinyxml2.so [arm] (priority: 13)
-[ 57% 16820/29185] //bionic/libc/system_properties:libsystemproperties clang++ system_properties.cpp (priority: 13)
-[ 57% 16821/29185] //system/hwservicemanager:libtokenmanager clang++ TokenManager.cpp (priority: 13)
-[ 57% 16822/29185] //system/core/debuggerd:libtombstoned_client_static clang++ tombstoned/tombstoned_client.cpp (priority: 13)
-[ 57% 16823/29185] //system/core/debuggerd/proto:libtombstone_proto clang++ proto/system/core/debuggerd/proto/tombstone.pb.cc (priority: 13)
-[ 57% 16824/29185] //bootable/recovery/twrpinstall:libtwrpinstall static link libtwrpinstall.a [arm] (priority: 13)
-[ 57% 16825/29185] //system/unwinding/libunwindstack:libunwindstack raw librustlibs.rs (priority: 13)
-[ 57% 16826/29185] //system/unwinding/libunwindstack:libunwindstack raw librustlibs.rs [arm] (priority: 13)
-[ 57% 16827/29185] //system/unwinding/libunwindstack:libunwindstack generate toc libunwindstack.so (priority: 13)
-[ 57% 16828/29185] //system/core/debuggerd:libtombstoned_client_static clang++ util.cpp (priority: 13)
-[ 57% 16829/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ AndroidUnwinder.cpp (priority: 13)
-[ 57% 16830/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ArmExidx.cpp (priority: 13)
-[ 57% 16831/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Demangle.cpp (priority: 13)
-[ 57% 16832/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DexFiles.cpp (priority: 13)
-[ 57% 16833/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfCfa.cpp (priority: 13)
-[ 57% 16834/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfMemory.cpp (priority: 13)
-[ 57% 16835/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfEhFrameWithHdr.cpp (priority: 13)
-[ 57% 16836/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfOp.cpp (priority: 13)
-[ 57% 16837/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfSection.cpp (priority: 13)
-[ 57% 16838/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Elf.cpp (priority: 13)
-[ 57% 16839/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ElfInterfaceArm.cpp (priority: 13)
-[ 57% 16840/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ElfInterface.cpp (priority: 13)
-[ 57% 16841/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Global.cpp (priority: 13)
-[ 57% 16842/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ JitDebug.cpp (priority: 13)
-[ 57% 16843/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MapInfo.cpp (priority: 13)
-[ 57% 16844/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Maps.cpp (priority: 13)
-[ 57% 16845/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MemoryMte.cpp (priority: 13)
-[ 57% 16846/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Memory.cpp (priority: 13)
-[ 57% 16847/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MemoryXz.cpp (priority: 13)
-[ 57% 16848/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Regs.cpp (priority: 13)
-[ 57% 16849/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsArm.cpp (priority: 13)
-[ 57% 16850/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsArm64.cpp (priority: 13)
-[ 57% 16851/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsX86.cpp (priority: 13)
-[ 57% 16852/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsX86_64.cpp (priority: 13)
-[ 57% 16853/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsRiscv64.cpp (priority: 13)
-[ 57% 16854/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Symbols.cpp (priority: 13)
-[ 57% 16855/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadEntry.cpp (priority: 13)
-[ 57% 16856/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadUnwinder.cpp (priority: 13)
-[ 57% 16857/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ LogAndroid.cpp (priority: 13)
-[ 57% 16858/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Unwinder.cpp (priority: 13)
-[ 57% 16859/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ AndroidUnwinder.cpp (priority: 13)
-[ 57% 16860/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ArmExidx.cpp (priority: 13)
-[ 57% 16861/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Demangle.cpp (priority: 13)
-[ 57% 16862/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DexFiles.cpp (priority: 13)
-[ 57% 16863/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfCfa.cpp (priority: 13)
-[ 57% 16864/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfEhFrameWithHdr.cpp (priority: 13)
-[ 57% 16865/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfMemory.cpp (priority: 13)
-[ 57% 16866/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfOp.cpp (priority: 13)
-[ 57% 16867/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ DwarfSection.cpp (priority: 13)
-[ 57% 16868/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Elf.cpp (priority: 13)
-[ 57% 16869/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ElfInterfaceArm.cpp (priority: 13)
-[ 57% 16870/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ElfInterface.cpp (priority: 13)
-[ 57% 16871/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Global.cpp (priority: 13)
-[ 57% 16872/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ JitDebug.cpp (priority: 13)
-[ 57% 16873/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MapInfo.cpp (priority: 13)
-[ 57% 16874/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Maps.cpp (priority: 13)
-[ 57% 16875/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Memory.cpp (priority: 13)
-[ 57% 16876/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MemoryMte.cpp (priority: 13)
-[ 57% 16877/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ MemoryXz.cpp (priority: 13)
-[ 57% 16878/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Regs.cpp (priority: 13)
-[ 57% 16879/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsArm.cpp (priority: 13)
-[ 57% 16880/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsArm64.cpp (priority: 13)
-[ 57% 16881/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsX86.cpp (priority: 13)
-[ 57% 16882/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsX86_64.cpp (priority: 13)
-[ 57% 16883/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ RegsRiscv64.cpp (priority: 13)
-[ 57% 16884/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Symbols.cpp (priority: 13)
-[ 57% 16885/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadEntry.cpp (priority: 13)
-[ 57% 16886/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ ThreadUnwinder.cpp (priority: 13)
-[ 57% 16887/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ LogAndroid.cpp (priority: 13)
-[ 57% 16888/29185] //system/unwinding/libunwindstack:libunwindstack_no_dex clang++ Unwinder.cpp (priority: 13)
-[ 57% 16889/29185] //system/update_engine:libupdate_engine_boot_control clang++ aosp/boot_control_android.cc (priority: 13)
-[ 57% 16890/29185] //system/update_engine:libupdate_engine_boot_control clang++ aosp/cleanup_previous_update_action.cc (priority: 13)
-[ 57% 16891/29185] //system/update_engine:libupdate_engine_boot_control clang++ aosp/dynamic_partition_utils.cc (priority: 13)
-[ 57% 16892/29185] //system/core/libusbhost:libusbhost generate toc libusbhost.so [arm] (priority: 13)
-[ 57% 16893/29185] //system/core/libvendorsupport:libvendorsupport generate toc libvendorsupport.so (priority: 13)
-[ 57% 16894/29185] //system/extras/verity:libverity_tree clang++ build_verity_tree.cpp (priority: 13)
-[ 57% 16895/29185] //system/update_engine:libupdate_engine_boot_control clang++ aosp/dynamic_partition_control_android.cc (priority: 13)
-[ 57% 16896/29185] //system/extras/verity:libverity_tree clang++ build_verity_tree_utils.cpp (priority: 13)
-[ 57% 16897/29185] //system/libvintf:libvintf strip libvintf.so (priority: 13)
-[ 57% 16898/29185] //system/extras/verity:libverity_tree clang++ hash_tree_builder.cpp (priority: 13)
-[ 57% 16899/29185] //system/libvintf:libvintf clang++ parse_string.cpp [arm] (priority: 13)
-[ 57% 16900/29185] //system/libvintf:libvintf clang++ Apex.cpp [arm] (priority: 13)
-[ 57% 16901/29185] //system/libvintf:libvintf clang++ parse_xml.cpp [arm] (priority: 13)
-[ 57% 16902/29185] //system/libvintf:libvintf clang++ CompatibilityMatrix.cpp [arm] (priority: 13)
+      |          (            )
+external/bash/subst.c:8887:12: note: use '==' to turn this assignment into an equality comparison
+ 8887 |   while (c = s[sindex])
+      |            ^
+      |            ==
+external/bash/subst.c:9611:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 9611 |   if (c = string[sindex])
+      |       ~~^~~~~~~~~~~~~~~~
+external/bash/subst.c:9611:9: note: place parentheses around the assignment to silence this warning
+ 9611 |   if (c = string[sindex])
+      |         ^               
+      |       (                 )
+external/bash/subst.c:9611:9: note: use '==' to turn this assignment into an equality comparison
+ 9611 |   if (c = string[sindex])
+      |         ^
+      |         ==
+external/bash/subst.c:9621:13: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 9621 |       if (c = string[sindex])
+      |           ~~^~~~~~~~~~~~~~~~
+external/bash/subst.c:9621:13: note: place parentheses around the assignment to silence this warning
+ 9621 |       if (c = string[sindex])
+      |             ^               
+      |           (                 )
+external/bash/subst.c:9621:13: note: use '==' to turn this assignment into an equality comparison
+ 9621 |       if (c = string[sindex])
+      |             ^
+      |             ==
+external/bash/subst.c:11887:31: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 11887 |   for (dquote = sindex = 0; c = string[sindex];)
+       |                             ~~^~~~~~~~~~~~~~~~
+external/bash/subst.c:11887:31: note: place parentheses around the assignment to silence this warning
+ 11887 |   for (dquote = sindex = 0; c = string[sindex];)
+       |                               ^               
+       |                             (                 )
+external/bash/subst.c:11887:31: note: use '==' to turn this assignment into an equality comparison
+ 11887 |   for (dquote = sindex = 0; c = string[sindex];)
+       |                               ^
+       |                               ==
+external/bash/subst.c:12431:33: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
+       |                            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+external/bash/subst.c:12431:33: note: place parentheses around the assignment to silence this warning
+ 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
+       |                                        ^                   
+       |                            (                               )
+external/bash/subst.c:12431:33: note: use '==' to turn this assignment into an equality comparison
+ 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
+       |                                        ^
+       |                                        ==
+external/bash/subst.c:12692:12: warning: array subscript is of type 'char' [-Wchar-subscripts]
+ 12692 |               omap[l->word->word[oind]] = 1;
+       |                   ^~~~~~~~~~~~~~~~~~~~
+19 warnings generated.
+[ 61% 18071/29185] //external/bc:bc clang src/args.c (priority: 12)
+[ 61% 18072/29185] //external/bc:bc clang src/bc.c (priority: 12)
+[ 61% 18073/29185] //external/bc:bc clang src/bc_lex.c (priority: 12)
+[ 61% 18074/29185] //external/bc:bc clang src/bc_parse.c (priority: 12)
+[ 61% 18075/29185] //external/bc:bc clang src/data.c (priority: 12)
+[ 61% 18076/29185] //external/bc:bc clang src/dc.c (priority: 12)
+[ 61% 18077/29185] //external/bc:bc clang src/dc_lex.c (priority: 12)
+[ 61% 18078/29185] //external/bc:bc clang src/dc_parse.c (priority: 12)
+[ 61% 18079/29185] //external/bash:bash clang y.tab.c (priority: 12)
+/usr/local/src/chet/src/bash/src/parse.y:2924:28: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ 2924 |       report_syntax_error (_("maximum here-document count exceeded"));
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+external/bash/bashintl.h:36:18: note: expanded from macro '_'
+   36 | #define _(msgid)        gettext(msgid)
+      |                         ^~~~~~~~~~~~~~
+external/bash/include/gettext.h:46:25: note: expanded from macro 'gettext'
+   46 | # define gettext(Msgid) ((const char *) (Msgid))
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:210:47: note: passing argument to parameter here
+  210 | static void report_syntax_error PARAMS((char *));
+      |                                               ^
+/usr/local/src/chet/src/bash/src/parse.y:4550:17: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4550 |       if (etext = error_token_from_token (cond_token))
+      |           ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: place parentheses around the assignment to silence this warning
+ 4550 |       if (etext = error_token_from_token (cond_token))
+      |                 ^                                    
+      |           (                                          )
+/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: use '==' to turn this assignment into an equality comparison
+ 4550 |       if (etext = error_token_from_token (cond_token))
+      |                 ^
+      |                 ==
+/usr/local/src/chet/src/bash/src/parse.y:4632:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4632 |           if (etext = error_token_from_token (cond_token))
+      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: place parentheses around the assignment to silence this warning
+ 4632 |           if (etext = error_token_from_token (cond_token))
+      |                     ^                                    
+      |               (                                          )
+/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: use '==' to turn this assignment into an equality comparison
+ 4632 |           if (etext = error_token_from_token (cond_token))
+      |                     ^
+      |                     ==
+/usr/local/src/chet/src/bash/src/parse.y:4664:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4664 |           if (etext = error_token_from_token (tok))
+      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: place parentheses around the assignment to silence this warning
+ 4664 |           if (etext = error_token_from_token (tok))
+      |                     ^                             
+      |               (                                   )
+/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: use '==' to turn this assignment into an equality comparison
+ 4664 |           if (etext = error_token_from_token (tok))
+      |                     ^
+      |                     ==
+/usr/local/src/chet/src/bash/src/parse.y:4715:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4715 |           if (etext = error_token_from_token (tok))
+      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: place parentheses around the assignment to silence this warning
+ 4715 |           if (etext = error_token_from_token (tok))
+      |                     ^                             
+      |               (                                   )
+/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: use '==' to turn this assignment into an equality comparison
+ 4715 |           if (etext = error_token_from_token (tok))
+      |                     ^
+      |                     ==
+/usr/local/src/chet/src/bash/src/parse.y:4742:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4742 |           if (etext = error_token_from_token (tok))
+      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: place parentheses around the assignment to silence this warning
+ 4742 |           if (etext = error_token_from_token (tok))
+      |                     ^                             
+      |               (                                   )
+/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: use '==' to turn this assignment into an equality comparison
+ 4742 |           if (etext = error_token_from_token (tok))
+      |                     ^
+      |                     ==
+/usr/local/src/chet/src/bash/src/parse.y:4760:22: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 4760 |       else if (etext = error_token_from_token (tok))
+      |                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: place parentheses around the assignment to silence this warning
+ 4760 |       else if (etext = error_token_from_token (tok))
+      |                      ^                             
+      |                (                                   )
+/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: use '==' to turn this assignment into an equality comparison
+ 4760 |       else if (etext = error_token_from_token (tok))
+      |                      ^
+      |                      ==
+/usr/local/src/chet/src/bash/src/parse.y:5690:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 5690 |   while (c = *string++)
+      |          ~~^~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: place parentheses around the assignment to silence this warning
+ 5690 |   while (c = *string++)
+      |            ^          
+      |          (            )
+/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: use '==' to turn this assignment into an equality comparison
+ 5690 |   while (c = *string++)
+      |            ^
+      |            ==
+/usr/local/src/chet/src/bash/src/parse.y:6106:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
+      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: place parentheses around the assignment to silence this warning
+ 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
+      |         ^                                               
+      |       (                                                 )
+/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: use '==' to turn this assignment into an equality comparison
+ 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
+      |         ^
+      |         ==
+/usr/local/src/chet/src/bash/src/parse.y:6109:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
+      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: place parentheses around the assignment to silence this warning
+ 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
+      |         ^                                                
+      |       (                                                  )
+/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: use '==' to turn this assignment into an equality comparison
+ 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
+      |         ^
+      |         ==
+/usr/local/src/chet/src/bash/src/parse.y:6261:8: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ 6261 |           msg = EOF_Reached ? _("syntax error: unexpected end of file") : _("syntax error");
+      |               ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:6385:10: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+ 6385 |   if (ea = expanding_alias ())
+      |       ~~~^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: place parentheses around the assignment to silence this warning
+ 6385 |   if (ea = expanding_alias ())
+      |          ^                   
+      |       (                      )
+/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: use '==' to turn this assignment into an equality comparison
+ 6385 |   if (ea = expanding_alias ())
+      |          ^
+      |          ==
+12 warnings generated.
+[ 61% 18080/29185] //external/bc:bc clang src/history.c (priority: 12)
+[ 61% 18081/29185] //external/bc:bc clang src/file.c (priority: 12)
+[ 61% 18082/29185] //external/bc:bc clang src/lang.c (priority: 12)
+[ 61% 18083/29185] //external/bc:bc clang src/lex.c (priority: 12)
+[ 61% 18084/29185] //external/bc:bc clang src/library.c (priority: 12)
+[ 61% 18085/29185] //external/bc:bc clang src/main.c (priority: 12)
+[ 61% 18086/29185] //external/bc:bc clang src/opt.c (priority: 12)
+[ 61% 18087/29185] //external/bc:bc clang src/parse.c (priority: 12)
+[ 61% 18088/29185] //external/bc:bc clang src/num.c (priority: 12)
+[ 61% 18089/29185] //external/bc:bc clang src/rand.c (priority: 12)
+[ 61% 18090/29185] //external/bc:bc clang src/program.c (priority: 12)
+[ 61% 18091/29185] //external/bc:bc clang src/read.c (priority: 12)
+[ 61% 18092/29185] //external/bc:bc clang src/vector.c (priority: 12)
+[ 61% 18093/29185] //external/bc:bc clang gen/bc_help.c (priority: 12)
+[ 61% 18094/29185] //external/bc:bc clang gen/lib.c (priority: 12)
+[ 62% 18095/29185] //external/boringssl:bcm_object remove addrsig bcm_object.o [apex31] (priority: 12)
+[ 62% 18096/29185] //external/bc:bc clang src/vm.c (priority: 12)
+[ 62% 18097/29185] //system/extras/bootctl:bootctl clang++ bootctl.cpp (priority: 12)
+[ 62% 18098/29185] //system/core/healthd:charger clang++ charger.cpp (priority: 12)
+[ 62% 18099/29185] //build/make/tools:check_radio_versions embedded python archive [linux_glibc] (priority: 12)
+[ 62% 18100/29185] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
+[ 62% 18101/29185] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
+[ 62% 18102/29185] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bionic/libc/crtend_android/android_ramdisk_arm64_armv8-a/crtend_android.o (priority: 12)
+[ 62% 18103/29185] //external/e2fsprogs/misc:e2freefrag strip e2freefrag (priority: 12)
+[ 62% 18104/29185] //external/e2fsprogs/e2fsck:e2fsck clang e2fsck.c (priority: 12)
+[ 62% 18105/29185] //external/e2fsprogs/e2fsck:e2fsck clang super.c (priority: 12)
+[ 62% 18106/29185] //system/core/healthd:charger clang++ charger_utils.cpp (priority: 12)
+[ 62% 18107/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass1.c (priority: 12)
+[ 62% 18108/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass1b.c (priority: 12)
+[ 62% 18109/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass3.c (priority: 12)
+[ 62% 18110/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass2.c (priority: 12)
+[ 62% 18111/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass5.c (priority: 12)
+[ 62% 18112/29185] //external/e2fsprogs/e2fsck:e2fsck clang logfile.c (priority: 12)
+[ 62% 18113/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass4.c (priority: 12)
+[ 62% 18114/29185] //external/e2fsprogs/e2fsck:e2fsck clang journal.c (priority: 12)
+[ 62% 18115/29185] //external/e2fsprogs/e2fsck:e2fsck clang revoke.c (priority: 12)
+[ 62% 18116/29185] //external/e2fsprogs/e2fsck:e2fsck clang recovery.c (priority: 12)
+[ 62% 18117/29185] //external/e2fsprogs/e2fsck:e2fsck clang badblocks.c (priority: 12)
+[ 62% 18118/29185] //external/e2fsprogs/e2fsck:e2fsck clang util.c (priority: 12)
+[ 62% 18119/29185] //external/e2fsprogs/e2fsck:e2fsck clang unix.c (priority: 12)
+[ 62% 18120/29185] //external/e2fsprogs/e2fsck:e2fsck clang dirinfo.c (priority: 12)
+[ 62% 18121/29185] //external/e2fsprogs/e2fsck:e2fsck clang dx_dirinfo.c (priority: 12)
+[ 62% 18122/29185] //external/e2fsprogs/e2fsck:e2fsck clang ehandler.c (priority: 12)
+[ 62% 18123/29185] //external/e2fsprogs/e2fsck:e2fsck clang problem.c (priority: 12)
+[ 62% 18124/29185] //external/e2fsprogs/e2fsck:e2fsck clang message.c (priority: 12)
+[ 62% 18125/29185] //external/e2fsprogs/e2fsck:e2fsck clang ea_refcount.c (priority: 12)
+[ 62% 18126/29185] //external/e2fsprogs/e2fsck:e2fsck clang quota.c (priority: 12)
+[ 62% 18127/29185] //external/e2fsprogs/e2fsck:e2fsck clang rehash.c (priority: 12)
+[ 62% 18128/29185] //external/e2fsprogs/e2fsck:e2fsck clang region.c (priority: 12)
+[ 62% 18129/29185] //external/e2fsprogs/e2fsck:e2fsck clang sigcatcher.c (priority: 12)
+[ 62% 18130/29185] //external/e2fsprogs/e2fsck:e2fsck clang readahead.c (priority: 12)
+[ 62% 18131/29185] //external/e2fsprogs/e2fsck:e2fsck clang extents.c (priority: 12)
+[ 62% 18132/29185] //external/e2fsprogs/e2fsck:e2fsck clang encrypted_files.c (priority: 12)
+[ 62% 18133/29185] //system/sepolicy:file_contexts.concat.tmp generate file_contexts.concat.tmp [common] (priority: 12)
+[ 62% 18134/29185] //external/e2fsprogs/contrib/android:e2fsdroid strip e2fsdroid (priority: 12)
+[ 62% 18135/29185] //system/sepolicy:file_contexts_bin_gen raw genrule.sbox.textproto [common] (priority: 12)
+[ 62% 18136/29185] //build/soong/scripts:gen_build_prop embedded python archive [linux_glibc] (priority: 12)
+[ 62% 18137/29185] //system/hwservicemanager:hwservicemanager clang++ service.cpp (priority: 12)
+[ 62% 18138/29185] //system/core/init:init_first_stage clang++ block_dev_initializer.cpp (priority: 12)
+[ 62% 18139/29185] //system/core/init:init_first_stage clang++ first_stage_console.cpp (priority: 12)
+[ 62% 18140/29185] //system/core/init:init_first_stage clang++ devices.cpp (priority: 12)
+[ 62% 18141/29185] //system/core/init:init_first_stage clang++ first_stage_main.cpp (priority: 12)
 == out/error.log
