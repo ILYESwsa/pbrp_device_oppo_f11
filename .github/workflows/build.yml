@@ -1,8 +1,12 @@
-name: Build AERA recovery (CPH1911)
+name: Build AERA recovery (CPH1911, slim branch)
 
 on:
   push:
-    branches: [aera-16.0]
+    branches: [aera-16.0-slim]
+    paths-ignore:
+      - '.github/slim/**'
+      - '.github/workflows/slim.yml'
+      - 'README.md'
   workflow_dispatch:
 
 permissions:

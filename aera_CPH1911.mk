@@ -11,3 +11,5 @@ AERA_CLOCK_POS := 1
 
 AERA_FLASHLIGHT_ENABLE := 1
 AERA_FL_PATH1 := /system/flashlight
+
+# Wi-Fi: AERA_ENABLE_WLAN is intentionally NOT set (no WLAN stack in the recovery).

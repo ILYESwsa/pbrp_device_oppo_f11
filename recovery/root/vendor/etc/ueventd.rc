@@ -32,8 +32,6 @@
 /dev/block/by-name/otp       0660    root    system
 
 # Connectivity
-/dev/stpwmt               0660   system     system
-/dev/wmtdetect            0660   system     system
 
 # BT
 /dev/stpbt                0660   bluetooth  bluetooth
@@ -46,7 +44,6 @@
 /dev/stpant               0660   system     system
 
 # WIFI
-/dev/wmtWifi              0660   wifi     wifi
 
 # FMRadio
 /dev/fm                   0660   media     media
