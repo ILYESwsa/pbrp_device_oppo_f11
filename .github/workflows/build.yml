@@ -77,6 +77,13 @@ jobs:
           git config --global user.email "ci@users.noreply.github.com"
           git config --global color.ui false
 
+      - name: Restore source cache
+        id: synccache
+        uses: actions/cache/restore@v4
+        with:
+          path: aera/.repo
+          key: aera-sync-aera16-v1
+
       - name: Sync AERA 16.0 sources
         shell: bash
         run: |
@@ -85,6 +92,13 @@ jobs:
           repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1
           repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
           df -h /
+
+      - name: Save source cache
+        if: steps.synccache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: aera/.repo
+          key: aera-sync-aera16-v1
 
       - name: Checkout device tree
         uses: actions/checkout@v4
