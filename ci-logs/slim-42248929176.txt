@@ -1,0 +1,90 @@
+input image: recovery.img 67.11 MB
+mkbootimg args: --header_version 2 --os_version 16.0.0 --os_patch_level 2099-12 --kernel /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/work/unpack/kernel --ramdisk /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/work/unpack/ramdisk --recovery_dtbo /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/work/unpack/recovery_dtbo --dtb /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/work/unpack/dtb --pagesize 0x00000800 --base 0x00000000 --kernel_offset 0x40080000 --ramdisk_offset 0x55000000 --second_offset 0x00000000 --tags_offset 0x54000000 --dtb_offset 0x000000005400
+ramdisk compression: 1f8b0800 compressed size 37.33 MB
+uncompressed cpio: 89.17 MB
+files in ramdisk: 3614
+--- 40 biggest files (before)
+  11363912  system/bin/recovery
+   4626376  twres/fonts/wqy-microhei.ttf
+   3069784  system/bin/update_engine_sideload
+   2799872  system/lib64/libicui18n.so
+   2694168  system/bin/init
+   2236528  system/bin/7za
+   2163048  system/bin/linker64
+   2106328  system/bin/adbd
+   2091392  system/lib64/libadbd_services.so
+   1954952  system/lib64/libicuuc.so
+   1922320  system/bin/aera-otaripper
+   1527248  sbin/aapt
+   1489184  system/lib64/libcrypto.so
+   1413200  sbin/bash
+   1322846  file_contexts.bin
+   1250088  sbin/magiskboot
+   1230728  system/lib64/libadbconnection_server.so
+   1222600  system/lib64/libchrome.so
+   1188200  system/lib64/libc.so
+   1176888  system/lib64/libandroidfw.so
+   1049704  system/lib64/libc++.so
+    981848  sbin/gnutar
+    855240  system/lib64/libperfetto_c.so
+    752960  system/lib64/libaosprecovery.so
+    746744  system/lib64/libbinder.so
+    721514  sepolicy
+    709712  twres/fonts/NotoSansCJKjp-Regular.ttf
+    705520  system/lib64/libapp_processes_protos_lite.so
+    705440  system/lib64/libadb_protos.so
+    702672  system/lib64/libunwindstack.so
+    685280  sbin/zip
+    684264  system/lib64/libhidlbase.so
+    655704  system/lib64/libvintf.so
+    652416  system/bin/logd
+    647680  sbin/gnused
+    611800  system/lib64/libfs_mgr.so
+    600544  system/lib64/libft2.so
+    563088  system/bin/toybox
+    551136  system/lib64/libprotobuf-cpp-lite.so
+    477688  system/lib64/libssl.so
+--- files matching keymaster/wifi patterns (before)
+   system/bin/keystore_cli_v2
+   system/etc/init/keystore2.rc
+   system/etc/selinux/plat_keystore2_key_contexts
+   system/etc/vintf/manifest/android.system.keystore2-service.xml
+   system/lib64/libnl.so
+--- kept because a remaining binary needs them
+--- removing
+   system/bin/keystore_cli_v2
+   system/etc/init/keystore2.rc
+   system/etc/selinux/plat_keystore2_key_contexts
+   system/etc/vintf/manifest/android.system.keystore2-service.xml
+   system/lib64/libnl.so
+   dangling symlink removed: init
+   dangling symlink removed: bin
+   dangling symlink removed: adb_keys
+   dangling symlink removed: bugreports
+   dangling symlink removed: etc
+   dangling symlink removed: system_ext
+   dangling symlink removed: product
+   dangling symlink removed: vendor_dlkm/etc
+   dangling symlink removed: system/flashlight/brightness
+   dangling symlink removed: system/bin/ash
+   dangling symlink removed: system/bin/magiskboot
+   dangling symlink removed: odm_dlkm/etc
+   dangling symlink removed: odm/firmware
+   dangling symlink removed: odm/lib
+   dangling symlink removed: odm/overlay
+   dangling symlink removed: odm/bin
+   dangling symlink removed: odm/usr
+   dangling symlink removed: odm/app
+   dangling symlink removed: odm/etc
+   dangling symlink removed: odm/framework
+   dangling symlink removed: odm/lib64
+   dangling symlink removed: odm/priv-app
+   dangling symlink removed: sbin/ash
+   dangling symlink removed: sbin/resetprop
+   dangling symlink removed: sbin/aera
+   dangling symlink removed: sbin/sh
+freed (uncompressed): 0.37 MB
+ramdisk compressed: 37.33 MB -> 37.02 MB
+repacked (no footer): 50.52 MB
+original AVB footer algorithm: SHA256_RSA2048
+final: 67.11 MB (partition image size; ramdisk shrank by 0.31 MB)
