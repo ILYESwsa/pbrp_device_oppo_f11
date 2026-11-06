@@ -1,258 +1,258 @@
-== Fri Nov  6 14:28:48 UTC 2026 run=42221029483 sha=bfbcd85d9b758a17ae4a13adc9414fdc71a2c911
+== Fri Nov  6 14:30:49 UTC 2026 run=42221029483 sha=bfbcd85d9b758a17ae4a13adc9414fdc71a2c911
                total        used        free      shared  buff/cache   available
-Mem:           15987        6580         950          32        8456        9027
+Mem:           15987        6451         967          32        8568        9156
 Swap:          28671         186       28485
-/dev/root       146G  133G   13G  92% /
+/dev/root       146G  134G   13G  92% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 46% 13612/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ AssetDir.cpp (priority: 14)
-[ 46% 13613/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Asset.cpp (priority: 14)
-[ 46% 13614/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ AssetManager.cpp (priority: 14)
-[ 46% 13615/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ AssetsProvider.cpp (priority: 14)
-[ 46% 13616/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ AssetManager2.cpp (priority: 14)
-In file included from frameworks/base/libs/androidfw/AssetManager2.cpp:19:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/AssetManager2.cpp:19:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 46% 13617/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ AttributeResolution.cpp (priority: 14)
-In file included from frameworks/base/libs/androidfw/AttributeResolution.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AttributeResolution.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/AttributeResolution.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AttributeResolution.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 46% 13618/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBufferStream.cpp (priority: 14)
-[ 46% 13619/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBuffer.cpp (priority: 14)
-[ 46% 13620/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ChunkIterator.cpp (priority: 14)
-[ 46% 13621/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ConfigDescription.cpp (priority: 14)
-[ 46% 13622/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ FileStream.cpp (priority: 14)
-[ 46% 13623/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Idmap.cpp (priority: 14)
-[ 46% 13624/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Locale.cpp (priority: 14)
-[ 46% 13625/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleData.cpp (priority: 14)
-[ 46% 13626/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LoadedArsc.cpp (priority: 14)
-In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 46% 13627/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleDataLookup.cpp (priority: 14)
-[ 46% 13628/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ misc.cpp (priority: 14)
-[ 46% 13629/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ObbFile.cpp (priority: 14)
-[ 46% 13630/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ NinePatch.cpp (priority: 14)
-[ 46% 13631/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PosixUtils.cpp (priority: 14)
-[ 46% 13632/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PngChunkFilter.cpp (priority: 14)
-[ 46% 13633/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Png.cpp (priority: 14)
-[ 46% 13634/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PngCrunch.cpp (priority: 14)
-[ 46% 13635/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTimer.cpp (priority: 14)
-[ 46% 13636/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceUtils.cpp (priority: 14)
-In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 46% 13637/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ StreamingZipInflater.cpp (priority: 14)
-[ 46% 13638/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTypes.cpp (priority: 14)
-[ 46% 13639/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ TypeWrappers.cpp (priority: 14)
-[ 46% 13640/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ StringPool.cpp (priority: 14)
-[ 46% 13641/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipFileRO.cpp (priority: 14)
-[ 46% 13642/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Util.cpp (priority: 14)
-[ 46% 13643/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupData.cpp (priority: 14)
-[ 46% 13644/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipUtils.cpp (priority: 14)
-[ 46% 13645/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupHelpers.cpp (priority: 14)
-[ 46% 13646/29185] //frameworks/base/libs/androidfw:libandroidfw_pathutils static link libandroidfw_pathutils.a (priority: 14)
-[ 46% 13647/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ CursorWindow.cpp (priority: 14)
-[ 46% 13648/29185] //bootable/recovery:libaosprecovery clang++ install/get_args.cpp (priority: 14)
-[ 46% 13649/29185] //bootable/recovery:libaosprecovery clang++ install/adb_install.cpp (priority: 14)
-[ 46% 13650/29185] //bootable/recovery:libaosprecovery clang++ install/spl_check.cpp (priority: 14)
-[ 46% 13651/29185] //bootable/recovery:libaosprecovery clang++ install/install.cpp (priority: 14)
-[ 46% 13652/29185] //bootable/recovery:libaosprecovery clang++ install/wipe_data.cpp (priority: 14)
-[ 46% 13653/29185] //bootable/recovery:libaosprecovery clang++ install/wipe_device.cpp (priority: 14)
-[ 46% 13654/29185] //bootable/recovery:libaosprecovery clang++ install/set_metadata.cpp (priority: 14)
-bootable/recovery/install/set_metadata.cpp:40:8: warning: 'security_context_t' is deprecated [-Wdeprecated-declarations]
-   40 | static security_context_t selinux_context;
-      |        ^
-external/selinux/libselinux/include/selinux/selinux.h:19:17: note: 'security_context_t' has been explicitly marked deprecated here
-   19 | __attribute__ ((deprecated))
-      |                 ^
+[ 47% 13837/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-bignum.cpp (priority: 14)
+[ 47% 13838/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-double-to-string.cpp (priority: 14)
+[ 47% 13839/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-fast-dtoa.cpp (priority: 14)
+[ 47% 13840/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-strtod.cpp (priority: 14)
+[ 47% 13841/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ double-conversion-string-to-double.cpp (priority: 14)
+[ 47% 13842/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ dtitvfmt.cpp (priority: 14)
+[ 47% 13843/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ dtfmtsym.cpp (priority: 14)
+[ 47% 13844/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ dtitvinf.cpp (priority: 14)
+[ 47% 13845/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ dtrule.cpp (priority: 14)
+[ 47% 13846/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ dtptngen.cpp (priority: 14)
+[ 47% 13847/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ erarules.cpp (priority: 14)
+[ 47% 13848/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ esctrn.cpp (priority: 14)
+[ 47% 13849/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ethpccal.cpp (priority: 14)
+[ 47% 13850/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ fmtable.cpp (priority: 14)
+[ 47% 13851/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ fmtable_cnv.cpp (priority: 14)
+[ 47% 13852/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ format.cpp (priority: 14)
+[ 47% 13853/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ formatted_string_builder.cpp (priority: 14)
+[ 47% 13854/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ formattedval_iterimpl.cpp (priority: 14)
+[ 47% 13855/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ formattedval_sbimpl.cpp (priority: 14)
+[ 47% 13856/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ formattedvalue.cpp (priority: 14)
+[ 47% 13857/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ fphdlimp.cpp (priority: 14)
+[ 47% 13858/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ fpositer.cpp (priority: 14)
+[ 47% 13859/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ funcrepl.cpp (priority: 14)
+[ 47% 13860/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ gender.cpp (priority: 14)
+[ 47% 13861/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ gregocal.cpp (priority: 14)
+[ 47% 13862/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ gregoimp.cpp (priority: 14)
+[ 47% 13863/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ hebrwcal.cpp (priority: 14)
+[ 47% 13864/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ indiancal.cpp (priority: 14)
+[ 47% 13865/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ inputext.cpp (priority: 14)
+[ 47% 13866/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ islamcal.cpp (priority: 14)
+[ 47% 13867/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ iso8601cal.cpp (priority: 14)
+[ 47% 13868/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ japancal.cpp (priority: 14)
+[ 47% 13869/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ listformatter.cpp (priority: 14)
+[ 47% 13870/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ measfmt.cpp (priority: 14)
+[ 47% 13871/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ measunit.cpp (priority: 14)
+[ 47% 13872/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ measure.cpp (priority: 14)
+[ 47% 13873/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ measunit_extra.cpp (priority: 14)
+[ 47% 13874/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2.cpp (priority: 14)
+[ 47% 13875/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_arguments.cpp (priority: 14)
+[ 47% 13876/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_checker.cpp (priority: 14)
+[ 47% 13877/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_data_model.cpp (priority: 14)
+[ 47% 13878/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_evaluation.cpp (priority: 14)
+[ 47% 13879/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_errors.cpp (priority: 14)
+[ 47% 13880/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_formattable.cpp (priority: 14)
+[ 47% 13881/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_formatter.cpp (priority: 14)
+[ 47% 13882/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_parser.cpp (priority: 14)
+[ 47% 13883/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_function_registry.cpp (priority: 14)
+[ 47% 13884/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ messageformat2_serializer.cpp (priority: 14)
+[ 47% 13885/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ name2uni.cpp (priority: 14)
+[ 47% 13886/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ msgfmt.cpp (priority: 14)
+[ 47% 13887/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ nfrs.cpp (priority: 14)
+[ 47% 13888/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ nfrule.cpp (priority: 14)
+[ 47% 13889/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ nfsubs.cpp (priority: 14)
+[ 47% 13890/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ nortrans.cpp (priority: 14)
+[ 47% 13891/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ nultrans.cpp (priority: 14)
+[ 47% 13892/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_affixutils.cpp (priority: 14)
+[ 47% 13893/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_asformat.cpp (priority: 14)
+[ 47% 13894/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_capi.cpp (priority: 14)
+[ 47% 13895/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_compact.cpp (priority: 14)
+[ 47% 13896/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_currencysymbols.cpp (priority: 14)
+[ 47% 13897/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_decimalquantity.cpp (priority: 14)
+[ 47% 13898/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_decimfmtprops.cpp (priority: 14)
+[ 47% 13899/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_fluent.cpp (priority: 14)
+[ 47% 13900/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_formatimpl.cpp (priority: 14)
+[ 47% 13901/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_grouping.cpp (priority: 14)
+[ 47% 13902/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_integerwidth.cpp (priority: 14)
+[ 47% 13903/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_longnames.cpp (priority: 14)
+[ 47% 13904/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_mapper.cpp (priority: 14)
+[ 47% 13905/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_modifiers.cpp (priority: 14)
+[ 47% 13906/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_multiplier.cpp (priority: 14)
+[ 47% 13907/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_notation.cpp (priority: 14)
+[ 47% 13908/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_output.cpp (priority: 14)
+[ 47% 13909/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_padding.cpp (priority: 14)
+[ 47% 13910/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_patternmodifier.cpp (priority: 14)
+[ 47% 13911/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_patternstring.cpp (priority: 14)
+[ 47% 13912/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_rounding.cpp (priority: 14)
+[ 47% 13913/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_scientific.cpp (priority: 14)
+[ 47% 13914/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_simple.cpp (priority: 14)
+[ 47% 13915/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_symbolswrapper.cpp (priority: 14)
+[ 47% 13916/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_skeletons.cpp (priority: 14)
+[ 47% 13917/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_usageprefs.cpp (priority: 14)
+[ 47% 13918/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ number_utils.cpp (priority: 14)
+[ 47% 13919/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numfmt.cpp (priority: 14)
+[ 47% 13920/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_affixes.cpp (priority: 14)
+[ 47% 13921/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_compositions.cpp (priority: 14)
+[ 47% 13922/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_currency.cpp (priority: 14)
+[ 47% 13923/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_decimal.cpp (priority: 14)
+[ 47% 13924/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_impl.cpp (priority: 14)
+[ 47% 13925/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_parsednumber.cpp (priority: 14)
+[ 47% 13926/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_scientific.cpp (priority: 14)
+[ 47% 13927/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_symbols.cpp (priority: 14)
+[ 47% 13928/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numparse_validators.cpp (priority: 14)
+[ 47% 13929/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numrange_capi.cpp (priority: 14)
+[ 47% 13930/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numrange_fluent.cpp (priority: 14)
+[ 47% 13931/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numrange_impl.cpp (priority: 14)
+[ 47% 13932/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ numsys.cpp (priority: 14)
+[ 47% 13933/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ persncal.cpp (priority: 14)
+[ 47% 13934/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ olsontz.cpp (priority: 14)
+[ 47% 13935/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ pluralranges.cpp (priority: 14)
+[ 47% 13936/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ plurfmt.cpp (priority: 14)
+[ 47% 13937/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ quant.cpp (priority: 14)
+[ 47% 13938/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ plurrule.cpp (priority: 14)
+[ 47% 13939/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ quantityformatter.cpp (priority: 14)
+[ 47% 13940/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbt.cpp (priority: 14)
+[ 47% 13941/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbnf.cpp (priority: 14)
+[ 47% 13942/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbt_data.cpp (priority: 14)
+[ 47% 13943/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbt_pars.cpp (priority: 14)
+[ 47% 13944/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbt_rule.cpp (priority: 14)
+[ 47% 13945/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbt_set.cpp (priority: 14)
+[ 47% 13946/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rbtz.cpp (priority: 14)
+[ 47% 13947/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ regexcmp.cpp (priority: 14)
+[ 47% 13948/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ regeximp.cpp (priority: 14)
+[ 47% 13949/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ regexst.cpp (priority: 14)
+[ 47% 13950/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ regextxt.cpp (priority: 14)
+[ 47% 13951/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ region.cpp (priority: 14)
+[ 47% 13952/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ reldatefmt.cpp (priority: 14)
+[ 47% 13953/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ reldtfmt.cpp (priority: 14)
+[ 47% 13954/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ remtrans.cpp (priority: 14)
+[ 47% 13955/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rematch.cpp (priority: 14)
+[ 47% 13956/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ repattrn.cpp (priority: 14)
+[ 47% 13957/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ scientificnumberformatter.cpp (priority: 14)
+[ 47% 13958/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ rulebasedcollator.cpp (priority: 14)
+[ 47% 13959/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ scriptset.cpp (priority: 14)
+[ 47% 13960/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ search.cpp (priority: 14)
+[ 47% 13961/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ selfmt.cpp (priority: 14)
+[ 47% 13962/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ sharedbreakiterator.cpp (priority: 14)
+[ 47% 13963/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ simpletz.cpp (priority: 14)
+[ 47% 13964/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ smpdtfst.cpp (priority: 14)
+[ 47% 13965/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ smpdtfmt.cpp (priority: 14)
+[ 47% 13966/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ sortkey.cpp (priority: 14)
+[ 47% 13967/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ standardplural.cpp (priority: 14)
+[ 47% 13968/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ string_segment.cpp (priority: 14)
+[ 47% 13969/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ strmatch.cpp (priority: 14)
+[ 47% 13970/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ strrepl.cpp (priority: 14)
+[ 47% 13971/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ stsearch.cpp (priority: 14)
+[ 47% 13972/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ taiwncal.cpp (priority: 14)
+[ 47% 13973/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ timezone.cpp (priority: 14)
+[ 47% 13974/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ titletrn.cpp (priority: 14)
+[ 47% 13975/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tmunit.cpp (priority: 14)
+[ 47% 13976/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tmutamt.cpp (priority: 14)
+[ 47% 13977/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tolowtrn.cpp (priority: 14)
+[ 47% 13978/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tmutfmt.cpp (priority: 14)
+[ 47% 13979/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ toupptrn.cpp (priority: 14)
+[ 47% 13980/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ translit.cpp (priority: 14)
+[ 47% 13981/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ transreg.cpp (priority: 14)
+[ 47% 13982/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tridpars.cpp (priority: 14)
+[ 47% 13983/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tzfmt.cpp (priority: 14)
+[ 47% 13984/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tzgnames.cpp (priority: 14)
+[ 47% 13985/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tznames.cpp (priority: 14)
+[ 47% 13986/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tznames_impl.cpp (priority: 14)
+[ 47% 13987/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tzrule.cpp (priority: 14)
+[ 47% 13988/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ tztrans.cpp (priority: 14)
+[ 47% 13989/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucal.cpp (priority: 14)
+[ 47% 13990/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucln_in.cpp (priority: 14)
+[ 47% 13991/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol.cpp (priority: 14)
+[ 47% 13992/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol_res.cpp (priority: 14)
+[ 47% 13993/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucol_sit.cpp (priority: 14)
+[ 47% 13994/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucoleitr.cpp (priority: 14)
+[ 47% 13995/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ucsdet.cpp (priority: 14)
+[ 47% 13996/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ udateintervalformat.cpp (priority: 14)
+[ 47% 13997/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ udat.cpp (priority: 14)
+[ 47% 13998/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ufieldpositer.cpp (priority: 14)
+[ 47% 13999/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ udatpg.cpp (priority: 14)
+[ 47% 14000/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ulistformatter.cpp (priority: 14)
+[ 47% 14001/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uitercollationiterator.cpp (priority: 14)
+[ 47% 14002/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ulocdata.cpp (priority: 14)
+[ 47% 14003/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ umsg.cpp (priority: 14)
+[ 47% 14004/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ unesctrn.cpp (priority: 14)
+[ 47% 14005/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uni2name.cpp (priority: 14)
+[ 47% 14006/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ units_complexconverter.cpp (priority: 14)
+[ 47% 14007/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ units_converter.cpp (priority: 14)
+[ 47% 14008/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ units_data.cpp (priority: 14)
+[ 48% 14009/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ units_router.cpp (priority: 14)
+[ 48% 14010/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ unumsys.cpp (priority: 14)
+[ 48% 14011/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ unum.cpp (priority: 14)
+[ 48% 14012/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ upluralrules.cpp (priority: 14)
+[ 48% 14013/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uregex.cpp (priority: 14)
+[ 48% 14014/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uregexc.cpp (priority: 14)
+[ 48% 14015/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uregion.cpp (priority: 14)
+[ 48% 14016/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uspoof.cpp (priority: 14)
+[ 48% 14017/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ usearch.cpp (priority: 14)
+[ 48% 14018/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uspoof_build.cpp (priority: 14)
+[ 48% 14019/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uspoof_conf.cpp (priority: 14)
+[ 48% 14020/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ uspoof_impl.cpp (priority: 14)
+[ 48% 14021/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ utf16collationiterator.cpp (priority: 14)
+[ 48% 14022/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ utmscale.cpp (priority: 14)
+[ 48% 14023/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ utf8collationiterator.cpp (priority: 14)
+[ 48% 14024/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ utrans.cpp (priority: 14)
+[ 48% 14025/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ vtzone.cpp (priority: 14)
+[ 48% 14026/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ vzone.cpp (priority: 14)
+[ 48% 14027/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ windtfmt.cpp (priority: 14)
+[ 48% 14028/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ winnmfmt.cpp (priority: 14)
+[ 48% 14029/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ wintzimpl.cpp (priority: 14)
+[ 48% 14030/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ zrule.cpp (priority: 14)
+[ 48% 14031/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ zonemeta.cpp (priority: 14)
+[ 48% 14032/29185] //external/icu/icu4c/source/common:libicuuc generate toc libicuuc.so (priority: 14)
+[ 48% 14033/29185] //system/incremental_delivery/incfs:libincfs generate toc libincfs.so (priority: 14)
+[ 48% 14034/29185] //system/incremental_delivery/incfs:libincfs link libincfs.so [arm] (priority: 14)
+[ 48% 14035/29185] //system/incremental_delivery/incfs:libincfs-utils static link libincfs-utils.a (priority: 14)
+[ 48% 14036/29185] //system/core/init:libinit protoc subcontext.proto (priority: 14)
+[ 48% 14037/29185] //system/core/init:libinit protoc persistent_properties.proto (priority: 14)
+[ 48% 14038/29185] //system/core/init:libinit protoc property_service.proto (priority: 14)
+[ 48% 14039/29185] //external/icu/icu4c/source/i18n:libicui18n clang++ ztrans.cpp (priority: 14)
+[ 48% 14040/29185] //system/core/init:libinit clang++ action_manager.cpp (priority: 14)
+[ 48% 14041/29185] //system/core/init:libinit clang++ action.cpp (priority: 14)
+[ 48% 14042/29185] //system/core/init:libinit clang++ capabilities.cpp (priority: 14)
+[ 48% 14043/29185] //system/core/init:libinit clang++ action_parser.cpp (priority: 14)
+[ 48% 14044/29185] //system/core/init:libinit clang++ epoll.cpp (priority: 14)
+[ 48% 14045/29185] //system/core/init:libinit clang++ import_parser.cpp (priority: 14)
+[ 48% 14046/29185] //system/core/init:libinit clang++ interprocess_fifo.cpp (priority: 14)
+[ 48% 14047/29185] //system/core/init:libinit clang++ keychords.cpp (priority: 14)
+[ 48% 14048/29185] //system/core/init:libinit clang++ parser.cpp (priority: 14)
+[ 48% 14049/29185] //system/core/init:libinit clang++ property_type.cpp (priority: 14)
+[ 48% 14050/29185] //system/core/init:libinit clang++ rlimit_parser.cpp (priority: 14)
+[ 48% 14051/29185] //system/core/init:libinit clang++ service.cpp (priority: 14)
+system/core/init/service.cpp:490:14: warning: 'setProcessGroupSwappiness' is deprecated: Unsupported in memcg v2 [-Wdeprecated-declarations]
+  490 |         if (!setProcessGroupSwappiness(uid(), pid_, swappiness_)) {
+      |              ^
+system/core/libprocessgroup/include/processgroup/processgroup.h:82:3: note: 'setProcessGroupSwappiness' has been explicitly marked deprecated here
+   82 | [[deprecated("Unsupported in memcg v2")]]
+      |   ^
 1 warning generated.
-[ 46% 13655/29185] //system/apex/libs/libapexsupport:libapexsupport header-abi-diff libapexsupport.so.llndk202404.abidiff [arm] (priority: 14)
-[ 46% 13656/29185] //system/apex/libs/libapexsupport:libapexsupport header-abi-diff libapexsupport.so.llndk.abidiff [arm] (priority: 14)
-[ 46% 13657/29185] //packages/modules/adb/proto:libapp_processes_protos_lite static link libapp_processes_protos_lite.a (priority: 14)
-[ 46% 13658/29185] //system/libvintf:libassemblevintf static link libassemblevintf.a [linux_glibc] (priority: 14)
-[ 46% 13659/29185] //system/core/libasyncio:libasyncio strip libasyncio.so [arm] (priority: 14)
-[ 46% 13660/29185] //system/core/libasyncio:libasyncio clang++ AsyncIO.cpp (priority: 14)
+[ 48% 14052/29185] //system/core/init:libinit clang++ service_list.cpp (priority: 14)
+[ 48% 14053/29185] //system/core/init:libinit clang++ service_utils.cpp (priority: 14)
+[ 48% 14054/29185] //system/core/init:libinit clang++ service_parser.cpp (priority: 14)
+[ 48% 14055/29185] //system/core/init:libinit clang++ proto/system/core/init/subcontext.pb.cc (priority: 14)
+[ 48% 14056/29185] //system/core/init:libinit clang++ tokenizer.cpp (priority: 14)
+[ 48% 14057/29185] //system/core/init:libinit clang++ subcontext.cpp (priority: 14)
+[ 48% 14058/29185] //system/core/init:libinit clang++ apex_init_util.cpp (priority: 14)
+[ 48% 14059/29185] //system/core/init:libinit clang++ util.cpp (priority: 14)
+[ 48% 14060/29185] //system/core/init:libinit clang++ block_dev_initializer.cpp (priority: 14)
+[ 48% 14061/29185] //system/core/init:libinit clang++ bootchart.cpp (priority: 14)
+[ 48% 14062/29185] //system/core/init:libinit clang++ devices.cpp (priority: 14)
+[ 48% 14063/29185] //system/core/init:libinit clang++ builtins.cpp (priority: 14)
+[ 48% 14064/29185] //system/core/init:libinit clang++ firmware_handler.cpp (priority: 14)
+[ 48% 14065/29185] //system/core/init:libinit clang++ first_stage_console.cpp (priority: 14)
+[ 48% 14066/29185] //system/core/init:libinit clang++ first_stage_init.cpp (priority: 14)
+[ 48% 14067/29185] //system/core/init:libinit clang++ first_stage_mount.cpp (priority: 14)
+[ 48% 14068/29185] //system/core/init:libinit clang++ fscrypt_init_extensions.cpp (priority: 14)
+[ 48% 14069/29185] //system/core/init:libinit clang++ lmkd_service.cpp (priority: 14)
+[ 48% 14070/29185] //system/core/init:libinit clang++ modalias_handler.cpp (priority: 14)
+[ 48% 14071/29185] //system/core/init:libinit clang++ init.cpp (priority: 14)
+[ 48% 14072/29185] //system/core/init:libinit clang++ mount_handler.cpp (priority: 14)
+[ 48% 14073/29185] //system/core/init:libinit clang++ mount_namespace.cpp (priority: 14)
+[ 48% 14074/29185] //system/core/init:libinit clang++ persistent_properties.cpp (priority: 14)
+[ 48% 14075/29185] //system/core/init:libinit clang++ proto/system/core/init/persistent_properties.pb.cc (priority: 14)
+[ 48% 14076/29185] //system/core/init:libinit clang++ proto/system/core/init/property_service.pb.cc (priority: 14)
+[ 48% 14077/29185] //system/core/init:libinit clang++ property_service.cpp (priority: 14)
+[ 48% 14078/29185] //system/core/init:libinit clang++ reboot.cpp (priority: 14)
+[ 48% 14079/29185] //system/core/init:libinit clang++ reboot_utils.cpp (priority: 14)
 == out/error.log
