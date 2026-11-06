@@ -1,258 +1,258 @@
-== Fri Nov  6 18:24:42 UTC 2026 run=42248928952 sha=aa77bbfab1a3f5ec68346762aced449fb0ba5396
+== Fri Nov  6 18:26:44 UTC 2026 run=42248928952 sha=aa77bbfab1a3f5ec68346762aced449fb0ba5396
                total        used        free      shared  buff/cache   available
-Mem:           15988        6608         186          30        9194        9003
-Swap:          28671         216       28455
-/dev/root       146G  134G   12G  93% /
+Mem:           15988        5948         728          30        9312        9663
+Swap:          28671         868       27803
+/dev/root       146G  135G   12G  93% /
 == oom/kill messages
 == last 250 lines of build.log
-      |          (            )
-external/bash/subst.c:8887:12: note: use '==' to turn this assignment into an equality comparison
- 8887 |   while (c = s[sindex])
-      |            ^
-      |            ==
-external/bash/subst.c:9611:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 9611 |   if (c = string[sindex])
-      |       ~~^~~~~~~~~~~~~~~~
-external/bash/subst.c:9611:9: note: place parentheses around the assignment to silence this warning
- 9611 |   if (c = string[sindex])
-      |         ^               
-      |       (                 )
-external/bash/subst.c:9611:9: note: use '==' to turn this assignment into an equality comparison
- 9611 |   if (c = string[sindex])
-      |         ^
-      |         ==
-external/bash/subst.c:9621:13: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 9621 |       if (c = string[sindex])
-      |           ~~^~~~~~~~~~~~~~~~
-external/bash/subst.c:9621:13: note: place parentheses around the assignment to silence this warning
- 9621 |       if (c = string[sindex])
-      |             ^               
-      |           (                 )
-external/bash/subst.c:9621:13: note: use '==' to turn this assignment into an equality comparison
- 9621 |       if (c = string[sindex])
-      |             ^
-      |             ==
-external/bash/subst.c:11887:31: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 11887 |   for (dquote = sindex = 0; c = string[sindex];)
-       |                             ~~^~~~~~~~~~~~~~~~
-external/bash/subst.c:11887:31: note: place parentheses around the assignment to silence this warning
- 11887 |   for (dquote = sindex = 0; c = string[sindex];)
-       |                               ^               
-       |                             (                 )
-external/bash/subst.c:11887:31: note: use '==' to turn this assignment into an equality comparison
- 11887 |   for (dquote = sindex = 0; c = string[sindex];)
-       |                               ^
-       |                               ==
-external/bash/subst.c:12431:33: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
-       |                            ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
-external/bash/subst.c:12431:33: note: place parentheses around the assignment to silence this warning
- 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
-       |                                        ^                   
-       |                            (                               )
-external/bash/subst.c:12431:33: note: use '==' to turn this assignment into an equality comparison
- 12431 |           for (eindex = 0; temp_string = expansions[eindex]; eindex++)
-       |                                        ^
-       |                                        ==
-external/bash/subst.c:12692:12: warning: array subscript is of type 'char' [-Wchar-subscripts]
- 12692 |               omap[l->word->word[oind]] = 1;
-       |                   ^~~~~~~~~~~~~~~~~~~~
-19 warnings generated.
-[ 61% 18071/29185] //external/bc:bc clang src/args.c (priority: 12)
-[ 61% 18072/29185] //external/bc:bc clang src/bc.c (priority: 12)
-[ 61% 18073/29185] //external/bc:bc clang src/bc_lex.c (priority: 12)
-[ 61% 18074/29185] //external/bc:bc clang src/bc_parse.c (priority: 12)
-[ 61% 18075/29185] //external/bc:bc clang src/data.c (priority: 12)
-[ 61% 18076/29185] //external/bc:bc clang src/dc.c (priority: 12)
-[ 61% 18077/29185] //external/bc:bc clang src/dc_lex.c (priority: 12)
-[ 61% 18078/29185] //external/bc:bc clang src/dc_parse.c (priority: 12)
-[ 61% 18079/29185] //external/bash:bash clang y.tab.c (priority: 12)
-/usr/local/src/chet/src/bash/src/parse.y:2924:28: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
- 2924 |       report_syntax_error (_("maximum here-document count exceeded"));
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-external/bash/bashintl.h:36:18: note: expanded from macro '_'
-   36 | #define _(msgid)        gettext(msgid)
-      |                         ^~~~~~~~~~~~~~
-external/bash/include/gettext.h:46:25: note: expanded from macro 'gettext'
-   46 | # define gettext(Msgid) ((const char *) (Msgid))
-      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:210:47: note: passing argument to parameter here
-  210 | static void report_syntax_error PARAMS((char *));
-      |                                               ^
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4550 |       if (etext = error_token_from_token (cond_token))
-      |           ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: place parentheses around the assignment to silence this warning
- 4550 |       if (etext = error_token_from_token (cond_token))
-      |                 ^                                    
-      |           (                                          )
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: use '==' to turn this assignment into an equality comparison
- 4550 |       if (etext = error_token_from_token (cond_token))
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+2 warnings generated.
+[ 62% 18328/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBuffer.cpp [arm] (priority: 12)
+[ 62% 18329/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BigBufferStream.cpp [arm] (priority: 12)
+[ 62% 18330/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ChunkIterator.cpp [arm] (priority: 12)
+[ 62% 18331/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ConfigDescription.cpp [arm] (priority: 12)
+[ 62% 18332/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ FileStream.cpp [arm] (priority: 12)
+[ 62% 18333/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Idmap.cpp [arm] (priority: 12)
+[ 62% 18334/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Locale.cpp [arm] (priority: 12)
+[ 62% 18335/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LoadedArsc.cpp [arm] (priority: 12)
+In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
+In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
+In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
+In file included from frameworks/native/include/ftl/small_vector.h:20:
+frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
+  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
+      |        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
+In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
+In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
+In file included from frameworks/native/include/ftl/small_vector.h:20:
+frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
+  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
+      |        ^
+frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
+   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
+      |                                      ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
+      |                                                 ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+ 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
+      |                                         ^
+frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
+  285 |   std::variant<Static, Dynamic> vector_;
+      |                                 ^
+frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
+  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
+      |                                        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+2 warnings generated.
+[ 62% 18336/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleData.cpp [arm] (priority: 12)
+[ 62% 18337/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ misc.cpp [arm] (priority: 12)
+[ 62% 18338/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ NinePatch.cpp [arm] (priority: 12)
+[ 62% 18339/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ObbFile.cpp [arm] (priority: 12)
+[ 62% 18340/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PosixUtils.cpp [arm] (priority: 12)
+[ 62% 18341/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleDataLookup.cpp [arm] (priority: 12)
+[ 62% 18342/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PngChunkFilter.cpp [arm] (priority: 12)
+[ 62% 18343/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Png.cpp [arm] (priority: 12)
+[ 62% 18344/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ PngCrunch.cpp [arm] (priority: 12)
+[ 62% 18345/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTimer.cpp [arm] (priority: 12)
+[ 62% 18346/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceUtils.cpp [arm] (priority: 12)
+In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
+In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
+In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
+In file included from frameworks/native/include/ftl/small_vector.h:20:
+frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
+  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
+      |        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
+In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
+In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
+In file included from frameworks/native/include/ftl/small_vector.h:20:
+frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
+  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
+      |        ^
+frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
+   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
+      |                                      ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
+      |                                                 ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+ 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
+      |                                         ^
+frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
+  285 |   std::variant<Static, Dynamic> vector_;
+      |                                 ^
+frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
+  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
+      |                                        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+2 warnings generated.
+[ 62% 18347/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ StreamingZipInflater.cpp [arm] (priority: 12)
+[ 62% 18348/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTypes.cpp [arm] (priority: 12)
+[ 62% 18349/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ TypeWrappers.cpp [arm] (priority: 12)
+[ 62% 18350/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ StringPool.cpp [arm] (priority: 12)
+[ 62% 18351/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipFileRO.cpp [arm] (priority: 12)
+[ 62% 18352/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ Util.cpp [arm] (priority: 12)
+[ 62% 18353/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipUtils.cpp [arm] (priority: 12)
+[ 62% 18354/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupData.cpp [arm] (priority: 12)
+[ 62% 18355/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupHelpers.cpp [arm] (priority: 12)
+[ 62% 18356/29185] //frameworks/base/libs/androidfw:libandroidfw_pathutils static link libandroidfw_pathutils.a [arm] (priority: 12)
+[ 62% 18357/29185] //external/icu/libandroidicu/static_shim:libandroidicu_static clang++ shim.cpp (priority: 12)
+[ 62% 18358/29185] //bootable/recovery:libaosprecovery strip libaosprecovery.so (priority: 12)
+[ 62% 18359/29185] //frameworks/base/libs/androidfw:libandroidfw clang++ CursorWindow.cpp [arm] (priority: 12)
+[ 62% 18360/29185] //bootable/recovery:libaosprecovery clang++ install/get_args.cpp [arm] (priority: 12)
+[ 62% 18361/29185] //bootable/recovery:libaosprecovery clang++ install/adb_install.cpp [arm] (priority: 12)
+[ 62% 18362/29185] //bootable/recovery:libaosprecovery clang++ install/spl_check.cpp [arm] (priority: 12)
+[ 62% 18363/29185] //bootable/recovery:libaosprecovery clang++ install/wipe_data.cpp [arm] (priority: 12)
+[ 62% 18364/29185] //bootable/recovery:libaosprecovery clang++ install/install.cpp [arm] (priority: 12)
+[ 62% 18365/29185] //bootable/recovery:libaosprecovery clang++ install/wipe_device.cpp [arm] (priority: 12)
+[ 62% 18366/29185] //bootable/recovery:libaosprecovery clang++ install/set_metadata.cpp [arm] (priority: 12)
+bootable/recovery/install/set_metadata.cpp:40:8: warning: 'security_context_t' is deprecated [-Wdeprecated-declarations]
+   40 | static security_context_t selinux_context;
+      |        ^
+external/selinux/libselinux/include/selinux/selinux.h:19:17: note: 'security_context_t' has been explicitly marked deprecated here
+   19 | __attribute__ ((deprecated))
       |                 ^
-      |                 ==
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: place parentheses around the assignment to silence this warning
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |                     ^                                    
-      |               (                                          )
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: use '==' to turn this assignment into an equality comparison
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4664 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: place parentheses around the assignment to silence this warning
- 4664 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: use '==' to turn this assignment into an equality comparison
- 4664 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4715 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: place parentheses around the assignment to silence this warning
- 4715 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: use '==' to turn this assignment into an equality comparison
- 4715 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4742 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: place parentheses around the assignment to silence this warning
- 4742 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: use '==' to turn this assignment into an equality comparison
- 4742 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: place parentheses around the assignment to silence this warning
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                      ^                             
-      |                (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: use '==' to turn this assignment into an equality comparison
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                      ^
-      |                      ==
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 5690 |   while (c = *string++)
-      |          ~~^~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: place parentheses around the assignment to silence this warning
- 5690 |   while (c = *string++)
-      |            ^          
-      |          (            )
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: use '==' to turn this assignment into an equality comparison
- 5690 |   while (c = *string++)
-      |            ^
-      |            ==
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: place parentheses around the assignment to silence this warning
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |         ^                                               
-      |       (                                                 )
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: use '==' to turn this assignment into an equality comparison
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |         ^
-      |         ==
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: place parentheses around the assignment to silence this warning
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |         ^                                                
-      |       (                                                  )
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: use '==' to turn this assignment into an equality comparison
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |         ^
-      |         ==
-/usr/local/src/chet/src/bash/src/parse.y:6261:8: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
- 6261 |           msg = EOF_Reached ? _("syntax error: unexpected end of file") : _("syntax error");
-      |               ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6385 |   if (ea = expanding_alias ())
-      |       ~~~^~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: place parentheses around the assignment to silence this warning
- 6385 |   if (ea = expanding_alias ())
-      |          ^                   
-      |       (                      )
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: use '==' to turn this assignment into an equality comparison
- 6385 |   if (ea = expanding_alias ())
-      |          ^
-      |          ==
-12 warnings generated.
-[ 61% 18080/29185] //external/bc:bc clang src/history.c (priority: 12)
-[ 61% 18081/29185] //external/bc:bc clang src/file.c (priority: 12)
-[ 61% 18082/29185] //external/bc:bc clang src/lang.c (priority: 12)
-[ 61% 18083/29185] //external/bc:bc clang src/lex.c (priority: 12)
-[ 61% 18084/29185] //external/bc:bc clang src/library.c (priority: 12)
-[ 61% 18085/29185] //external/bc:bc clang src/main.c (priority: 12)
-[ 61% 18086/29185] //external/bc:bc clang src/opt.c (priority: 12)
-[ 61% 18087/29185] //external/bc:bc clang src/parse.c (priority: 12)
-[ 61% 18088/29185] //external/bc:bc clang src/num.c (priority: 12)
-[ 61% 18089/29185] //external/bc:bc clang src/rand.c (priority: 12)
-[ 61% 18090/29185] //external/bc:bc clang src/program.c (priority: 12)
-[ 61% 18091/29185] //external/bc:bc clang src/read.c (priority: 12)
-[ 61% 18092/29185] //external/bc:bc clang src/vector.c (priority: 12)
-[ 61% 18093/29185] //external/bc:bc clang gen/bc_help.c (priority: 12)
-[ 61% 18094/29185] //external/bc:bc clang gen/lib.c (priority: 12)
-[ 62% 18095/29185] //external/boringssl:bcm_object remove addrsig bcm_object.o [apex31] (priority: 12)
-[ 62% 18096/29185] //external/bc:bc clang src/vm.c (priority: 12)
-[ 62% 18097/29185] //system/extras/bootctl:bootctl clang++ bootctl.cpp (priority: 12)
-[ 62% 18098/29185] //system/core/healthd:charger clang++ charger.cpp (priority: 12)
-[ 62% 18099/29185] //build/make/tools:check_radio_versions embedded python archive [linux_glibc] (priority: 12)
-[ 62% 18100/29185] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
-[ 62% 18101/29185] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
-[ 62% 18102/29185] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bionic/libc/crtend_android/android_ramdisk_arm64_armv8-a/crtend_android.o (priority: 12)
-[ 62% 18103/29185] //external/e2fsprogs/misc:e2freefrag strip e2freefrag (priority: 12)
-[ 62% 18104/29185] //external/e2fsprogs/e2fsck:e2fsck clang e2fsck.c (priority: 12)
-[ 62% 18105/29185] //external/e2fsprogs/e2fsck:e2fsck clang super.c (priority: 12)
-[ 62% 18106/29185] //system/core/healthd:charger clang++ charger_utils.cpp (priority: 12)
-[ 62% 18107/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass1.c (priority: 12)
-[ 62% 18108/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass1b.c (priority: 12)
-[ 62% 18109/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass3.c (priority: 12)
-[ 62% 18110/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass2.c (priority: 12)
-[ 62% 18111/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass5.c (priority: 12)
-[ 62% 18112/29185] //external/e2fsprogs/e2fsck:e2fsck clang logfile.c (priority: 12)
-[ 62% 18113/29185] //external/e2fsprogs/e2fsck:e2fsck clang pass4.c (priority: 12)
-[ 62% 18114/29185] //external/e2fsprogs/e2fsck:e2fsck clang journal.c (priority: 12)
-[ 62% 18115/29185] //external/e2fsprogs/e2fsck:e2fsck clang revoke.c (priority: 12)
-[ 62% 18116/29185] //external/e2fsprogs/e2fsck:e2fsck clang recovery.c (priority: 12)
-[ 62% 18117/29185] //external/e2fsprogs/e2fsck:e2fsck clang badblocks.c (priority: 12)
-[ 62% 18118/29185] //external/e2fsprogs/e2fsck:e2fsck clang util.c (priority: 12)
-[ 62% 18119/29185] //external/e2fsprogs/e2fsck:e2fsck clang unix.c (priority: 12)
-[ 62% 18120/29185] //external/e2fsprogs/e2fsck:e2fsck clang dirinfo.c (priority: 12)
-[ 62% 18121/29185] //external/e2fsprogs/e2fsck:e2fsck clang dx_dirinfo.c (priority: 12)
-[ 62% 18122/29185] //external/e2fsprogs/e2fsck:e2fsck clang ehandler.c (priority: 12)
-[ 62% 18123/29185] //external/e2fsprogs/e2fsck:e2fsck clang problem.c (priority: 12)
-[ 62% 18124/29185] //external/e2fsprogs/e2fsck:e2fsck clang message.c (priority: 12)
-[ 62% 18125/29185] //external/e2fsprogs/e2fsck:e2fsck clang ea_refcount.c (priority: 12)
-[ 62% 18126/29185] //external/e2fsprogs/e2fsck:e2fsck clang quota.c (priority: 12)
-[ 62% 18127/29185] //external/e2fsprogs/e2fsck:e2fsck clang rehash.c (priority: 12)
-[ 62% 18128/29185] //external/e2fsprogs/e2fsck:e2fsck clang region.c (priority: 12)
-[ 62% 18129/29185] //external/e2fsprogs/e2fsck:e2fsck clang sigcatcher.c (priority: 12)
-[ 62% 18130/29185] //external/e2fsprogs/e2fsck:e2fsck clang readahead.c (priority: 12)
-[ 62% 18131/29185] //external/e2fsprogs/e2fsck:e2fsck clang extents.c (priority: 12)
-[ 62% 18132/29185] //external/e2fsprogs/e2fsck:e2fsck clang encrypted_files.c (priority: 12)
-[ 62% 18133/29185] //system/sepolicy:file_contexts.concat.tmp generate file_contexts.concat.tmp [common] (priority: 12)
-[ 62% 18134/29185] //external/e2fsprogs/contrib/android:e2fsdroid strip e2fsdroid (priority: 12)
-[ 62% 18135/29185] //system/sepolicy:file_contexts_bin_gen raw genrule.sbox.textproto [common] (priority: 12)
-[ 62% 18136/29185] //build/soong/scripts:gen_build_prop embedded python archive [linux_glibc] (priority: 12)
-[ 62% 18137/29185] //system/hwservicemanager:hwservicemanager clang++ service.cpp (priority: 12)
-[ 62% 18138/29185] //system/core/init:init_first_stage clang++ block_dev_initializer.cpp (priority: 12)
-[ 62% 18139/29185] //system/core/init:init_first_stage clang++ first_stage_console.cpp (priority: 12)
-[ 62% 18140/29185] //system/core/init:init_first_stage clang++ devices.cpp (priority: 12)
-[ 62% 18141/29185] //system/core/init:init_first_stage clang++ first_stage_main.cpp (priority: 12)
+1 warning generated.
+[ 62% 18367/29185] //bootable/recovery:libaosprecovery clang++ install/ZipUtil.cpp [arm] (priority: 12)
+[ 62% 18368/29185] //packages/modules/adb/proto:libapp_processes_protos_lite strip libapp_processes_protos_lite.so (priority: 12)
+[ 62% 18369/29185] //system/core/libasyncio:libasyncio strip libasyncio.so (priority: 12)
+[ 62% 18370/29185] //system/core/libasyncio:libasyncio static link libasyncio.a (priority: 12)
+[ 62% 18371/29185] //system/logging/logd:libaudit static link libaudit.a (priority: 12)
+[ 62% 18372/29185] //external/avb:libavb static link libavb.a (priority: 12)
+[ 62% 18373/29185] //external/avb:libavb_user clang libavb/boringssl/sha.c (priority: 12)
+[ 62% 18374/29185] //external/avb:libavb_user clang libavb/avb_chain_partition_descriptor.c (priority: 12)
+[ 62% 18375/29185] //external/avb:libavb_user clang libavb/avb_cmdline.c (priority: 12)
+[ 62% 18376/29185] //external/avb:libavb_user clang libavb/avb_crc32.c (priority: 12)
+[ 62% 18377/29185] //external/avb:libavb_user clang libavb/avb_crypto.c (priority: 12)
+[ 62% 18378/29185] //external/avb:libavb_user clang libavb/avb_descriptor.c (priority: 12)
+[ 62% 18379/29185] //external/avb:libavb_user clang libavb/avb_footer.c (priority: 12)
+[ 62% 18380/29185] //external/avb:libavb_user clang libavb/avb_hash_descriptor.c (priority: 12)
+[ 62% 18381/29185] //external/avb:libavb_user clang libavb/avb_hashtree_descriptor.c (priority: 12)
+[ 62% 18382/29185] //external/avb:libavb_user clang libavb/avb_kernel_cmdline_descriptor.c (priority: 12)
+[ 62% 18383/29185] //external/avb:libavb_user clang libavb/avb_property_descriptor.c (priority: 12)
+[ 62% 18384/29185] //external/avb:libavb_user clang libavb/avb_rsa.c (priority: 12)
+[ 62% 18385/29185] //external/avb:libavb_user clang libavb/avb_slot_verify.c (priority: 12)
+[ 62% 18386/29185] //external/avb:libavb_user clang libavb/avb_util.c (priority: 12)
+[ 63% 18387/29185] //external/avb:libavb_user clang libavb/avb_vbmeta_image.c (priority: 12)
+[ 63% 18388/29185] //external/avb:libavb_user clang libavb/avb_version.c (priority: 12)
+[ 63% 18389/29185] //external/avb:libavb_user clang libavb/avb_sysdeps_posix.c (priority: 12)
+[ 63% 18390/29185] //external/avb:libavb_user clang libavb_ab/avb_ab_flow.c (priority: 12)
+[ 63% 18391/29185] //system/apex/libs/libapexutil:libapexutil clang++ apexutil.cpp [linux_glibc] (priority: 12)
+[ 63% 18392/29185] //external/avb:libavb_user clang libavb_user/avb_user_verity.c (priority: 12)
+[ 63% 18393/29185] //external/avb:libavb_user clang libavb_user/avb_user_verification.c (priority: 12)
+[ 63% 18394/29185] //system/libbase:libbase strip libbase.so [apex31] (priority: 12)
+[ 63% 18395/29185] //system/libbase:libbase static link libbase.a (priority: 12)
+[ 63% 18396/29185] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
+[ 63% 18397/29185] //external/avb:libavb_user clang++ libavb_user/avb_ops_user.cpp (priority: 12)
+[ 63% 18398/29185] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
+[ 63% 18399/29185] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk202404.abidiff [arm] (priority: 12)
+[ 63% 18400/29185] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk.abidiff [arm] (priority: 12)
+[ 63% 18401/29185] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex35.abidiff [arm] (priority: 12)
+[ 63% 18402/29185] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex.abidiff [arm] (priority: 12)
+[ 63% 18403/29185] //hardware/interfaces/boot/aidl/client:libboot_control_client generate toc libboot_control_client.so (priority: 12)
+[ 63% 18404/29185] //hardware/interfaces/boot/aidl/client:libboot_control_client generate toc libboot_control_client.so (priority: 12)
+[ 63% 18405/29185] //bootable/recovery/bootloader_message:libbootloader_message generate toc libbootloader_message.so [arm] (priority: 12)
+[ 63% 18406/29185] //bootable/recovery/bootloader_message:libbootloader_message static link libbootloader_message.a (priority: 12)
+[ 63% 18407/29185] //bootable/recovery/bootloader_message:libbootloader_message generate toc libbootloader_message.so (priority: 12)
+[ 63% 18408/29185] //external/libbrillo:libbrillo static link libbrillo.a (priority: 12)
+[ 63% 18409/29185] //external/libbrillo:libbrillo-stream static link libbrillo-stream.a (priority: 12)
+[ 63% 18410/29185] //external/brotli:libbrotli clang c/common/constants.c (priority: 12)
+[ 63% 18411/29185] //external/brotli:libbrotli clang c/common/context.c (priority: 12)
+[ 63% 18412/29185] //external/brotli:libbrotli clang c/common/dictionary.c (priority: 12)
+[ 63% 18413/29185] //external/brotli:libbrotli clang c/common/platform.c (priority: 12)
+[ 63% 18414/29185] //external/brotli:libbrotli clang c/common/transform.c (priority: 12)
+[ 63% 18415/29185] //external/brotli:libbrotli clang c/dec/bit_reader.c (priority: 12)
+[ 63% 18416/29185] //external/brotli:libbrotli clang c/dec/decode.c (priority: 12)
+[ 63% 18417/29185] //external/brotli:libbrotli clang c/dec/huffman.c (priority: 12)
+[ 63% 18418/29185] //external/brotli:libbrotli clang c/dec/state.c (priority: 12)
+[ 63% 18419/29185] //system/core/healthd:libbatterymonitor clang++ BatteryMonitor.cpp (priority: 12)
+system/core/healthd/BatteryMonitor.cpp:132:30: warning: ISO C++ requires field designators to be specified in declaration order; field 'batteryChargeTimeToFullNowSeconds' will be initialized after field 'batteryStatus' [-Wreorder-init-list]
+  132 |             .batteryStatus = BatteryStatus::UNKNOWN,
+      |             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+system/core/healthd/BatteryMonitor.cpp:131:21: note: previous initialization for field 'batteryChargeTimeToFullNowSeconds' is here
+  131 |                     (int64_t)HealthInfo::BATTERY_CHARGE_TIME_TO_FULL_NOW_SECONDS_UNSUPPORTED,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 63% 18420/29185] //external/brotli:libbrotli clang c/enc/backward_references_hq.c (priority: 12)
+[ 63% 18421/29185] //external/brotli:libbrotli clang c/enc/backward_references.c (priority: 12)
+[ 63% 18422/29185] //external/brotli:libbrotli clang c/enc/bit_cost.c (priority: 12)
+[ 63% 18423/29185] //external/brotli:libbrotli clang c/enc/brotli_bit_stream.c (priority: 12)
+[ 63% 18424/29185] //external/brotli:libbrotli clang c/enc/block_splitter.c (priority: 12)
+[ 63% 18425/29185] //external/brotli:libbrotli clang c/enc/command.c (priority: 12)
+[ 63% 18426/29185] //external/brotli:libbrotli clang c/enc/cluster.c (priority: 12)
+[ 63% 18427/29185] //external/brotli:libbrotli clang c/enc/compress_fragment.c (priority: 12)
+[ 63% 18428/29185] //external/brotli:libbrotli clang c/enc/dictionary_hash.c (priority: 12)
+[ 63% 18429/29185] //external/brotli:libbrotli clang c/enc/compress_fragment_two_pass.c (priority: 12)
+[ 63% 18430/29185] //external/brotli:libbrotli clang c/enc/encoder_dict.c (priority: 12)
+[ 63% 18431/29185] //external/brotli:libbrotli clang c/enc/entropy_encode.c (priority: 12)
+[ 63% 18432/29185] //external/brotli:libbrotli clang c/enc/fast_log.c (priority: 12)
+[ 63% 18433/29185] //external/brotli:libbrotli clang c/enc/encode.c (priority: 12)
+[ 63% 18434/29185] //external/brotli:libbrotli clang c/enc/literal_cost.c (priority: 12)
+[ 63% 18435/29185] //external/brotli:libbrotli clang c/enc/memory.c (priority: 12)
+[ 63% 18436/29185] //external/brotli:libbrotli clang c/enc/histogram.c (priority: 12)
+[ 63% 18437/29185] //external/brotli:libbrotli clang c/enc/static_dict.c (priority: 12)
+[ 63% 18438/29185] //external/brotli:libbrotli clang c/enc/utf8_util.c (priority: 12)
+[ 63% 18439/29185] //external/brotli:libbrotli clang c/enc/metablock.c (priority: 12)
+[ 63% 18440/29185] //external/bsdiff:libbspatch static link libbspatch.a (priority: 12)
+[ 63% 18441/29185] //external/brotli:libbrotli static link libbrotli.a (priority: 12)
+[ 63% 18442/29185] //external/bzip2:libbz clang blocksort.c (priority: 12)
+[ 63% 18443/29185] //external/bzip2:libbz clang bzlib.c (priority: 12)
+[ 63% 18444/29185] //external/bzip2:libbz clang crctable.c (priority: 12)
+[ 63% 18445/29185] //external/bzip2:libbz clang decompress.c (priority: 12)
+[ 63% 18446/29185] //external/bzip2:libbz clang compress.c (priority: 12)
+[ 63% 18447/29185] //external/bzip2:libbz clang huffman.c (priority: 12)
+[ 63% 18448/29185] //external/bzip2:libbz clang randtable.c (priority: 12)
+[ 63% 18449/29185] //external/bzip2:libbz static link libbz.a (priority: 12)
+[ 63% 18450/29185] //bionic/libc:libc generate toc libc.so (priority: 12)
+[ 63% 18451/29185] //bionic/libc:libc static link libc.a (priority: 12)
+[ 63% 18452/29185] //bionic/libc:libc_dynamic_dispatch static link libc_dynamic_dispatch.a (priority: 12)
+[ 63% 18453/29185] //bionic/libc:libc_nomalloc static link libc_nomalloc.a (priority: 12)
+[ 63% 18454/29185] //bionic/libc:libc static link libc.a (priority: 12)
+[ 63% 18455/29185] //external/libcap:libcap generate toc libcap.so [arm] (priority: 12)
+[ 63% 18456/29185] //external/libcap:libcap generate toc libcap.so (priority: 12)
+[ 63% 18457/29185] //system/core/healthd:libcharger_sysprop static link libcharger_sysprop.a (priority: 12)
+[ 63% 18458/29185] //external/libcap:libcap static link libcap.a (priority: 12)
+[ 63% 18459/29185] //system/core/healthd:libcharger_sysprop sysprop charger.sysprop (priority: 12)
+[ 63% 18460/29185] //external/libchrome:libchrome generate toc libchrome.so (priority: 12)
+[ 63% 18461/29185] //external/libchrome:libchrome clang++ base/at_exit.cc [arm] (priority: 12)
+[ 63% 18462/29185] //external/libchrome:libchrome clang++ base/barrier_closure.cc [arm] (priority: 12)
 == out/error.log
