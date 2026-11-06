@@ -83,11 +83,23 @@ for c in sorted(cand):
         if not c.is_symlink(): freed += c.stat().st_size
         c.unlink(); log('  ', rel(c))
     except FileNotFoundError: pass
-for p in list(R.rglob('*')):      # drop dangling symlinks left behind
-    if p.is_symlink() and not p.exists():
-        log('   dangling symlink removed:', rel(p)); p.unlink()
+removed = set(cand)
+def link_target(p):
+    t = os.readlink(p)
+    return pathlib.Path(os.path.normpath((R / t.lstrip('/')) if t.startswith('/') else (p.parent / t)))
+sym_before = [p for p in files if p.is_symlink()]
+for p in sym_before:                # only symlinks that point at a removed file; absolute links resolve inside the ramdisk
+    if p.is_symlink() and link_target(p) in removed:
+        log('   symlink to removed file dropped:', rel(p)); p.unlink()
 log(f'freed (uncompressed): {mb(freed)}')
 
+after = [p for p in R.rglob('*') if p.is_file() or p.is_symlink()]
+dropped_links = len([p for p in sym_before if not os.path.lexists(p)])
+log(f'sanity: files {len(files)} -> {len(after)}, symlinks before {len(sym_before)}, dropped {dropped_links}')
+for must in ('init','system/bin/recovery','system/bin/init','sbin','system/bin/linker64','system/lib64/libc.so'):
+    if not os.path.lexists(R/must):
+        log('FATAL: essential path missing after slimming:', must); raise SystemExit(2)
+assert len(files) - len(after) == len(removed) + dropped_links, 'unexpected number of files removed'
 new_cpio = W/'new.cpio'
 cmd = "find . -print0 | LC_ALL=C sort -z | cpio --null -o -H newc -R 0:0 --quiet"
 with open(new_cpio,'wb') as o: subprocess.run(cmd, shell=True, cwd=R, stdout=o, check=True)
