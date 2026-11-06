@@ -1,9 +1,12 @@
-== Fri Nov  6 11:42:26 UTC 2026 run=42209149474 sha=212b3b9aa041edd04aa5c9cefd79a12af2d31980
+== Fri Nov  6 11:43:52 UTC 2026 run=42209149474 sha=212b3b9aa041edd04aa5c9cefd79a12af2d31980
                total        used        free      shared  buff/cache   available
-Mem:           15988       14477         296          12        1214         967
-Swap:          12287       11873         414
+Mem:           15988       14569         424           6         995        1113
+Swap:          12287       11970         317
 /dev/root       146G  107G   39G  74% /
 == oom/kill messages
+[ 2563.277725] soong_build invoked oom-killer: gfp_mask=0x100cca(GFP_HIGHUSER_MOVABLE), order=0, oom_score_adj=500
+[ 2563.278452] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=hosted-compute-agent.service,mems_allowed=0,global_oom,task_memcg=/system.slice/hosted-compute-agent.service,task=soong_build,pid=20768,uid=1001
+[ 2563.278518] Out of memory: Killed process 20768 (soong_build) total-vm:27201708kB, anon-rss:13627920kB, file-rss:6400kB, shmem-rss:0kB, UID:1001 pgtables:50996kB oom_score_adj:500
 == last 250 lines of build.log
 11:36:25 ************************************************************
 11:36:25 You are building on a machine with 15.6GB of RAM
