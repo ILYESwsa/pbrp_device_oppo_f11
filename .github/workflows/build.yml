@@ -45,21 +45,7 @@ jobs:
             BIG=/; BIGFREE=$ROOT_FREE
           fi
           echo "source tree on: $BIG ($BIGFREE GB free)"
-          # Soong analysis (soong_build) needs ~14 GB RAM: compressed-RAM swap first (no disk), small disk swap only if room
-          sudo modprobe zram 2>/dev/null && {
-            echo lz4 | sudo tee /sys/block/zram0/comp_algorithm >/dev/null 2>&1 || true
-            echo 12G | sudo tee /sys/block/zram0/disksize >/dev/null
-            sudo mkswap /dev/zram0 >/dev/null && sudo swapon -p 100 /dev/zram0 && echo "zram swap on"
-          } || echo "no zram"
-          if swapon --show | grep -q zram; then SZ=6; else SZ=12; fi
-          if [ "$BIG" = "/mnt" ]; then SWF=/mnt/swapfile; else SWF=/swapfile; fi
-          if [ "$BIGFREE" -gt $((SZ + 45)) ]; then
-            sudo fallocate -l ${SZ}G $SWF && sudo chmod 600 $SWF && sudo mkswap $SWF >/dev/null && sudo swapon -p 10 $SWF
-          fi
-          sudo sysctl vm.swappiness=100
           df -h
-          swapon --show
-          free -h
 
       - name: Install build dependencies
         shell: bash
@@ -121,6 +107,26 @@ jobs:
         run: |
           { df -h; swapon --show; free -m; du -sh "$GITHUB_WORKSPACE/aera/.repo" 2>/dev/null; du -sh --exclude=.repo "$GITHUB_WORKSPACE/aera" 2>/dev/null; } > "$GITHUB_WORKSPACE/build.log" 2>&1
           bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-push-log.sh"
+
+      - name: Add disk swap for soong_build
+        shell: bash
+        run: |
+          # soong_build was OOM-killed at ~13.6 GB RSS on this 16 GB runner; zram does not help (it lives in RAM),
+          # so use real disk swap, on /mnt (separate device) when it has room, else on the source disk.
+          sudo swapoff -a || true
+          sudo rm -f /swapfile /mnt/swapfile
+          ROOT_FREE=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
+          MNT_FREE=$(df --output=avail -BG /mnt 2>/dev/null | tail -1 | tr -dc 0-9)
+          echo "free GB: /=$ROOT_FREE /mnt=${MNT_FREE:-0}"
+          if [ "${MNT_FREE:-0}" -ge 26 ]; then SWF=/mnt/swapfile; FREE=$MNT_FREE; SZ=$(( FREE - 2 )); else SWF=/swapfile; FREE=$ROOT_FREE; SZ=$(( FREE - 14 )); fi
+          [ "$SZ" -gt 28 ] && SZ=28
+          if [ "$SZ" -ge 8 ]; then
+            sudo fallocate -l ${SZ}G $SWF && sudo chmod 600 $SWF && sudo mkswap $SWF >/dev/null && sudo swapon $SWF
+          fi
+          sudo systemctl stop docker.socket docker containerd snapd mysql postgresql apache2 nginx php8.1-fpm 2>/dev/null || true
+          sync; echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+          sudo sysctl vm.swappiness=100
+          df -h; swapon --show; free -h
 
       - name: Build recovery image
         shell: bash
