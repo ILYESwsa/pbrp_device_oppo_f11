@@ -1,124 +1,10 @@
-== Sat Nov  7 06:51:20 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
+== Sat Nov  7 06:53:22 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
                total        used        free      shared  buff/cache   available
-Mem:           15988        8058        7464          11         466        7562
-Swap:          28671        7064       21607
-/dev/root       146G  130G   17G  89% /
+Mem:           15988        5080        5430          13        5478       10527
+Swap:          28671         254       28417
+/dev/root       146G  131G   15G  90% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 78% 912/1162] regenerate globs shard 911 of 1024
-[ 78% 913/1162] regenerate globs shard 912 of 1024
-[ 78% 914/1162] regenerate globs shard 913 of 1024
-[ 78% 915/1162] regenerate globs shard 914 of 1024
-[ 78% 916/1162] regenerate globs shard 915 of 1024
-[ 78% 917/1162] regenerate globs shard 916 of 1024
-[ 79% 918/1162] regenerate globs shard 917 of 1024
-[ 79% 919/1162] regenerate globs shard 918 of 1024
-[ 79% 920/1162] regenerate globs shard 919 of 1024
-[ 79% 921/1162] regenerate globs shard 920 of 1024
-[ 79% 922/1162] regenerate globs shard 921 of 1024
-[ 79% 923/1162] regenerate globs shard 922 of 1024
-[ 79% 924/1162] regenerate globs shard 923 of 1024
-[ 79% 925/1162] regenerate globs shard 924 of 1024
-[ 79% 926/1162] regenerate globs shard 925 of 1024
-[ 79% 927/1162] regenerate globs shard 926 of 1024
-[ 79% 928/1162] regenerate globs shard 927 of 1024
-[ 79% 929/1162] regenerate globs shard 928 of 1024
-[ 80% 930/1162] regenerate globs shard 929 of 1024
-[ 80% 931/1162] regenerate globs shard 930 of 1024
-[ 80% 932/1162] regenerate globs shard 931 of 1024
-[ 80% 933/1162] regenerate globs shard 932 of 1024
-[ 80% 934/1162] regenerate globs shard 933 of 1024
-[ 80% 935/1162] regenerate globs shard 934 of 1024
-[ 80% 936/1162] regenerate globs shard 935 of 1024
-[ 80% 937/1162] regenerate globs shard 936 of 1024
-[ 80% 938/1162] regenerate globs shard 937 of 1024
-[ 80% 939/1162] regenerate globs shard 938 of 1024
-[ 80% 940/1162] regenerate globs shard 939 of 1024
-[ 80% 941/1162] regenerate globs shard 940 of 1024
-[ 81% 942/1162] regenerate globs shard 941 of 1024
-[ 81% 943/1162] regenerate globs shard 942 of 1024
-[ 81% 944/1162] regenerate globs shard 943 of 1024
-[ 81% 945/1162] regenerate globs shard 944 of 1024
-[ 81% 946/1162] regenerate globs shard 945 of 1024
-[ 81% 947/1162] regenerate globs shard 946 of 1024
-[ 81% 948/1162] regenerate globs shard 947 of 1024
-[ 81% 949/1162] regenerate globs shard 948 of 1024
-[ 81% 950/1162] regenerate globs shard 949 of 1024
-[ 81% 951/1162] regenerate globs shard 950 of 1024
-[ 81% 952/1162] regenerate globs shard 951 of 1024
-[ 82% 953/1162] regenerate globs shard 952 of 1024
-[ 82% 954/1162] regenerate globs shard 953 of 1024
-[ 82% 955/1162] regenerate globs shard 954 of 1024
-[ 82% 956/1162] regenerate globs shard 955 of 1024
-[ 82% 957/1162] regenerate globs shard 956 of 1024
-[ 82% 958/1162] regenerate globs shard 957 of 1024
-[ 82% 959/1162] regenerate globs shard 958 of 1024
-[ 82% 960/1162] regenerate globs shard 959 of 1024
-[ 82% 961/1162] regenerate globs shard 960 of 1024
-[ 82% 962/1162] regenerate globs shard 961 of 1024
-[ 82% 963/1162] regenerate globs shard 962 of 1024
-[ 82% 964/1162] regenerate globs shard 963 of 1024
-[ 83% 965/1162] regenerate globs shard 964 of 1024
-[ 83% 966/1162] regenerate globs shard 965 of 1024
-[ 83% 967/1162] regenerate globs shard 966 of 1024
-[ 83% 968/1162] regenerate globs shard 967 of 1024
-[ 83% 969/1162] regenerate globs shard 968 of 1024
-[ 83% 970/1162] regenerate globs shard 969 of 1024
-[ 83% 971/1162] regenerate globs shard 970 of 1024
-[ 83% 972/1162] regenerate globs shard 971 of 1024
-[ 83% 973/1162] regenerate globs shard 972 of 1024
-[ 83% 974/1162] regenerate globs shard 973 of 1024
-[ 83% 975/1162] regenerate globs shard 974 of 1024
-[ 83% 976/1162] regenerate globs shard 975 of 1024
-[ 84% 977/1162] regenerate globs shard 976 of 1024
-[ 84% 978/1162] regenerate globs shard 977 of 1024
-[ 84% 979/1162] regenerate globs shard 978 of 1024
-[ 84% 980/1162] regenerate globs shard 979 of 1024
-[ 84% 981/1162] regenerate globs shard 980 of 1024
-[ 84% 982/1162] regenerate globs shard 981 of 1024
-[ 84% 983/1162] regenerate globs shard 982 of 1024
-[ 84% 984/1162] regenerate globs shard 983 of 1024
-[ 84% 985/1162] regenerate globs shard 984 of 1024
-[ 84% 986/1162] regenerate globs shard 985 of 1024
-[ 84% 987/1162] regenerate globs shard 986 of 1024
-[ 85% 988/1162] regenerate globs shard 987 of 1024
-[ 85% 989/1162] regenerate globs shard 988 of 1024
-[ 85% 990/1162] regenerate globs shard 989 of 1024
-[ 85% 991/1162] regenerate globs shard 990 of 1024
-[ 85% 992/1162] regenerate globs shard 991 of 1024
-[ 85% 993/1162] regenerate globs shard 992 of 1024
-[ 85% 994/1162] regenerate globs shard 993 of 1024
-[ 85% 995/1162] regenerate globs shard 994 of 1024
-[ 85% 996/1162] regenerate globs shard 995 of 1024
-[ 85% 997/1162] regenerate globs shard 996 of 1024
-[ 85% 998/1162] regenerate globs shard 997 of 1024
-[ 85% 999/1162] regenerate globs shard 998 of 1024
-[ 86% 1000/1162] regenerate globs shard 999 of 1024
-[ 86% 1001/1162] regenerate globs shard 1000 of 1024
-[ 86% 1002/1162] regenerate globs shard 1001 of 1024
-[ 86% 1003/1162] regenerate globs shard 1002 of 1024
-[ 86% 1004/1162] regenerate globs shard 1003 of 1024
-[ 86% 1005/1162] regenerate globs shard 1004 of 1024
-[ 86% 1006/1162] regenerate globs shard 1005 of 1024
-[ 86% 1007/1162] regenerate globs shard 1006 of 1024
-[ 86% 1008/1162] regenerate globs shard 1007 of 1024
-[ 86% 1009/1162] regenerate globs shard 1008 of 1024
-[ 86% 1010/1162] regenerate globs shard 1009 of 1024
-[ 87% 1011/1162] regenerate globs shard 1010 of 1024
-[ 87% 1012/1162] regenerate globs shard 1011 of 1024
-[ 87% 1013/1162] regenerate globs shard 1012 of 1024
-[ 87% 1014/1162] regenerate globs shard 1013 of 1024
-[ 87% 1015/1162] regenerate globs shard 1014 of 1024
-[ 87% 1016/1162] regenerate globs shard 1015 of 1024
-[ 87% 1017/1162] regenerate globs shard 1016 of 1024
-[ 87% 1018/1162] regenerate globs shard 1017 of 1024
-[ 87% 1019/1162] regenerate globs shard 1018 of 1024
-[ 87% 1020/1162] regenerate globs shard 1019 of 1024
-[ 87% 1021/1162] regenerate globs shard 1020 of 1024
-[ 87% 1022/1162] regenerate globs shard 1021 of 1024
-[ 88% 1023/1162] regenerate globs shard 1022 of 1024
-[ 88% 1024/1162] regenerate globs shard 1023 of 1024
-[ 88% 1025/1162] compile out/host/linux-x86/bin/go/blueprint-deptools/pkg/github.com/google/blueprint/deptools.a
 [ 88% 1026/1162] compile out/host/linux-x86/bin/go/blueprint-metrics/pkg/github.com/google/blueprint/metrics.a
 [ 88% 1027/1162] compile out/host/linux-x86/bin/go/androidmk-parser/pkg/android/soong/androidmk/parser.a
 [ 88% 1028/1162] compile out/host/linux-x86/bin/go/blueprint-parser/pkg/github.com/google/blueprint/parser.a
@@ -255,4 +141,118 @@ Swap:          28671        7064       21607
 [ 99% 1159/1162] compile out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 99% 1160/1162] link out/host/linux-x86/bin/go/soong_build/obj/a.out
 [ 99% 1161/1162] cp out/host/linux-x86/bin/soong_build
+[100% 1162/1162] analyzing Android.bp files and generating ninja file at out/soong/build.twrp_CPH1911.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+out/build-twrp_CPH1911-cleanspec.ninja is missing, regenerating...
+out/build-twrp_CPH1911.ninja is missing, regenerating...
+[100% 1163/1163] initializing legacy Make module parser ...
+[ 95% 1164/1217] including out/soong/installs-twrp_CPH1911.mk ...
+[ 95% 1165/1217] including out/soong/Android-twrp_CPH1911.mk ...
+[ 95% 1166/1217] including art/Android.mk ...
+[ 95% 1167/1217] including bionic/Android.mk ...
+[ 95% 1168/1217] including bootable/recovery/Android.mk ...
+bootable/recovery/prebuilt/Android.mk:445: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh out/target/product/CPH1911/recovery/root/vendor/bin/hw 
+[ 96% 1169/1217] including build/make/target/board/Android.mk ...
+[ 96% 1170/1217] including build/make/target/product/gsi/Android.mk ...
+[ 96% 1171/1217] including build/make/target/product/security/Android.mk ...
+[ 96% 1172/1217] including build/make/tools/fs_config/Android.mk ...
+[ 96% 1173/1217] including development/build/Android.mk ...
+[ 96% 1174/1217] including development/gki/Android.mk ...
+[ 96% 1175/1217] including device/oppo/CPH1911/Android.mk ...
+[ 96% 1176/1217] including device/qcom/common/Android.mk ...
+[ 96% 1177/1217] including device/qcom/twrp-common/Android.mk ...
+[ 96% 1178/1217] including external/fmtlib/support/Android.mk ...
+[ 96% 1179/1217] including external/googletest/googletest/Android.mk ...
+[ 96% 1180/1217] including external/icu/icu4c/Android.mk ...
+[ 97% 1181/1217] including external/libusb/Android.mk ...
+[ 97% 1182/1217] including external/magisk-prebuilt/Android.mk ...
+[ 97% 1183/1217] including external/noto-fonts/emoji-compat-flatbuffers/Android.mk ...
+[ 97% 1184/1217] including external/python3/Android.mk ...
+[ 97% 1185/1217] including frameworks/base/Android.mk ...
+[ 97% 1186/1217] including frameworks/libs/binary_translation/Android.mk ...
+[ 97% 1187/1217] including hardware/interfaces/compatibility_matrices/Android.mk ...
+[ 97% 1188/1217] including hardware/interfaces/configstore/1.1/default/Android.mk ...
+[ 97% 1189/1217] including hardware/interfaces/graphics/composer/2.2/default/Android.mk ...
+[ 97% 1190/1217] including hardware/interfaces/keymaster/3.0/default/Android.mk ...
+[ 97% 1191/1217] including hardware/interfaces/media/1.0/xml/Android.mk ...
+[ 97% 1192/1217] including hardware/interfaces/soundtrigger/2.0/default/Android.mk ...
+[ 98% 1193/1217] including hardware/interfaces/soundtrigger/2.1/default/Android.mk ...
+[ 98% 1194/1217] including hardware/interfaces/tv/Android.mk ...
+[ 98% 1195/1217] including hardware/interfaces/wifi/supplicant/1.1/vts/Android.mk ...
+[ 98% 1196/1217] including hardware/libhardware/Android.mk ...
+[ 98% 1197/1217] including hardware/libhardware_legacy/Android.mk ...
+[ 98% 1198/1217] including packages/modules/Bluetooth/android/app/tests/Android.mk ...
+[ 98% 1199/1217] including packages/modules/Bluetooth/system/Android.mk ...
+[ 98% 1200/1217] including prebuilts/sdk/Android.mk ...
+[ 98% 1201/1217] including system/chre/Android.mk ...
+[ 98% 1202/1217] including system/core/fastboot/Android.mk ...
+[ 98% 1203/1217] including system/core/init/Android.mk ...
+[ 98% 1204/1217] including system/core/rootdir/Android.mk ...
+[ 99% 1205/1217] including system/extras/Android.mk ...
+[ 99% 1206/1217] including system/libfmq/benchmarks/Android.mk ...
+[ 99% 1207/1217] including system/libhidl/vintfdata/Android.mk ...
+[ 99% 1208/1217] including system/libvintf/Android.mk ...
+[ 99% 1209/1217] including system/sepolicy/Android.mk ...
+[ 99% 1210/1217] including system/timezone/Android.mk ...
+[ 99% 1211/1217] including system/tools/hidl/build/Android.mk ...
+[ 99% 1212/1217] including tools/platform-compat/Android.mk ...
+[ 99% 1213/1217] including tools/tradefederation/core/Android.mk ...
+[ 99% 1214/1217] including vendor/twrp/Android.mk ...
+[ 99% 1215/1217] including out/soong/late-twrp_CPH1911.mk ...
+[ 99% 1216/1217] finishing legacy Make module parsing ...
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/bin/catbox-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: test/catbox/tools/catbox-tradefed/README has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: test/app_compat/csuite/README.md has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:74: warning: test/vts/tools/vts-core-tradefed/README has no license metadata
+[100% 1217/1217] writing legacy Make module rules ...
+out/build-twrp_CPH1911-package.ninja is missing, regenerating...
+[ 99% 1218/1220] initializing packaging system ...
+[ 99% 1219/1220] including distdir.mk ...
+[100% 1220/1220] writing packaging rules ...
+Starting ninja...
+[  4% 1221/27163] //external/rust/crates/unicode-ident:libunicode_ident rustc src/lib.rs [linux_glibc] (priority: 292016)
+[  4% 1222/27163] //external/rust/crates/byteorder:libbyteorder rustc src/lib.rs [linux_glibc] (priority: 252016)
+[  4% 1223/27163] //external/rust/crates/cfg-if:libcfg_if rustc src/lib.rs [linux_glibc] (priority: 252016)
+[  4% 1224/27163] //external/rust/crates/libc:liblibc rustc src/lib.rs [linux_glibc] (priority: 252016)
+[  4% 1225/27163] //external/rust/crates/proc-macro2:libproc_macro2 rustc src/lib.rs [linux_glibc] (priority: 282016)
+[  4% 1226/27163] //external/rust/crates/quote:libquote rustc src/lib.rs [linux_glibc] (priority: 272016)
+[  4% 1227/27163] //prebuilts/rust:libcore.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/library/core/src/lib.rs (priority: 252014)
+[  4% 1228/27163] //external/rust/crates/getrandom:libgetrandom rustc src/lib.rs [linux_glibc] (priority: 242016)
+[  4% 1229/27163] //external/rust/crates/once_cell:libonce_cell rustc src/lib.rs [linux_glibc] (priority: 242016)
+[  4% 1230/27163] //prebuilts/rust:libcompiler_builtins.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/vendor/compiler_builtins/src/lib.rs (priority: 242014)
+[  4% 1231/27163] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/vendor/cfg-if/src/lib.rs (priority: 232014)
+[  4% 1232/27163] //prebuilts/rust:liblibc.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/vendor/libc/src/lib.rs (priority: 232014)
+[  4% 1233/27163] compile out/host/linux-x86/bin/go/soong-makedeps/pkg/android/soong/makedeps.a (priority: 225018)
+[  4% 1234/27163] compile out/host/linux-x86/bin/go/sbox/obj/sbox.a (priority: 225017)
+[  4% 1235/27163] link out/host/linux-x86/bin/go/sbox/obj/a.out (priority: 224017)
+[  4% 1236/27163] cp out/host/linux-x86/bin/sbox (priority: 223017)
+[  4% 1237/27163] //external/rust/crates/protobuf:copy_protobuf_build_out raw genrule.sbox.textproto (priority: 222018)
+[  4% 1238/27163] //external/rust/crates/protobuf:copy_protobuf_build_out generate version.rs (priority: 222017)
+[  4% 1239/27163] //external/rust/crates/either:libeither rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1240/27163] //external/rust/crates/fastrand:libfastrand rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1241/27163] //external/rust/crates/memchr:libmemchr rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1242/27163] //external/rust/crates/protobuf:libprotobuf cp out [linux_glibc] (priority: 222016)
+[  4% 1243/27163] //external/rust/crates/remove_dir_all:libremove_dir_all rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1244/27163] //prebuilts/rust:liballoc.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/library/alloc/src/lib.rs (priority: 222014)
+[  4% 1245/27163] //prebuilts/rust:libunwind.rust_sysroot rustc linux-x86/1.75.0/src/stdlibs/library/unwind/src/lib.rs (priority: 222014)
+[  4% 1246/27163] //external/rust/crates/aho-corasick:libaho_corasick rustc src/lib.rs [linux_glibc] (priority: 212016)
+[  4% 1247/27163] //external/rust/crates/anyhow:libanyhow rustc src/lib.rs [linux_glibc] (priority: 212016)
+[  4% 1248/27163] //external/rust/crates/log:liblog_rust rustc src/lib.rs [linux_glibc] (priority: 212016)
+[  4% 1249/27163] //external/rust/crates/syn:libsyn rustc src/lib.rs [linux_glibc] (priority: 262016)
+[  4% 1250/27163] //external/rust/crates/zerocopy-derive:libzerocopy_derive rustc src/lib.rs [linux_glibc] (priority: 252016)
+[  4% 1251/27163] //external/rust/crates/regex-syntax:libregex_syntax rustc src/lib.rs [linux_glibc] (priority: 212016)
+[  4% 1252/27163] //external/rust/crates/thiserror-impl:libthiserror_impl rustc src/lib.rs [linux_glibc] (priority: 242016)
+[  4% 1253/27163] //external/rust/crates/zerocopy:libzerocopy rustc src/lib.rs [linux_glibc] (priority: 242016)
+[  4% 1254/27163] //external/rust/crates/ahash:libahash rustc src/lib.rs [linux_glibc] (priority: 232016)
+[  4% 1255/27163] //external/rust/crates/thiserror:libthiserror rustc src/lib.rs [linux_glibc] (priority: 232016)
+[  4% 1256/27163] //external/rust/crates/hashbrown:libhashbrown rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1257/27163] //external/rust/crates/protobuf-support:libprotobuf_support rustc src/lib.rs [linux_glibc] (priority: 222016)
+[  4% 1258/27163] //external/rust/crates/tempfile:libtempfile rustc src/lib.rs [linux_glibc] (priority: 212016)
 == out/error.log
