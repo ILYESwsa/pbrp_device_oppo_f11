@@ -1,7 +1,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# TWRP 14.1 product for OPPO F11. Lunch: twrp_CPH1911-ap2a-eng (or twrp_CPH1911-eng)
+# TWRP 14.1 product for OPPO F11. Lunch: twrp_CPH1911-ap2a-eng
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)

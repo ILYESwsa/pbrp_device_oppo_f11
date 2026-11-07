@@ -16,7 +16,7 @@ repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 git clone -b android-14.1 https://github.com/ILYESwsa/pbrp_device_oppo_f11 device/oppo/CPH1911
 export ALLOW_MISSING_DEPENDENCIES=true LC_ALL=C
 source build/envsetup.sh
-lunch twrp_CPH1911-ap2a-eng || lunch twrp_CPH1911-eng
+lunch twrp_CPH1911-ap2a-eng
 mka adbd recoveryimage
 ```
 Add `F11_RAMBOOT_TEST=1` only for `fastboot boot` tests, never for flashing.

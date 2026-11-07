@@ -140,7 +140,7 @@ jobs:
           # Keep soong_build's Go heap small (it was OOM-killed at ~14 GB RSS)
           export GOGC=40 GOMEMLIMIT=11GiB GOMAXPROCS=2
           source build/envsetup.sh
-          (lunch twrp_CPH1911-ap2a-eng || lunch twrp_CPH1911-ap1a-eng || lunch twrp_CPH1911-eng)
+          lunch twrp_CPH1911-ap2a-eng
           # Snapshot memory + build log to the ci-logs branch every 2 minutes
           ( while true; do sleep 120; $PUSH; done ) &
           mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
