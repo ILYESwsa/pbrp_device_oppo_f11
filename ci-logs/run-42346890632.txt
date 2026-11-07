@@ -1,8 +1,8 @@
-== Sat Nov  7 06:49:19 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
+== Sat Nov  7 06:51:20 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
                total        used        free      shared  buff/cache   available
-Mem:           15988       15294         170           9         523         323
-Swap:          28671       12483       16188
-/dev/root       146G  128G   19G  88% /
+Mem:           15988        8058        7464          11         466        7562
+Swap:          28671        7064       21607
+/dev/root       146G  130G   17G  89% /
 == oom/kill messages
 == last 250 lines of build.log
 [ 78% 912/1162] regenerate globs shard 911 of 1024
