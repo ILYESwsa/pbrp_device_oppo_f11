@@ -1,21 +1,258 @@
-== Sat Nov  7 06:42:37 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
+== Sat Nov  7 06:45:15 UTC 2026 run=42346890632 sha=283b1e62e737f7c64126280ac7f96a4f44e9fce4
                total        used        free      shared  buff/cache   available
-Mem:           15988         752         294          50       14942       14839
-Swap:              0           0           0
-/dev/root       146G   98G   48G  68% /
+Mem:           15988       15207         219           5         561         428
+Swap:          28671        1365       27306
+/dev/root       146G  127G   20G  87% /
 == oom/kill messages
 == last 250 lines of build.log
-Filesystem       Size  Used Avail Use% Mounted on
-/dev/root        146G   98G   48G  68% /
-tmpfs            7.9G  172K  7.9G   1% /dev/shm
-tmpfs            3.2G  1.0M  3.2G   1% /run
-tmpfs            5.0M     0  5.0M   0% /run/lock
-efivarfs         128M   34K  128M   1% /sys/firmware/efi/efivars
-/dev/nvme0n1p15  105M  6.1M   99M   6% /boot/efi
-tmpfs            1.6G   12K  1.6G   1% /run/user/1001
-               total        used        free      shared  buff/cache   available
-Mem:           15988         687         188          50       15112       14903
-Swap:              0           0           0
-19G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/twrp/.repo
-62G	/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/twrp
+[ 78% 912/1162] regenerate globs shard 911 of 1024
+[ 78% 913/1162] regenerate globs shard 912 of 1024
+[ 78% 914/1162] regenerate globs shard 913 of 1024
+[ 78% 915/1162] regenerate globs shard 914 of 1024
+[ 78% 916/1162] regenerate globs shard 915 of 1024
+[ 78% 917/1162] regenerate globs shard 916 of 1024
+[ 79% 918/1162] regenerate globs shard 917 of 1024
+[ 79% 919/1162] regenerate globs shard 918 of 1024
+[ 79% 920/1162] regenerate globs shard 919 of 1024
+[ 79% 921/1162] regenerate globs shard 920 of 1024
+[ 79% 922/1162] regenerate globs shard 921 of 1024
+[ 79% 923/1162] regenerate globs shard 922 of 1024
+[ 79% 924/1162] regenerate globs shard 923 of 1024
+[ 79% 925/1162] regenerate globs shard 924 of 1024
+[ 79% 926/1162] regenerate globs shard 925 of 1024
+[ 79% 927/1162] regenerate globs shard 926 of 1024
+[ 79% 928/1162] regenerate globs shard 927 of 1024
+[ 79% 929/1162] regenerate globs shard 928 of 1024
+[ 80% 930/1162] regenerate globs shard 929 of 1024
+[ 80% 931/1162] regenerate globs shard 930 of 1024
+[ 80% 932/1162] regenerate globs shard 931 of 1024
+[ 80% 933/1162] regenerate globs shard 932 of 1024
+[ 80% 934/1162] regenerate globs shard 933 of 1024
+[ 80% 935/1162] regenerate globs shard 934 of 1024
+[ 80% 936/1162] regenerate globs shard 935 of 1024
+[ 80% 937/1162] regenerate globs shard 936 of 1024
+[ 80% 938/1162] regenerate globs shard 937 of 1024
+[ 80% 939/1162] regenerate globs shard 938 of 1024
+[ 80% 940/1162] regenerate globs shard 939 of 1024
+[ 80% 941/1162] regenerate globs shard 940 of 1024
+[ 81% 942/1162] regenerate globs shard 941 of 1024
+[ 81% 943/1162] regenerate globs shard 942 of 1024
+[ 81% 944/1162] regenerate globs shard 943 of 1024
+[ 81% 945/1162] regenerate globs shard 944 of 1024
+[ 81% 946/1162] regenerate globs shard 945 of 1024
+[ 81% 947/1162] regenerate globs shard 946 of 1024
+[ 81% 948/1162] regenerate globs shard 947 of 1024
+[ 81% 949/1162] regenerate globs shard 948 of 1024
+[ 81% 950/1162] regenerate globs shard 949 of 1024
+[ 81% 951/1162] regenerate globs shard 950 of 1024
+[ 81% 952/1162] regenerate globs shard 951 of 1024
+[ 82% 953/1162] regenerate globs shard 952 of 1024
+[ 82% 954/1162] regenerate globs shard 953 of 1024
+[ 82% 955/1162] regenerate globs shard 954 of 1024
+[ 82% 956/1162] regenerate globs shard 955 of 1024
+[ 82% 957/1162] regenerate globs shard 956 of 1024
+[ 82% 958/1162] regenerate globs shard 957 of 1024
+[ 82% 959/1162] regenerate globs shard 958 of 1024
+[ 82% 960/1162] regenerate globs shard 959 of 1024
+[ 82% 961/1162] regenerate globs shard 960 of 1024
+[ 82% 962/1162] regenerate globs shard 961 of 1024
+[ 82% 963/1162] regenerate globs shard 962 of 1024
+[ 82% 964/1162] regenerate globs shard 963 of 1024
+[ 83% 965/1162] regenerate globs shard 964 of 1024
+[ 83% 966/1162] regenerate globs shard 965 of 1024
+[ 83% 967/1162] regenerate globs shard 966 of 1024
+[ 83% 968/1162] regenerate globs shard 967 of 1024
+[ 83% 969/1162] regenerate globs shard 968 of 1024
+[ 83% 970/1162] regenerate globs shard 969 of 1024
+[ 83% 971/1162] regenerate globs shard 970 of 1024
+[ 83% 972/1162] regenerate globs shard 971 of 1024
+[ 83% 973/1162] regenerate globs shard 972 of 1024
+[ 83% 974/1162] regenerate globs shard 973 of 1024
+[ 83% 975/1162] regenerate globs shard 974 of 1024
+[ 83% 976/1162] regenerate globs shard 975 of 1024
+[ 84% 977/1162] regenerate globs shard 976 of 1024
+[ 84% 978/1162] regenerate globs shard 977 of 1024
+[ 84% 979/1162] regenerate globs shard 978 of 1024
+[ 84% 980/1162] regenerate globs shard 979 of 1024
+[ 84% 981/1162] regenerate globs shard 980 of 1024
+[ 84% 982/1162] regenerate globs shard 981 of 1024
+[ 84% 983/1162] regenerate globs shard 982 of 1024
+[ 84% 984/1162] regenerate globs shard 983 of 1024
+[ 84% 985/1162] regenerate globs shard 984 of 1024
+[ 84% 986/1162] regenerate globs shard 985 of 1024
+[ 84% 987/1162] regenerate globs shard 986 of 1024
+[ 85% 988/1162] regenerate globs shard 987 of 1024
+[ 85% 989/1162] regenerate globs shard 988 of 1024
+[ 85% 990/1162] regenerate globs shard 989 of 1024
+[ 85% 991/1162] regenerate globs shard 990 of 1024
+[ 85% 992/1162] regenerate globs shard 991 of 1024
+[ 85% 993/1162] regenerate globs shard 992 of 1024
+[ 85% 994/1162] regenerate globs shard 993 of 1024
+[ 85% 995/1162] regenerate globs shard 994 of 1024
+[ 85% 996/1162] regenerate globs shard 995 of 1024
+[ 85% 997/1162] regenerate globs shard 996 of 1024
+[ 85% 998/1162] regenerate globs shard 997 of 1024
+[ 85% 999/1162] regenerate globs shard 998 of 1024
+[ 86% 1000/1162] regenerate globs shard 999 of 1024
+[ 86% 1001/1162] regenerate globs shard 1000 of 1024
+[ 86% 1002/1162] regenerate globs shard 1001 of 1024
+[ 86% 1003/1162] regenerate globs shard 1002 of 1024
+[ 86% 1004/1162] regenerate globs shard 1003 of 1024
+[ 86% 1005/1162] regenerate globs shard 1004 of 1024
+[ 86% 1006/1162] regenerate globs shard 1005 of 1024
+[ 86% 1007/1162] regenerate globs shard 1006 of 1024
+[ 86% 1008/1162] regenerate globs shard 1007 of 1024
+[ 86% 1009/1162] regenerate globs shard 1008 of 1024
+[ 86% 1010/1162] regenerate globs shard 1009 of 1024
+[ 87% 1011/1162] regenerate globs shard 1010 of 1024
+[ 87% 1012/1162] regenerate globs shard 1011 of 1024
+[ 87% 1013/1162] regenerate globs shard 1012 of 1024
+[ 87% 1014/1162] regenerate globs shard 1013 of 1024
+[ 87% 1015/1162] regenerate globs shard 1014 of 1024
+[ 87% 1016/1162] regenerate globs shard 1015 of 1024
+[ 87% 1017/1162] regenerate globs shard 1016 of 1024
+[ 87% 1018/1162] regenerate globs shard 1017 of 1024
+[ 87% 1019/1162] regenerate globs shard 1018 of 1024
+[ 87% 1020/1162] regenerate globs shard 1019 of 1024
+[ 87% 1021/1162] regenerate globs shard 1020 of 1024
+[ 87% 1022/1162] regenerate globs shard 1021 of 1024
+[ 88% 1023/1162] regenerate globs shard 1022 of 1024
+[ 88% 1024/1162] regenerate globs shard 1023 of 1024
+[ 88% 1025/1162] compile out/host/linux-x86/bin/go/blueprint-deptools/pkg/github.com/google/blueprint/deptools.a
+[ 88% 1026/1162] compile out/host/linux-x86/bin/go/blueprint-metrics/pkg/github.com/google/blueprint/metrics.a
+[ 88% 1027/1162] compile out/host/linux-x86/bin/go/androidmk-parser/pkg/android/soong/androidmk/parser.a
+[ 88% 1028/1162] compile out/host/linux-x86/bin/go/blueprint-parser/pkg/github.com/google/blueprint/parser.a
+[ 88% 1029/1162] compile out/host/linux-x86/bin/go/blueprint-pathtools/pkg/github.com/google/blueprint/pathtools.a
+[ 88% 1030/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-flags/pkg/github.com/google/go-cmp/cmp/internal/flags.a
+[ 88% 1031/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-diff/pkg/github.com/google/go-cmp/cmp/internal/diff.a
+[ 88% 1032/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-function/pkg/github.com/google/go-cmp/cmp/internal/function.a
+[ 88% 1033/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-testprotos/pkg/github.com/google/go-cmp/cmp/internal/testprotos.a
+[ 88% 1034/1162] compile out/host/linux-x86/bin/go/blueprint-proptools/pkg/github.com/google/blueprint/proptools.a
+[ 89% 1035/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-teststructs/pkg/github.com/google/go-cmp/cmp/internal/teststructs.a
+[ 89% 1036/1162] compile out/host/linux-x86/bin/go/go-cmp-internal-value/pkg/github.com/google/go-cmp/cmp/internal/value.a
+[ 89% 1037/1162] compile out/host/linux-x86/bin/go/go-cmp/pkg/github.com/google/go-cmp/cmp.a
+[ 89% 1038/1162] compile out/host/linux-x86/bin/go/go-starlark-internal-spell/pkg/go.starlark.net/internal/spell.a
+[ 89% 1039/1162] compile out/host/linux-x86/bin/go/go-starlark-syntax/pkg/go.starlark.net/syntax.a
+[ 89% 1040/1162] compile out/host/linux-x86/bin/go/go-starlark-resolve/pkg/go.starlark.net/resolve.a
+[ 89% 1041/1162] compile out/host/linux-x86/bin/go/blueprint/pkg/github.com/google/blueprint.a
+[ 89% 1042/1162] compile out/host/linux-x86/bin/go/blueprint-bootstrap-bpdoc/pkg/github.com/google/blueprint/bootstrap/bpdoc.a
+[ 89% 1043/1162] compile out/host/linux-x86/bin/go/go-starlark-internal-compile/pkg/go.starlark.net/internal/compile.a
+[ 89% 1044/1162] compile out/host/linux-x86/bin/go/blueprint-bootstrap/pkg/github.com/google/blueprint/bootstrap.a
+[ 89% 1045/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-detrand/pkg/google.golang.org/protobuf/internal/detrand.a
+[ 90% 1046/1162] compile out/host/linux-x86/bin/go/golang-protobuf-android/pkg/google.golang.org/protobuf/android.a
+[ 90% 1047/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-errors/pkg/google.golang.org/protobuf/internal/errors.a
+[ 90% 1048/1162] compile out/host/linux-x86/bin/go/golang-protobuf-encoding-protowire/pkg/google.golang.org/protobuf/encoding/protowire.a
+[ 90% 1049/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-flags/pkg/google.golang.org/protobuf/internal/flags.a
+[ 90% 1050/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-pragma/pkg/google.golang.org/protobuf/internal/pragma.a
+[ 90% 1051/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-set/pkg/google.golang.org/protobuf/internal/set.a
+[ 90% 1052/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-version/pkg/google.golang.org/protobuf/internal/version.a
+[ 90% 1053/1162] compile out/host/linux-x86/bin/go/golang-protobuf-reflect-protoreflect/pkg/google.golang.org/protobuf/reflect/protoreflect.a
+[ 90% 1054/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-descfmt/pkg/google.golang.org/protobuf/internal/descfmt.a
+[ 90% 1055/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-descopts/pkg/google.golang.org/protobuf/internal/descopts.a
+[ 90% 1056/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-messageset/pkg/google.golang.org/protobuf/internal/encoding/messageset.a
+[ 90% 1057/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-genid/pkg/google.golang.org/protobuf/internal/genid.a
+[ 91% 1058/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-order/pkg/google.golang.org/protobuf/internal/order.a
+[ 91% 1059/1162] compile out/host/linux-x86/bin/go/go-starlark-starlark/pkg/go.starlark.net/starlark.a
+[ 91% 1060/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-strs/pkg/google.golang.org/protobuf/internal/strs.a
+[ 91% 1061/1162] compile out/host/linux-x86/bin/go/go-starlark-starlarkstruct/pkg/go.starlark.net/starlarkstruct.a
+[ 91% 1062/1162] compile out/host/linux-x86/bin/go/go-starlark-starlarkjson/pkg/go.starlark.net/starlarkjson.a
+[ 91% 1063/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-text/pkg/google.golang.org/protobuf/internal/encoding/text.a
+[ 91% 1064/1162] compile out/host/linux-x86/bin/go/go-starlark-starlarktest/pkg/go.starlark.net/starlarktest.a
+[ 91% 1065/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-defval/pkg/google.golang.org/protobuf/internal/encoding/defval.a
+[ 91% 1066/1162] compile out/host/linux-x86/bin/go/golang-protobuf-runtime-protoiface/pkg/google.golang.org/protobuf/runtime/protoiface.a
+[ 91% 1067/1162] compile out/host/linux-x86/bin/go/golang-protobuf-reflect-protoregistry/pkg/google.golang.org/protobuf/reflect/protoregistry.a
+[ 91% 1068/1162] compile out/host/linux-x86/bin/go/loadplugins/obj/loadplugins.a
+[ 91% 1069/1162] compile out/host/linux-x86/bin/go/golang-protobuf-proto/pkg/google.golang.org/protobuf/proto.a
+[ 92% 1070/1162] link out/host/linux-x86/bin/go/loadplugins/obj/a.out
+[ 92% 1071/1162] compile out/host/linux-x86/bin/go/golang-protobuf-encoding-prototext/pkg/google.golang.org/protobuf/encoding/prototext.a
+[ 92% 1072/1162] cp out/host/linux-x86/bin/loadplugins
+[ 92% 1073/1162] compile out/host/linux-x86/bin/go/soong/pkg/android/soong.a
+[ 92% 1074/1162] compile out/host/linux-x86/bin/go/soong-android-allowlists/pkg/android/soong/android/allowlists.a
+[ 92% 1075/1162] compile out/host/linux-x86/bin/go/soong-cquery/pkg/android/soong/bazel/cquery.a
+[ 92% 1076/1162] compile out/host/linux-x86/bin/go/soong-remoteexec/pkg/android/soong/remoteexec.a
+[ 92% 1077/1162] compile out/host/linux-x86/bin/go/soong-response/pkg/android/soong/response.a
+[ 92% 1078/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-filedesc/pkg/google.golang.org/protobuf/internal/filedesc.a
+[ 92% 1079/1162] compile out/host/linux-x86/bin/go/soong-starlark/pkg/android/soong/starlark_import.a
+[ 92% 1080/1162] compile out/host/linux-x86/bin/go/soong-starlark-format/pkg/android/soong/starlark_fmt.a
+[ 93% 1081/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-tag/pkg/google.golang.org/protobuf/internal/encoding/tag.a
+[ 93% 1082/1162] create out/host/linux-x86/bin/go/soong_build/gen/plugin.go
+[ 93% 1083/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-impl/pkg/google.golang.org/protobuf/internal/impl.a
+[ 93% 1084/1162] compile out/host/linux-x86/bin/go/golang-protobuf-internal-filetype/pkg/google.golang.org/protobuf/internal/filetype.a
+[ 93% 1085/1162] compile out/host/linux-x86/bin/go/golang-protobuf-runtime-protoimpl/pkg/google.golang.org/protobuf/runtime/protoimpl.a
+[ 93% 1086/1162] compile out/host/linux-x86/bin/go/sbox_proto/pkg/android/soong/cmd/sbox/sbox_proto.a
+[ 93% 1087/1162] compile out/host/linux-x86/bin/go/soong-android_team_proto/pkg/android/soong/android/team_proto.a
+[ 93% 1088/1162] compile out/host/linux-x86/bin/go/soong-testing-code_metadata_internal_proto/pkg/android/soong/testing/code_metadata_internal_proto.a
+[ 93% 1089/1162] compile out/host/linux-x86/bin/go/bazel_build_proto/pkg/prebuilts/bazel/common/proto/build.a
+[ 93% 1090/1162] compile out/host/linux-x86/bin/go/soong-testing-test_spec_proto/pkg/android/soong/testing/test_spec_proto.a
+[ 93% 1091/1162] compile out/host/linux-x86/bin/go/soong-ui-bazel_metrics_proto/pkg/android/soong/ui/metrics/bazel_metrics_proto.a
+[ 93% 1092/1162] compile out/host/linux-x86/bin/go/bazel_analysis_v2_proto/pkg/prebuilts/bazel/common/proto/analysis_v2.a
+[ 94% 1093/1162] compile out/host/linux-x86/bin/go/soong-ui-bp2build_metrics_proto/pkg/android/soong/ui/metrics/bp2build_metrics_proto.a
+[ 94% 1094/1162] compile out/host/linux-x86/bin/go/soong-ui-metrics_proto/pkg/android/soong/ui/metrics/metrics_proto.a
+[ 94% 1095/1162] compile out/host/linux-x86/bin/go/soong-bazel/pkg/android/soong/bazel.a
+[ 94% 1096/1162] compile out/host/linux-x86/bin/go/soong-ui-metrics_upload_proto/pkg/android/soong/ui/metrics/upload_proto.a
+[ 94% 1097/1162] compile out/host/linux-x86/bin/go/soong-shared/pkg/android/soong/shared.a
+[ 94% 1098/1162] compile out/host/linux-x86/bin/go/soong-android-soongconfig/pkg/android/soong/android/soongconfig.a
+[ 94% 1099/1162] compile out/host/linux-x86/bin/go/soong-ui-mk_metrics_proto/pkg/android/soong/ui/metrics/mk_metrics_proto.a
+[ 94% 1100/1162] compile out/host/linux-x86/bin/go/soong-ui-metrics/pkg/android/soong/ui/metrics.a
+[ 94% 1101/1162] compile out/host/linux-x86/bin/go/soong-android/pkg/android/soong/android.a
+[ 94% 1102/1162] compile out/host/linux-x86/bin/go/kernel-config-soong-rules/pkg/android/soong/kernel/configs.a
+[ 94% 1103/1162] compile out/host/linux-x86/bin/go/soong-aconfig/pkg/android/soong/aconfig.a
+[ 95% 1104/1162] compile out/host/linux-x86/bin/go/soong-bloaty/pkg/android/soong/bloaty.a
+[ 95% 1105/1162] compile out/host/linux-x86/bin/go/soong-aidl-library/pkg/android/soong/aidl_library.a
+[ 95% 1106/1162] compile out/host/linux-x86/bin/go/soong-dexpreopt/pkg/android/soong/dexpreopt.a
+[ 95% 1107/1162] compile out/host/linux-x86/bin/go/soong-cc-config/pkg/android/soong/cc/config.a
+[ 95% 1108/1162] compile out/host/linux-x86/bin/go/soong-fuzz/pkg/android/soong/fuzz.a
+[ 95% 1109/1162] compile out/host/linux-x86/bin/go/soong-icu/pkg/android/soong/icu.a
+[ 95% 1110/1162] compile out/host/linux-x86/bin/go/soong-genrule/pkg/android/soong/genrule.a
+[ 95% 1111/1162] compile out/host/linux-x86/bin/go/soong-java-config/pkg/android/soong/java/config.a
+[ 95% 1112/1162] compile out/host/linux-x86/bin/go/soong-java-config-error_prone/pkg/android/soong/java/config/error_prone.a
+[ 95% 1113/1162] compile out/host/linux-x86/bin/go/soong-fs_config/pkg/android/soong/fs_config.a
+[ 95% 1114/1162] compile out/host/linux-x86/bin/go/soong-libchrome/pkg/android/soong/external/libchrome.a
+[ 95% 1115/1162] compile out/host/linux-x86/bin/go/soong-multitree/pkg/android/soong/multitree.a
+[ 96% 1116/1162] compile out/host/linux-x86/bin/go/soong-provenance/pkg/android/soong/provenance.a
+[ 96% 1117/1162] compile out/host/linux-x86/bin/go/soong-phony/pkg/android/soong/phony.a
+[ 96% 1118/1162] compile out/host/linux-x86/bin/go/soong-snapshot/pkg/android/soong/snapshot.a
+[ 96% 1119/1162] compile out/host/linux-x86/bin/go/soong-rust-config/pkg/android/soong/rust/config.a
+[ 96% 1120/1162] compile out/host/linux-x86/bin/go/soong-testing/pkg/android/soong/testing.a
+[ 96% 1121/1162] compile out/host/linux-x86/bin/go/soong-etc/pkg/android/soong/etc.a
+[ 96% 1122/1162] compile out/host/linux-x86/bin/go/soong-tradefed/pkg/android/soong/tradefed.a
+[ 96% 1123/1162] compile out/host/linux-x86/bin/go/soong-ca-certificates/pkg/android/soong/system/ca-certificates.a
+[ 96% 1124/1162] compile out/host/linux-x86/bin/go/soong-ca-certificates-apex/pkg/android/soong/external/conscrypt/apex/ca-certificates.a
+[ 96% 1125/1162] compile out/host/linux-x86/bin/go/soong-twrp-generator/pkg/twrp/soong/generator.a
+[ 96% 1126/1162] compile out/host/linux-x86/bin/go/soong-xml/pkg/android/soong/xml.a
+[ 96% 1127/1162] compile out/host/linux-x86/bin/go/vintf-compatibility-matrix-soong-rules/pkg/android/soong/vintf-compatibility-matrix.a
+[ 97% 1128/1162] compile out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a
+[ 97% 1129/1162] compile out/host/linux-x86/bin/go/soong-android-sdk/pkg/android/soong/android_sdk.a
+[ 97% 1130/1162] compile out/host/linux-x86/bin/go/soong-bpf/pkg/android/soong/bpf.a
+[ 97% 1131/1162] compile out/host/linux-x86/bin/go/soong-clang/pkg/android/soong/external/clang.a
+[ 97% 1132/1162] compile out/host/linux-x86/bin/go/soong-clang-prebuilts/pkg/android/soong/prebuilts/clang/host/linux-x86/clangprebuilts.a
+[ 97% 1133/1162] compile out/host/linux-x86/bin/go/soong-libaosprecovery_defaults/pkg/bootable/recovery/libaosprecovery.a
+[ 97% 1134/1162] compile out/host/linux-x86/bin/go/soong-kernel/pkg/android/soong/kernel.a
+[ 97% 1135/1162] compile out/host/linux-x86/bin/go/soong-libminuitwrp_defaults/pkg/bootable/recovery/minuitwrp.a
+[ 97% 1136/1162] compile out/host/linux-x86/bin/go/soong-libguitwrp_defaults/pkg/bootable/recovery/gui.a
+[ 97% 1137/1162] compile out/host/linux-x86/bin/go/soong-llvm/pkg/android/soong/external/llvm.a
+[ 97% 1138/1162] compile out/host/linux-x86/bin/go/soong-linkerconfig/pkg/android/soong/linkerconfig.a
+[ 98% 1139/1162] compile out/host/linux-x86/bin/go/soong-python/pkg/android/soong/python.a
+[ 98% 1140/1162] compile out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
+[ 98% 1141/1162] compile out/host/linux-x86/bin/go/soong-rust/pkg/android/soong/rust.a
+[ 98% 1142/1162] compile out/host/linux-x86/bin/go/soong-rust-prebuilts/pkg/android/soong/prebuilts/rust/rustprebuilts.a
+[ 98% 1143/1162] compile out/host/linux-x86/bin/go/soong-vold_defaults/pkg/system/vold.a
+[ 98% 1144/1162] compile out/host/linux-x86/bin/go/soong-java/pkg/android/soong/java.a
+[ 98% 1145/1162] compile out/host/linux-x86/bin/go/hidl-soong-rules/pkg/android/soong/hidl.a
+[ 98% 1146/1162] compile out/host/linux-x86/bin/go/aidl-soong-rules/pkg/android/soong/aidl.a
+[ 98% 1147/1162] compile out/host/linux-x86/bin/go/soong-aconfig-codegen/pkg/android/soong/aconfig/codegen.a
+[ 98% 1148/1162] compile out/host/linux-x86/bin/go/soong-csuite/pkg/android/soong/csuite.a
+[ 98% 1149/1162] compile out/host/linux-x86/bin/go/soong-api/pkg/android/soong/api.a
+[ 98% 1150/1162] compile out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
+[ 99% 1151/1162] compile out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
+[ 99% 1152/1162] compile out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
+[ 99% 1153/1162] compile out/host/linux-x86/bin/go/soong-selinux/pkg/android/soong/selinux.a
+[ 99% 1154/1162] compile out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
+[ 99% 1155/1162] compile out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
+[ 99% 1156/1162] compile out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
+[ 99% 1157/1162] compile out/host/linux-x86/bin/go/soong-bp2build/pkg/android/soong/bp2build.a
+[ 99% 1158/1162] compile out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
+[ 99% 1159/1162] compile out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
+[ 99% 1160/1162] link out/host/linux-x86/bin/go/soong_build/obj/a.out
+[ 99% 1161/1162] cp out/host/linux-x86/bin/soong_build
 == out/error.log
