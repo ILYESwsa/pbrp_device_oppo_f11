@@ -22,13 +22,8 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a73
+TARGET_SUPPORTS_64_BIT_APPS := true
 
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := generic
-TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := CPH1911
@@ -98,6 +93,19 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
+
+# Reference-tree flags (lighthouse/infiniti) that apply here
+AERA_FORCE_PREBUILT_KERNEL := 1
+AERA_NO_TREBLE_COMPATIBILITY_CHECK := 1
+AERA_OPTIONS_LIST_NUM := 6
+# MediaTek: the health-service battery path is broken on MTK (AERA build notes), use the legacy sysfs path
+TW_USE_LEGACY_BATTERY_SERVICES := true
+
+# Debug tools in the recovery (same as the reference trees)
+TARGET_RECOVERY_DEVICE_MODULES += debuggerd
+TARGET_RECOVERY_DEVICE_MODULES += strace
+RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
+RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 
 # Decryption: OFF (boot-only bring-up)
 AERA_INCLUDE_CRYPTO := false

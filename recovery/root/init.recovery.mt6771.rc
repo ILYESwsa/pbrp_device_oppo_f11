@@ -24,3 +24,14 @@ on post-fs
 on boot
     chown system system /proc/touchpanel/tp_fw_update
     write /proc/touchpanel/tp_fw_update 1
+
+# --- bring-up debug logger (keeps logs on /cache across a bootloop)
+service aera_dbglog /system/bin/sh /system/bin/aera_dbglog.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    start aera_dbglog
