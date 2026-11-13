@@ -1,8 +1,8 @@
-== Fri Nov 13 21:11:59 UTC 2026 run=43502557089 sha=48d1c297cbf2759eb48e7dae252c2bdbe9e99954
+== Fri Nov 13 21:14:01 UTC 2026 run=43502557089 sha=48d1c297cbf2759eb48e7dae252c2bdbe9e99954
                total        used        free      shared  buff/cache   available
-Mem:           15987       15177         168           8         641         455
-Swap:          28671       14514       14157
-/dev/root       146G  126G   20G  87% /
+Mem:           15987        5066        5380           9        5540       10564
+Swap:          28671         304       28367
+/dev/root       146G  128G   18G  88% /
 == oom/kill messages
 == last 250 lines of build.log
 20:57:49 ************************************************************
@@ -161,4 +161,95 @@ Running globs...
 [ 97% 128/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 98% 129/131] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
 [ 99% 130/131] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/soong_build
+[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/build.twrp_CPH1911.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
+Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-cleanspec.ninja is missing, regenerating...
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911.ninja is missing, regenerating...
+[100% 132/132] initializing legacy Make module parser ...
+[ 91% 133/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/installs-twrp_CPH1911.mk ...
+[ 92% 134/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/Android-twrp_CPH1911.mk ...
+[ 93% 135/145] including build/make/target/board/android-info.mk ...
+[ 93% 136/145] including art/Android.mk ...
+[ 94% 137/145] including bootable/recovery/Android.mk ...
+bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/vendor/bin/hw 
+[ 95% 138/145] including device/oppo/CPH1911/Android.mk ...
+[ 95% 139/145] including device/qcom/twrp-common/Android.mk ...
+[ 96% 140/145] including external/magisk-prebuilt/Android.mk ...
+[ 97% 141/145] including hardware/qcom/wlan/Android.mk ...
+[ 97% 142/145] including vendor/twrp/Android.mk ...
+[ 98% 143/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/late-twrp_CPH1911.mk ...
+[ 99% 144/145] finishing legacy Make module parsing ...
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/catbox-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+[100% 145/145] writing legacy Make module rules ...
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-package.ninja is missing, regenerating...
+[ 98% 146/148] initializing packaging system ...
+[ 99% 147/148] including distdir.mk ...
+[100% 148/148] writing packaging rules ...
+Starting ninja...
+[  0% 149/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-deptools/linux_glibc_x86_64/pkg/github.com/google/blueprint/deptools.a (priority: 76)
+[  0% 150/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pathtools/linux_glibc_x86_64/pkg/github.com/google/blueprint/pathtools.a (priority: 75)
+[  0% 151/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/android-archive-zip/linux_glibc_x86_64/pkg/android/soong/third_party/zip.a (priority: 76)
+[  0% 152/25207] //external/icu/libandroidicuinit:libandroidicuinit clang++ android_icu_init.cpp [linux_glibc] (priority: 75)
+[  0% 153/25207] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library [linux_glibc] (priority: 75)
+[  0% 154/25207] //external/icu/libandroidicuinit:libandroidicuinit clang++ IcuRegistration.cpp [linux_glibc] (priority: 75)
+[  0% 155/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-jar/linux_glibc_x86_64/pkg/android/soong/jar.a (priority: 75)
+[  0% 156/25207] //external/icu/icu4c/source:libicuuc_stubdata clang++ stubdata/stubdata.cpp [linux_glibc] (priority: 75)
+[  0% 157/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-response/linux_glibc_x86_64/pkg/android/soong/response.a (priority: 75)
+[  0% 158/25207] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-detrand/linux_glibc_x86_64/pkg/google.golang.org/protobuf/internal/detrand.a (priority: 74)
+[  0% 159/25207] //external/icu/libandroidicuinit:libandroidicuinit static link libandroidicuinit.a [linux_glibc] (priority: 74)
+[  0% 160/25207] //prebuilts/clang/host/linux-x86:libc++ generate toc libc++.so [linux_glibc] (priority: 74)
+[  0% 161/25207] //external/icu/icu4c/source/common:libicuuc clang++ appendable.cpp [linux_glibc] (priority: 74)
+[  0% 162/25207] //external/icu/icu4c/source/common:libicuuc clang++ bmpset.cpp [linux_glibc] (priority: 74)
+[  0% 163/25207] //external/icu/icu4c/source/common:libicuuc clang++ brkeng.cpp [linux_glibc] (priority: 74)
+[  0% 164/25207] //external/icu/icu4c/source/common:libicuuc clang++ bytesinkutil.cpp [linux_glibc] (priority: 74)
+[  0% 165/25207] //external/icu/icu4c/source/common:libicuuc clang++ brkiter.cpp [linux_glibc] (priority: 74)
+[  0% 166/25207] //external/icu/icu4c/source/common:libicuuc clang++ bytestream.cpp [linux_glibc] (priority: 74)
+[  0% 167/25207] //external/icu/icu4c/source/common:libicuuc clang++ bytestrie.cpp [linux_glibc] (priority: 74)
+[  0% 168/25207] //external/icu/icu4c/source/common:libicuuc clang++ bytestriebuilder.cpp [linux_glibc] (priority: 74)
+[  0% 169/25207] //external/icu/icu4c/source/common:libicuuc clang++ bytestrieiterator.cpp [linux_glibc] (priority: 74)
+[  0% 170/25207] //external/icu/icu4c/source/common:libicuuc clang++ caniter.cpp [linux_glibc] (priority: 74)
+[  0% 171/25207] //external/icu/icu4c/source/common:libicuuc clang++ characterproperties.cpp [linux_glibc] (priority: 74)
+[  0% 172/25207] //external/icu/icu4c/source/common:libicuuc clang++ chariter.cpp [linux_glibc] (priority: 74)
+[  0% 173/25207] //external/icu/icu4c/source/common:libicuuc clang++ charstr.cpp [linux_glibc] (priority: 74)
+[  0% 174/25207] //external/icu/icu4c/source/common:libicuuc clang++ cmemory.cpp [linux_glibc] (priority: 74)
+[  0% 175/25207] //external/icu/icu4c/source/common:libicuuc clang++ cstring.cpp [linux_glibc] (priority: 74)
+[  0% 176/25207] //external/icu/icu4c/source/common:libicuuc clang++ cwchar.cpp [linux_glibc] (priority: 74)
+[  0% 177/25207] //external/icu/icu4c/source/common:libicuuc clang++ cstr.cpp [linux_glibc] (priority: 74)
+[  0% 178/25207] //external/icu/icu4c/source/common:libicuuc clang++ dictionarydata.cpp [linux_glibc] (priority: 74)
+[  0% 179/25207] //external/icu/icu4c/source/common:libicuuc clang++ dtintrv.cpp [linux_glibc] (priority: 74)
+[  0% 180/25207] //external/icu/icu4c/source/common:libicuuc clang++ dictbe.cpp [linux_glibc] (priority: 74)
+[  0% 181/25207] //external/icu/icu4c/source/common:libicuuc clang++ edits.cpp [linux_glibc] (priority: 74)
+[  0% 182/25207] //external/icu/icu4c/source/common:libicuuc clang++ errorcode.cpp [linux_glibc] (priority: 74)
+[  0% 183/25207] //external/icu/icu4c/source/common:libicuuc clang++ emojiprops.cpp [linux_glibc] (priority: 74)
+[  0% 184/25207] //external/icu/icu4c/source/common:libicuuc clang++ filteredbrk.cpp [linux_glibc] (priority: 74)
+[  0% 185/25207] //external/icu/icu4c/source/common:libicuuc clang++ filterednormalizer2.cpp [linux_glibc] (priority: 74)
+[  0% 186/25207] //external/icu/icu4c/source/common:libicuuc clang++ icuplug.cpp [linux_glibc] (priority: 74)
+[  0% 187/25207] //external/icu/icu4c/source/common:libicuuc clang++ icudataver.cpp [linux_glibc] (priority: 74)
+[  0% 188/25207] //external/icu/icu4c/source/common:libicuuc clang++ loadednormalizer2impl.cpp [linux_glibc] (priority: 74)
+[  0% 189/25207] //external/icu/icu4c/source/common:libicuuc clang++ localebuilder.cpp [linux_glibc] (priority: 74)
+[  0% 190/25207] //external/icu/icu4c/source/common:libicuuc clang++ localematcher.cpp [linux_glibc] (priority: 74)
+[  0% 191/25207] //external/icu/icu4c/source/common:libicuuc clang++ localeprioritylist.cpp [linux_glibc] (priority: 74)
+[  0% 192/25207] //external/icu/icu4c/source/common:libicuuc clang++ locavailable.cpp [linux_glibc] (priority: 74)
+[  0% 193/25207] //external/icu/icu4c/source/common:libicuuc clang++ locbased.cpp [linux_glibc] (priority: 74)
+[  0% 194/25207] //external/icu/icu4c/source/common:libicuuc clang++ locdispnames.cpp [linux_glibc] (priority: 74)
+[  0% 195/25207] //external/icu/icu4c/source/common:libicuuc clang++ locdistance.cpp [linux_glibc] (priority: 74)
+[  0% 196/25207] //external/icu/icu4c/source/common:libicuuc clang++ locdspnm.cpp [linux_glibc] (priority: 74)
+[  0% 197/25207] //external/icu/icu4c/source/common:libicuuc clang++ locid.cpp [linux_glibc] (priority: 74)
+[  0% 198/25207] //external/icu/icu4c/source/common:libicuuc clang++ loclikely.cpp [linux_glibc] (priority: 74)
+[  0% 199/25207] //external/icu/icu4c/source/common:libicuuc clang++ locmap.cpp [linux_glibc] (priority: 74)
+[  0% 200/25207] //external/icu/icu4c/source/common:libicuuc clang++ loclikelysubtags.cpp [linux_glibc] (priority: 74)
 == out/error.log
