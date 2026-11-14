@@ -15,8 +15,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# F11 launched on Android 9 (API 28); stock vendor is Android 11 (VNDK 30). Legacy non-A/B, no dynamic partitions.
-PRODUCT_SHIPPING_API_LEVEL := 28
+# Stock vendor is Android 11 (API 30 / VNDK 30), same pairing as the selene tree. Legacy non-A/B, no dynamic partitions.
+PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_TARGET_VNDK_VERSION := 30
 
 $(call inherit-product, $(LOCAL_PATH)/aera_CPH1911.mk)
@@ -26,8 +26,7 @@ PRODUCT_PACKAGES_ENG += \
 
 # MTP by default in recovery
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.sys.usb.storage.type=mtp \
-    ro.mediatek.platform=MT6771
+    ro.sys.usb.storage.type=mtp
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.usb.config=mtp

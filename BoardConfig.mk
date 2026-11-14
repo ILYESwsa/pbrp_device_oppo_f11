@@ -22,7 +22,12 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a73
-TARGET_SUPPORTS_64_BIT_APPS := true
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := generic
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 
 # Assert
@@ -96,7 +101,6 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # Reference-tree flags (lighthouse/infiniti) that apply here
 AERA_FORCE_PREBUILT_KERNEL := 1
-AERA_NO_TREBLE_COMPATIBILITY_CHECK := 1
 AERA_OPTIONS_LIST_NUM := 6
 # MediaTek: the health-service battery path is broken on MTK (AERA build notes), use the legacy sysfs path
 TW_USE_LEGACY_BATTERY_SERVICES := true
@@ -111,7 +115,10 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 AERA_INCLUDE_CRYPTO := false
 AERA_INCLUDE_CRYPTO_FBE := false
 
-# UI / hardware
+# UI / hardware (1080x2340 LCD, waterdrop notch, fbdev)
+AERA_SCREEN_H := 2340
+AERA_STATUS_H := 100
+TARGET_SCREEN_DENSITY := 420
 AERA_THEME := portrait_hdpi
 AERA_EXTRA_LANGUAGES := true
 AERA_FRAMERATE := 60
@@ -139,3 +146,6 @@ TARGET_USES_MKE2FS := true
 # Logging
 AERA_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# MTK build properties (ro.hardware etc.), like the selene tree
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop

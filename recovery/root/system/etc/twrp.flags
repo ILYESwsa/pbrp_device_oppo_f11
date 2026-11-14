@@ -46,3 +46,16 @@
 /usb_otg           auto      /dev/block/sda1               /dev/block/sda                      flags=display="Usb-Otg";storage;wipeingui;removable
 /storage           ext4      /data/media/0                                                     flags=backup=1;display="Internal Storage";usermrf;fsflags="bind,utf8";removable
 #
+/bootloader	emmc	/dev/block/by-name/lk	flags=backup=1
+/bootloader2	emmc	/dev/block/by-name/lk2	flags=backup=1
+/scp1	emmc	/dev/block/by-name/scp1	flags=backup=1
+/scp2	emmc	/dev/block/by-name/scp2	flags=backup=1
+/md1dsp	emmc	/dev/block/by-name/md1dsp	flags=backup=1
+/md1arm7	emmc	/dev/block/by-name/md1arm7	flags=backup=1
+/md3img	emmc	/dev/block/by-name/md3img	flags=backup=1
+/cam_vpu1	emmc	/dev/block/by-name/cam_vpu1	flags=backup=1
+/cam_vpu2	emmc	/dev/block/by-name/cam_vpu2	flags=backup=1
+/cam_vpu3	emmc	/dev/block/by-name/cam_vpu3	flags=backup=1
+/gz1	emmc	/dev/block/by-name/gz1	flags=backup=1
+/gz2	emmc	/dev/block/by-name/gz2	flags=backup=1
+/otp	emmc	/dev/block/by-name/otp	flags=backup=1

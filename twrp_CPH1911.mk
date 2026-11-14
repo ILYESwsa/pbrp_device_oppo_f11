@@ -1,11 +1,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+PRODUCT_RELEASE_NAME := CPH1911
+
 # AERA product for OPPO F11. Lunch: twrp_CPH1911-bp2a-eng
 # (the twrp_ product prefix is only the build-system name, like the AERA reference trees)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Common recovery configuration
 $(call inherit-product, vendor/twrp/config/common.mk)

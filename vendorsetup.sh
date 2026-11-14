@@ -1,5 +1,7 @@
 #!/bin/bash
-# AERA build settings for OPPO F11 (CPH1911). Usage: export AERA_BUILD_DEVICE=CPH1911
+#
+# AERA Recovery environment for the OPPO F11 (CPH1911). Same layout as the selene (MT6768) AERA tree.
+# Usage: export AERA_BUILD_DEVICE=CPH1911 BEFORE sourcing build/envsetup.sh (AERA wiki).
 
 FDEVICE="CPH1911"
 
@@ -19,22 +21,28 @@ if [ -z "$1" ] && [ -z "$AERA_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" ] || [ "$AERA_BUILD_DEVICE" = "$FDEVICE" ]; then
-    export LC_ALL=C
+    export LC_ALL="C"
     export AERA_PRODUCT_PREFIX=AERA
     export AERA_BUILD_STATUS=Unofficial
     export AERA_BUILD_TYPE=Alpha
+    export AERA_MAINTAINER="ILYESwsa"
+    # Stock Android 11 vendor under an Android 16 recovery: the treble check would always fail.
+    export AERA_NO_TREBLE_COMPATIBILITY_CHECK=1
     export AERA_VANILLA_BUILD=1
-    export AERA_TARGET_DEVICES="CPH1911"
-    export AERA_RECOVERY_BOOT_PARTITION="/dev/block/by-name/recovery"
-    export AERA_RECOVERY_SYSTEM_PARTITION="/dev/block/by-name/system"
-    export AERA_RECOVERY_VENDOR_PARTITION="/dev/block/by-name/vendor"
-
-    export AERA_USE_TAR_BINARY=1
+    export AERA_ENABLE_ROOT_MANAGER=0
+    export AERA_ALLOW_EARLY_SETTINGS_LOAD=1
+    export AERA_USE_UPDATED_MAGISKBOOT=1
+    export AERA_USE_BUSYBOX_BINARY=1
+    export AERA_USE_DATE_BINARY=1
+    export AERA_USE_GREP_BINARY=1
     export AERA_USE_SED_BINARY=1
+    export AERA_USE_TAR_BINARY=1
     export AERA_USE_XZ_UTILS=1
-    export AERA_USE_BASH_SHELL=1
-    export AERA_ASH_IS_BASH=1
-    export AERA_ENABLE_APP_MANAGER=1
-    export AERA_DELETE_AROMAFM=1
+    export AERA_USE_ZSTD_BINARY=1
+    export AERA_SETTINGS_ROOT_DIRECTORY=/data/recovery
+    export AERA_MISCELLANEOUS_ROOT_DIRECTORY=/sdcard
+    # OPPO F11 (CPH1911)
+    export TARGET_DEVICE_ALT="CPH1911,OP4883,OP4863"
+    export AERA_TARGET_DEVICES="$TARGET_DEVICE_ALT"
     unset AERA_MAINTAINER_PATCH_VERSION
 fi
