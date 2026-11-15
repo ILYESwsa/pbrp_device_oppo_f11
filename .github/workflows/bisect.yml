@@ -1,0 +1,53 @@
+name: Bisect images (CPH1911)
+on:
+  push:
+    branches: [bisect]
+permissions:
+  contents: write
+  actions: read
+jobs:
+  make:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: recovery-CPH1911
+          run-id: 43585108044
+          github-token: ${{ github.token }}
+          path: in
+      - name: Tools
+        shell: bash
+        run: |
+          sudo apt-get update && sudo apt-get install -y binutils python3 git
+          mkdir -p tools
+          git clone --depth 1 https://android.googlesource.com/platform/system/tools/mkbootimg tools/mkbootimg
+          git clone --depth 1 https://android.googlesource.com/platform/external/avb tools/avb
+      - name: Build images
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 .github/bisect/make_images.py in/recovery.img out 2>&1 | tee make.log
+      - name: Report to ci-logs
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          API="https://api.github.com/repos/$GITHUB_REPOSITORY/contents/ci-logs/bisect-$GITHUB_RUN_ID.txt"
+          tail -n 400 make.log > /tmp/s.txt 2>/dev/null || echo "no log" > /tmp/s.txt
+          base64 -w0 /tmp/s.txt > /tmp/s.b64
+          python3 - > /tmp/body.json <<'PY'
+          import json
+          print(json.dumps({"message":"bisect report","content":open('/tmp/s.b64').read(),"branch":"ci-logs"}))
+          PY
+          curl -s -o /dev/null -X PUT -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -d @/tmp/body.json "$API"
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: bisect-images
+          path: |
+            out/*.img
+            out/report.txt
+          if-no-files-found: error
