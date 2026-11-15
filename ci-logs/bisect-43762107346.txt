@@ -1,0 +1,25 @@
+source: recovery.img 67.11 MB
+AERA ramdisk: gz 40.01 MB unpacked 92.61 MB entries 3744
+source header args: --header_version 2 --os_version 16.0.0 --os_patch_level 2099-12 --kernel --ramdisk --recovery_dtbo --dtb --pagesize 0x00000800 --base 0x00000000 --kernel_offset 0x40080000 --ramdisk_offset 0x55000000 --second_offset 0x00000000 --tags_offset 0x54000000 --dtb_offset 0x0000000054000000 --board  --cmdline bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+trim: closure 94 files kept, 46 removable candidates >150 KB
+trim removed 13 files, 26.37 MB unpacked:
+     4626376  twres/fonts/wqy-microhei.ttf
+     3069784  system/bin/update_engine_sideload
+     2799872  system/lib64/libicui18n.so
+     2236528  system/bin/7za
+     2091392  system/lib64/libadbd_services.so
+     1954952  system/lib64/libicuuc.so
+     1922320  system/bin/aera-otaripper
+     1498688  sbin/busybox
+     1413200  sbin/bash
+     1322846  file_contexts.bin
+     1230728  system/lib64/libadbconnection_server.so
+     1222600  system/lib64/libchrome.so
+      981848  sbin/gnutar
+T3_trim_workinghdr: file 67108864 (content 42057728), ramdisk gz 28.55 MB, unpacked 66.23 MB, header os=12.0.0 cmdline="bootopt=64S3,32N2,64N2
+"
+T4_trim_aerahdr: file 67108864 (content 42057728), ramdisk gz 28.55 MB, unpacked 66.23 MB, header os=16.0.0 cmdline="bootopt=64S3,32N2,64N2 androidboot.selinux=permissive"
+T5_min_workinghdr: file 67108864 (content 34877440), ramdisk gz 21.37 MB, unpacked 56.15 MB, header os=12.0.0 cmdline="bootopt=64S3,32N2,64N2
+"
+T2_full_workinghdr: file 67108864 (content 53385216), ramdisk gz 39.88 MB, unpacked 92.61 MB, header os=12.0.0 cmdline="bootopt=64S3,32N2,64N2
+"
