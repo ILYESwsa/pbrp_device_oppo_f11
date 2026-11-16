@@ -62,7 +62,6 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_RECOVERY_MKBOOTIMG_ARGS += --os_version 12.0.0 --os_patch_level 2099-12
 
 # Legacy NON-A/B device with a separate recovery partition. Declared explicitly (same as the marie tree):
 # the v3 ramdisk contained update_engine_sideload, which AERA only adds when AB_OTA_UPDATER is true.
@@ -102,7 +101,10 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16
-PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
+# The boot header's os_version comes from PLATFORM_VERSION_LAST_STABLE (12 = same as the working image).
+# Do NOT use BOARD_RECOVERY_MKBOOTIMG_ARGS here: when it is set AOSP stops using BOARD_MKBOOTIMG_ARGS for the
+# recovery image, which silently dropped header v2, the ramdisk/tags offsets and the dtb/dtbo in the v4 build.
+PLATFORM_VERSION_LAST_STABLE := 12
 
 # Reference-tree flags (lighthouse/infiniti) that apply here
 AERA_FORCE_PREBUILT_KERNEL := 1

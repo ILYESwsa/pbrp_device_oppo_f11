@@ -1,8 +1,8 @@
-name: Build AERA recovery (CPH1911, v4)
+name: Build AERA recovery (CPH1911, v5)
 
 on:
   push:
-    branches: [aera-16.0-v4]
+    branches: [aera-16.0-v5]
   workflow_dispatch:
 
 permissions:
@@ -54,7 +54,7 @@ jobs:
           sudo apt-get install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev \
             libc6-dev-i386 libncurses5 lib32z1-dev x11proto-core-dev libx11-dev libgl1-mesa-dev \
             libxml2-utils xsltproc unzip fontconfig python3 python-is-python3 bc rsync lz4 \
-            libssl-dev cpio xz-utils
+            libssl-dev cpio xz-utils ccache
           mkdir -p ~/bin
           curl -s https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
           chmod a+x ~/bin/repo
@@ -63,12 +63,13 @@ jobs:
           git config --global user.email "ci@users.noreply.github.com"
           git config --global color.ui false
 
-      - name: Restore source cache
-        id: synccache
+      - name: Restore ccache
         uses: actions/cache/restore@v4
         with:
-          path: aera/.repo
-          key: aera-sync-aera16-v1
+          path: ~/.ccache
+          key: ccache-aera16-v5-${{ github.run_id }}
+          restore-keys: |
+            ccache-aera16-v5-
 
       - name: Sync AERA 16.0 sources
         shell: bash
@@ -78,13 +79,6 @@ jobs:
           repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1
           repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
           df -h /
-
-      - name: Save source cache
-        if: steps.synccache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: aera/.repo
-          key: aera-sync-aera16-v1
 
       - name: Checkout device tree
         uses: actions/checkout@v4
@@ -138,6 +132,11 @@ jobs:
           trap "$PUSH; exit 143" TERM
           cd "$GITHUB_WORKSPACE/aera"
           export ALLOW_MISSING_DEPENDENCIES=true
+          # ccache for the C/C++ compile steps (restored/saved around the build)
+          export USE_CCACHE=1 CCACHE_EXEC=/usr/bin/ccache CCACHE_DIR="$HOME/.ccache" CCACHE_MAXSIZE=3G CCACHE_COMPRESS=1
+          export CCACHE_NOHASHDIR=1 CCACHE_COMPILERCHECK=content CCACHE_SLOPPINESS=include_file_mtime,include_file_ctime,time_macros
+          export CCACHE_BASEDIR="$(readlink -f "$GITHUB_WORKSPACE/aera")"
+          ccache -M 3G; ccache -z
           # Keep soong_build's Go heap small (it was OOM-killed at ~14 GB RSS)
           export GOGC=40 GOMEMLIMIT=11GiB GOMAXPROCS=2
           source build/envsetup.sh
@@ -146,12 +145,35 @@ jobs:
           ( while true; do sleep 120; $PUSH; done ) &
           mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
 
+      - name: ccache stats and save
+        if: always()
+        shell: bash
+        run: ccache -s 2>&1 | tail -12 || true
+
+      - name: Save ccache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.ccache
+          key: ccache-aera16-v5-${{ github.run_id }}
+
       - name: Header and ramdisk audit
         if: always()
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-audit.sh"
+
+      - name: Permissive variant
+        shell: bash
+        run: bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-variants.sh"
+
+      - name: Upload permissive image
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovery-permissive
+          path: variants/recovery_permissive.img
+          if-no-files-found: error
 
       - name: Upload recovery image
         if: success()
