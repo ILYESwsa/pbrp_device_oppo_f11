@@ -1,258 +1,258 @@
-== Mon Nov 16 19:31:11 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
+== Mon Nov 16 19:33:13 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
                total        used        free      shared  buff/cache   available
-Mem:           15988        6583         684          31        8721        9027
+Mem:           15988        6385         974          31        8628        9224
 Swap:          28671         195       28476
 /dev/root       146G  135G   11G  93% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 61% 17488/28379] //external/e2fsprogs/e2fsck:e2fsck clang e2fsck.c (priority: 12)
-[ 61% 17489/28379] //external/e2fsprogs/e2fsck:e2fsck clang super.c (priority: 12)
-[ 61% 17490/28379] //system/core/healthd:charger clang++ charger.cpp (priority: 12)
-[ 61% 17491/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass1b.c (priority: 12)
-[ 61% 17492/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass1.c (priority: 12)
-[ 61% 17493/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass2.c (priority: 12)
-[ 61% 17494/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass3.c (priority: 12)
-[ 61% 17495/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass4.c (priority: 12)
-[ 61% 17496/28379] //external/e2fsprogs/e2fsck:e2fsck clang pass5.c (priority: 12)
-[ 61% 17497/28379] //external/e2fsprogs/e2fsck:e2fsck clang logfile.c (priority: 12)
-[ 61% 17498/28379] //external/e2fsprogs/e2fsck:e2fsck clang journal.c (priority: 12)
-[ 61% 17499/28379] //external/e2fsprogs/e2fsck:e2fsck clang recovery.c (priority: 12)
-[ 61% 17500/28379] //external/e2fsprogs/e2fsck:e2fsck clang revoke.c (priority: 12)
-[ 61% 17501/28379] //external/e2fsprogs/e2fsck:e2fsck clang badblocks.c (priority: 12)
-[ 61% 17502/28379] //external/e2fsprogs/e2fsck:e2fsck clang util.c (priority: 12)
-[ 61% 17503/28379] //external/e2fsprogs/e2fsck:e2fsck clang unix.c (priority: 12)
-[ 61% 17504/28379] //external/e2fsprogs/e2fsck:e2fsck clang dirinfo.c (priority: 12)
-[ 61% 17505/28379] //external/e2fsprogs/e2fsck:e2fsck clang dx_dirinfo.c (priority: 12)
-[ 61% 17506/28379] //external/e2fsprogs/e2fsck:e2fsck clang ehandler.c (priority: 12)
-[ 61% 17507/28379] //external/e2fsprogs/e2fsck:e2fsck clang problem.c (priority: 12)
-[ 61% 17508/28379] //external/e2fsprogs/e2fsck:e2fsck clang message.c (priority: 12)
-[ 61% 17509/28379] //external/e2fsprogs/e2fsck:e2fsck clang ea_refcount.c (priority: 12)
-[ 61% 17510/28379] //external/e2fsprogs/e2fsck:e2fsck clang quota.c (priority: 12)
-[ 61% 17511/28379] //external/e2fsprogs/e2fsck:e2fsck clang region.c (priority: 12)
-[ 61% 17512/28379] //external/e2fsprogs/e2fsck:e2fsck clang rehash.c (priority: 12)
-[ 61% 17513/28379] //external/e2fsprogs/e2fsck:e2fsck clang sigcatcher.c (priority: 12)
-[ 61% 17514/28379] //external/e2fsprogs/e2fsck:e2fsck clang readahead.c (priority: 12)
-[ 61% 17515/28379] //external/e2fsprogs/e2fsck:e2fsck clang extents.c (priority: 12)
-[ 61% 17516/28379] //external/e2fsprogs/contrib/android:e2fsdroid strip e2fsdroid (priority: 12)
-[ 61% 17517/28379] //external/e2fsprogs/e2fsck:e2fsck clang encrypted_files.c (priority: 12)
-[ 61% 17518/28379] //system/sepolicy:file_contexts_bin_gen raw genrule.sbox.textproto [common] (priority: 12)
-[ 61% 17519/28379] //system/sepolicy:file_contexts.concat.tmp generate file_contexts.concat.tmp [common] (priority: 12)
-[ 61% 17520/28379] //build/soong/scripts:gen_build_prop embedded python archive [linux_glibc] (priority: 12)
-[ 61% 17521/28379]  (priority: 12)
-[ 61% 17522/28379] //system/hwservicemanager:hwservicemanager clang++ service.cpp (priority: 12)
-[ 61% 17523/28379] //system/core/init:init_first_stage clang++ block_dev_initializer.cpp (priority: 12)
-[ 61% 17524/28379] //system/core/init:init_first_stage clang++ first_stage_console.cpp (priority: 12)
-[ 61% 17525/28379] //system/core/init:init_first_stage clang++ devices.cpp (priority: 12)
-[ 61% 17526/28379] //system/core/init:init_first_stage clang++ first_stage_main.cpp (priority: 12)
-[ 61% 17527/28379] //system/core/init:init_first_stage clang++ first_stage_init.cpp (priority: 12)
-[ 61% 17528/28379] //system/core/init:init_first_stage clang++ first_stage_mount.cpp (priority: 12)
-[ 61% 17529/28379] //system/core/init:init_first_stage clang++ reboot_utils.cpp (priority: 12)
-[ 61% 17530/28379] //system/core/init:init_first_stage clang++ selabel.cpp (priority: 12)
-[ 61% 17531/28379] //system/core/init:init_first_stage clang++ service_utils.cpp (priority: 12)
-[ 61% 17532/28379] //system/core/init:init_first_stage clang++ snapuserd_transition.cpp (priority: 12)
-[ 61% 17533/28379] //system/core/init:init_first_stage clang++ switch_root.cpp (priority: 12)
-[ 61% 17534/28379] //system/core/init:init_first_stage clang++ uevent_listener.cpp (priority: 12)
-system/core/init/uevent_listener.cpp:196:19: warning: ISO C++ requires field designators to be specified in declaration order; field 'events' will be initialized after field 'fd' [-Wreorder-init-list]
-  196 |             .fd = device_fd_.get(),
-      |             ~~~~~~^~~~~~~~~~~~~~~~
-system/core/init/uevent_listener.cpp:195:23: note: previous initialization for field 'events' is here
-  195 |             .events = POLLIN,
-      |                       ^~~~~~
-bionic/libc/kernel/uapi/asm-generic/poll.h:9:16: note: expanded from macro 'POLLIN'
-    9 | #define POLLIN 0x0001
-      |                ^~~~~~
-1 warning generated.
-[ 61% 17535/28379] //system/core/init:init_first_stage rustc generated_rust_staticlib/librustlibs.rs (priority: 12)
-[ 61% 17536/28379] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bootable/recovery/init_recovery.rc/android_recovery_arm64_armv8-a/init.rc (priority: 12)
-[ 61% 17537/28379] //system/core/init:init_first_stage clang++ util.cpp (priority: 12)
-[ 61% 17538/28379] //system/security/keystore:keystore_cli_v2 clang++ keystore_cli_v2.cpp (priority: 12)
-system/security/keystore/keystore_cli_v2.cpp:704:9: warning: variable 'test_count' set but not used [-Wunused-but-set-variable]
-  704 |     int test_count = 0;
-      |         ^
-system/security/keystore/keystore_cli_v2.cpp:864:25: warning: 'listEntries' is deprecated: use listEntriesBatched instead. [-Wdeprecated-declarations]
-  864 |     auto rc = keystore->listEntries(ks2::Domain::APP, -1 /* nspace ignored */, &key_list);
       |                         ^
-out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/include/aidl/android/system/keystore2/IKeystoreService.h:66:210: note: 'listEntries' has been explicitly marked deprecated here
-   66 |   virtual ::ndk::ScopedAStatus listEntries(::aidl::android::system::keystore2::Domain in_domain, int64_t in_nspace, std::vector<::aidl::android::system::keystore2::KeyDescriptor>* _aidl_return) __attribute__((deprecated("use listEntriesBatched instead."))) = 0;
-      |                                                                                                                                                                                                                  ^
-system/security/keystore/keystore_cli_v2.cpp:1002:33: warning: 'AServiceManager_getService' is deprecated: this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService [-Wdeprecated-declarations]
- 1002 |     ::ndk::SpAIBinder apcBinder(AServiceManager_getService("android.security.apc"));
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
+In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
+In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
+In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
+In file included from frameworks/native/include/ftl/small_vector.h:20:
+frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
+  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
+      |        ^
+frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
+   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
+      |                                      ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
+      |                                                 ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
+ 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
+      |                                         ^
+frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
+  285 |   std::variant<Static, Dynamic> vector_;
       |                                 ^
-frameworks/native/libs/binder/ndk/include_platform/android/binder_manager.h:107:3: note: 'AServiceManager_getService' has been explicitly marked deprecated here
-  107 | [[deprecated("this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService")]]
-      |   ^
-3 warnings generated.
-[ 61% 17539/28379] //system/security/keystore:keystore_cli_v2 clang++ proto/system/security/keystore/keystore_client.pb.cc (priority: 12)
-[ 61% 17540/28379] //system/apex/proto:lib_apex_manifest_proto_lite clang++ proto/system/apex/proto/apex_manifest.pb.cc [linux_glibc] (priority: 12)
-[ 61% 17541/28379] //build/soong/linkerconfig/proto:lib_linker_config_proto_lite clang++ proto/build/soong/linkerconfig/proto/linker_config.pb.cc [linux_glibc] (priority: 12)
-[ 61% 17542/28379] //packages/modules/adb/crypto:libadb_crypto strip libadb_crypto.so (priority: 12)
-[ 61% 17543/28379] //packages/modules/adb/crypto:libadb_crypto static link libadb_crypto.a (priority: 12)
-[ 61% 17544/28379] //packages/modules/adb/proto:libadb_protos static link libadb_protos.a (priority: 12)
-[ 61% 17545/28379] //packages/modules/adb:libadb_sysdeps static link libadb_sysdeps.a (priority: 12)
-[ 61% 17546/28379] //packages/modules/adb/tls:libadb_tls_connection strip libadb_tls_connection.so (priority: 12)
-[ 61% 17547/28379] //packages/modules/adb/tls:libadb_tls_connection static link libadb_tls_connection.a (priority: 12)
-[ 61% 17548/28379] //packages/modules/adb/libs/adbconnection:libadbconnection_server strip libadbconnection_server.so (priority: 12)
-[ 61% 17549/28379] //packages/modules/adb/libs/adbconnection:libadbconnection_server static link libadbconnection_server.a (priority: 12)
-[ 61% 17550/28379] //packages/modules/adb:libadbd static link libadbd.a (priority: 12)
-[ 61% 17551/28379] //frameworks/native/libs/adbd_auth:libadbd_auth generate toc libadbd_auth.so (priority: 12)
-[ 61% 17552/28379] //packages/modules/adb:libadbd_core static link libadbd_core.a (priority: 12)
-[ 61% 17553/28379] //packages/modules/adb/libs/libadbd_fs:libadbd_fs generate toc libadbd_fs.so (priority: 12)
-[ 61% 17554/28379] //packages/modules/adb:libadbd_services clang++ daemon/file_sync_service.cpp (priority: 12)
-[ 61% 17555/28379] //system/core/init:init_second_stage.recovery link init (priority: 12)
-[ 61% 17556/28379] //packages/modules/adb:libadbd_services clang++ daemon/services.cpp (priority: 12)
-[ 61% 17557/28379] //packages/modules/adb:libadbd_services clang++ daemon/shell_service.cpp (priority: 12)
-[ 61% 17558/28379] //packages/modules/adb:libadbd_services clang++ daemon/tradeinmode.cpp (priority: 12)
-[ 61% 17559/28379] //packages/modules/adb:libadbd_services clang++ shell_service_protocol.cpp (priority: 12)
-[ 61% 17560/28379] //packages/modules/adb:libadbd_services clang++ daemon/framebuffer_service.cpp (priority: 12)
-[ 61% 17561/28379] //packages/modules/adb:libadbd_services clang++ daemon/mdns.cpp (priority: 12)
-[ 61% 17562/28379] //packages/modules/adb:libadbd_services clang++ daemon/restart_service.cpp (priority: 12)
-[ 61% 17563/28379] //bootable/recovery/aeraui:libaera_android_adb_rescue clang++ features/backup/android_packages_xml.cpp (priority: 12)
-[ 61% 17564/28379] //bootable/recovery/aeraui:libaera_android_adb_rescue clang++ features/developer/android_adb_rescue.cpp (priority: 12)
-[ 61% 17565/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ screen_lock.cpp (priority: 12)
-[ 61% 17566/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_log.cpp (priority: 12)
-[ 61% 17567/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_message.cpp (priority: 12)
-[ 61% 17568/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_screen_timer.cpp (priority: 12)
-[ 61% 17569/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_backend.cpp (priority: 12)
-[ 61% 17570/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_terminal.cpp (priority: 12)
-[ 61% 17571/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_xml_support.cpp (priority: 12)
-[ 61% 17572/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/alpha_dec.c (priority: 12)
-[ 61% 17573/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/buffer_dec.c (priority: 12)
-[ 61% 17574/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/frame_dec.c (priority: 12)
-[ 61% 17575/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/idec_dec.c (priority: 12)
-[ 61% 17576/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/io_dec.c (priority: 12)
-[ 61% 17577/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/quant_dec.c (priority: 12)
-[ 61% 17578/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/tree_dec.c (priority: 12)
-[ 61% 17579/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8_dec.c (priority: 12)
-[ 61% 17580/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8l_dec.c (priority: 12)
-[ 61% 17581/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/webp_dec.c (priority: 12)
-[ 61% 17582/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing.c (priority: 12)
-[ 61% 17583/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_ui_host.cpp (priority: 12)
-[ 61% 17584/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/cpu.c (priority: 12)
-[ 61% 17585/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec.c (priority: 12)
-[ 61% 17586/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing_neon.c (priority: 12)
-[ 61% 17587/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_clip_tables.c (priority: 12)
-[ 61% 17588/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters.c (priority: 12)
-[ 61% 17589/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters_neon.c (priority: 12)
-[ 61% 17590/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_neon.c (priority: 12)
-[ 61% 17591/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless.c (priority: 12)
-[ 61% 17592/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/rescaler.c (priority: 12)
-[ 61% 17593/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling.c (priority: 12)
-[ 61% 17594/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless_neon.c (priority: 12)
-[ 62% 17595/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv.c (priority: 12)
-[ 62% 17596/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv_neon.c (priority: 12)
-[ 62% 17597/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling_neon.c (priority: 12)
-[ 62% 17598/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/bit_reader_utils.c (priority: 12)
-[ 62% 17599/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/color_cache_utils.c (priority: 12)
-[ 62% 17600/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/filters_utils.c (priority: 12)
-[ 62% 17601/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/huffman_utils.c (priority: 12)
-[ 62% 17602/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/quant_levels_dec_utils.c (priority: 12)
-[ 62% 17603/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/palette.c (priority: 12)
-[ 62% 17604/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/random_utils.c (priority: 12)
-[ 62% 17605/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/rescaler_utils.c (priority: 12)
-[ 62% 17606/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/thread_utils.c (priority: 12)
-[ 62% 17607/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/utils.c (priority: 12)
-[ 62% 17608/28379] //bootable/recovery/aeraui:libaeraui clang++ components/home_plugin_grid.cpp (priority: 12)
-[ 62% 17609/28379] //bootable/recovery/aeraui:libaeraui clang++ components/aera_logo.cpp (priority: 12)
-[ 62% 17610/28379] //bootable/recovery/aeraui:libaeraui clang++ components/android_icon.cpp (priority: 12)
-[ 62% 17611/28379] //bootable/recovery/aeraui:libaeraui clang++ components/plugin_desktop.cpp (priority: 12)
-[ 62% 17612/28379] //bootable/recovery/aeraui:libaeraui clang++ components/matrix_engraving.cpp (priority: 12)
-[ 62% 17613/28379] //bootable/recovery/aeraui:libaeraui clang++ components/picture_decode.cpp (priority: 12)
-[ 62% 17614/28379] //bootable/recovery/aeraui:libaeraui clang++ components/picture_viewer.cpp (priority: 12)
-[ 62% 17615/28379] //bootable/recovery/aeraui:libaeraui clang++ components/power_transition.cpp (priority: 12)
-[ 62% 17616/28379] //bootable/recovery/aeraui:libaeraui clang++ components/retroarch_icon.cpp (priority: 12)
-[ 62% 17617/28379] //bootable/recovery/aeraui:libaeraui clang++ components/text_edit.cpp (priority: 12)
-[ 62% 17618/28379] //bootable/recovery/aeraui:libaeraui clang++ components/lock_credential.cpp (priority: 12)
-[ 62% 17619/28379] //bootable/recovery/aeraui:libaeraui clang++ features/security/lock_security.cpp (priority: 12)
-[ 62% 17620/28379] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
-[ 62% 17621/28379] //bootable/recovery/aeraui:libaeraui clang++ components/webkit_icon.cpp (priority: 12)
-[ 62% 17622/28379] //bootable/recovery/aeraui:libaeraui clang++ features/developer/kernel_settings.cpp (priority: 12)
-[ 62% 17623/28379] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
-[ 62% 17624/28379] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
-[ 62% 17625/28379] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
-[ 62% 17626/28379] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
-[ 62% 17627/28379] //bootable/recovery/aeraui:libaeraui clang++ features/artillery/game.cpp (priority: 12)
-[ 62% 17628/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/mobile_data_scene.cpp (priority: 12)
-[ 62% 17629/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
-[ 62% 17630/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
-[ 62% 17631/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
-[ 62% 17632/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
-[ 62% 17633/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
-[ 62% 17634/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
-[ 62% 17635/28379] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
-[ 62% 17636/28379] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
-[ 62% 17637/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
-[ 62% 17638/28379] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
-[ 62% 17639/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource.cpp (priority: 12)
-[ 62% 17640/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource_download.cpp (priority: 12)
-[ 62% 17641/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/font_library.cpp (priority: 12)
-[ 62% 17642/28379] //bootable/recovery/aeraui:libaeraui clang++ features/media/launcher.cpp (priority: 12)
-[ 62% 17643/28379] //bootable/recovery/aeraui:libaeraui clang++ features/media/session.cpp (priority: 12)
-[ 62% 17644/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/launcher.cpp (priority: 12)
-[ 62% 17645/28379] //bootable/recovery/aeraui:libaeraui clang++ features/nas/smb_browser.cpp (priority: 12)
-[ 62% 17646/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/activity.cpp (priority: 12)
-[ 62% 17647/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/session.cpp (priority: 12)
-[ 62% 17648/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/console_commands.cpp (priority: 12)
-[ 62% 17649/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/plugin_manager.cpp (priority: 12)
-[ 62% 17650/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/store_metadata.cpp (priority: 12)
-[ 62% 17651/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_inspector.cpp (priority: 12)
-bootable/recovery/aeraui/features/update/payload_inspector.cpp:124:28: warning: 'MOVE' is deprecated [-Wdeprecated-declarations]
-  124 |     case InstallOperation::MOVE: return "move";
-      |                            ^
-out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-a_static/gen/proto/update_engine/update_metadata.pb.h:934:3: note: 'MOVE' has been explicitly marked deprecated here
-  934 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type MOVE =
-      |   ^
-external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
-  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
-      |                                                  ^
-bootable/recovery/aeraui/features/update/payload_inspector.cpp:125:28: warning: 'BSDIFF' is deprecated [-Wdeprecated-declarations]
-  125 |     case InstallOperation::BSDIFF: return "bsdiff";
-      |                            ^
-out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-a_static/gen/proto/update_engine/update_metadata.pb.h:936:3: note: 'BSDIFF' has been explicitly marked deprecated here
-  936 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type BSDIFF =
-      |   ^
-external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
-  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
-      |                                                  ^
+frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
+  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
+      |                                        ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
+  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
+      |                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
+  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
+      |                                         ^
+prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
+  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
+      |                                                 ^
 2 warnings generated.
-[ 62% 17652/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/image_zip.cpp (priority: 12)
-[ 62% 17653/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_arb.cpp (priority: 12)
-[ 62% 17654/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_extract.cpp (priority: 12)
-[ 62% 17655/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_targets.cpp (priority: 12)
-[ 62% 17656/28379] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/launcher.cpp (priority: 12)
-[ 62% 17657/28379] //bootable/recovery/aeraui:libaeraui clang++ features/recorder/service.cpp (priority: 12)
-[ 62% 17658/28379] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/session.cpp (priority: 12)
-[ 62% 17659/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/launcher.cpp (priority: 12)
-[ 62% 17660/28379] //bootable/recovery/aeraui:libaeraui clang++ features/root/root_manager.cpp (priority: 12)
-[ 62% 17661/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/session.cpp (priority: 12)
-[ 62% 17662/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/query.cpp (priority: 12)
-[ 62% 17663/28379] //bootable/recovery/aeraui:libaeraui clang++ features/telegram/launcher.cpp (priority: 12)
-[ 62% 17664/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/update_manager.cpp (priority: 12)
-[ 62% 17665/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog_generated.cpp (priority: 12)
-[ 62% 17666/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog.cpp (priority: 12)
-[ 62% 17667/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/i18n.cpp (priority: 12)
-[ 62% 17668/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/fonts/aera_fallback.cpp (priority: 12)
-[ 62% 17669/28379] //bootable/recovery/aeraui:libaeraui clang++ platform/unencrypted_users.cpp (priority: 12)
-[ 62% 17670/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/about_scene.cpp (priority: 12)
-[ 62% 17671/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/artillery_scene.cpp (priority: 12)
-[ 62% 17672/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/boot_scene.cpp (priority: 12)
-[ 62% 17673/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/browser_scene.cpp (priority: 12)
-[ 62% 17674/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/appvault_scene.cpp (priority: 12)
-[ 62% 17675/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/decrypt_scene.cpp (priority: 12)
-[ 62% 17676/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/developer_scene.cpp (priority: 12)
-[ 62% 17677/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/android_adb_rescue_scene.cpp (priority: 12)
-[ 62% 17678/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/doom_scene.cpp (priority: 12)
-[ 62% 17679/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/fastboot_scene.cpp (priority: 12)
-[ 62% 17680/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/gallery_scene.cpp (priority: 12)
-[ 62% 17681/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/font_browser.cpp (priority: 12)
-[ 62% 17682/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/generic_plugin_scene.cpp (priority: 12)
-[ 62% 17683/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/launcher_scene.cpp (priority: 12)
-[ 62% 17684/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/lock_scene.cpp (priority: 12)
-[ 62% 17685/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/media_scene.cpp (priority: 12)
-[ 62% 17686/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/home_scene.cpp (priority: 12)
-[ 62% 17687/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/nas_scene.cpp (priority: 12)
-[ 62% 17688/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/operation_scene.cpp (priority: 12)
-[ 62% 17689/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/plugin_scene.cpp (priority: 12)
-[ 62% 17690/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/package_review.cpp (priority: 12)
-[ 62% 17691/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/reboot_scene.cpp (priority: 12)
-[ 62% 17692/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/recorder_scene.cpp (priority: 12)
+[ 62% 17732/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ StreamingZipInflater.cpp [arm] (priority: 12)
+[ 62% 17733/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTypes.cpp [arm] (priority: 12)
+[ 62% 17734/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ TypeWrappers.cpp [arm] (priority: 12)
+[ 62% 17735/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ StringPool.cpp [arm] (priority: 12)
+[ 62% 17736/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ Util.cpp [arm] (priority: 12)
+[ 62% 17737/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipFileRO.cpp [arm] (priority: 12)
+[ 62% 17738/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipUtils.cpp [arm] (priority: 12)
+[ 62% 17739/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupData.cpp [arm] (priority: 12)
+[ 62% 17740/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupHelpers.cpp [arm] (priority: 12)
+[ 62% 17741/28379] //frameworks/base/libs/androidfw:libandroidfw_pathutils static link libandroidfw_pathutils.a [arm] (priority: 12)
+[ 62% 17742/28379] //external/icu/libandroidicu/static_shim:libandroidicu_static clang++ shim.cpp (priority: 12)
+[ 62% 17743/28379] //bootable/recovery:libaosprecovery strip libaosprecovery.so (priority: 12)
+[ 62% 17744/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ CursorWindow.cpp [arm] (priority: 12)
+[ 62% 17745/28379] //bootable/recovery:libaosprecovery clang++ install/get_args.cpp [arm] (priority: 12)
+[ 62% 17746/28379] //bootable/recovery:libaosprecovery clang++ install/adb_install.cpp [arm] (priority: 12)
+[ 62% 17747/28379] //bootable/recovery:libaosprecovery clang++ install/spl_check.cpp [arm] (priority: 12)
+[ 62% 17748/28379] //bootable/recovery:libaosprecovery clang++ install/install.cpp [arm] (priority: 12)
+[ 62% 17749/28379] //bootable/recovery:libaosprecovery clang++ install/wipe_data.cpp [arm] (priority: 12)
+[ 62% 17750/28379] //bootable/recovery:libaosprecovery clang++ install/wipe_device.cpp [arm] (priority: 12)
+[ 62% 17751/28379] //bootable/recovery:libaosprecovery clang++ install/set_metadata.cpp [arm] (priority: 12)
+bootable/recovery/install/set_metadata.cpp:40:8: warning: 'security_context_t' is deprecated [-Wdeprecated-declarations]
+   40 | static security_context_t selinux_context;
+      |        ^
+external/selinux/libselinux/include/selinux/selinux.h:19:17: note: 'security_context_t' has been explicitly marked deprecated here
+   19 | __attribute__ ((deprecated))
+      |                 ^
+1 warning generated.
+[ 62% 17752/28379] //bootable/recovery:libaosprecovery clang++ install/ZipUtil.cpp [arm] (priority: 12)
+[ 62% 17753/28379] //packages/modules/adb/proto:libapp_processes_protos_lite strip libapp_processes_protos_lite.so (priority: 12)
+[ 62% 17754/28379] //system/core/libasyncio:libasyncio strip libasyncio.so (priority: 12)
+[ 62% 17755/28379] //system/core/libasyncio:libasyncio static link libasyncio.a (priority: 12)
+[ 62% 17756/28379] //external/avb:libavb static link libavb.a (priority: 12)
+[ 62% 17757/28379] //external/avb:libavb_user clang libavb/boringssl/sha.c (priority: 12)
+[ 62% 17758/28379] //external/avb:libavb_user clang libavb/avb_chain_partition_descriptor.c (priority: 12)
+[ 62% 17759/28379] //external/avb:libavb_user clang libavb/avb_cmdline.c (priority: 12)
+[ 62% 17760/28379] //external/avb:libavb_user clang libavb/avb_crc32.c (priority: 12)
+[ 62% 17761/28379] //external/avb:libavb_user clang libavb/avb_crypto.c (priority: 12)
+[ 62% 17762/28379] //external/avb:libavb_user clang libavb/avb_descriptor.c (priority: 12)
+[ 62% 17763/28379] //external/avb:libavb_user clang libavb/avb_footer.c (priority: 12)
+[ 62% 17764/28379] //external/avb:libavb_user clang libavb/avb_hash_descriptor.c (priority: 12)
+[ 62% 17765/28379] //external/avb:libavb_user clang libavb/avb_hashtree_descriptor.c (priority: 12)
+[ 62% 17766/28379] //external/avb:libavb_user clang libavb/avb_kernel_cmdline_descriptor.c (priority: 12)
+[ 62% 17767/28379] //external/avb:libavb_user clang libavb/avb_property_descriptor.c (priority: 12)
+[ 62% 17768/28379] //external/avb:libavb_user clang libavb/avb_rsa.c (priority: 12)
+[ 62% 17769/28379] //external/avb:libavb_user clang libavb/avb_slot_verify.c (priority: 12)
+[ 62% 17770/28379] //external/avb:libavb_user clang libavb/avb_util.c (priority: 12)
+[ 62% 17771/28379] //external/avb:libavb_user clang libavb/avb_vbmeta_image.c (priority: 12)
+[ 62% 17772/28379] //external/avb:libavb_user clang libavb/avb_version.c (priority: 12)
+[ 62% 17773/28379] //external/avb:libavb_user clang libavb/avb_sysdeps_posix.c (priority: 12)
+[ 62% 17774/28379] //external/avb:libavb_user clang libavb_ab/avb_ab_flow.c (priority: 12)
+[ 62% 17775/28379] //system/apex/libs/libapexutil:libapexutil clang++ apexutil.cpp [linux_glibc] (priority: 12)
+[ 62% 17776/28379] //external/avb:libavb_user clang libavb_user/avb_user_verity.c (priority: 12)
+[ 62% 17777/28379] //external/avb:libavb_user clang libavb_user/avb_user_verification.c (priority: 12)
+[ 62% 17778/28379] //system/libbase:libbase strip libbase.so [apex31] (priority: 12)
+[ 62% 17779/28379] //system/libbase:libbase static link libbase.a (priority: 12)
+[ 62% 17780/28379] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
+[ 62% 17781/28379] //system/core/healthd:libbatterymonitor clang++ BatteryMonitor.cpp (priority: 12)
+system/core/healthd/BatteryMonitor.cpp:132:30: warning: ISO C++ requires field designators to be specified in declaration order; field 'batteryChargeTimeToFullNowSeconds' will be initialized after field 'batteryStatus' [-Wreorder-init-list]
+  132 |             .batteryStatus = BatteryStatus::UNKNOWN,
+      |             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+system/core/healthd/BatteryMonitor.cpp:131:21: note: previous initialization for field 'batteryChargeTimeToFullNowSeconds' is here
+  131 |                     (int64_t)HealthInfo::BATTERY_CHARGE_TIME_TO_FULL_NOW_SECONDS_UNSUPPORTED,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 62% 17782/28379] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
+[ 62% 17783/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk202404.abidiff [arm] (priority: 12)
+[ 62% 17784/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk.abidiff [arm] (priority: 12)
+[ 62% 17785/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex35.abidiff [arm] (priority: 12)
+[ 62% 17786/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex.abidiff [arm] (priority: 12)
+[ 62% 17787/28379] //hardware/interfaces/boot/aidl/client:libboot_control_client strip libboot_control_client.so (priority: 12)
+[ 62% 17788/28379] //bootable/recovery/bootloader_message:libbootloader_message generate toc libbootloader_message.so [arm] (priority: 12)
+[ 62% 17789/28379] //external/avb:libavb_user clang++ libavb_user/avb_ops_user.cpp (priority: 12)
+[ 62% 17790/28379] //bootable/recovery/bootloader_message:libbootloader_message static link libbootloader_message.a (priority: 12)
+[ 62% 17791/28379] //external/brotli:libbrotli clang c/common/context.c (priority: 12)
+[ 62% 17792/28379] //external/brotli:libbrotli clang c/common/constants.c (priority: 12)
+[ 62% 17793/28379] //external/brotli:libbrotli clang c/common/platform.c (priority: 12)
+[ 62% 17794/28379] //external/brotli:libbrotli clang c/common/dictionary.c (priority: 12)
+[ 62% 17795/28379] //external/brotli:libbrotli clang c/common/transform.c (priority: 12)
+[ 62% 17796/28379] //external/brotli:libbrotli clang c/dec/bit_reader.c (priority: 12)
+[ 62% 17797/28379] //external/brotli:libbrotli clang c/dec/huffman.c (priority: 12)
+[ 62% 17798/28379] //external/brotli:libbrotli clang c/dec/decode.c (priority: 12)
+[ 62% 17799/28379] //external/brotli:libbrotli clang c/dec/state.c (priority: 12)
+[ 62% 17800/28379] //external/brotli:libbrotli clang c/enc/backward_references.c (priority: 12)
+[ 62% 17801/28379] //external/brotli:libbrotli clang c/enc/backward_references_hq.c (priority: 12)
+[ 62% 17802/28379] //external/brotli:libbrotli clang c/enc/bit_cost.c (priority: 12)
+[ 62% 17803/28379] //external/brotli:libbrotli clang c/enc/block_splitter.c (priority: 12)
+[ 62% 17804/28379] //external/brotli:libbrotli clang c/enc/brotli_bit_stream.c (priority: 12)
+[ 62% 17805/28379] //external/brotli:libbrotli clang c/enc/cluster.c (priority: 12)
+[ 62% 17806/28379] //external/brotli:libbrotli clang c/enc/command.c (priority: 12)
+[ 62% 17807/28379] //external/brotli:libbrotli clang c/enc/compress_fragment.c (priority: 12)
+[ 62% 17808/28379] //external/brotli:libbrotli clang c/enc/compress_fragment_two_pass.c (priority: 12)
+[ 62% 17809/28379] //external/brotli:libbrotli clang c/enc/dictionary_hash.c (priority: 12)
+[ 62% 17810/28379] //external/brotli:libbrotli clang c/enc/encoder_dict.c (priority: 12)
+[ 62% 17811/28379] //external/brotli:libbrotli clang c/enc/encode.c (priority: 12)
+[ 62% 17812/28379] //external/brotli:libbrotli clang c/enc/entropy_encode.c (priority: 12)
+[ 62% 17813/28379] //external/brotli:libbrotli clang c/enc/fast_log.c (priority: 12)
+[ 62% 17814/28379] //external/brotli:libbrotli clang c/enc/literal_cost.c (priority: 12)
+[ 62% 17815/28379] //external/brotli:libbrotli clang c/enc/histogram.c (priority: 12)
+[ 62% 17816/28379] //external/brotli:libbrotli clang c/enc/memory.c (priority: 12)
+[ 62% 17817/28379] //external/brotli:libbrotli clang c/enc/metablock.c (priority: 12)
+[ 62% 17818/28379] //external/brotli:libbrotli clang c/enc/static_dict.c (priority: 12)
+[ 62% 17819/28379] //external/brotli:libbrotli clang c/enc/utf8_util.c (priority: 12)
+[ 62% 17820/28379] //external/brotli:libbrotli static link libbrotli.a (priority: 12)
+[ 62% 17821/28379] //external/bzip2:libbz clang blocksort.c (priority: 12)
+[ 62% 17822/28379] //external/bzip2:libbz clang bzlib.c (priority: 12)
+[ 62% 17823/28379] //external/bzip2:libbz clang crctable.c (priority: 12)
+[ 62% 17824/28379] //external/bzip2:libbz clang decompress.c (priority: 12)
+[ 62% 17825/28379] //external/bzip2:libbz clang compress.c (priority: 12)
+[ 62% 17826/28379] //external/bzip2:libbz clang randtable.c (priority: 12)
+[ 62% 17827/28379] //external/bzip2:libbz clang huffman.c (priority: 12)
+[ 62% 17828/28379] //bionic/libc:libc generate toc libc.so (priority: 12)
+[ 62% 17829/28379] //bionic/libc:libc static link libc.a (priority: 12)
+[ 62% 17830/28379] //bionic/libc:libc_dynamic_dispatch static link libc_dynamic_dispatch.a (priority: 12)
+[ 62% 17831/28379] //bionic/libc:libc_nomalloc static link libc_nomalloc.a (priority: 12)
+[ 62% 17832/28379] //bionic/libc:libc static link libc.a (priority: 12)
+[ 62% 17833/28379] //external/libcap:libcap generate toc libcap.so (priority: 12)
+[ 62% 17834/28379] //external/libcap:libcap generate toc libcap.so [arm] (priority: 12)
+[ 62% 17835/28379] //external/libcap:libcap static link libcap.a (priority: 12)
+[ 62% 17836/28379] //system/core/healthd:libcharger_sysprop static link libcharger_sysprop.a (priority: 12)
+[ 62% 17837/28379] //system/core/healthd:libcharger_sysprop sysprop charger.sysprop (priority: 12)
+[ 62% 17838/28379] //external/libchrome:libchrome generate toc libchrome.so (priority: 12)
+[ 62% 17839/28379] //external/libchrome:libchrome clang++ base/barrier_closure.cc [arm] (priority: 12)
+[ 62% 17840/28379] //external/libchrome:libchrome clang++ base/at_exit.cc [arm] (priority: 12)
+[ 62% 17841/28379] //external/libchrome:libchrome clang++ base/base64.cc [arm] (priority: 12)
+[ 62% 17842/28379] //external/libchrome:libchrome clang++ base/base64url.cc [arm] (priority: 12)
+[ 62% 17843/28379] //external/libchrome:libchrome clang++ base/base_paths.cc [arm] (priority: 12)
+[ 62% 17844/28379] //external/libchrome:libchrome clang++ base/base_switches.cc [arm] (priority: 12)
+[ 62% 17845/28379] //external/libchrome:libchrome clang++ base/base_paths_posix.cc [arm] (priority: 12)
+[ 62% 17846/28379] //external/libchrome:libchrome clang++ base/big_endian.cc [arm] (priority: 12)
+[ 62% 17847/28379] //external/libchrome:libchrome clang++ base/build_time.cc [arm] (priority: 12)
+[ 62% 17848/28379] //external/libchrome:libchrome clang++ base/callback_helpers.cc [arm] (priority: 12)
+[ 62% 17849/28379] //external/libchrome:libchrome clang++ base/callback_internal.cc [arm] (priority: 12)
+[ 62% 17850/28379] //external/libchrome:libchrome clang++ base/cpu.cc [arm] (priority: 12)
+[ 62% 17851/28379] //external/libchrome:libchrome clang++ base/command_line.cc [arm] (priority: 12)
+[ 62% 17852/28379] //external/libchrome:libchrome clang++ base/debug/alias.cc [arm] (priority: 12)
+[ 62% 17853/28379] //external/libchrome:libchrome clang++ base/debug/activity_tracker.cc [arm] (priority: 12)
+[ 62% 17854/28379] //external/libchrome:libchrome clang++ base/debug/crash_logging.cc [arm] (priority: 12)
+[ 62% 17855/28379] //external/libchrome:libchrome clang++ base/debug/debugger.cc [arm] (priority: 12)
+[ 62% 17856/28379] //external/libchrome:libchrome clang++ base/debug/debugger_posix.cc [arm] (priority: 12)
+[ 62% 17857/28379] //external/libchrome:libchrome clang++ base/debug/dump_without_crashing.cc [arm] (priority: 12)
+[ 62% 17858/28379] //external/libchrome:libchrome clang++ base/debug/proc_maps_linux.cc [arm] (priority: 12)
+[ 62% 17859/28379] //external/libchrome:libchrome clang++ base/debug/profiler.cc [arm] (priority: 12)
+[ 62% 17860/28379] //external/libchrome:libchrome clang++ base/debug/stack_trace.cc [arm] (priority: 12)
+[ 62% 17861/28379] //external/libchrome:libchrome clang++ base/debug/task_annotator.cc [arm] (priority: 12)
+[ 62% 17862/28379] //external/libchrome:libchrome clang++ base/environment.cc [arm] (priority: 12)
+[ 62% 17863/28379] //external/libchrome:libchrome clang++ base/feature_list.cc [arm] (priority: 12)
+[ 62% 17864/28379] //external/libchrome:libchrome clang++ base/files/file.cc [arm] (priority: 12)
+[ 62% 17865/28379] //external/libchrome:libchrome clang++ base/files/file_enumerator.cc [arm] (priority: 12)
+[ 62% 17866/28379] //external/libchrome:libchrome clang++ base/files/file_descriptor_watcher_posix.cc [arm] (priority: 12)
+[ 62% 17867/28379] //external/libchrome:libchrome clang++ base/files/file_enumerator_posix.cc [arm] (priority: 12)
+[ 62% 17868/28379] //external/libchrome:libchrome clang++ base/files/file_path.cc [arm] (priority: 12)
+[ 62% 17869/28379] //external/libchrome:libchrome clang++ base/files/file_path_constants.cc [arm] (priority: 12)
+[ 62% 17870/28379] //external/libchrome:libchrome clang++ base/files/file_path_watcher.cc [arm] (priority: 12)
+[ 62% 17871/28379] //external/libchrome:libchrome clang++ base/files/file_posix.cc [arm] (priority: 12)
+[ 62% 17872/28379] //external/libchrome:libchrome clang++ base/files/file_tracing.cc [arm] (priority: 12)
+[ 62% 17873/28379] //external/libchrome:libchrome clang++ base/files/file_util.cc [arm] (priority: 12)
+[ 62% 17874/28379] //external/libchrome:libchrome clang++ base/files/file_util_posix.cc [arm] (priority: 12)
+[ 62% 17875/28379] //external/libchrome:libchrome clang++ base/files/important_file_writer.cc [arm] (priority: 12)
+[ 62% 17876/28379] //external/libchrome:libchrome clang++ base/files/memory_mapped_file.cc [arm] (priority: 12)
+[ 62% 17877/28379] //external/libchrome:libchrome clang++ base/files/memory_mapped_file_posix.cc [arm] (priority: 12)
+[ 62% 17878/28379] //external/libchrome:libchrome clang++ base/files/scoped_file.cc [arm] (priority: 12)
+[ 63% 17879/28379] //external/libchrome:libchrome clang++ base/files/scoped_temp_dir.cc [arm] (priority: 12)
+[ 63% 17880/28379] //external/libchrome:libchrome clang++ base/guid.cc [arm] (priority: 12)
+[ 63% 17881/28379] //external/libchrome:libchrome clang++ base/hash.cc [arm] (priority: 12)
+[ 63% 17882/28379] //external/libchrome:libchrome clang++ base/json/json_file_value_serializer.cc [arm] (priority: 12)
+[ 63% 17883/28379] //external/libchrome:libchrome clang++ base/json/json_reader.cc [arm] (priority: 12)
+[ 63% 17884/28379] //external/libchrome:libchrome clang++ base/json/json_parser.cc [arm] (priority: 12)
+[ 63% 17885/28379] //external/libchrome:libchrome clang++ base/json/json_string_value_serializer.cc [arm] (priority: 12)
+[ 63% 17886/28379] //external/libchrome:libchrome clang++ base/json/json_value_converter.cc [arm] (priority: 12)
+[ 63% 17887/28379] //external/libchrome:libchrome clang++ base/json/json_writer.cc [arm] (priority: 12)
+[ 63% 17888/28379] //external/libchrome:libchrome clang++ base/json/string_escape.cc [arm] (priority: 12)
+[ 63% 17889/28379] //external/libchrome:libchrome clang++ base/lazy_instance_helpers.cc [arm] (priority: 12)
+[ 63% 17890/28379] //external/libchrome:libchrome clang++ base/location.cc [arm] (priority: 12)
+[ 63% 17891/28379] //external/libchrome:libchrome clang++ base/md5.cc [arm] (priority: 12)
+[ 63% 17892/28379] //external/libchrome:libchrome clang++ base/logging.cc [arm] (priority: 12)
+[ 63% 17893/28379] //external/libchrome:libchrome clang++ base/memory/aligned_memory.cc [arm] (priority: 12)
+[ 63% 17894/28379] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17895/28379] //external/libchrome:libchrome clang++ base/memory/read_only_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17896/28379] //external/libchrome:libchrome clang++ base/memory/ref_counted.cc [arm] (priority: 12)
+[ 63% 17897/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle.cc [arm] (priority: 12)
+[ 63% 17898/28379] //external/libchrome:libchrome clang++ base/memory/ref_counted_memory.cc [arm] (priority: 12)
+[ 63% 17899/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_mapping.cc [arm] (priority: 12)
+[ 63% 17900/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_helper.cc [arm] (priority: 12)
+[ 63% 17901/28379] //external/libchrome:libchrome clang++ base/memory/weak_ptr.cc [arm] (priority: 12)
+[ 63% 17902/28379] //external/libchrome:libchrome clang++ base/memory/unsafe_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17903/28379] //external/libchrome:libchrome clang++ base/memory/writable_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17904/28379] //external/libchrome:libchrome clang++ base/message_loop/incoming_task_queue.cc [arm] (priority: 12)
+[ 63% 17905/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop_current.cc [arm] (priority: 12)
+[ 63% 17906/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop.cc [arm] (priority: 12)
+[ 63% 17907/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop_task_runner.cc [arm] (priority: 12)
+[ 63% 17908/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump.cc [arm] (priority: 12)
+[ 63% 17909/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump_default.cc [arm] (priority: 12)
+[ 63% 17910/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump_libevent.cc [arm] (priority: 12)
+[ 63% 17911/28379] //external/libchrome:libchrome clang++ base/message_loop/watchable_io_message_pump_posix.cc [arm] (priority: 12)
+[ 63% 17912/28379] //external/libchrome:libchrome clang++ base/metrics/bucket_ranges.cc [arm] (priority: 12)
+[ 63% 17913/28379] //external/libchrome:libchrome clang++ base/metrics/dummy_histogram.cc [arm] (priority: 12)
+[ 63% 17914/28379] //external/libchrome:libchrome clang++ base/metrics/field_trial.cc [arm] (priority: 12)
+[ 63% 17915/28379] //external/libchrome:libchrome clang++ base/metrics/field_trial_param_associator.cc [arm] (priority: 12)
+[ 63% 17916/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_base.cc [arm] (priority: 12)
+[ 63% 17917/28379] //external/libchrome:libchrome clang++ base/metrics/histogram.cc [arm] (priority: 12)
+[ 63% 17918/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_functions.cc [arm] (priority: 12)
+[ 63% 17919/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_samples.cc [arm] (priority: 12)
+[ 63% 17920/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_snapshot_manager.cc [arm] (priority: 12)
+[ 63% 17921/28379] //external/libchrome:libchrome clang++ base/metrics/metrics_hashes.cc [arm] (priority: 12)
+[ 63% 17922/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_memory_allocator.cc [arm] (priority: 12)
+[ 63% 17923/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_histogram_allocator.cc [arm] (priority: 12)
+[ 63% 17924/28379] //external/libchrome:libchrome clang++ base/metrics/sample_map.cc [arm] (priority: 12)
+[ 63% 17925/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_sample_map.cc [arm] (priority: 12)
+[ 63% 17926/28379] //external/libchrome:libchrome clang++ base/metrics/sample_vector.cc [arm] (priority: 12)
+[ 63% 17927/28379] //external/libchrome:libchrome clang++ base/metrics/sparse_histogram.cc [arm] (priority: 12)
 == out/error.log
