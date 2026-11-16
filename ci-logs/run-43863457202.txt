@@ -1,7 +1,7 @@
-== Mon Nov 16 12:55:25 UTC 2026 run=43863457202 sha=1d62e568060aeeed16fb18de9e8988caf923894d
+== Mon Nov 16 12:57:12 UTC 2026 run=43863457202 sha=1d62e568060aeeed16fb18de9e8988caf923894d
                total        used        free      shared  buff/cache   available
-Mem:           15988       15189         158           7         640         444
-Swap:          28671       18217       10454
+Mem:           15988         692       13277          18        2018       14930
+Swap:          28671         203       28468
 /dev/root       146G  128G   19G  88% /
 == oom/kill messages
 == last 250 lines of build.log
@@ -164,4 +164,71 @@ Running globs...
 [ 97% 128/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 98% 129/131] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
 [ 99% 130/131] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/soong_build
+[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/build.twrp_CPH1911.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
+Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-cleanspec.ninja is missing, regenerating...
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911.ninja is missing, regenerating...
+[100% 132/132] initializing legacy Make module parser ...
+[ 91% 133/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/installs-twrp_CPH1911.mk ...
+[ 92% 134/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/Android-twrp_CPH1911.mk ...
+[ 93% 135/145] including build/make/target/board/android-info.mk ...
+[ 93% 136/145] including art/Android.mk ...
+[ 94% 137/145] including bootable/recovery/Android.mk ...
+bootable/recovery/aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
+bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/vendor/bin/hw 
+bootable/recovery/orscmd/../aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
+[ 95% 138/145] including device/oppo/CPH1911/Android.mk ...
+[ 95% 139/145] including device/qcom/twrp-common/Android.mk ...
+[ 96% 140/145] including external/magisk-prebuilt/Android.mk ...
+[ 97% 141/145] including hardware/qcom/wlan/Android.mk ...
+[ 97% 142/145] including vendor/twrp/Android.mk ...
+[ 98% 143/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/late-twrp_CPH1911.mk ...
+[ 99% 144/145] finishing legacy Make module parsing ...
+FAILED: 
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/catbox-tradefed has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+In file included from build/make/core/main.mk:1215:
+In file included from build/make/core/Makefile:8105:
+build/make/core/tasks/cts.mk:64: error:       ============================================================
+      Could not find version "12" in CTS platform release file:
+      cts/tests/tests/os/assets/platform_releases.txt
+      Most likely PLATFORM_VERSION_LAST_STABLE in build/core/version_defaults.mk
+      has changed and a new version must be added to this CTS file.
+      ============================================================.
+12:57:12 ckati failed with: exit status 1
+
+#### failed to build some targets (34:11 (mm:ss)) ####
+
 == out/error.log
+FAILED: finishing legacy Make module parsing ...
+Error: makefile error
+Output:
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/catbox-tradefed has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata[0m
+[1mbuild/make/core/tasks/tools/compatibility.mk:75: [35mwarning: [0m[1m/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata[0m
+In file included from build/make/core/main.mk:1215:
+In file included from build/make/core/Makefile:8105:
+[1mbuild/make/core/tasks/cts.mk:64: [31merror: [0m[1m      ============================================================
+      Could not find version "12" in CTS platform release file:
+      cts/tests/tests/os/assets/platform_releases.txt
+      Most likely PLATFORM_VERSION_LAST_STABLE in build/core/version_defaults.mk
+      has changed and a new version must be added to this CTS file.
+      ============================================================.[0m
+
