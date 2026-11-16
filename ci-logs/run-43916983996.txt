@@ -1,100 +1,10 @@
-== Mon Nov 16 19:49:27 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
+== Mon Nov 16 19:49:49 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
                total        used        free      shared  buff/cache   available
-Mem:           15988        6509         853          32        8625        9100
-Swap:          28671         190       28481
-/dev/root       146G  138G  7.9G  95% /
+Mem:           15988         561        6478          32        8948       15046
+Swap:          28671         181       28490
+/dev/root       146G  138G  7.7G  95% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 99% 28124/28379] Install: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/adbd (priority: 6)
-[ 99% 28125/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/base64 (priority: 6)
-[ 99% 28126/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/basename (priority: 6)
-[ 99% 28127/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/blkdiscard (priority: 6)
-[ 99% 28128/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/blockdev (priority: 6)
-[ 99% 28129/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/brctl (priority: 6)
-[ 99% 28130/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cal (priority: 6)
-[ 99% 28131/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cat (priority: 6)
-[ 99% 28132/28379] Install: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/charger (priority: 6)
-[ 99% 28133/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chattr (priority: 6)
-[ 99% 28134/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chcon (priority: 6)
-[ 99% 28135/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chgrp (priority: 6)
-[ 99% 28136/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chmod (priority: 6)
-[ 99% 28137/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chown (priority: 6)
-[ 99% 28138/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chroot (priority: 6)
-[ 99% 28139/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/chrt (priority: 6)
-[ 99% 28140/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cksum (priority: 6)
-[ 99% 28141/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/clear (priority: 6)
-[ 99% 28142/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cmp (priority: 6)
-[ 99% 28143/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/comm (priority: 6)
-[ 99% 28144/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cp (priority: 6)
-[ 99% 28145/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cpio (priority: 6)
-[ 99% 28146/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/cut (priority: 6)
-[ 99% 28147/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/date (priority: 6)
-[ 99% 28148/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/dd (priority: 6)
-[ 99% 28149/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/devmem (priority: 6)
-[ 99% 28150/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/df (priority: 6)
-[ 99% 28151/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/diff (priority: 6)
-[ 99% 28152/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/dirname (priority: 6)
-[ 99% 28153/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/dmesg (priority: 6)
-[ 99% 28154/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/dos2unix (priority: 6)
-[ 99% 28155/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/du (priority: 6)
-[ 99% 28156/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/echo (priority: 6)
-[ 99% 28157/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/egrep (priority: 6)
-[ 99% 28158/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/env (priority: 6)
-[ 99% 28159/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/expand (priority: 6)
-[ 99% 28160/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/expr (priority: 6)
-[ 99% 28161/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/fallocate (priority: 6)
-[ 99% 28162/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/false (priority: 6)
-[ 99% 28163/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/fgrep (priority: 6)
-[ 99% 28164/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/file (priority: 6)
-[ 99% 28165/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/find (priority: 6)
-[ 99% 28166/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/flock (priority: 6)
-[ 99% 28167/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/fmt (priority: 6)
-[ 99% 28168/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/free (priority: 6)
-[ 99% 28169/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/fsync (priority: 6)
-[ 99% 28170/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getconf (priority: 6)
-[ 99% 28171/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getenforce (priority: 6)
-[ 99% 28172/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getevent (priority: 6)
-[ 99% 28173/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getfattr (priority: 6)
-[ 99% 28174/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getopt (priority: 6)
-[ 99% 28175/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/getprop (priority: 6)
-[ 99% 28176/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gpiodetect (priority: 6)
-[ 99% 28177/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gpiofind (priority: 6)
-[ 99% 28178/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gpioget (priority: 6)
-[ 99% 28179/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gpioinfo (priority: 6)
-[ 99% 28180/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gpioset (priority: 6)
-[ 99% 28181/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/grep (priority: 6)
-[ 99% 28182/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/groups (priority: 6)
-[ 99% 28183/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gunzip (priority: 6)
-[ 99% 28184/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/gzip (priority: 6)
-[ 99% 28185/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/head (priority: 6)
-[ 99% 28186/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/hostname (priority: 6)
-[ 99% 28187/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/hwclock (priority: 6)
-[ 99% 28188/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/i2cdetect (priority: 6)
-[ 99% 28189/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/i2cdump (priority: 6)
-[ 99% 28190/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/i2cget (priority: 6)
-[ 99% 28191/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/i2cset (priority: 6)
-[ 99% 28192/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/i2ctransfer (priority: 6)
-[ 99% 28193/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/iconv (priority: 6)
-[ 99% 28194/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/id (priority: 6)
-[ 99% 28195/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/ifconfig (priority: 6)
-[ 99% 28196/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/inotifyd (priority: 6)
-[ 99% 28197/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/insmod (priority: 6)
-[ 99% 28198/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/install (priority: 6)
-[ 99% 28199/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/ionice (priority: 6)
-[ 99% 28200/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/iorenice (priority: 6)
-[ 99% 28201/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/kill (priority: 6)
-[ 99% 28202/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/killall (priority: 6)
-[ 99% 28203/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/linker_asan64 (priority: 6)
-[ 99% 28204/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/linker_hwasan64 (priority: 6)
-[ 99% 28205/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/ln (priority: 6)
-[ 99% 28206/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/load_policy (priority: 6)
-[ 99% 28207/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/log (priority: 6)
-[ 99% 28208/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/logger (priority: 6)
-[ 99% 28209/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/logname (priority: 6)
-[ 99% 28210/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/losetup (priority: 6)
-[ 99% 28211/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/ls (priority: 6)
-[ 99% 28212/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/lsattr (priority: 6)
-[ 99% 28213/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/lsmod (priority: 6)
 [ 99% 28214/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/lsof (priority: 6)
 [ 99% 28215/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/lspci (priority: 6)
 [ 99% 28216/28379] Symlink: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/system/bin/lsusb (priority: 6)
@@ -255,4 +165,94 @@ Swap:          28671         190       28481
 [ 99% 28371/28379] Install: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/mkbootimg (priority: 3)
 [ 99% 28372/28379] build /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/dtb.img (priority: 3)
 [ 99% 28373/28379] Install: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/adbd (priority: 3)
+[ 99% 28374/28379] build /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/obj/ETC/recovery_text_res_intermediates/installing_text.png (priority: 6)
+[ 99% 28375/28379] build /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/obj/PACKAGING/recovery_intermediates/ramdisk_files-timestamp (priority: 5)
+#########################################################################
+Variables exported from build/core/Makefile:
+AERA_ENABLE_MOBILE_DATA=0 AERA_SUPPORT_FINGERPRINT=0 AERA_FINGERPRINT_BACKEND=aidl AERA_ENABLE_ROOT_MANAGER=0 AERA_VENDOR_CMD=Fox_Before_Recovery_Image AERA_MANIFEST_VER=16.0 BOARD_BOOT_HEADER_VERSION=2 TARGET_ARCH=arm64 TARGET_RECOVERY_ROOT_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root TARGET_VENDOR_RAMDISK_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/vendor_ramdisk MKBOOTIMG=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/mkbootimg MKBOOTFS=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/mkbootfs INTERNAL_RECOVERYIMAGE_ARGS="--ramdisk /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/ramdisk-recovery.img  --cmdline "bootopt=64S3,32N2,64N2" --base 0x40078000 --pagesize 2048 --recovery_dtbo device/oppo/CPH1911/prebuilt/dtbo.img --dtb /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/dtb.img" INTERNAL_MKBOOTIMG_VERSION_ARGS=--os_version 16 --os_patch_level 2099-12-31 BOARD_MKBOOTIMG_ARGS="--ramdisk_offset 0x14f88000 --tags_offset 0x13f88000 --second_offset 0xbff88000 --dtb_offset 0x13f88000 --header_version 2" TARGET_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/system COMPRESSION_COMMAND=prebuilts/build-tools/path/linux-x86/gzip INSTALLED_RECOVERYIMAGE_TARGET=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery.img BOARD_BOOTIMAGE_PARTITION_SIZE=33554432 BOARD_RECOVERYIMAGE_PARTITION_SIZE=67108864 BOARD_USES_RECOVERY_AS_BOOT=false INTERNAL_KERNEL_CMDLINE=bootopt=64S3,32N2,64N2 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT= BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT= ORANGEFOX_CALLING_CARD=2.0 recovery_ramdisk=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/ramdisk-recovery.img
+#########################################################################
+Building AERA Recovery Project...
+-- Setting up environment variables
+-- ARM64 arch detected. Copying ARM64 binaries
+-- Symlinking "resetprop" ...
+-- This build will use magiskboot for patching boot images ...
+-- Backing up /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root//sbin/magiskboot to: /tmp/fox_build_tmp/ ...
+-- Copying bash ...
+-- Cleaning up any bash stragglers...
+-- Cleaning up any ash stragglers...
+-- Copying the AERA InfoZip "zip" binary ...
+-- This build will use /data/recovery for its internal settings ... 
+-- This build will use /sdcard for its stuff ... 
+-- Omitting the aapt binary (it is useless if the app manager is not enabled) ...
+-- Generating the build ID 
+-- Saving some original file sizes 
+-- Building the recovery image, using the official AOSP recovery image builder ...
+[ 99% 28376/28379] ----- Making uncompressed recovery ramdisk ------ (priority: 4)
+[ 99% 28377/28379] ----- Making compressed recovery ramdisk ------ (priority: 3)
+[ 99% 28378/28379] build /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery.img (priority: 2)
+[100% 28379/28379] build recoveryimage (priority: 1)
+#########################################################################
+Variables exported from build/core/Makefile:
+AERA_ENABLE_MOBILE_DATA=0 AERA_SUPPORT_FINGERPRINT=0 AERA_FINGERPRINT_BACKEND=aidl AERA_ENABLE_ROOT_MANAGER=0 AERA_VENDOR_CMD=Fox_After_Recovery_Image AERA_MANIFEST_VER=16.0 BOARD_BOOT_HEADER_VERSION=2 TARGET_ARCH=arm64 TARGET_RECOVERY_ROOT_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root TARGET_VENDOR_RAMDISK_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/vendor_ramdisk MKBOOTIMG=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/mkbootimg MKBOOTFS=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/mkbootfs INTERNAL_RECOVERYIMAGE_ARGS="--ramdisk /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/ramdisk-recovery.img  --cmdline "bootopt=64S3,32N2,64N2" --base 0x40078000 --pagesize 2048 --recovery_dtbo device/oppo/CPH1911/prebuilt/dtbo.img --dtb /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/dtb.img" INTERNAL_MKBOOTIMG_VERSION_ARGS=--os_version 16 --os_patch_level 2099-12-31 BOARD_MKBOOTIMG_ARGS="--ramdisk_offset 0x14f88000 --tags_offset 0x13f88000 --second_offset 0xbff88000 --dtb_offset 0x13f88000 --header_version 2" TARGET_OUT=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/system COMPRESSION_COMMAND=prebuilts/build-tools/path/linux-x86/gzip INSTALLED_RECOVERYIMAGE_TARGET=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery.img INSTALLED_BOOTIMAGE_TARGET=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/boot.img BOARD_BOOTIMAGE_PARTITION_SIZE=33554432 BOARD_RECOVERYIMAGE_PARTITION_SIZE=67108864 BOARD_USES_RECOVERY_AS_BOOT=false INTERNAL_KERNEL_CMDLINE=bootopt=64S3,32N2,64N2 ORANGEFOX_CALLING_CARD=4.0 recovery_ramdisk=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/ramdisk-recovery.img
+#########################################################################
+-- Setting up environment variables
+-- This is NOT a system-as-root build - removing the system_sar_mount directory ...
+-- Copying recovery: "/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery.img" --> "/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.img" 
+-- Creating the AERA zip installer ...
+- Creating /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip for deployment ...
+-- This build will skip all AERA patches ... 
+-- This build will use /sdcard for its stuff ... 
+-- This build will use /data/recovery for its settings ... 
+-- Deleting the initd addon ...
+-- Adding the alternative device codename(s): "CPH1911,OP4883,OP4863" 
+- Running ZIP command: zip --exclude=*.git* -r9 /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip .
+  adding: recovery.img (deflated 30%)
+  adding: INSTALL.txt (deflated 41%)
+  adding: META-INF/ (stored 0%)
+  adding: META-INF/com/ (stored 0%)
+  adding: META-INF/com/google/ (stored 0%)
+  adding: META-INF/com/google/android/ (stored 0%)
+  adding: META-INF/com/google/android/updater-script (stored 0%)
+  adding: META-INF/com/google/android/update-binary (deflated 71%)
+  adding: META-INF/com/google/android/aera-installer (deflated 71%)
+  adding: META-INF/debug/ (stored 0%)
+  adding: META-INF/debug/fox_build_vars.txt (deflated 48%)
+  adding: META-INF/debug/default.prop (deflated 74%)
+  adding: sdcard/ (stored 0%)
+  adding: sdcard/AERA/ (stored 0%)
+  adding: sdcard/AERA/Files/ (stored 0%)
+  adding: sdcard/AERA/aera.bashrc (deflated 47%)
+enter new zip file comment (end with .):
+- Running ZIP command: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/vendor/recovery/signature/sign_zip.sh -z /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip
+- Signing /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip ...
+-- Creating md5 for /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip
+- Finished:
+---------------------------------
+ -rw-r--r-- 1 nobody nogroup 46704595 Nov 16 19:49 /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip
+---------------------------------
+
+
+
+        █████╗ ███████╗██████╗  █████╗
+       ██╔══██╗██╔════╝██╔══██╗██╔══██╗
+       ███████║█████╗  ██████╔╝███████║
+       ██╔══██║██╔══╝  ██╔══██╗██╔══██║
+       ██║  ██║███████╗██║  ██║██║  ██║
+       ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+
+                 RECOVERY PROJECT R1.0
+
+
+=================Finished building AERA R1.0=================
+
+Recovery image: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.img
+          MD5: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.img.md5
+
+Recovery zip: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip
+          MD5: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/AERA-R1.0-Alpha-Unofficial-CPH1911.zip.md5
+
+==================================================================
+
+#### build completed successfully (02:10:12 (hh:mm:ss)) ####
+
 == out/error.log
