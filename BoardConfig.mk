@@ -104,7 +104,7 @@ PLATFORM_VERSION := 16
 # The boot header's os_version comes from PLATFORM_VERSION_LAST_STABLE (12 = same as the working image).
 # Do NOT use BOARD_RECOVERY_MKBOOTIMG_ARGS here: when it is set AOSP stops using BOARD_MKBOOTIMG_ARGS for the
 # recovery image, which silently dropped header v2, the ramdisk/tags offsets and the dtb/dtbo in the v4 build.
-PLATFORM_VERSION_LAST_STABLE := 12
+PLATFORM_VERSION_LAST_STABLE := 16
 
 # Reference-tree flags (lighthouse/infiniti) that apply here
 AERA_FORCE_PREBUILT_KERNEL := 1
