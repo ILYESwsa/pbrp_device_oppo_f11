@@ -1,258 +1,258 @@
-== Mon Nov 16 08:28:04 UTC 2026 run=43815424474 sha=51ab6c40fa2a06af0cdd513926085fd8d27eb356
+== Mon Nov 16 08:30:05 UTC 2026 run=43815424474 sha=51ab6c40fa2a06af0cdd513926085fd8d27eb356
                total        used        free      shared  buff/cache   available
-Mem:           15988        6605         725          30        8657        9005
+Mem:           15988        6473         823          30        8692        9138
 Swap:          28671         188       28483
-/dev/root       146G  134G   12G  93% /
+/dev/root       146G  135G   12G  93% /
 == oom/kill messages
 == last 250 lines of build.log
-[ 62% 17717/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ FileStream.cpp [arm] (priority: 12)
-[ 62% 17718/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ Idmap.cpp [arm] (priority: 12)
-[ 62% 17719/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ Locale.cpp [arm] (priority: 12)
-[ 62% 17720/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleData.cpp [arm] (priority: 12)
-[ 62% 17721/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ LoadedArsc.cpp [arm] (priority: 12)
-In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/LoadedArsc.cpp:38:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 62% 17722/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ misc.cpp [arm] (priority: 12)
-[ 62% 17723/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ NinePatch.cpp [arm] (priority: 12)
-[ 62% 17724/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ObbFile.cpp [arm] (priority: 12)
-[ 62% 17725/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ PosixUtils.cpp [arm] (priority: 12)
-[ 62% 17726/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ LocaleDataLookup.cpp [arm] (priority: 12)
-[ 62% 17727/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ PngChunkFilter.cpp [arm] (priority: 12)
-[ 62% 17728/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ Png.cpp [arm] (priority: 12)
-[ 62% 17729/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ PngCrunch.cpp [arm] (priority: 12)
-[ 62% 17730/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTimer.cpp [arm] (priority: 12)
-[ 62% 17731/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceUtils.cpp [arm] (priority: 12)
-In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-In file included from frameworks/base/libs/androidfw/ResourceUtils.cpp:17:
-In file included from frameworks/base/libs/androidfw/include/androidfw/ResourceUtils.h:20:
-In file included from frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:36:
-In file included from frameworks/native/include/ftl/small_vector.h:20:
-frameworks/native/include/ftl/static_vector.h:371:8: warning: 'aligned_storage_t' is deprecated [-Wdeprecated-declarations]
-  371 |   std::aligned_storage_t<sizeof(value_type), alignof(value_type)> data_[N];
-      |        ^
-frameworks/native/include/ftl/static_vector.h:371:8: note: in instantiation of template type alias 'aligned_storage_t' requested here
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:33:38: note: in instantiation of template class 'android::ftl::StaticVector<android::ResTable_config, 1>' requested here
-   33 |     : public integral_constant<bool, __is_constructible(_Tp, __add_lvalue_reference_t<const _Tp>)> {};
-      |                                      ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/is_constructible.h:37:49: note: in instantiation of template class 'std::is_copy_constructible<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
-   37 | inline constexpr bool is_copy_constructible_v = is_copy_constructible<_Tp>::value;
-      |                                                 ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/variant:1168:41: note: in instantiation of variable template specialization 'std::is_copy_constructible_v<android::ftl::StaticVector<android::ResTable_config, 1>>' requested here
- 1168 |     : private __sfinae_ctor_base< __all<is_copy_constructible_v<_Types>...>::value,
-      |                                         ^
-frameworks/native/include/ftl/small_vector.h:285:33: note: in instantiation of template class 'std::variant<android::ftl::StaticVector<android::ResTable_config, 1>, android::ftl::SmallVector<android::ResTable_config, 0>>' requested here
-  285 |   std::variant<Static, Dynamic> vector_;
-      |                                 ^
-frameworks/base/libs/androidfw/include/androidfw/AssetManager2.h:492:40: note: in instantiation of template class 'android::ftl::SmallVector<android::ResTable_config, 1>' requested here
-  492 |   ftl::SmallVector<ResTable_config, 1> configurations_;
-      |                                        ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__type_traits/aligned_storage.h:102:25: note: 'aligned_storage_t' has been explicitly marked deprecated here
-  102 | using aligned_storage_t _LIBCPP_DEPRECATED_IN_CXX23 = typename aligned_storage<_Len, _Align>::type;
-      |                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:727:41: note: expanded from macro '_LIBCPP_DEPRECATED_IN_CXX23'
-  727 | #    define _LIBCPP_DEPRECATED_IN_CXX23 _LIBCPP_DEPRECATED
-      |                                         ^
-prebuilts/clang/host/linux-x86/clang-r547379/include/c++/v1/__config:688:49: note: expanded from macro '_LIBCPP_DEPRECATED'
-  688 | #      define _LIBCPP_DEPRECATED __attribute__((__deprecated__))
-      |                                                 ^
-2 warnings generated.
-[ 62% 17732/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ StreamingZipInflater.cpp [arm] (priority: 12)
-[ 62% 17733/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ResourceTypes.cpp [arm] (priority: 12)
-[ 62% 17734/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ TypeWrappers.cpp [arm] (priority: 12)
-[ 62% 17735/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ StringPool.cpp [arm] (priority: 12)
-[ 62% 17736/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipFileRO.cpp [arm] (priority: 12)
-[ 62% 17737/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ Util.cpp [arm] (priority: 12)
-[ 62% 17738/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ ZipUtils.cpp [arm] (priority: 12)
-[ 62% 17739/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupData.cpp [arm] (priority: 12)
-[ 62% 17740/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ BackupHelpers.cpp [arm] (priority: 12)
-[ 62% 17741/28379] //frameworks/base/libs/androidfw:libandroidfw_pathutils static link libandroidfw_pathutils.a [arm] (priority: 12)
-[ 62% 17742/28379] //external/icu/libandroidicu/static_shim:libandroidicu_static clang++ shim.cpp (priority: 12)
-[ 62% 17743/28379] //bootable/recovery:libaosprecovery strip libaosprecovery.so (priority: 12)
-[ 62% 17744/28379] //frameworks/base/libs/androidfw:libandroidfw clang++ CursorWindow.cpp [arm] (priority: 12)
-[ 62% 17745/28379] //bootable/recovery:libaosprecovery clang++ install/get_args.cpp [arm] (priority: 12)
-[ 62% 17746/28379] //bootable/recovery:libaosprecovery clang++ install/adb_install.cpp [arm] (priority: 12)
-[ 62% 17747/28379] //bootable/recovery:libaosprecovery clang++ install/spl_check.cpp [arm] (priority: 12)
-[ 62% 17748/28379] //bootable/recovery:libaosprecovery clang++ install/install.cpp [arm] (priority: 12)
-[ 62% 17749/28379] //bootable/recovery:libaosprecovery clang++ install/wipe_data.cpp [arm] (priority: 12)
-[ 62% 17750/28379] //bootable/recovery:libaosprecovery clang++ install/wipe_device.cpp [arm] (priority: 12)
-[ 62% 17751/28379] //bootable/recovery:libaosprecovery clang++ install/set_metadata.cpp [arm] (priority: 12)
-bootable/recovery/install/set_metadata.cpp:40:8: warning: 'security_context_t' is deprecated [-Wdeprecated-declarations]
-   40 | static security_context_t selinux_context;
-      |        ^
-external/selinux/libselinux/include/selinux/selinux.h:19:17: note: 'security_context_t' has been explicitly marked deprecated here
-   19 | __attribute__ ((deprecated))
-      |                 ^
-1 warning generated.
-[ 62% 17752/28379] //bootable/recovery:libaosprecovery clang++ install/ZipUtil.cpp [arm] (priority: 12)
-[ 62% 17753/28379] //packages/modules/adb/proto:libapp_processes_protos_lite strip libapp_processes_protos_lite.so (priority: 12)
-[ 62% 17754/28379] //system/core/libasyncio:libasyncio strip libasyncio.so (priority: 12)
-[ 62% 17755/28379] //system/core/libasyncio:libasyncio static link libasyncio.a (priority: 12)
-[ 62% 17756/28379] //external/avb:libavb static link libavb.a (priority: 12)
-[ 62% 17757/28379] //external/avb:libavb_user clang libavb/boringssl/sha.c (priority: 12)
-[ 62% 17758/28379] //external/avb:libavb_user clang libavb/avb_chain_partition_descriptor.c (priority: 12)
-[ 62% 17759/28379] //external/avb:libavb_user clang libavb/avb_cmdline.c (priority: 12)
-[ 62% 17760/28379] //external/avb:libavb_user clang libavb/avb_crc32.c (priority: 12)
-[ 62% 17761/28379] //external/avb:libavb_user clang libavb/avb_crypto.c (priority: 12)
-[ 62% 17762/28379] //external/avb:libavb_user clang libavb/avb_descriptor.c (priority: 12)
-[ 62% 17763/28379] //external/avb:libavb_user clang libavb/avb_footer.c (priority: 12)
-[ 62% 17764/28379] //external/avb:libavb_user clang libavb/avb_hash_descriptor.c (priority: 12)
-[ 62% 17765/28379] //external/avb:libavb_user clang libavb/avb_hashtree_descriptor.c (priority: 12)
-[ 62% 17766/28379] //external/avb:libavb_user clang libavb/avb_kernel_cmdline_descriptor.c (priority: 12)
-[ 62% 17767/28379] //external/avb:libavb_user clang libavb/avb_property_descriptor.c (priority: 12)
-[ 62% 17768/28379] //external/avb:libavb_user clang libavb/avb_rsa.c (priority: 12)
-[ 62% 17769/28379] //external/avb:libavb_user clang libavb/avb_slot_verify.c (priority: 12)
-[ 62% 17770/28379] //external/avb:libavb_user clang libavb/avb_util.c (priority: 12)
-[ 62% 17771/28379] //external/avb:libavb_user clang libavb/avb_vbmeta_image.c (priority: 12)
-[ 62% 17772/28379] //external/avb:libavb_user clang libavb/avb_version.c (priority: 12)
-[ 62% 17773/28379] //external/avb:libavb_user clang libavb/avb_sysdeps_posix.c (priority: 12)
-[ 62% 17774/28379] //external/avb:libavb_user clang libavb_ab/avb_ab_flow.c (priority: 12)
-[ 62% 17775/28379] //system/apex/libs/libapexutil:libapexutil clang++ apexutil.cpp [linux_glibc] (priority: 12)
-[ 62% 17776/28379] //external/avb:libavb_user clang libavb_user/avb_user_verity.c (priority: 12)
-[ 62% 17777/28379] //external/avb:libavb_user clang libavb_user/avb_user_verification.c (priority: 12)
-[ 62% 17778/28379] //system/libbase:libbase strip libbase.so [apex31] (priority: 12)
-[ 62% 17779/28379] //system/libbase:libbase static link libbase.a (priority: 12)
-[ 62% 17780/28379] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
-[ 62% 17781/28379] //external/avb:libavb_user clang++ libavb_user/avb_ops_user.cpp (priority: 12)
-[ 62% 17782/28379] //system/core/healthd:libbatterymonitor static link libbatterymonitor.a (priority: 12)
-[ 62% 17783/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk202404.abidiff [arm] (priority: 12)
-[ 62% 17784/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.llndk.abidiff [arm] (priority: 12)
-[ 62% 17785/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex35.abidiff [arm] (priority: 12)
-[ 62% 17786/28379] //frameworks/native/libs/binder/ndk:libbinder_ndk header-abi-diff libbinder_ndk.so.apex.abidiff [arm] (priority: 12)
-[ 62% 17787/28379] //hardware/interfaces/boot/aidl/client:libboot_control_client strip libboot_control_client.so (priority: 12)
-[ 62% 17788/28379] //bootable/recovery/bootloader_message:libbootloader_message generate toc libbootloader_message.so [arm] (priority: 12)
-[ 62% 17789/28379] //bootable/recovery/bootloader_message:libbootloader_message static link libbootloader_message.a (priority: 12)
-[ 62% 17790/28379] //external/brotli:libbrotli clang c/common/constants.c (priority: 12)
-[ 62% 17791/28379] //external/brotli:libbrotli clang c/common/context.c (priority: 12)
-[ 62% 17792/28379] //external/brotli:libbrotli clang c/common/dictionary.c (priority: 12)
-[ 62% 17793/28379] //external/brotli:libbrotli clang c/common/platform.c (priority: 12)
-[ 62% 17794/28379] //external/brotli:libbrotli clang c/common/transform.c (priority: 12)
-[ 62% 17795/28379] //external/brotli:libbrotli clang c/dec/bit_reader.c (priority: 12)
-[ 62% 17796/28379] //external/brotli:libbrotli clang c/dec/decode.c (priority: 12)
-[ 62% 17797/28379] //external/brotli:libbrotli clang c/dec/huffman.c (priority: 12)
-[ 62% 17798/28379] //external/brotli:libbrotli clang c/dec/state.c (priority: 12)
-[ 62% 17799/28379] //system/core/healthd:libbatterymonitor clang++ BatteryMonitor.cpp (priority: 12)
-system/core/healthd/BatteryMonitor.cpp:132:30: warning: ISO C++ requires field designators to be specified in declaration order; field 'batteryChargeTimeToFullNowSeconds' will be initialized after field 'batteryStatus' [-Wreorder-init-list]
-  132 |             .batteryStatus = BatteryStatus::UNKNOWN,
-      |             ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
-system/core/healthd/BatteryMonitor.cpp:131:21: note: previous initialization for field 'batteryChargeTimeToFullNowSeconds' is here
-  131 |                     (int64_t)HealthInfo::BATTERY_CHARGE_TIME_TO_FULL_NOW_SECONDS_UNSUPPORTED,
-      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-1 warning generated.
-[ 62% 17800/28379] //external/brotli:libbrotli clang c/enc/backward_references.c (priority: 12)
-[ 62% 17801/28379] //external/brotli:libbrotli clang c/enc/backward_references_hq.c (priority: 12)
-[ 62% 17802/28379] //external/brotli:libbrotli clang c/enc/bit_cost.c (priority: 12)
-[ 62% 17803/28379] //external/brotli:libbrotli clang c/enc/brotli_bit_stream.c (priority: 12)
-[ 62% 17804/28379] //external/brotli:libbrotli clang c/enc/block_splitter.c (priority: 12)
-[ 62% 17805/28379] //external/brotli:libbrotli clang c/enc/command.c (priority: 12)
-[ 62% 17806/28379] //external/brotli:libbrotli clang c/enc/cluster.c (priority: 12)
-[ 62% 17807/28379] //external/brotli:libbrotli clang c/enc/compress_fragment.c (priority: 12)
-[ 62% 17808/28379] //external/brotli:libbrotli clang c/enc/compress_fragment_two_pass.c (priority: 12)
-[ 62% 17809/28379] //external/brotli:libbrotli clang c/enc/dictionary_hash.c (priority: 12)
-[ 62% 17810/28379] //external/brotli:libbrotli clang c/enc/encoder_dict.c (priority: 12)
-[ 62% 17811/28379] //external/brotli:libbrotli clang c/enc/entropy_encode.c (priority: 12)
-[ 62% 17812/28379] //external/brotli:libbrotli clang c/enc/fast_log.c (priority: 12)
-[ 62% 17813/28379] //external/brotli:libbrotli clang c/enc/encode.c (priority: 12)
-[ 62% 17814/28379] //external/brotli:libbrotli clang c/enc/literal_cost.c (priority: 12)
-[ 62% 17815/28379] //external/brotli:libbrotli clang c/enc/memory.c (priority: 12)
-[ 62% 17816/28379] //external/brotli:libbrotli clang c/enc/histogram.c (priority: 12)
-[ 62% 17817/28379] //external/brotli:libbrotli clang c/enc/static_dict.c (priority: 12)
-[ 62% 17818/28379] //external/brotli:libbrotli clang c/enc/metablock.c (priority: 12)
-[ 62% 17819/28379] //external/brotli:libbrotli clang c/enc/utf8_util.c (priority: 12)
-[ 62% 17820/28379] //external/brotli:libbrotli static link libbrotli.a (priority: 12)
-[ 62% 17821/28379] //external/bzip2:libbz clang blocksort.c (priority: 12)
-[ 62% 17822/28379] //external/bzip2:libbz clang bzlib.c (priority: 12)
-[ 62% 17823/28379] //external/bzip2:libbz clang crctable.c (priority: 12)
-[ 62% 17824/28379] //external/bzip2:libbz clang compress.c (priority: 12)
-[ 62% 17825/28379] //external/bzip2:libbz clang decompress.c (priority: 12)
-[ 62% 17826/28379] //external/bzip2:libbz clang randtable.c (priority: 12)
-[ 62% 17827/28379] //external/bzip2:libbz clang huffman.c (priority: 12)
-[ 62% 17828/28379] //bionic/libc:libc generate toc libc.so (priority: 12)
-[ 62% 17829/28379] //bionic/libc:libc static link libc.a (priority: 12)
-[ 62% 17830/28379] //bionic/libc:libc_dynamic_dispatch static link libc_dynamic_dispatch.a (priority: 12)
-[ 62% 17831/28379] //bionic/libc:libc static link libc.a (priority: 12)
-[ 62% 17832/28379] //external/libcap:libcap generate toc libcap.so (priority: 12)
-[ 62% 17833/28379] //bionic/libc:libc_nomalloc static link libc_nomalloc.a (priority: 12)
-[ 62% 17834/28379] //external/libcap:libcap static link libcap.a (priority: 12)
-[ 62% 17835/28379] //system/core/healthd:libcharger_sysprop static link libcharger_sysprop.a (priority: 12)
-[ 62% 17836/28379] //external/libcap:libcap generate toc libcap.so [arm] (priority: 12)
-[ 62% 17837/28379] //system/core/healthd:libcharger_sysprop sysprop charger.sysprop (priority: 12)
-[ 62% 17838/28379] //external/libchrome:libchrome generate toc libchrome.so (priority: 12)
-[ 62% 17839/28379] //external/libchrome:libchrome clang++ base/barrier_closure.cc [arm] (priority: 12)
-[ 62% 17840/28379] //external/libchrome:libchrome clang++ base/at_exit.cc [arm] (priority: 12)
-[ 62% 17841/28379] //external/libchrome:libchrome clang++ base/base64.cc [arm] (priority: 12)
-[ 62% 17842/28379] //external/libchrome:libchrome clang++ base/base64url.cc [arm] (priority: 12)
-[ 62% 17843/28379] //external/libchrome:libchrome clang++ base/base_paths.cc [arm] (priority: 12)
-[ 62% 17844/28379] //external/libchrome:libchrome clang++ base/base_switches.cc [arm] (priority: 12)
-[ 62% 17845/28379] //external/libchrome:libchrome clang++ base/base_paths_posix.cc [arm] (priority: 12)
-[ 62% 17846/28379] //external/libchrome:libchrome clang++ base/big_endian.cc [arm] (priority: 12)
-[ 62% 17847/28379] //external/libchrome:libchrome clang++ base/build_time.cc [arm] (priority: 12)
-[ 62% 17848/28379] //external/libchrome:libchrome clang++ base/callback_helpers.cc [arm] (priority: 12)
-[ 62% 17849/28379] //external/libchrome:libchrome clang++ base/callback_internal.cc [arm] (priority: 12)
-[ 62% 17850/28379] //external/libchrome:libchrome clang++ base/cpu.cc [arm] (priority: 12)
-[ 62% 17851/28379] //external/libchrome:libchrome clang++ base/command_line.cc [arm] (priority: 12)
-[ 62% 17852/28379] //external/libchrome:libchrome clang++ base/debug/alias.cc [arm] (priority: 12)
-[ 62% 17853/28379] //external/libchrome:libchrome clang++ base/debug/activity_tracker.cc [arm] (priority: 12)
-[ 62% 17854/28379] //external/libchrome:libchrome clang++ base/debug/crash_logging.cc [arm] (priority: 12)
+[ 62% 17877/28379] //external/libchrome:libchrome clang++ base/files/memory_mapped_file_posix.cc [arm] (priority: 12)
+[ 62% 17878/28379] //external/libchrome:libchrome clang++ base/files/scoped_file.cc [arm] (priority: 12)
+[ 63% 17879/28379] //external/libchrome:libchrome clang++ base/files/scoped_temp_dir.cc [arm] (priority: 12)
+[ 63% 17880/28379] //external/libchrome:libchrome clang++ base/guid.cc [arm] (priority: 12)
+[ 63% 17881/28379] //external/libchrome:libchrome clang++ base/hash.cc [arm] (priority: 12)
+[ 63% 17882/28379] //external/libchrome:libchrome clang++ base/json/json_file_value_serializer.cc [arm] (priority: 12)
+[ 63% 17883/28379] //external/libchrome:libchrome clang++ base/json/json_reader.cc [arm] (priority: 12)
+[ 63% 17884/28379] //external/libchrome:libchrome clang++ base/json/json_parser.cc [arm] (priority: 12)
+[ 63% 17885/28379] //external/libchrome:libchrome clang++ base/json/json_string_value_serializer.cc [arm] (priority: 12)
+[ 63% 17886/28379] //external/libchrome:libchrome clang++ base/json/json_value_converter.cc [arm] (priority: 12)
+[ 63% 17887/28379] //external/libchrome:libchrome clang++ base/json/json_writer.cc [arm] (priority: 12)
+[ 63% 17888/28379] //external/libchrome:libchrome clang++ base/json/string_escape.cc [arm] (priority: 12)
+[ 63% 17889/28379] //external/libchrome:libchrome clang++ base/lazy_instance_helpers.cc [arm] (priority: 12)
+[ 63% 17890/28379] //external/libchrome:libchrome clang++ base/location.cc [arm] (priority: 12)
+[ 63% 17891/28379] //external/libchrome:libchrome clang++ base/md5.cc [arm] (priority: 12)
+[ 63% 17892/28379] //external/libchrome:libchrome clang++ base/logging.cc [arm] (priority: 12)
+[ 63% 17893/28379] //external/libchrome:libchrome clang++ base/memory/aligned_memory.cc [arm] (priority: 12)
+[ 63% 17894/28379] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17895/28379] //external/libchrome:libchrome clang++ base/memory/ref_counted.cc [arm] (priority: 12)
+[ 63% 17896/28379] //external/libchrome:libchrome clang++ base/memory/read_only_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17897/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle.cc [arm] (priority: 12)
+[ 63% 17898/28379] //external/libchrome:libchrome clang++ base/memory/ref_counted_memory.cc [arm] (priority: 12)
+[ 63% 17899/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_mapping.cc [arm] (priority: 12)
+[ 63% 17900/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_helper.cc [arm] (priority: 12)
+[ 63% 17901/28379] //external/libchrome:libchrome clang++ base/memory/weak_ptr.cc [arm] (priority: 12)
+[ 63% 17902/28379] //external/libchrome:libchrome clang++ base/memory/unsafe_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17903/28379] //external/libchrome:libchrome clang++ base/memory/writable_shared_memory_region.cc [arm] (priority: 12)
+[ 63% 17904/28379] //external/libchrome:libchrome clang++ base/message_loop/incoming_task_queue.cc [arm] (priority: 12)
+[ 63% 17905/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop.cc [arm] (priority: 12)
+[ 63% 17906/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop_current.cc [arm] (priority: 12)
+[ 63% 17907/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump.cc [arm] (priority: 12)
+[ 63% 17908/28379] //external/libchrome:libchrome clang++ base/message_loop/message_loop_task_runner.cc [arm] (priority: 12)
+[ 63% 17909/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump_default.cc [arm] (priority: 12)
+[ 63% 17910/28379] //external/libchrome:libchrome clang++ base/message_loop/message_pump_libevent.cc [arm] (priority: 12)
+[ 63% 17911/28379] //external/libchrome:libchrome clang++ base/message_loop/watchable_io_message_pump_posix.cc [arm] (priority: 12)
+[ 63% 17912/28379] //external/libchrome:libchrome clang++ base/metrics/bucket_ranges.cc [arm] (priority: 12)
+[ 63% 17913/28379] //external/libchrome:libchrome clang++ base/metrics/dummy_histogram.cc [arm] (priority: 12)
+[ 63% 17914/28379] //external/libchrome:libchrome clang++ base/metrics/field_trial_param_associator.cc [arm] (priority: 12)
+[ 63% 17915/28379] //external/libchrome:libchrome clang++ base/metrics/field_trial.cc [arm] (priority: 12)
+[ 63% 17916/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_base.cc [arm] (priority: 12)
+[ 63% 17917/28379] //external/libchrome:libchrome clang++ base/metrics/histogram.cc [arm] (priority: 12)
+[ 63% 17918/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_functions.cc [arm] (priority: 12)
+[ 63% 17919/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_samples.cc [arm] (priority: 12)
+[ 63% 17920/28379] //external/libchrome:libchrome clang++ base/metrics/histogram_snapshot_manager.cc [arm] (priority: 12)
+[ 63% 17921/28379] //external/libchrome:libchrome clang++ base/metrics/metrics_hashes.cc [arm] (priority: 12)
+[ 63% 17922/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_memory_allocator.cc [arm] (priority: 12)
+[ 63% 17923/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_histogram_allocator.cc [arm] (priority: 12)
+[ 63% 17924/28379] //external/libchrome:libchrome clang++ base/metrics/persistent_sample_map.cc [arm] (priority: 12)
+[ 63% 17925/28379] //external/libchrome:libchrome clang++ base/metrics/sample_map.cc [arm] (priority: 12)
+[ 63% 17926/28379] //external/libchrome:libchrome clang++ base/metrics/sample_vector.cc [arm] (priority: 12)
+[ 63% 17927/28379] //external/libchrome:libchrome clang++ base/metrics/sparse_histogram.cc [arm] (priority: 12)
+[ 63% 17928/28379] //external/libchrome:libchrome clang++ base/native_library.cc [arm] (priority: 12)
+[ 63% 17929/28379] //external/libchrome:libchrome clang++ base/metrics/statistics_recorder.cc [arm] (priority: 12)
+[ 63% 17930/28379] //external/libchrome:libchrome clang++ base/native_library_posix.cc [arm] (priority: 12)
+[ 63% 17931/28379] //external/libchrome:libchrome clang++ base/observer_list_threadsafe.cc [arm] (priority: 12)
+[ 63% 17932/28379] //external/libchrome:libchrome clang++ base/path_service.cc [arm] (priority: 12)
+[ 63% 17933/28379] //external/libchrome:libchrome clang++ base/pending_task.cc [arm] (priority: 12)
+[ 63% 17934/28379] //external/libchrome:libchrome clang++ base/pickle.cc [arm] (priority: 12)
+[ 63% 17935/28379] //external/libchrome:libchrome clang++ base/posix/file_descriptor_shuffle.cc [arm] (priority: 12)
+[ 63% 17936/28379] //external/libchrome:libchrome clang++ base/posix/safe_strerror.cc [arm] (priority: 12)
+[ 63% 17937/28379] //external/libchrome:libchrome clang++ base/posix/global_descriptors.cc [arm] (priority: 12)
+[ 63% 17938/28379] //external/libchrome:libchrome clang++ base/process/kill.cc [arm] (priority: 12)
+[ 63% 17939/28379] //external/libchrome:libchrome clang++ base/process/kill_posix.cc [arm] (priority: 12)
+[ 63% 17940/28379] //external/libchrome:libchrome clang++ base/process/launch.cc [arm] (priority: 12)
+[ 63% 17941/28379] //external/libchrome:libchrome clang++ base/process/launch_posix.cc [arm] (priority: 12)
+[ 63% 17942/28379] //external/libchrome:libchrome clang++ base/process/memory.cc [arm] (priority: 12)
+[ 63% 17943/28379] //external/libchrome:libchrome clang++ base/process/process_handle.cc [arm] (priority: 12)
+[ 63% 17944/28379] //external/libchrome:libchrome clang++ base/process/process_handle_posix.cc [arm] (priority: 12)
+[ 63% 17945/28379] //external/libchrome:libchrome clang++ base/process/process_iterator.cc [arm] (priority: 12)
+[ 63% 17946/28379] //external/libchrome:libchrome clang++ base/process/process_metrics.cc [arm] (priority: 12)
+[ 63% 17947/28379] //external/libchrome:libchrome clang++ base/process/process_metrics_posix.cc [arm] (priority: 12)
+[ 63% 17948/28379] //external/libchrome:libchrome clang++ base/process/process_posix.cc [arm] (priority: 12)
+[ 63% 17949/28379] //external/libchrome:libchrome clang++ base/rand_util.cc [arm] (priority: 12)
+[ 63% 17950/28379] //external/libchrome:libchrome clang++ base/rand_util_posix.cc [arm] (priority: 12)
+[ 63% 17951/28379] //external/libchrome:libchrome clang++ base/run_loop.cc [arm] (priority: 12)
+[ 63% 17952/28379] //external/libchrome:libchrome clang++ base/scoped_native_library.cc [arm] (priority: 12)
+[ 63% 17953/28379] //external/libchrome:libchrome clang++ base/sequence_checker_impl.cc [arm] (priority: 12)
+[ 63% 17954/28379] //external/libchrome:libchrome clang++ base/sequence_token.cc [arm] (priority: 12)
+[ 63% 17955/28379] //external/libchrome:libchrome clang++ base/sequenced_task_runner.cc [arm] (priority: 12)
+[ 63% 17956/28379] //external/libchrome:libchrome clang++ base/sha1.cc [arm] (priority: 12)
+[ 63% 17957/28379] //external/libchrome:libchrome clang++ base/strings/pattern.cc [arm] (priority: 12)
+[ 63% 17958/28379] //external/libchrome:libchrome clang++ base/strings/nullable_string16.cc [arm] (priority: 12)
+[ 63% 17959/28379] //external/libchrome:libchrome clang++ base/strings/safe_sprintf.cc [arm] (priority: 12)
+[ 63% 17960/28379] //external/libchrome:libchrome clang++ base/strings/strcat.cc [arm] (priority: 12)
+[ 63% 17961/28379] //external/libchrome:libchrome clang++ base/strings/string16.cc [arm] (priority: 12)
+[ 63% 17962/28379] //external/libchrome:libchrome clang++ base/strings/string_number_conversions.cc [arm] (priority: 12)
+[ 63% 17963/28379] //external/libchrome:libchrome clang++ base/strings/string_piece.cc [arm] (priority: 12)
+[ 63% 17964/28379] //external/libchrome:libchrome clang++ base/strings/string_split.cc [arm] (priority: 12)
+[ 63% 17965/28379] //external/libchrome:libchrome clang++ base/strings/string_util.cc [arm] (priority: 12)
+[ 63% 17966/28379] //external/libchrome:libchrome clang++ base/strings/string_util_constants.cc [arm] (priority: 12)
+[ 63% 17967/28379] //external/libchrome:libchrome clang++ base/strings/stringprintf.cc [arm] (priority: 12)
+[ 63% 17968/28379] //external/libchrome:libchrome clang++ base/strings/utf_string_conversion_utils.cc [arm] (priority: 12)
+[ 63% 17969/28379] //external/libchrome:libchrome clang++ base/sync_socket_posix.cc [arm] (priority: 12)
+[ 63% 17970/28379] //external/libchrome:libchrome clang++ base/strings/utf_string_conversions.cc [arm] (priority: 12)
+[ 63% 17971/28379] //external/libchrome:libchrome clang++ base/synchronization/atomic_flag.cc [arm] (priority: 12)
+[ 63% 17972/28379] //external/libchrome:libchrome clang++ base/synchronization/condition_variable_posix.cc [arm] (priority: 12)
+[ 63% 17973/28379] //external/libchrome:libchrome clang++ base/synchronization/lock.cc [arm] (priority: 12)
+[ 63% 17974/28379] //external/libchrome:libchrome clang++ base/synchronization/lock_impl_posix.cc [arm] (priority: 12)
+[ 63% 17975/28379] //external/libchrome:libchrome clang++ base/sys_info.cc [arm] (priority: 12)
+[ 63% 17976/28379] //external/libchrome:libchrome clang++ base/synchronization/waitable_event_posix.cc [arm] (priority: 12)
+[ 63% 17977/28379] //external/libchrome:libchrome clang++ base/sys_info_posix.cc [arm] (priority: 12)
+[ 63% 17978/28379] //external/libchrome:libchrome clang++ base/task/cancelable_task_tracker.cc [arm] (priority: 12)
+[ 63% 17979/28379] //external/libchrome:libchrome clang++ base/task_runner.cc [arm] (priority: 12)
+[ 63% 17980/28379] //external/libchrome:libchrome clang++ base/task_scheduler/scheduler_lock_impl.cc [arm] (priority: 12)
+[ 63% 17981/28379] //external/libchrome:libchrome clang++ base/task_scheduler/scoped_set_task_priority_for_current_thread.cc [arm] (priority: 12)
+[ 63% 17982/28379] //external/libchrome:libchrome clang++ base/task_scheduler/sequence.cc [arm] (priority: 12)
+[ 63% 17983/28379] //external/libchrome:libchrome clang++ base/task_scheduler/sequence_sort_key.cc [arm] (priority: 12)
+[ 63% 17984/28379] //external/libchrome:libchrome clang++ base/task_scheduler/task_traits.cc [arm] (priority: 12)
+[ 63% 17985/28379] //external/libchrome:libchrome clang base/third_party/dynamic_annotations/dynamic_annotations.c [arm] (priority: 12)
+[ 63% 17986/28379] //external/libchrome:libchrome clang++ base/third_party/icu/icu_utf.cc [arm] (priority: 12)
+[ 63% 17987/28379] //external/libchrome:libchrome clang++ base/task_scheduler/task.cc [arm] (priority: 12)
+[ 63% 17988/28379] //external/libchrome:libchrome clang++ base/third_party/nspr/prtime.cc [arm] (priority: 12)
+[ 63% 17989/28379] //external/libchrome:libchrome clang++ base/threading/platform_thread_posix.cc [arm] (priority: 12)
+[ 63% 17990/28379] //external/libchrome:libchrome clang++ base/threading/post_task_and_reply_impl.cc [arm] (priority: 12)
+[ 63% 17991/28379] //external/libchrome:libchrome clang++ base/threading/scoped_blocking_call.cc [arm] (priority: 12)
+[ 63% 17992/28379] //external/libchrome:libchrome clang++ base/threading/sequence_local_storage_slot.cc [arm] (priority: 12)
+[ 63% 17993/28379] //external/libchrome:libchrome clang++ base/threading/sequence_local_storage_map.cc [arm] (priority: 12)
+[ 63% 17994/28379] //external/libchrome:libchrome clang++ base/threading/sequenced_task_runner_handle.cc [arm] (priority: 12)
+[ 63% 17995/28379] //external/libchrome:libchrome clang++ base/threading/simple_thread.cc [arm] (priority: 12)
+[ 63% 17996/28379] //external/libchrome:libchrome clang++ base/threading/thread_checker_impl.cc [arm] (priority: 12)
+[ 63% 17997/28379] //external/libchrome:libchrome clang++ base/threading/thread.cc [arm] (priority: 12)
+[ 63% 17998/28379] //external/libchrome:libchrome clang++ base/threading/thread_collision_warner.cc [arm] (priority: 12)
+[ 63% 17999/28379] //external/libchrome:libchrome clang++ base/threading/thread_id_name_manager.cc [arm] (priority: 12)
+[ 63% 18000/28379] //external/libchrome:libchrome clang++ base/threading/thread_local_storage.cc [arm] (priority: 12)
+[ 63% 18001/28379] //external/libchrome:libchrome clang++ base/threading/thread_local_storage_posix.cc [arm] (priority: 12)
+[ 63% 18002/28379] //external/libchrome:libchrome clang++ base/threading/thread_restrictions.cc [arm] (priority: 12)
+[ 63% 18003/28379] //external/libchrome:libchrome clang++ base/threading/thread_task_runner_handle.cc [arm] (priority: 12)
+[ 63% 18004/28379] //external/libchrome:libchrome clang++ base/time/clock.cc [arm] (priority: 12)
+[ 63% 18005/28379] //external/libchrome:libchrome clang++ base/time/default_clock.cc [arm] (priority: 12)
+[ 63% 18006/28379] //external/libchrome:libchrome clang++ base/time/default_tick_clock.cc [arm] (priority: 12)
+[ 63% 18007/28379] //external/libchrome:libchrome clang++ base/time/tick_clock.cc [arm] (priority: 12)
+[ 63% 18008/28379] //external/libchrome:libchrome clang++ base/time/time.cc [arm] (priority: 12)
+[ 63% 18009/28379] //external/libchrome:libchrome clang++ base/time/time_conversion_posix.cc [arm] (priority: 12)
+[ 63% 18010/28379] //external/libchrome:libchrome clang++ base/time/time_exploded_posix.cc [arm] (priority: 12)
+[ 63% 18011/28379] //external/libchrome:libchrome clang++ base/time/time_now_posix.cc [arm] (priority: 12)
+[ 63% 18012/28379] //external/libchrome:libchrome clang++ base/time/time_override.cc [arm] (priority: 12)
+[ 63% 18013/28379] //external/libchrome:libchrome clang++ base/timer/elapsed_timer.cc [arm] (priority: 12)
+[ 63% 18014/28379] //external/libchrome:libchrome clang++ base/timer/timer.cc [arm] (priority: 12)
+[ 63% 18015/28379] //external/libchrome:libchrome clang++ base/token.cc [arm] (priority: 12)
+[ 63% 18016/28379] //external/libchrome:libchrome clang++ base/unguessable_token.cc [arm] (priority: 12)
+[ 63% 18017/28379] //external/libchrome:libchrome clang++ base/value_iterators.cc [arm] (priority: 12)
+[ 63% 18018/28379] //external/libchrome:libchrome clang++ base/version.cc [arm] (priority: 12)
+[ 63% 18019/28379] //external/libchrome:libchrome clang++ base/values.cc [arm] (priority: 12)
+[ 63% 18020/28379] //external/libchrome:libchrome clang++ base/vlog.cc [arm] (priority: 12)
+[ 63% 18021/28379] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_advertisement.cc [arm] (priority: 12)
+[ 63% 18022/28379] //external/libchrome:libchrome clang++ device/bluetooth/bluetooth_uuid.cc [arm] (priority: 12)
+[ 63% 18023/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets.cc [arm] (priority: 12)
+[ 63% 18024/28379] //external/libchrome:libchrome clang++ device/bluetooth/bluez/bluetooth_service_attribute_value_bluez.cc [arm] (priority: 12)
+[ 63% 18025/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/insets_f.cc [arm] (priority: 12)
+[ 63% 18026/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/point.cc [arm] (priority: 12)
+[ 63% 18027/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/point_conversions.cc [arm] (priority: 12)
+[ 63% 18028/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/point_f.cc [arm] (priority: 12)
+[ 63% 18029/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/rect.cc [arm] (priority: 12)
+[ 63% 18030/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/rect_f.cc [arm] (priority: 12)
+[ 63% 18031/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/size.cc [arm] (priority: 12)
+[ 63% 18032/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/size_conversions.cc [arm] (priority: 12)
+[ 63% 18033/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/size_f.cc [arm] (priority: 12)
+[ 63% 18034/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/vector2d_f.cc [arm] (priority: 12)
+[ 63% 18035/28379] //external/libchrome:libchrome clang++ ui/gfx/geometry/vector2d.cc [arm] (priority: 12)
+[ 63% 18036/28379] //external/libchrome:libchrome clang++ ui/gfx/range/range.cc [arm] (priority: 12)
+[ 63% 18037/28379] //external/libchrome:libchrome clang++ ui/gfx/range/range_f.cc [arm] (priority: 12)
+[ 63% 18038/28379] //external/libchrome:libchrome clang++ base/files/file_util_linux.cc [arm] (priority: 12)
+[ 63% 18039/28379] //external/libchrome:libchrome clang++ base/files/file_path_watcher_linux.cc [arm] (priority: 12)
+[ 63% 18040/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_posix.cc [arm] (priority: 12)
+[ 63% 18041/28379] //external/libchrome:libchrome clang++ base/posix/unix_domain_socket.cc [arm] (priority: 12)
+[ 63% 18042/28379] //external/libchrome:libchrome clang++ base/process/internal_linux.cc [arm] (priority: 12)
+[ 63% 18043/28379] //external/libchrome:libchrome clang++ base/process/memory_linux.cc [arm] (priority: 12)
+[ 63% 18044/28379] //external/libchrome:libchrome clang++ base/process/process_handle_linux.cc [arm] (priority: 12)
+[ 63% 18045/28379] //external/libchrome:libchrome clang++ base/process/process_info_linux.cc [arm] (priority: 12)
+[ 63% 18046/28379] //external/libchrome:libchrome clang++ base/process/process_iterator_linux.cc [arm] (priority: 12)
+[ 63% 18047/28379] //external/libchrome:libchrome clang++ base/process/process_metrics_linux.cc [arm] (priority: 12)
+[ 63% 18048/28379] //external/libchrome:libchrome clang++ base/strings/sys_string_conversions_posix.cc [arm] (priority: 12)
+[ 63% 18049/28379] //external/libchrome:libchrome clang++ base/sys_info_linux.cc [arm] (priority: 12)
+[ 63% 18050/28379] //external/libchrome:libchrome clang++ base/threading/platform_thread_internal_posix.cc [arm] (priority: 12)
+[ 63% 18051/28379] //external/libchrome:libchrome clang++ base/threading/platform_thread_linux.cc [arm] (priority: 12)
+[ 63% 18052/28379] //external/libchrome:libchrome clang++ base/android/android_hardware_buffer_compat.cc [arm] (priority: 12)
+[ 63% 18053/28379] //external/libchrome:libchrome clang++ base/android/build_info.cc [arm] (priority: 12)
+[ 63% 18054/28379] //external/libchrome:libchrome clang++ base/android/content_uri_utils.cc [arm] (priority: 12)
+[ 63% 18055/28379] //external/libchrome:libchrome clang++ base/android/java_exception_reporter.cc [arm] (priority: 12)
+[ 63% 18056/28379] //external/libchrome:libchrome clang++ base/android/jni_android.cc [arm] (priority: 12)
+[ 63% 18057/28379] //external/libchrome:libchrome clang++ base/android/jni_string.cc [arm] (priority: 12)
+[ 63% 18058/28379] //external/libchrome:libchrome clang++ base/android/jni_array.cc [arm] (priority: 12)
+[ 63% 18059/28379] //external/libchrome:libchrome clang++ base/android/path_utils.cc [arm] (priority: 12)
+[ 63% 18060/28379] //external/libchrome:libchrome clang++ base/android/scoped_java_ref.cc [arm] (priority: 12)
+[ 63% 18061/28379] //external/libchrome:libchrome clang++ base/android/scoped_hardware_buffer_handle.cc [arm] (priority: 12)
+[ 63% 18062/28379] //external/libchrome:libchrome clang++ base/android/sys_utils.cc [arm] (priority: 12)
+[ 63% 18063/28379] //external/libchrome:libchrome clang++ base/base_paths_android.cc [arm] (priority: 12)
+[ 63% 18064/28379] //external/libchrome:libchrome clang++ base/debug/stack_trace_android.cc [arm] (priority: 12)
+[ 63% 18065/28379] //external/libchrome:libchrome clang++ base/memory/platform_shared_memory_region_android.cc [arm] (priority: 12)
+[ 63% 18066/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_android.cc [arm] (priority: 12)
+[ 63% 18067/28379] //external/libchrome:libchrome clang++ base/memory/shared_memory_handle_android.cc [arm] (priority: 12)
+[ 63% 18068/28379] //external/libchrome:libchrome clang++ base/os_compat_android.cc [arm] (priority: 12)
+[ 63% 18069/28379] //external/libchrome:libchrome clang++ base/time/time_android.cc [arm] (priority: 12)
+[ 63% 18070/28379] //external/libchrome:libchrome clang++ base/sys_info_android.cc [arm] (priority: 12)
+[ 63% 18071/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_bitstr.cc [apex31] (priority: 12)
+[ 63% 18072/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_bool.cc [apex31] (priority: 12)
+[ 63% 18073/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_d2i_fp.cc [apex31] (priority: 12)
+[ 63% 18074/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_dup.cc [apex31] (priority: 12)
+[ 63% 18075/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_gentm.cc [apex31] (priority: 12)
+[ 63% 18076/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_i2d_fp.cc [apex31] (priority: 12)
+[ 63% 18077/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_int.cc [apex31] (priority: 12)
+[ 63% 18078/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_mbstr.cc [apex31] (priority: 12)
+[ 63% 18079/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_octet.cc [apex31] (priority: 12)
+[ 63% 18080/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_object.cc [apex31] (priority: 12)
+[ 63% 18081/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strex.cc [apex31] (priority: 12)
+[ 63% 18082/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_strnid.cc [apex31] (priority: 12)
+[ 63% 18083/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_time.cc [apex31] (priority: 12)
+[ 63% 18084/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_type.cc [apex31] (priority: 12)
+[ 63% 18085/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/a_utctm.cc [apex31] (priority: 12)
+[ 63% 18086/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_lib.cc [apex31] (priority: 12)
+[ 63% 18087/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn1_par.cc [apex31] (priority: 12)
+[ 63% 18088/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/asn_pack.cc [apex31] (priority: 12)
+[ 63% 18089/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_int.cc [apex31] (priority: 12)
+[ 63% 18090/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/f_string.cc [apex31] (priority: 12)
+[ 63% 18091/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/posix_time.cc [apex31] (priority: 12)
+[ 63% 18092/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_dec.cc [apex31] (priority: 12)
+[ 63% 18093/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_enc.cc [apex31] (priority: 12)
+[ 63% 18094/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_fre.cc [apex31] (priority: 12)
+[ 63% 18095/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_new.cc [apex31] (priority: 12)
+[ 63% 18096/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_typ.cc [apex31] (priority: 12)
+[ 63% 18097/28379] //external/boringssl:libcrypto clang++ src/crypto/base64/base64.cc [apex31] (priority: 12)
+[ 63% 18098/28379] //external/boringssl:libcrypto clang++ src/crypto/asn1/tasn_utl.cc [apex31] (priority: 12)
+[ 63% 18099/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/bio.cc [apex31] (priority: 12)
+[ 63% 18100/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/bio_mem.cc [apex31] (priority: 12)
+[ 63% 18101/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/errno.cc [apex31] (priority: 12)
+[ 63% 18102/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/connect.cc [apex31] (priority: 12)
+[ 63% 18103/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/file.cc [apex31] (priority: 12)
+[ 63% 18104/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/fd.cc [apex31] (priority: 12)
+[ 63% 18105/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/hexdump.cc [apex31] (priority: 12)
+[ 63% 18106/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/pair.cc [apex31] (priority: 12)
+[ 63% 18107/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/printf.cc [apex31] (priority: 12)
+[ 63% 18108/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/socket.cc [apex31] (priority: 12)
+[ 63% 18109/28379] //external/boringssl:libcrypto clang++ src/crypto/bio/socket_helper.cc [apex31] (priority: 12)
+[ 63% 18110/28379] //external/boringssl:libcrypto clang++ src/crypto/blake2/blake2.cc [apex31] (priority: 12)
+[ 63% 18111/28379] //external/boringssl:libcrypto clang++ src/crypto/bn_extra/bn_asn1.cc [apex31] (priority: 12)
+[ 63% 18112/28379] //external/boringssl:libcrypto clang++ src/crypto/bn_extra/convert.cc [apex31] (priority: 12)
+[ 63% 18113/28379] //external/boringssl:libcrypto clang++ src/crypto/buf/buf.cc [apex31] (priority: 12)
+[ 63% 18114/28379] //external/boringssl:libcrypto clang++ src/crypto/bytestring/asn1_compat.cc [apex31] (priority: 12)
+[ 63% 18115/28379] //external/boringssl:libcrypto clang++ src/crypto/bytestring/ber.cc [apex31] (priority: 12)
+[ 63% 18116/28379] //external/boringssl:libcrypto clang++ src/crypto/bytestring/cbb.cc [apex31] (priority: 12)
+[ 63% 18117/28379] //external/boringssl:libcrypto clang++ src/crypto/bytestring/cbs.cc [apex31] (priority: 12)
+[ 63% 18118/28379] //external/boringssl:libcrypto clang++ src/crypto/bytestring/unicode.cc [apex31] (priority: 12)
+[ 63% 18119/28379] //external/boringssl:libcrypto clang++ src/crypto/chacha/chacha.cc [apex31] (priority: 12)
+[ 63% 18120/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/cipher_extra.cc [apex31] (priority: 12)
+[ 63% 18121/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/derive_key.cc [apex31] (priority: 12)
+[ 63% 18122/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_aesctrhmac.cc [apex31] (priority: 12)
+[ 63% 18123/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_aesgcmsiv.cc [apex31] (priority: 12)
+[ 63% 18124/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_chacha20poly1305.cc [apex31] (priority: 12)
+[ 63% 18125/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_des.cc [apex31] (priority: 12)
+[ 63% 18126/28379] //external/boringssl:libcrypto clang++ src/crypto/cipher_extra/e_null.cc [apex31] (priority: 12)
 == out/error.log
