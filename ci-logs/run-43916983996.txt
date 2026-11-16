@@ -1,220 +1,10 @@
-== Mon Nov 16 19:29:09 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
+== Mon Nov 16 19:31:11 UTC 2026 run=43916983996 sha=fc1ecc05bb10da1ed24471682ff78913500fb043
                total        used        free      shared  buff/cache   available
-Mem:           15988        6585         298          31        9104        9024
+Mem:           15988        6583         684          31        8721        9027
 Swap:          28671         195       28476
 /dev/root       146G  135G   11G  93% /
 == oom/kill messages
 == last 250 lines of build.log
-      |         (                                    )
-external/bash/variables.c:3987:13: note: use '==' to turn this assignment into an equality comparison
- 3987 |     if (elt = hash_remove (name, v->table, 0))
-      |             ^
-      |             ==
-external/bash/variables.c:4896:35: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4896 |   for (i = 0, list_index = 0; var = vars[i]; i++)
-      |                               ~~~~^~~~~~~~~
-external/bash/variables.c:4896:35: note: place parentheses around the assignment to silence this warning
- 4896 |   for (i = 0, list_index = 0; var = vars[i]; i++)
-      |                                   ^        
-      |                               (            )
-external/bash/variables.c:4896:35: note: use '==' to turn this assignment into an equality comparison
- 4896 |   for (i = 0, list_index = 0; var = vars[i]; i++)
-      |                                   ^
-      |                                   ==
-external/bash/variables.c:5420:11: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 5420 |   if (ret = vcxt->down)
-      |       ~~~~^~~~~~~~~~~~
-external/bash/variables.c:5420:11: note: place parentheses around the assignment to silence this warning
- 5420 |   if (ret = vcxt->down)
-      |           ^           
-      |       (               )
-external/bash/variables.c:5420:11: note: use '==' to turn this assignment into an equality comparison
- 5420 |   if (ret = vcxt->down)
-      |           ^
-      |           ==
-external/bash/variables.c:6179:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6179 |   while (val = extract_colon_unit (temp, &tptr))
-      |          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-external/bash/variables.c:6179:14: note: place parentheses around the assignment to silence this warning
- 6179 |   while (val = extract_colon_unit (temp, &tptr))
-      |              ^                                 
-      |          (                                     )
-external/bash/variables.c:6179:14: note: use '==' to turn this assignment into an equality comparison
- 6179 |   while (val = extract_colon_unit (temp, &tptr))
-      |              ^
-      |              ==
-external/bash/variables.c:6228:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6228 |   if (v = find_variable (name))
-      |       ~~^~~~~~~~~~~~~~~~~~~~~~
-external/bash/variables.c:6228:9: note: place parentheses around the assignment to silence this warning
- 6228 |   if (v = find_variable (name))
-      |         ^                     
-      |       (                       )
-external/bash/variables.c:6228:9: note: use '==' to turn this assignment into an equality comparison
- 6228 |   if (v = find_variable (name))
-      |         ^
-      |         ==
-9 warnings generated.
-[ 61% 17454/28379] //external/bash:bash clang xmalloc.c (priority: 12)
-[ 61% 17455/28379] //external/bc:bc clang src/args.c (priority: 12)
-[ 61% 17456/28379] //external/bc:bc clang src/bc.c (priority: 12)
-[ 61% 17457/28379] //external/bc:bc clang src/bc_lex.c (priority: 12)
-[ 61% 17458/28379] //external/bc:bc clang src/bc_parse.c (priority: 12)
-[ 61% 17459/28379] //external/bash:bash clang y.tab.c (priority: 12)
-/usr/local/src/chet/src/bash/src/parse.y:2924:28: warning: passing 'const char *' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
- 2924 |       report_syntax_error (_("maximum here-document count exceeded"));
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-external/bash/bashintl.h:36:18: note: expanded from macro '_'
-   36 | #define _(msgid)        gettext(msgid)
-      |                         ^~~~~~~~~~~~~~
-external/bash/include/gettext.h:46:25: note: expanded from macro 'gettext'
-   46 | # define gettext(Msgid) ((const char *) (Msgid))
-      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:210:47: note: passing argument to parameter here
-  210 | static void report_syntax_error PARAMS((char *));
-      |                                               ^
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4550 |       if (etext = error_token_from_token (cond_token))
-      |           ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: place parentheses around the assignment to silence this warning
- 4550 |       if (etext = error_token_from_token (cond_token))
-      |                 ^                                    
-      |           (                                          )
-/usr/local/src/chet/src/bash/src/parse.y:4550:17: note: use '==' to turn this assignment into an equality comparison
- 4550 |       if (etext = error_token_from_token (cond_token))
-      |                 ^
-      |                 ==
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: place parentheses around the assignment to silence this warning
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |                     ^                                    
-      |               (                                          )
-/usr/local/src/chet/src/bash/src/parse.y:4632:14: note: use '==' to turn this assignment into an equality comparison
- 4632 |           if (etext = error_token_from_token (cond_token))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4664 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: place parentheses around the assignment to silence this warning
- 4664 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4664:14: note: use '==' to turn this assignment into an equality comparison
- 4664 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4715 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: place parentheses around the assignment to silence this warning
- 4715 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4715:14: note: use '==' to turn this assignment into an equality comparison
- 4715 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4742 |           if (etext = error_token_from_token (tok))
-      |               ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: place parentheses around the assignment to silence this warning
- 4742 |           if (etext = error_token_from_token (tok))
-      |                     ^                             
-      |               (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4742:14: note: use '==' to turn this assignment into an equality comparison
- 4742 |           if (etext = error_token_from_token (tok))
-      |                     ^
-      |                     ==
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: place parentheses around the assignment to silence this warning
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                      ^                             
-      |                (                                   )
-/usr/local/src/chet/src/bash/src/parse.y:4760:22: note: use '==' to turn this assignment into an equality comparison
- 4760 |       else if (etext = error_token_from_token (tok))
-      |                      ^
-      |                      ==
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 5690 |   while (c = *string++)
-      |          ~~^~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: place parentheses around the assignment to silence this warning
- 5690 |   while (c = *string++)
-      |            ^          
-      |          (            )
-/usr/local/src/chet/src/bash/src/parse.y:5690:12: note: use '==' to turn this assignment into an equality comparison
- 5690 |   while (c = *string++)
-      |            ^
-      |            ==
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: place parentheses around the assignment to silence this warning
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |         ^                                               
-      |       (                                                 )
-/usr/local/src/chet/src/bash/src/parse.y:6106:9: note: use '==' to turn this assignment into an equality comparison
- 6106 |   if (t = find_token_in_alist (tok, word_token_alist, 0))
-      |         ^
-      |         ==
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |       ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: place parentheses around the assignment to silence this warning
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |         ^                                                
-      |       (                                                  )
-/usr/local/src/chet/src/bash/src/parse.y:6109:9: note: use '==' to turn this assignment into an equality comparison
- 6109 |   if (t = find_token_in_alist (tok, other_token_alist, 0))
-      |         ^
-      |         ==
-/usr/local/src/chet/src/bash/src/parse.y:6261:8: warning: assigning to 'char *' from 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
- 6261 |           msg = EOF_Reached ? _("syntax error: unexpected end of file") : _("syntax error");
-      |               ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
- 6385 |   if (ea = expanding_alias ())
-      |       ~~~^~~~~~~~~~~~~~~~~~~~
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: place parentheses around the assignment to silence this warning
- 6385 |   if (ea = expanding_alias ())
-      |          ^                   
-      |       (                      )
-/usr/local/src/chet/src/bash/src/parse.y:6385:10: note: use '==' to turn this assignment into an equality comparison
- 6385 |   if (ea = expanding_alias ())
-      |          ^
-      |          ==
-12 warnings generated.
-[ 61% 17460/28379] //external/bc:bc clang src/dc.c (priority: 12)
-[ 61% 17461/28379] //external/bc:bc clang src/data.c (priority: 12)
-[ 61% 17462/28379] //external/bc:bc clang src/dc_lex.c (priority: 12)
-[ 61% 17463/28379] //external/bc:bc clang src/dc_parse.c (priority: 12)
-[ 61% 17464/28379] //external/bc:bc clang src/history.c (priority: 12)
-[ 61% 17465/28379] //external/bc:bc clang src/file.c (priority: 12)
-[ 61% 17466/28379] //external/bc:bc clang src/lang.c (priority: 12)
-[ 61% 17467/28379] //external/bc:bc clang src/lex.c (priority: 12)
-[ 61% 17468/28379] //external/bc:bc clang src/library.c (priority: 12)
-[ 61% 17469/28379] //external/bc:bc clang src/main.c (priority: 12)
-[ 61% 17470/28379] //external/bc:bc clang src/opt.c (priority: 12)
-[ 61% 17471/28379] //external/bc:bc clang src/parse.c (priority: 12)
-[ 61% 17472/28379] //external/bc:bc clang src/num.c (priority: 12)
-[ 61% 17473/28379] //external/bc:bc clang src/rand.c (priority: 12)
-[ 61% 17474/28379] //external/bc:bc clang src/program.c (priority: 12)
-[ 61% 17475/28379] //external/bc:bc clang src/read.c (priority: 12)
-[ 61% 17476/28379] //external/bc:bc clang src/vector.c (priority: 12)
-[ 61% 17477/28379] //external/bc:bc clang gen/bc_help.c (priority: 12)
-[ 61% 17478/28379] //external/bc:bc clang src/vm.c (priority: 12)
-[ 61% 17479/28379] //external/boringssl:bcm_object remove addrsig bcm_object.o [apex31] (priority: 12)
-[ 61% 17480/28379] //external/bc:bc clang gen/lib.c (priority: 12)
-[ 61% 17481/28379] //system/core/healthd:charger clang++ charger_utils.cpp (priority: 12)
-[ 61% 17482/28379] //build/make/tools:check_elf_file embedded python archive [linux_glibc] (priority: 12)
-[ 61% 17483/28379] //build/make/tools:check_radio_versions embedded python archive [linux_glibc] (priority: 12)
-[ 61% 17484/28379] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
-[ 61% 17485/28379] //bionic/libc:crtbegin_static remove addrsig crtbegin_static.o (priority: 12)
-[ 61% 17486/28379] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bionic/libc/crtend_android/android_ramdisk_arm64_armv8-a/crtend_android.o (priority: 12)
-[ 61% 17487/28379] //external/e2fsprogs/misc:e2freefrag strip e2freefrag (priority: 12)
 [ 61% 17488/28379] //external/e2fsprogs/e2fsck:e2fsck clang e2fsck.c (priority: 12)
 [ 61% 17489/28379] //external/e2fsprogs/e2fsck:e2fsck clang super.c (priority: 12)
 [ 61% 17490/28379] //system/core/healthd:charger clang++ charger.cpp (priority: 12)
@@ -255,4 +45,214 @@ external/bash/include/gettext.h:46:25: note: expanded from macro 'gettext'
 [ 61% 17525/28379] //system/core/init:init_first_stage clang++ devices.cpp (priority: 12)
 [ 61% 17526/28379] //system/core/init:init_first_stage clang++ first_stage_main.cpp (priority: 12)
 [ 61% 17527/28379] //system/core/init:init_first_stage clang++ first_stage_init.cpp (priority: 12)
+[ 61% 17528/28379] //system/core/init:init_first_stage clang++ first_stage_mount.cpp (priority: 12)
+[ 61% 17529/28379] //system/core/init:init_first_stage clang++ reboot_utils.cpp (priority: 12)
+[ 61% 17530/28379] //system/core/init:init_first_stage clang++ selabel.cpp (priority: 12)
+[ 61% 17531/28379] //system/core/init:init_first_stage clang++ service_utils.cpp (priority: 12)
+[ 61% 17532/28379] //system/core/init:init_first_stage clang++ snapuserd_transition.cpp (priority: 12)
+[ 61% 17533/28379] //system/core/init:init_first_stage clang++ switch_root.cpp (priority: 12)
+[ 61% 17534/28379] //system/core/init:init_first_stage clang++ uevent_listener.cpp (priority: 12)
+system/core/init/uevent_listener.cpp:196:19: warning: ISO C++ requires field designators to be specified in declaration order; field 'events' will be initialized after field 'fd' [-Wreorder-init-list]
+  196 |             .fd = device_fd_.get(),
+      |             ~~~~~~^~~~~~~~~~~~~~~~
+system/core/init/uevent_listener.cpp:195:23: note: previous initialization for field 'events' is here
+  195 |             .events = POLLIN,
+      |                       ^~~~~~
+bionic/libc/kernel/uapi/asm-generic/poll.h:9:16: note: expanded from macro 'POLLIN'
+    9 | #define POLLIN 0x0001
+      |                ^~~~~~
+1 warning generated.
+[ 61% 17535/28379] //system/core/init:init_first_stage rustc generated_rust_staticlib/librustlibs.rs (priority: 12)
+[ 61% 17536/28379] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bootable/recovery/init_recovery.rc/android_recovery_arm64_armv8-a/init.rc (priority: 12)
+[ 61% 17537/28379] //system/core/init:init_first_stage clang++ util.cpp (priority: 12)
+[ 61% 17538/28379] //system/security/keystore:keystore_cli_v2 clang++ keystore_cli_v2.cpp (priority: 12)
+system/security/keystore/keystore_cli_v2.cpp:704:9: warning: variable 'test_count' set but not used [-Wunused-but-set-variable]
+  704 |     int test_count = 0;
+      |         ^
+system/security/keystore/keystore_cli_v2.cpp:864:25: warning: 'listEntries' is deprecated: use listEntriesBatched instead. [-Wdeprecated-declarations]
+  864 |     auto rc = keystore->listEntries(ks2::Domain::APP, -1 /* nspace ignored */, &key_list);
+      |                         ^
+out/soong/.intermediates/system/hardware/interfaces/keystore2/aidl/android.system.keystore2-V5-ndk-source/gen/include/aidl/android/system/keystore2/IKeystoreService.h:66:210: note: 'listEntries' has been explicitly marked deprecated here
+   66 |   virtual ::ndk::ScopedAStatus listEntries(::aidl::android::system::keystore2::Domain in_domain, int64_t in_nspace, std::vector<::aidl::android::system::keystore2::KeyDescriptor>* _aidl_return) __attribute__((deprecated("use listEntriesBatched instead."))) = 0;
+      |                                                                                                                                                                                                                  ^
+system/security/keystore/keystore_cli_v2.cpp:1002:33: warning: 'AServiceManager_getService' is deprecated: this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService [-Wdeprecated-declarations]
+ 1002 |     ::ndk::SpAIBinder apcBinder(AServiceManager_getService("android.security.apc"));
+      |                                 ^
+frameworks/native/libs/binder/ndk/include_platform/android/binder_manager.h:107:3: note: 'AServiceManager_getService' has been explicitly marked deprecated here
+  107 | [[deprecated("this polls 5s, use AServiceManager_waitForService or AServiceManager_checkService")]]
+      |   ^
+3 warnings generated.
+[ 61% 17539/28379] //system/security/keystore:keystore_cli_v2 clang++ proto/system/security/keystore/keystore_client.pb.cc (priority: 12)
+[ 61% 17540/28379] //system/apex/proto:lib_apex_manifest_proto_lite clang++ proto/system/apex/proto/apex_manifest.pb.cc [linux_glibc] (priority: 12)
+[ 61% 17541/28379] //build/soong/linkerconfig/proto:lib_linker_config_proto_lite clang++ proto/build/soong/linkerconfig/proto/linker_config.pb.cc [linux_glibc] (priority: 12)
+[ 61% 17542/28379] //packages/modules/adb/crypto:libadb_crypto strip libadb_crypto.so (priority: 12)
+[ 61% 17543/28379] //packages/modules/adb/crypto:libadb_crypto static link libadb_crypto.a (priority: 12)
+[ 61% 17544/28379] //packages/modules/adb/proto:libadb_protos static link libadb_protos.a (priority: 12)
+[ 61% 17545/28379] //packages/modules/adb:libadb_sysdeps static link libadb_sysdeps.a (priority: 12)
+[ 61% 17546/28379] //packages/modules/adb/tls:libadb_tls_connection strip libadb_tls_connection.so (priority: 12)
+[ 61% 17547/28379] //packages/modules/adb/tls:libadb_tls_connection static link libadb_tls_connection.a (priority: 12)
+[ 61% 17548/28379] //packages/modules/adb/libs/adbconnection:libadbconnection_server strip libadbconnection_server.so (priority: 12)
+[ 61% 17549/28379] //packages/modules/adb/libs/adbconnection:libadbconnection_server static link libadbconnection_server.a (priority: 12)
+[ 61% 17550/28379] //packages/modules/adb:libadbd static link libadbd.a (priority: 12)
+[ 61% 17551/28379] //frameworks/native/libs/adbd_auth:libadbd_auth generate toc libadbd_auth.so (priority: 12)
+[ 61% 17552/28379] //packages/modules/adb:libadbd_core static link libadbd_core.a (priority: 12)
+[ 61% 17553/28379] //packages/modules/adb/libs/libadbd_fs:libadbd_fs generate toc libadbd_fs.so (priority: 12)
+[ 61% 17554/28379] //packages/modules/adb:libadbd_services clang++ daemon/file_sync_service.cpp (priority: 12)
+[ 61% 17555/28379] //system/core/init:init_second_stage.recovery link init (priority: 12)
+[ 61% 17556/28379] //packages/modules/adb:libadbd_services clang++ daemon/services.cpp (priority: 12)
+[ 61% 17557/28379] //packages/modules/adb:libadbd_services clang++ daemon/shell_service.cpp (priority: 12)
+[ 61% 17558/28379] //packages/modules/adb:libadbd_services clang++ daemon/tradeinmode.cpp (priority: 12)
+[ 61% 17559/28379] //packages/modules/adb:libadbd_services clang++ shell_service_protocol.cpp (priority: 12)
+[ 61% 17560/28379] //packages/modules/adb:libadbd_services clang++ daemon/framebuffer_service.cpp (priority: 12)
+[ 61% 17561/28379] //packages/modules/adb:libadbd_services clang++ daemon/mdns.cpp (priority: 12)
+[ 61% 17562/28379] //packages/modules/adb:libadbd_services clang++ daemon/restart_service.cpp (priority: 12)
+[ 61% 17563/28379] //bootable/recovery/aeraui:libaera_android_adb_rescue clang++ features/backup/android_packages_xml.cpp (priority: 12)
+[ 61% 17564/28379] //bootable/recovery/aeraui:libaera_android_adb_rescue clang++ features/developer/android_adb_rescue.cpp (priority: 12)
+[ 61% 17565/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ screen_lock.cpp (priority: 12)
+[ 61% 17566/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_log.cpp (priority: 12)
+[ 61% 17567/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_message.cpp (priority: 12)
+[ 61% 17568/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_screen_timer.cpp (priority: 12)
+[ 61% 17569/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_backend.cpp (priority: 12)
+[ 61% 17570/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_terminal.cpp (priority: 12)
+[ 61% 17571/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_xml_support.cpp (priority: 12)
+[ 61% 17572/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/alpha_dec.c (priority: 12)
+[ 61% 17573/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/buffer_dec.c (priority: 12)
+[ 61% 17574/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/frame_dec.c (priority: 12)
+[ 61% 17575/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/idec_dec.c (priority: 12)
+[ 61% 17576/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/io_dec.c (priority: 12)
+[ 61% 17577/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/quant_dec.c (priority: 12)
+[ 61% 17578/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/tree_dec.c (priority: 12)
+[ 61% 17579/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8_dec.c (priority: 12)
+[ 61% 17580/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/vp8l_dec.c (priority: 12)
+[ 61% 17581/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dec/webp_dec.c (priority: 12)
+[ 61% 17582/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing.c (priority: 12)
+[ 61% 17583/28379] //bootable/recovery/aeraui/platform:libaera_recovery_host clang++ aera_ui_host.cpp (priority: 12)
+[ 61% 17584/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/cpu.c (priority: 12)
+[ 61% 17585/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec.c (priority: 12)
+[ 61% 17586/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/alpha_processing_neon.c (priority: 12)
+[ 61% 17587/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_clip_tables.c (priority: 12)
+[ 61% 17588/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters.c (priority: 12)
+[ 61% 17589/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/filters_neon.c (priority: 12)
+[ 61% 17590/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/dec_neon.c (priority: 12)
+[ 61% 17591/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless.c (priority: 12)
+[ 61% 17592/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/rescaler.c (priority: 12)
+[ 61% 17593/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling.c (priority: 12)
+[ 61% 17594/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/lossless_neon.c (priority: 12)
+[ 62% 17595/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv.c (priority: 12)
+[ 62% 17596/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/yuv_neon.c (priority: 12)
+[ 62% 17597/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/dsp/upsampling_neon.c (priority: 12)
+[ 62% 17598/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/bit_reader_utils.c (priority: 12)
+[ 62% 17599/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/color_cache_utils.c (priority: 12)
+[ 62% 17600/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/filters_utils.c (priority: 12)
+[ 62% 17601/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/huffman_utils.c (priority: 12)
+[ 62% 17602/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/quant_levels_dec_utils.c (priority: 12)
+[ 62% 17603/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/palette.c (priority: 12)
+[ 62% 17604/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/random_utils.c (priority: 12)
+[ 62% 17605/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/rescaler_utils.c (priority: 12)
+[ 62% 17606/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/thread_utils.c (priority: 12)
+[ 62% 17607/28379] //bootable/recovery/aeraui/third_party/libwebp:libaera_webp_decoder clang src/utils/utils.c (priority: 12)
+[ 62% 17608/28379] //bootable/recovery/aeraui:libaeraui clang++ components/home_plugin_grid.cpp (priority: 12)
+[ 62% 17609/28379] //bootable/recovery/aeraui:libaeraui clang++ components/aera_logo.cpp (priority: 12)
+[ 62% 17610/28379] //bootable/recovery/aeraui:libaeraui clang++ components/android_icon.cpp (priority: 12)
+[ 62% 17611/28379] //bootable/recovery/aeraui:libaeraui clang++ components/plugin_desktop.cpp (priority: 12)
+[ 62% 17612/28379] //bootable/recovery/aeraui:libaeraui clang++ components/matrix_engraving.cpp (priority: 12)
+[ 62% 17613/28379] //bootable/recovery/aeraui:libaeraui clang++ components/picture_decode.cpp (priority: 12)
+[ 62% 17614/28379] //bootable/recovery/aeraui:libaeraui clang++ components/picture_viewer.cpp (priority: 12)
+[ 62% 17615/28379] //bootable/recovery/aeraui:libaeraui clang++ components/power_transition.cpp (priority: 12)
+[ 62% 17616/28379] //bootable/recovery/aeraui:libaeraui clang++ components/retroarch_icon.cpp (priority: 12)
+[ 62% 17617/28379] //bootable/recovery/aeraui:libaeraui clang++ components/text_edit.cpp (priority: 12)
+[ 62% 17618/28379] //bootable/recovery/aeraui:libaeraui clang++ components/lock_credential.cpp (priority: 12)
+[ 62% 17619/28379] //bootable/recovery/aeraui:libaeraui clang++ features/security/lock_security.cpp (priority: 12)
+[ 62% 17620/28379] //bootable/recovery/aeraui:libaeraui clang++ components/wallpaper.cpp (priority: 12)
+[ 62% 17621/28379] //bootable/recovery/aeraui:libaeraui clang++ components/webkit_icon.cpp (priority: 12)
+[ 62% 17622/28379] //bootable/recovery/aeraui:libaeraui clang++ features/developer/kernel_settings.cpp (priority: 12)
+[ 62% 17623/28379] //bootable/recovery/aeraui:libaeraui clang++ core/gpu_renderer.cpp (priority: 12)
+[ 62% 17624/28379] //bootable/recovery/aeraui:libaeraui clang++ core/runner.cpp (priority: 12)
+[ 62% 17625/28379] //bootable/recovery/aeraui:libaeraui clang++ core/engine.cpp (priority: 12)
+[ 62% 17626/28379] //bootable/recovery/aeraui:libaeraui clang++ core/status_bar.cpp (priority: 12)
+[ 62% 17627/28379] //bootable/recovery/aeraui:libaeraui clang++ features/artillery/game.cpp (priority: 12)
+[ 62% 17628/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/mobile_data_scene.cpp (priority: 12)
+[ 62% 17629/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration.cpp (priority: 12)
+[ 62% 17630/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/app_registration_io.cpp (priority: 12)
+[ 62% 17631/28379] //bootable/recovery/aeraui:libaeraui clang++ features/backup/incremental_apks.cpp (priority: 12)
+[ 62% 17632/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/launcher.cpp (priority: 12)
+[ 62% 17633/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/runtime.cpp (priority: 12)
+[ 62% 17634/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/session.cpp (priority: 12)
+[ 62% 17635/28379] //bootable/recovery/aeraui:libaeraui clang++ features/doom/launcher.cpp (priority: 12)
+[ 62% 17636/28379] //bootable/recovery/aeraui:libaeraui clang++ features/doom/session.cpp (priority: 12)
+[ 62% 17637/28379] //bootable/recovery/aeraui:libaeraui clang++ features/browser/web_scene.cpp (priority: 12)
+[ 62% 17638/28379] //bootable/recovery/aeraui:libaeraui clang++ features/files/file_manager.cpp (priority: 12)
+[ 62% 17639/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource.cpp (priority: 12)
+[ 62% 17640/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/fontsource_download.cpp (priority: 12)
+[ 62% 17641/28379] //bootable/recovery/aeraui:libaeraui clang++ features/fonts/font_library.cpp (priority: 12)
+[ 62% 17642/28379] //bootable/recovery/aeraui:libaeraui clang++ features/media/launcher.cpp (priority: 12)
+[ 62% 17643/28379] //bootable/recovery/aeraui:libaeraui clang++ features/media/session.cpp (priority: 12)
+[ 62% 17644/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/launcher.cpp (priority: 12)
+[ 62% 17645/28379] //bootable/recovery/aeraui:libaeraui clang++ features/nas/smb_browser.cpp (priority: 12)
+[ 62% 17646/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/activity.cpp (priority: 12)
+[ 62% 17647/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugin_api/session.cpp (priority: 12)
+[ 62% 17648/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/console_commands.cpp (priority: 12)
+[ 62% 17649/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/plugin_manager.cpp (priority: 12)
+[ 62% 17650/28379] //bootable/recovery/aeraui:libaeraui clang++ features/plugins/store_metadata.cpp (priority: 12)
+[ 62% 17651/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_inspector.cpp (priority: 12)
+bootable/recovery/aeraui/features/update/payload_inspector.cpp:124:28: warning: 'MOVE' is deprecated [-Wdeprecated-declarations]
+  124 |     case InstallOperation::MOVE: return "move";
+      |                            ^
+out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-a_static/gen/proto/update_engine/update_metadata.pb.h:934:3: note: 'MOVE' has been explicitly marked deprecated here
+  934 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type MOVE =
+      |   ^
+external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
+  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
+      |                                                  ^
+bootable/recovery/aeraui/features/update/payload_inspector.cpp:125:28: warning: 'BSDIFF' is deprecated [-Wdeprecated-declarations]
+  125 |     case InstallOperation::BSDIFF: return "bsdiff";
+      |                            ^
+out/soong/.intermediates/system/update_engine/update_metadata-protos/android_arm64_armv8-a_static/gen/proto/update_engine/update_metadata.pb.h:936:3: note: 'BSDIFF' has been explicitly marked deprecated here
+  936 |   PROTOBUF_DEPRECATED_ENUM static constexpr Type BSDIFF =
+      |   ^
+external/protobuf/src/google/protobuf/port_def.inc:354:50: note: expanded from macro 'PROTOBUF_DEPRECATED_ENUM'
+  354 | # define PROTOBUF_DEPRECATED_ENUM __attribute__((deprecated))
+      |                                                  ^
+2 warnings generated.
+[ 62% 17652/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/image_zip.cpp (priority: 12)
+[ 62% 17653/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_arb.cpp (priority: 12)
+[ 62% 17654/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_extract.cpp (priority: 12)
+[ 62% 17655/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/payload_targets.cpp (priority: 12)
+[ 62% 17656/28379] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/launcher.cpp (priority: 12)
+[ 62% 17657/28379] //bootable/recovery/aeraui:libaeraui clang++ features/recorder/service.cpp (priority: 12)
+[ 62% 17658/28379] //bootable/recovery/aeraui:libaeraui clang++ features/retroarch/session.cpp (priority: 12)
+[ 62% 17659/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/launcher.cpp (priority: 12)
+[ 62% 17660/28379] //bootable/recovery/aeraui:libaeraui clang++ features/root/root_manager.cpp (priority: 12)
+[ 62% 17661/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/session.cpp (priority: 12)
+[ 62% 17662/28379] //bootable/recovery/aeraui:libaeraui clang++ features/streams/query.cpp (priority: 12)
+[ 62% 17663/28379] //bootable/recovery/aeraui:libaeraui clang++ features/telegram/launcher.cpp (priority: 12)
+[ 62% 17664/28379] //bootable/recovery/aeraui:libaeraui clang++ features/update/update_manager.cpp (priority: 12)
+[ 62% 17665/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog_generated.cpp (priority: 12)
+[ 62% 17666/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/catalog/catalog.cpp (priority: 12)
+[ 62% 17667/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/i18n.cpp (priority: 12)
+[ 62% 17668/28379] //bootable/recovery/aeraui:libaeraui clang++ localization/fonts/aera_fallback.cpp (priority: 12)
+[ 62% 17669/28379] //bootable/recovery/aeraui:libaeraui clang++ platform/unencrypted_users.cpp (priority: 12)
+[ 62% 17670/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/about_scene.cpp (priority: 12)
+[ 62% 17671/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/artillery_scene.cpp (priority: 12)
+[ 62% 17672/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/boot_scene.cpp (priority: 12)
+[ 62% 17673/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/browser_scene.cpp (priority: 12)
+[ 62% 17674/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/appvault_scene.cpp (priority: 12)
+[ 62% 17675/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/decrypt_scene.cpp (priority: 12)
+[ 62% 17676/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/developer_scene.cpp (priority: 12)
+[ 62% 17677/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/android_adb_rescue_scene.cpp (priority: 12)
+[ 62% 17678/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/doom_scene.cpp (priority: 12)
+[ 62% 17679/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/fastboot_scene.cpp (priority: 12)
+[ 62% 17680/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/gallery_scene.cpp (priority: 12)
+[ 62% 17681/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/font_browser.cpp (priority: 12)
+[ 62% 17682/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/generic_plugin_scene.cpp (priority: 12)
+[ 62% 17683/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/launcher_scene.cpp (priority: 12)
+[ 62% 17684/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/lock_scene.cpp (priority: 12)
+[ 62% 17685/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/media_scene.cpp (priority: 12)
+[ 62% 17686/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/home_scene.cpp (priority: 12)
+[ 62% 17687/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/nas_scene.cpp (priority: 12)
+[ 62% 17688/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/operation_scene.cpp (priority: 12)
+[ 62% 17689/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/plugin_scene.cpp (priority: 12)
+[ 62% 17690/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/package_review.cpp (priority: 12)
+[ 62% 17691/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/reboot_scene.cpp (priority: 12)
+[ 62% 17692/28379] //bootable/recovery/aeraui:libaeraui clang++ scenes/recorder_scene.cpp (priority: 12)
 == out/error.log
