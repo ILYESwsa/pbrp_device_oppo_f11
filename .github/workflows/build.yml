@@ -1,8 +1,8 @@
-name: Build AERA recovery (CPH1911, v3)
+name: Build AERA recovery (CPH1911, v4)
 
 on:
   push:
-    branches: [aera-16.0-v3]
+    branches: [aera-16.0-v4]
   workflow_dispatch:
 
 permissions:
@@ -145,6 +145,13 @@ jobs:
           # Snapshot memory + build log to the ci-logs branch every 2 minutes
           ( while true; do sleep 120; $PUSH; done ) &
           mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
+
+      - name: Header and ramdisk audit
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-audit.sh"
 
       - name: Upload recovery image
         if: success()

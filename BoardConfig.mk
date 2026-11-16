@@ -41,7 +41,6 @@ TARGET_BOARD_PLATFORM_GPU := Mali-G72 MP3
 
 # Kernel: prebuilt gzip kernel with appended dtb (4.14), boot header v2
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -63,8 +62,14 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --os_version 12.0.0 --os_patch_level 2099-12
 
-# Partitions (legacy non-A/B: separate recovery partition)
+# Legacy NON-A/B device with a separate recovery partition. Declared explicitly (same as the marie tree):
+# the v3 ramdisk contained update_engine_sideload, which AERA only adds when AB_OTA_UPDATER is true.
+AB_OTA_UPDATER := false
+BOARD_USES_RECOVERY_AS_BOOT := false
+
+# Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
@@ -105,12 +110,6 @@ AERA_OPTIONS_LIST_NUM := 6
 # MediaTek: the health-service battery path is broken on MTK (AERA build notes), use the legacy sysfs path
 TW_USE_LEGACY_BATTERY_SERVICES := true
 
-# Debug tools in the recovery (same as the reference trees)
-TARGET_RECOVERY_DEVICE_MODULES += debuggerd
-TARGET_RECOVERY_DEVICE_MODULES += strace
-RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/debuggerd
-RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
-
 # Decryption: OFF (boot-only bring-up)
 AERA_INCLUDE_CRYPTO := false
 AERA_INCLUDE_CRYPTO_FBE := false
@@ -120,7 +119,8 @@ AERA_SCREEN_H := 2340
 AERA_STATUS_H := 100
 TARGET_SCREEN_DENSITY := 420
 AERA_THEME := portrait_hdpi
-AERA_EXTRA_LANGUAGES := true
+AERA_EXTRA_LANGUAGES := false
+AERA_EXCLUDE_NANO_EDITOR := true
 AERA_FRAMERATE := 60
 AERA_SCREEN_BLANK_ON_BOOT := true
 AERA_INPUT_BLACKLIST := "hbtp_vm"
@@ -144,7 +144,6 @@ AERA_INCLUDE_RESETPROP := true
 TARGET_USES_MKE2FS := true
 
 # Logging
-AERA_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # MTK build properties (ro.hardware etc.), like the selene tree
