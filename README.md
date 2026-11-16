@@ -25,3 +25,6 @@ source build/envsetup.sh
 lunch twrp_CPH1911-bp2a-eng
 mka adbd recoveryimage
 ```
+
+## Acknowledgements
+This project was assisted with [GLM](https://chat.z.ai/), an AI model by z.ai.
