@@ -1,0 +1,44 @@
+== recovery.img: 67108864 bytes
+--header_version 0 --os_version 12.0.0 --os_patch_level 2099-12 --kernel <ub>/kernel --ramdisk <ub>/ramdisk --pagesize 0x00000800 --base 0x00000000 --kernel_offset 0x40080000 --ramdisk_offset 0x41078000 --second_offset 0x00000000 --tags_offset 0x40078100 --board '' --cmdline bootopt=64S3,32N2,64N2
+== ramdisk file: 34269965 bytes, magic 1f8b0800
+== unpacked: 81617920 bytes, entries: 3712
+== A/B or optional-tool artifacts in the ramdisk (want none of the A/B ones):
+1413200 sbin/bash
+1422 system/etc/bash.bashrc
+111680 system/lib64/android.hardware.boot@1.0.so
+103152 system/lib64/android.hardware.boot@1.1.so
+99072 system/lib64/android.hardware.boot@1.2.so
+246772 twres/fonts/NotoSansBengaliUI-VF.ttf
+709712 twres/fonts/NotoSansCJKjp-Regular.ttf
+247460 twres/fonts/NotoSansDevanagariUI-VF.ttf
+66156 twres/fonts/NotoSansHebrew-Regular.ttf
+22024 twres/fonts/NotoSansThaiUI-Regular.ttf
+4626376 twres/fonts/wqy-microhei.ttf
+== 25 biggest files:
+sort: write failed: 'standard output': Broken pipe
+sort: write error
+10413568 system/bin/recovery
+4626376 twres/fonts/wqy-microhei.ttf
+2799872 system/lib64/libicui18n.so
+2694168 system/bin/init
+2236528 system/bin/7za
+2163048 system/bin/linker64
+2106328 system/bin/adbd
+2091392 system/lib64/libadbd_services.so
+1954952 system/lib64/libicuuc.so
+1922320 system/bin/aera-otaripper
+1489184 system/lib64/libcrypto.so
+1413200 sbin/bash
+1322846 file_contexts.bin
+1230728 system/lib64/libadbconnection_server.so
+1222600 system/lib64/libchrome.so
+1188200 system/lib64/libc.so
+1176888 system/lib64/libandroidfw.so
+1049704 system/lib64/libc++.so
+884120 sbin/magiskboot
+855240 system/lib64/libperfetto_c.so
+752960 system/lib64/libaosprecovery.so
+746744 system/lib64/libbinder.so
+721514 sepolicy
+709712 twres/fonts/NotoSansCJKjp-Regular.ttf
+705520 system/lib64/libapp_processes_protos_lite.so
