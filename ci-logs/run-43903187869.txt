@@ -1,7 +1,7 @@
-== Mon Nov 16 17:05:42 UTC 2026 run=43903187869 sha=27a1b3fdcc0f7813cfcc26b7e1efba046b4c2b32
+== Mon Nov 16 17:07:44 UTC 2026 run=43903187869 sha=27a1b3fdcc0f7813cfcc26b7e1efba046b4c2b32
                total        used        free      shared  buff/cache   available
-Mem:           15988       15409         158          11         420         220
-Swap:          28671       14919       13752
+Mem:           15988        6090        8540          10        1358        9540
+Swap:          28671         232       28439
 /dev/root       146G  128G   19G  88% /
 == oom/kill messages
 == last 250 lines of build.log
@@ -164,4 +164,19 @@ Running globs...
 [ 97% 128/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
 [ 98% 129/131] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
 [ 99% 130/131] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/soong_build
+[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/build.twrp_CPH1911.ninja
+Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
+Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
+Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
+Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-cleanspec.ninja is missing, regenerating...
+/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911.ninja is missing, regenerating...
+[100% 132/132] initializing legacy Make module parser ...
+[ 91% 133/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/installs-twrp_CPH1911.mk ...
+[ 92% 134/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/Android-twrp_CPH1911.mk ...
+[ 93% 135/145] including build/make/target/board/android-info.mk ...
+[ 93% 136/145] including art/Android.mk ...
 == out/error.log
