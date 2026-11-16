@@ -1,3 +1,4 @@
+
 name: Build AERA recovery (CPH1911, v5)
 
 on:
@@ -19,6 +20,7 @@ jobs:
     env:
       AERA_BUILD_DEVICE: CPH1911
       LC_ALL: C
+
     steps:
       - name: Free disk space and add swap
         shell: bash
@@ -35,15 +37,20 @@ jobs:
           ROOT_FREE=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
           MNT_FREE=$(df --output=avail -BG /mnt 2>/dev/null | tail -1 | tr -dc 0-9)
           echo "free GB after cleanup: /=${ROOT_FREE:-0} /mnt=${MNT_FREE:-0}"
-          # Put the source tree + out/ on whichever disk has more room
+
           if [ "${MNT_FREE:-0}" -gt "${ROOT_FREE:-0}" ]; then
-            sudo mkdir -p /mnt/aera && sudo chown "$(id -u):$(id -g)" /mnt/aera
-            rm -rf "$GITHUB_WORKSPACE/aera"; ln -sfn /mnt/aera "$GITHUB_WORKSPACE/aera"
-            BIG=/mnt; BIGFREE=$MNT_FREE
+            sudo mkdir -p /mnt/aera
+            sudo chown "$(id -u):$(id -g)" /mnt/aera
+            rm -rf "$GITHUB_WORKSPACE/aera"
+            ln -sfn /mnt/aera "$GITHUB_WORKSPACE/aera"
+            BIG=/mnt
+            BIGFREE=$MNT_FREE
           else
             mkdir -p "$GITHUB_WORKSPACE/aera"
-            BIG=/; BIGFREE=$ROOT_FREE
+            BIG=/
+            BIGFREE=$ROOT_FREE
           fi
+
           echo "source tree on: $BIG ($BIGFREE GB free)"
           df -h
 
@@ -55,10 +62,12 @@ jobs:
             libc6-dev-i386 libncurses5 lib32z1-dev x11proto-core-dev libx11-dev libgl1-mesa-dev \
             libxml2-utils xsltproc unzip fontconfig python3 python-is-python3 bc rsync lz4 \
             libssl-dev cpio xz-utils ccache
+
           mkdir -p ~/bin
           curl -s https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
           chmod a+x ~/bin/repo
           echo "$HOME/bin" >> "$GITHUB_PATH"
+
           git config --global user.name "ci"
           git config --global user.email "ci@users.noreply.github.com"
           git config --global color.ui false
@@ -66,7 +75,7 @@ jobs:
       - name: Restore ccache
         uses: actions/cache/restore@v4
         with:
-          path: ~/.ccache
+          path: aera/out/ccache
           key: ccache-aera16-v5-${{ github.run_id }}
           restore-keys: |
             ccache-aera16-v5-
@@ -76,8 +85,10 @@ jobs:
         run: |
           mkdir -p "$GITHUB_WORKSPACE/aera"
           cd "$GITHUB_WORKSPACE/aera"
+
           repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1
           repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+
           df -h /
 
       - name: Checkout device tree
@@ -90,7 +101,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          curl -s -o /dev/null -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+          curl -s -o /dev/null -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$GITHUB_REPOSITORY/git/refs" \
             -d "{\"ref\":\"refs/heads/ci-logs\",\"sha\":\"$GITHUB_SHA\"}" || true
 
@@ -99,28 +112,55 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          { df -h; swapon --show; free -m; du -sh "$GITHUB_WORKSPACE/aera/.repo" 2>/dev/null; du -sh --exclude=.repo "$GITHUB_WORKSPACE/aera" 2>/dev/null; } > "$GITHUB_WORKSPACE/build.log" 2>&1
+          {
+            df -h
+            swapon --show
+            free -m
+            du -sh "$GITHUB_WORKSPACE/aera/.repo" 2>/dev/null
+            du -sh --exclude=.repo "$GITHUB_WORKSPACE/aera" 2>/dev/null
+          } > "$GITHUB_WORKSPACE/build.log" 2>&1
+
           bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-push-log.sh"
 
       - name: Add disk swap for soong_build
         shell: bash
         run: |
-          # soong_build was OOM-killed at ~13.6 GB RSS on this 16 GB runner; zram does not help (it lives in RAM),
-          # so use real disk swap, on /mnt (separate device) when it has room, else on the source disk.
           sudo swapoff -a || true
           sudo rm -f /swapfile /mnt/swapfile
+
           ROOT_FREE=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
           MNT_FREE=$(df --output=avail -BG /mnt 2>/dev/null | tail -1 | tr -dc 0-9)
+
           echo "free GB: /=$ROOT_FREE /mnt=${MNT_FREE:-0}"
-          if [ "${MNT_FREE:-0}" -ge 26 ]; then SWF=/mnt/swapfile; FREE=$MNT_FREE; SZ=$(( FREE - 2 )); else SWF=/swapfile; FREE=$ROOT_FREE; SZ=$(( FREE - 14 )); fi
-          [ "$SZ" -gt 28 ] && SZ=28
-          if [ "$SZ" -ge 8 ]; then
-            sudo fallocate -l ${SZ}G $SWF && sudo chmod 600 $SWF && sudo mkswap $SWF >/dev/null && sudo swapon $SWF
+
+          if [ "${MNT_FREE:-0}" -ge 26 ]; then
+            SWF=/mnt/swapfile
+            FREE=$MNT_FREE
+            SZ=$(( FREE - 2 ))
+          else
+            SWF=/swapfile
+            FREE=$ROOT_FREE
+            SZ=$(( FREE - 14 ))
           fi
+
+          [ "$SZ" -gt 28 ] && SZ=28
+
+          if [ "$SZ" -ge 8 ]; then
+            sudo fallocate -l ${SZ}G "$SWF" &&
+            sudo chmod 600 "$SWF" &&
+            sudo mkswap "$SWF" >/dev/null &&
+            sudo swapon "$SWF"
+          fi
+
           sudo systemctl stop docker.socket docker containerd snapd mysql postgresql apache2 nginx php8.1-fpm 2>/dev/null || true
-          sync; echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
+
+          sync
+          echo 3 | sudo tee /proc/sys/vm/drop_caches >/dev/null
           sudo sysctl vm.swappiness=100
-          df -h; swapon --show; free -h
+
+          df -h
+          swapon --show
+          free -h
 
       - name: Build recovery image
         shell: bash
@@ -128,33 +168,60 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           PUSH="bash $GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-push-log.sh"
+
           trap "$PUSH" EXIT
           trap "$PUSH; exit 143" TERM
+
           cd "$GITHUB_WORKSPACE/aera"
+
           export ALLOW_MISSING_DEPENDENCIES=true
-          # ccache for the C/C++ compile steps (restored/saved around the build)
-          export USE_CCACHE=1 CCACHE_EXEC=/usr/bin/ccache CCACHE_DIR="$HOME/.ccache" CCACHE_MAXSIZE=3G CCACHE_COMPRESS=1
-          export CCACHE_NOHASHDIR=1 CCACHE_COMPILERCHECK=content CCACHE_SLOPPINESS=include_file_mtime,include_file_ctime,time_macros
+
+          # Store ccache inside the writable Android output directory.
+          export CCACHE_DIR="$GITHUB_WORKSPACE/aera/out/ccache"
+          mkdir -p "$CCACHE_DIR"
+
+          export USE_CCACHE=1
+          export CCACHE_EXEC=/usr/bin/ccache
+          export CCACHE_MAXSIZE=3G
+          export CCACHE_COMPRESS=1
+          export CCACHE_NOHASHDIR=1
+          export CCACHE_COMPILERCHECK=content
+          export CCACHE_SLOPPINESS=include_file_mtime,include_file_ctime,time_macros
           export CCACHE_BASEDIR="$(readlink -f "$GITHUB_WORKSPACE/aera")"
-          ccache -M 3G; ccache -z
-          # Keep soong_build's Go heap small (it was OOM-killed at ~14 GB RSS)
-          export GOGC=40 GOMEMLIMIT=11GiB GOMAXPROCS=2
+
+          ccache -M 3G
+          ccache -z
+
+          # Keep soong_build's Go heap small.
+          export GOGC=40
+          export GOMEMLIMIT=11GiB
+          export GOMAXPROCS=2
+
           source build/envsetup.sh
           lunch twrp_CPH1911-bp2a-eng
-          # Snapshot memory + build log to the ci-logs branch every 2 minutes
-          ( while true; do sleep 120; $PUSH; done ) &
+
+          # Push build log every 2 minutes.
+          (
+            while true; do
+              sleep 120
+              $PUSH
+            done
+          ) &
+
           mka adbd recoveryimage -j2 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
 
-      - name: ccache stats and save
+      - name: ccache stats
         if: always()
         shell: bash
-        run: ccache -s 2>&1 | tail -12 || true
+        run: |
+          export CCACHE_DIR="$GITHUB_WORKSPACE/aera/out/ccache"
+          ccache -s 2>&1 | tail -12 || true
 
       - name: Save ccache
         if: always()
         uses: actions/cache/save@v4
         with:
-          path: ~/.ccache
+          path: aera/out/ccache
           key: ccache-aera16-v5-${{ github.run_id }}
 
       - name: Header and ramdisk audit
@@ -162,11 +229,13 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-audit.sh"
+        run: |
+          bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-audit.sh"
 
       - name: Permissive variant
         shell: bash
-        run: bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-variants.sh"
+        run: |
+          bash "$GITHUB_WORKSPACE/aera/device/oppo/CPH1911/.github/ci-variants.sh"
 
       - name: Upload permissive image
         uses: actions/upload-artifact@v4
