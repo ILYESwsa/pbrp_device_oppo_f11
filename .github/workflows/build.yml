@@ -4,6 +4,10 @@ name: Build AERA recovery (CPH1911, v5)
 on:
   push:
     branches: [aera-16.0-v5]
+    # Doc-only pushes must not burn a 6-hour runner (the 2026-11-16 README push did).
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
   workflow_dispatch:
 
 permissions:
@@ -61,7 +65,7 @@ jobs:
           sudo apt-get install -y git-core gnupg flex bison build-essential zip curl zlib1g-dev \
             libc6-dev-i386 libncurses5 lib32z1-dev x11proto-core-dev libx11-dev libgl1-mesa-dev \
             libxml2-utils xsltproc unzip fontconfig python3 python-is-python3 bc rsync lz4 \
-            libssl-dev cpio xz-utils ccache
+            libssl-dev cpio xz-utils zstd ccache
 
           mkdir -p ~/bin
           curl -s https://storage.googleapis.com/git-repo-downloads/repo -o ~/bin/repo
@@ -80,16 +84,99 @@ jobs:
           restore-keys: |
             ccache-aera16-v5-
 
+      - name: Compute source-cache key
+        id: srckey
+        shell: bash
+        run: echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore source cache
+        id: srccache
+        uses: actions/cache/restore@v4
+        with:
+          path: aera-src-cache.tar.zst
+          key: aera-src-aera16-${{ steps.srckey.outputs.month }}
+          restore-keys: |
+            aera-src-aera16-
+
       - name: Sync AERA 16.0 sources
         shell: bash
         run: |
           mkdir -p "$GITHUB_WORKSPACE/aera"
           cd "$GITHUB_WORKSPACE/aera"
 
+          # Seed .repo from the bounded source cache (git object stores for the
+          # biggest projects) so repo sync only has to fetch the delta.
+          SRCTAR="$GITHUB_WORKSPACE/aera-src-cache.tar.zst"
+          if [ -f "$SRCTAR" ]; then
+            echo "source cache: $(stat -c %s "$SRCTAR") bytes, extracting..."
+            mkdir -p .repo
+            tar --use-compress-program='zstd -T0' -xf "$SRCTAR" -C .repo
+            echo "seeded .repo: $(du -sh .repo 2>/dev/null | cut -f1)"
+          else
+            echo "no source cache, full sync"
+          fi
+
           repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1
           repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
 
           df -h /
+
+      - name: Snapshot source cache
+        id: srcsnap
+        shell: bash
+        run: |
+          # Rebuild the bounded source cache after the sync: manifests, every
+          # project's small git config dir, and the largest git object stores,
+          # capped at ~6.2 GB so it fits GitHub's 10 GB cache quota next to the
+          # 3 GB ccache (git packs barely compress, so the tar stays near raw size).
+          # Only project dirs whose object store made it into the budget are
+          # included; the rest are simply re-cloned on the next cold sync.
+          TAR="$GITHUB_WORKSPACE/aera-src-cache.tar.zst"
+          rm -f "$TAR"
+          cd "$GITHUB_WORKSPACE/aera/.repo" || { echo "no .repo, skipping"; exit 0; }
+
+          BUDGET=$((6 * 1024 * 1024 * 1024 + 200 * 1024 * 1024))   # 6.2 GB
+          USED=$(du -sb manifests manifests.git 2>/dev/null | awk '{s+=$1} END{print s+0}')
+          STORES=""
+          while IFS=$'\t' read -r sz p; do
+            [ "$((USED + sz))" -gt "$BUDGET" ] && continue
+            STORES="$STORES $(basename "$p")"
+            USED=$((USED + sz))
+          done < <(du -sb project-objects/* 2>/dev/null | sort -rn)
+          echo "cached object stores:$(echo $STORES | wc -w), raw budget used: $((USED / 1024 / 1024)) MB"
+
+          LIST="manifests manifests.git"
+          for d in projects/*; do
+            [ -d "$d" ] || continue
+            store=$(sed -n 's#.*project-objects/\([^/]*\)/.*#\1#p' "$d/objects/info/alternates" 2>/dev/null | head -1)
+            if [ -n "$store" ]; then
+              case " $STORES " in
+                *" $store "*) LIST="$LIST $d" ;;
+              esac
+            fi
+          done
+          echo "snapshot entries: $(echo $LIST | wc -w)"
+
+          if ! tar --use-compress-program='zstd -T0' -cf "$TAR" $LIST; then
+            echo "tar failed, skipping source cache" >&2
+            rm -f "$TAR"
+            exit 0
+          fi
+          SIZE=$(stat -c %s "$TAR")
+          echo "source cache tarball: $SIZE bytes"
+          if [ "$SIZE" -lt $((100 * 1024 * 1024)) ]; then
+            echo "snapshot too small, refusing to cache" >&2
+            rm -f "$TAR"
+            exit 0
+          fi
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+
+      - name: Save source cache
+        if: steps.srccache.outputs.cache-hit != 'true' && steps.srcsnap.outputs.ok == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: aera-src-cache.tar.zst
+          key: aera-src-aera16-${{ steps.srckey.outputs.month }}
 
       - name: Checkout device tree
         uses: actions/checkout@v4

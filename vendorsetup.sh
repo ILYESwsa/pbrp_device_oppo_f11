@@ -32,7 +32,9 @@ if [ "$1" = "$FDEVICE" ] || [ "$AERA_BUILD_DEVICE" = "$FDEVICE" ]; then
     export AERA_ENABLE_ROOT_MANAGER=0
     export AERA_ALLOW_EARLY_SETTINGS_LOAD=1
     export AERA_USE_UPDATED_MAGISKBOOT=1
-    export AERA_USE_EXTREME_COMPRESSION=1
+    # Read by the vendor packaging script (AERA_A16.sh) from the ENVIRONMENT with a
+    # strict `= 1` check — a BoardConfig make variable never reaches it. Same as marie.
+    export AERA_EXCLUDE_NANO_EDITOR=1
     export AERA_SETTINGS_ROOT_DIRECTORY=/data/recovery
     export AERA_MISCELLANEOUS_ROOT_DIRECTORY=/sdcard
     # OPPO F11 (CPH1911)

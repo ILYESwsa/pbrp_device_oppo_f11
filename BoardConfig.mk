@@ -101,7 +101,8 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16
-# The boot header's os_version comes from PLATFORM_VERSION_LAST_STABLE (12 = same as the working image).
+# The boot header's os_version comes from PLATFORM_VERSION_LAST_STABLE; 16 matches this
+# recovery (the v4 image used 12.0.0 to mirror stock, v5 builds advertise 16.0.0).
 # Do NOT use BOARD_RECOVERY_MKBOOTIMG_ARGS here: when it is set AOSP stops using BOARD_MKBOOTIMG_ARGS for the
 # recovery image, which silently dropped header v2, the ramdisk/tags offsets and the dtb/dtbo in the v4 build.
 PLATFORM_VERSION_LAST_STABLE := 16
@@ -112,9 +113,12 @@ AERA_OPTIONS_LIST_NUM := 6
 # MediaTek: the health-service battery path is broken on MTK (AERA build notes), use the legacy sysfs path
 TW_USE_LEGACY_BATTERY_SERVICES := true
 
-# Decryption: OFF (boot-only bring-up)
-AERA_INCLUDE_CRYPTO := false
-AERA_INCLUDE_CRYPTO_FBE := false
+# Decryption: OFF (boot-only bring-up). Both flags must stay UNSET: any non-empty
+# value (including "false") is copied into TW_INCLUDE_CRYPTO by aera_config.mk and
+# Android.mk's `ifneq ($(TW_INCLUDE_CRYPTO),)` then still pulls keystore2,
+# vold_prepare_subdirs and fscryptpolicyget into the build. Unset = fully off.
+# AERA_EXCLUDE_NANO_EDITOR also lives in vendorsetup.sh (the vendor packaging
+# script reads it from the environment, not from here).
 
 # UI / hardware (1080x2340 LCD, waterdrop notch, fbdev)
 AERA_SCREEN_H := 2340
@@ -122,7 +126,6 @@ AERA_STATUS_H := 100
 TARGET_SCREEN_DENSITY := 420
 AERA_THEME := portrait_hdpi
 AERA_EXTRA_LANGUAGES := false
-AERA_EXCLUDE_NANO_EDITOR := true
 AERA_FRAMERATE := 60
 AERA_SCREEN_BLANK_ON_BOOT := true
 AERA_INPUT_BLACKLIST := "hbtp_vm"
@@ -144,6 +147,12 @@ endif
 AERA_USE_TOOLBOX := true
 AERA_INCLUDE_RESETPROP := true
 TARGET_USES_MKE2FS := true
+
+# XZ-compress the recovery runtime inside the ramdisk (wiki + infiniti/instantnoodlep:
+# this is a BoardConfig.mk make variable, NOT a vendorsetup.sh export — compression.mk
+# checks `ifeq ($(AERA_USE_EXTREME_COMPRESSION),1)`). Early init unpacks it in RAM;
+# v5 run 43955625101 shipped it: ramdisk 3614 files -> 712 + aera-runtime.tar.xz.
+AERA_USE_EXTREME_COMPRESSION := 1
 
 # Logging
 TARGET_USES_LOGD := true
