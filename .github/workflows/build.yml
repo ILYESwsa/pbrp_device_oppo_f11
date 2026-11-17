@@ -136,7 +136,7 @@ jobs:
           cd "$GITHUB_WORKSPACE/aera/.repo" || { echo "no .repo, skipping"; exit 0; }
 
           BUDGET=$((6 * 1024 * 1024 * 1024 + 200 * 1024 * 1024))   # 6.2 GB
-          USED=$(du -sb manifests manifests.git 2>/dev/null | awk '{s+=$1} END{print s+0}')
+          USED=$(du -sb manifests manifests.git 2>/dev/null | awk '{s+=$1} END{print s+0}' || true)
           STORES=""
           while IFS=$'\t' read -r sz p; do
             [ "$((USED + sz))" -gt "$BUDGET" ] && continue
@@ -147,9 +147,10 @@ jobs:
 
           LIST="manifests manifests.git"
           for d in projects/*; do
-            [ -d "$d" ] || continue
-            store=$(sed -n 's#.*project-objects/\([^/]*\)/.*#\1#p' "$d/objects/info/alternates" 2>/dev/null | head -1)
-            if [ -n "$store" ]; then
+            if [ -r "$d/objects/info/alternates" ]; then
+              alt=$(head -1 "$d/objects/info/alternates")
+              store=${alt##*project-objects/}
+              store=${store%%/*}
               case " $STORES " in
                 *" $store "*) LIST="$LIST $d" ;;
               esac
@@ -250,6 +251,7 @@ jobs:
           free -h
 
       - name: Build recovery image
+        id: build
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -312,7 +314,7 @@ jobs:
           key: ccache-aera16-v5-${{ github.run_id }}
 
       - name: Header and ramdisk audit
-        if: always()
+        if: always() && steps.build.outcome == 'success'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
