@@ -136,26 +136,37 @@ jobs:
           cd "$GITHUB_WORKSPACE/aera/.repo" || { echo "no .repo, skipping"; exit 0; }
 
           BUDGET=$((6 * 1024 * 1024 * 1024 + 200 * 1024 * 1024))   # 6.2 GB
+          # Modern repo (2.x) layout: projects/<path>.git/objects is a symlink
+          # into project-objects/<owner>/<repo>.git/objects (there are no
+          # alternates files), and object stores live in nested owner dirs
+          # (project-objects/platform/build.git, not project_build.git).
+          # Pick whole object stores biggest-first until the budget is full.
           USED=$(du -sb manifests manifests.git 2>/dev/null | awk '{s+=$1} END{print s+0}' || true)
           STORES=""
+          LIST="manifests manifests.git"
           while IFS=$'\t' read -r sz p; do
             [ "$((USED + sz))" -gt "$BUDGET" ] && continue
-            STORES="$STORES $(basename "$p")"
+            store=${p#project-objects/}
+            STORES="$STORES$store "
+            LIST="$LIST $p"
             USED=$((USED + sz))
-          done < <(du -sb project-objects/* 2>/dev/null | sort -rn)
+          done < <(find project-objects -type d -name '*.git' -exec du -sb {} + 2>/dev/null | sort -rn)
           echo "cached object stores:$(echo $STORES | wc -w), raw budget used: $((USED / 1024 / 1024)) MB"
 
           LIST="manifests manifests.git"
-          for d in projects/*; do
-            if [ -r "$d/objects/info/alternates" ]; then
-              alt=$(head -1 "$d/objects/info/alternates")
-              store=${alt##*project-objects/}
-              store=${store%%/*}
-              case " $STORES " in
-                *" $store "*) LIST="$LIST $d" ;;
-              esac
-            fi
-          done
+          while IFS= read -r d; do
+            link=$(readlink "$d/objects" 2>/dev/null) || continue
+            case "$link" in
+              *project-objects/*) ;;
+              *) continue ;;
+            esac
+            store=${link#*project-objects/}
+            store=${store%/objects}
+            store=${store%/}
+            case " $STORES " in
+              *" $store "*) LIST="$LIST $d" ;;
+            esac
+          done < <(find projects -type d -name '*.git' 2>/dev/null)
           echo "snapshot entries: $(echo $LIST | wc -w)"
 
           if ! tar --use-compress-program='zstd -T0' -cf "$TAR" $LIST; then
