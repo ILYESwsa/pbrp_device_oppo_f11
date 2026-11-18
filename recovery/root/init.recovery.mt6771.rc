@@ -33,5 +33,5 @@ service aera_dbglog /system/bin/sh /system/bin/aera_dbglog.sh
     oneshot
     seclabel u:r:recovery:s0
 
-on boot
+on fs
     start aera_dbglog

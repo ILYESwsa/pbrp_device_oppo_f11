@@ -1,18 +1,32 @@
 #!/system/bin/sh
-# Bring-up helper: keep the kernel log and recovery log on /cache so they survive a bootloop.
-# Read them later from the stock ROM:  /cache/aera_dmesg.txt  /cache/aera_recovery.log  /cache/aera_info.txt
-mkdir -p /mnt/dbg
-mount -t ext4 -o rw,nosuid,nodev /dev/block/by-name/cache /mnt/dbg 2>/dev/null || \
-mount -t ext4 -o rw,nosuid,nodev /dev/block/platform/bootdevice/by-name/cache /mnt/dbg 2>/dev/null
-[ -d /mnt/dbg ] || exit 0
-{
-  date; echo "--- getprop"; getprop 2>&1; echo "--- ls /system/bin"; ls /system/bin 2>&1
-  echo "--- ls /dev/graphics /dev/dri"; ls -l /dev/graphics /dev/dri 2>&1
-} > /mnt/dbg/aera_info.txt 2>&1
+# Save recovery diagnostics on the cache partition.
+dir=/mnt/dbg
+mkdir -p "$dir" || exit 1
+attempt=0
+while [ "$attempt" -lt 15 ]; do
+    for block in /dev/block/by-name/cache /dev/block/platform/bootdevice/by-name/cache; do
+        [ -b "$block" ] || continue
+        mount -t ext4 -o rw,nosuid,nodev "$block" "$dir" && break 2
+    done
+    attempt=$((attempt + 1))
+    sleep 1
+done
+if ! grep -q " $dir ext4 rw," /proc/mounts; then
+    echo 'aera_dbglog: cache mount failed' > /dev/kmsg
+    exit 1
+fi
+
+date > "$dir/aera_info.txt"
+sync
 i=0
 while [ "$i" -lt 1800 ]; do
-  { date; dmesg || toybox dmesg || cat /proc/kmsg; } > /mnt/dbg/aera_dmesg.txt 2>&1
-  cat /tmp/recovery.log > /mnt/dbg/aera_recovery.log 2>/dev/null
-  sync
-  i=$((i+1)); sleep 1
+    if dmesg > "$dir/.aera_dmesg.tmp" 2>&1; then
+        mv -f "$dir/.aera_dmesg.tmp" "$dir/aera_dmesg.txt"
+    fi
+    if [ -r /tmp/recovery.log ] && cat /tmp/recovery.log > "$dir/.aera_recovery.tmp"; then
+        mv -f "$dir/.aera_recovery.tmp" "$dir/aera_recovery.log"
+    fi
+    sync
+    i=$((i + 1))
+    sleep 1
 done
