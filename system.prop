@@ -1,3 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 ro.mediatek.platform=MT6771
 ro.hardware=mt6771
+
+# Explicitly A-only: AERA's installer reads this (install.cpp, twrpinstall,
+# twrp-functions) to decide between the A/B and non-A/B code paths.
+ro.build.ab_update=false

@@ -68,6 +68,15 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 AB_OTA_UPDATER := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 
+# AERA's recovery binary links against the boot control client even on A-only
+# devices; without these the ramdisk is missing libboot_control_client.so and
+# the recovery fails to start with "library not found".
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libboot_control_client
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libboot_control_client.so
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
