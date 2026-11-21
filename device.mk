@@ -19,7 +19,10 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_TARGET_VNDK_VERSION := 30
 
-$(call inherit-product, $(LOCAL_PATH)/aera_CPH1911.mk)
+# AERA_* device configuration moved into BoardConfig.mk: the AERA translation
+# layer (bootable/recovery/aera_config.mk + vendor/recovery/aera_soong_config.mk)
+# runs from build/make/core/config.mk right after the device BoardConfig, so a
+# product .mk file was too late for those values (aera_CPH1911.mk removed).
 
 PRODUCT_PACKAGES_ENG += \
     tzdata_twrp

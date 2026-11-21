@@ -69,13 +69,20 @@ AB_OTA_UPDATER := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 
 # AERA's recovery binary links against the boot control client even on A-only
-# devices; without these the ramdisk is missing libboot_control_client.so and
-# the recovery fails to start with "library not found".
+# devices. The relink must ship the full dependency chain, not just the top
+# library: libboot_control_client.so needs android.hardware.boot-V1-ndk.so and
+# libandroidfw.so needs libincfs.so - the a2a0b2a image shipped only
+# libboot_control_client.so, so the dynamic linker still refused to start
+# recovery (verified by walking the DT_NEEDED closure of the built image).
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libboot_control_client
+    libboot_control_client \
+    android.hardware.boot-V1-ndk \
+    libincfs
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libboot_control_client.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libboot_control_client.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot-V1-ndk.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libincfs.so
 
 # The stock ROM is system-as-root, but unlike android-12.1 (which set
 # BOARD_BUILD_SYSTEM_ROOT_IMAGE := true), this must NOT be set here: Android 16
@@ -138,6 +145,11 @@ TW_USE_LEGACY_BATTERY_SERVICES := true
 # script reads it from the environment, not from here).
 
 # UI / hardware (1080x2340 LCD, waterdrop notch, fbdev)
+AERA_MAINTAINER := ILYESwsa
+AERA_STATUS_INDENT_LEFT := 42
+AERA_STATUS_INDENT_RIGHT := 42
+AERA_HIDE_NOTCH := 1
+AERA_CLOCK_POS := 1
 AERA_SCREEN_H := 2340
 AERA_STATUS_H := 100
 TARGET_SCREEN_DENSITY := 420
@@ -152,6 +164,16 @@ AERA_DEFAULT_BRIGHTNESS := 800
 AERA_EXCLUDE_DEFAULT_USB_INIT := true
 AERA_UI_ADAPTIVE_RESOLUTION := true
 AERA_EXCLUDE_APEX := true
+
+# Flashlight: OF-style config backed by the ramdisk files under /system/flashlight.
+AERA_FLASHLIGHT_ENABLE := 1
+AERA_FL_PATH1 := /system/flashlight
+
+# NOTE: all AERA_* device configuration must live in this file (BoardConfig.mk).
+# bootable/recovery/aera_config.mk and vendor/recovery/aera_soong_config.mk are
+# included from build/make/core/config.mk right after the device BoardConfig,
+# so values set only in product .mk files (like the old aera_CPH1911.mk) are
+# read too late and silently never apply. Same placement as the marie tree.
 
 # Boot mode. twrpfastboot=1 is only for `fastboot boot` testing, never for flashing:
 #   make ... F11_RAMBOOT_TEST=1
