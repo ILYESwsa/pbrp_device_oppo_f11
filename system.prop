@@ -5,3 +5,8 @@ ro.hardware=mt6771
 # Explicitly A-only: AERA's installer reads this (install.cpp, twrpinstall,
 # twrp-functions) to decide between the A/B and non-A/B code paths.
 ro.build.ab_update=false
+
+# Stock ROM is system-as-root (device launched with Android 9, where SAR was
+# mandatory). AERA itself reads the mounted ROM's own build.prop at runtime
+# (TWFunc::Has_System_Root); this prop advertises SAR to zip installers.
+ro.build.system_root_image=true

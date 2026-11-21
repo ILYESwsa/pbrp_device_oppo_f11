@@ -77,6 +77,14 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libboot_control_client.so
 
+# The stock ROM is system-as-root, but unlike android-12.1 (which set
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true), this must NOT be set here: Android 16
+# removed the flag (it is a KATI_obsolete_var and aborts the build) because
+# system-as-root is the only systemimage layout left. AERA detects the ROM
+# layout at runtime from the mounted system's build.prop; the declaration for
+# installers lives in system.prop (ro.build.system_root_image) and the raw
+# image view of system is /system_image in twrp.flags.
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
