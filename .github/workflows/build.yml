@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # prune stale actions/cache entries (see "Prune stale caches")
 
 concurrency:
   group: build-${{ github.ref }}
@@ -77,6 +78,7 @@ jobs:
           git config --global color.ui false
 
       - name: Restore ccache
+        continue-on-error: true   # a cache-service hiccup must not kill a 1.5 h run
         uses: actions/cache/restore@v4
         with:
           path: aera/out/ccache
@@ -84,17 +86,16 @@ jobs:
           restore-keys: |
             ccache-aera16-v5-
 
-      - name: Compute source-cache key
-        id: srckey
-        shell: bash
-        run: echo "month=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
-
       - name: Restore source cache
         id: srccache
+        continue-on-error: true   # worst case: one cold sync
         uses: actions/cache/restore@v4
         with:
+          # Per-run key + restore-keys: always restore the newest previous
+          # snapshot and always save a fresh one (GitHub caches are
+          # immutable, so a stable key can never be refreshed).
           path: aera-src-cache.tar.zst
-          key: aera-src-aera16-${{ steps.srckey.outputs.month }}
+          key: aera-src-aera16-${{ github.run_id }}
           restore-keys: |
             aera-src-aera16-
 
@@ -104,20 +105,38 @@ jobs:
           mkdir -p "$GITHUB_WORKSPACE/aera"
           cd "$GITHUB_WORKSPACE/aera"
 
+          sync_tree() {
+            repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1 &&
+            repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+          }
+
           # Seed .repo from the bounded source cache (git object stores for the
           # biggest projects) so repo sync only has to fetch the delta.
           SRCTAR="$GITHUB_WORKSPACE/aera-src-cache.tar.zst"
+          SEEDED=false
           if [ -f "$SRCTAR" ]; then
             echo "source cache: $(stat -c %s "$SRCTAR") bytes, extracting..."
             mkdir -p .repo
-            tar --use-compress-program='zstd -T0' -xf "$SRCTAR" -C .repo
-            echo "seeded .repo: $(du -sh .repo 2>/dev/null | cut -f1)"
+            if tar --use-compress-program='zstd -T0' -xf "$SRCTAR" -C .repo; then
+              SEEDED=true
+              echo "seeded .repo: $(du -sh .repo 2>/dev/null | cut -f1), $(find .repo/project-objects -type d -name '*.git' 2>/dev/null | wc -l) object stores"
+            else
+              echo "source cache is corrupt, syncing cold" >&2
+              rm -rf .repo
+            fi
           else
             echo "no source cache, full sync"
           fi
 
-          repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0 --depth=1
-          repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
+          if ! sync_tree; then
+            if [ "$SEEDED" = true ]; then
+              echo "::warning::sync with the seeded .repo failed, wiping the seed and retrying cold"
+              rm -rf .repo
+            else
+              echo "::warning::sync failed, retrying (repo sync resumes)"
+            fi
+            sync_tree
+          fi
 
           df -h /
 
@@ -125,10 +144,12 @@ jobs:
         id: srcsnap
         shell: bash
         run: |
-          # Rebuild the bounded source cache after the sync: manifests, every
-          # project's small git config dir, and the largest git object stores,
-          # capped at ~6.2 GB so it fits GitHub's 10 GB cache quota next to the
-          # 3 GB ccache (git packs barely compress, so the tar stays near raw size).
+          # Rebuild the bounded source cache after every sync: manifests, every
+          # chosen project's small git config dir, and the largest git object
+          # stores, capped at ~6.2 GB so that one source cache plus the 3 GB
+          # ccache fits GitHub's 10 GB cache quota (git packs barely compress,
+          # so the tar stays near raw size). The "Prune stale caches" step
+          # deletes older generations so the quota never overflows.
           # Only project dirs whose object store made it into the budget are
           # included; the rest are simply re-cloned on the next cold sync.
           TAR="$GITHUB_WORKSPACE/aera-src-cache.tar.zst"
@@ -153,14 +174,26 @@ jobs:
           done < <(find project-objects -type d -name '*.git' -exec du -sb {} + 2>/dev/null | sort -rn)
           echo "cached object stores:$(echo $STORES | wc -w), raw budget used: $((USED / 1024 / 1024)) MB"
 
-          LIST="manifests manifests.git"
+          # NOTE: do NOT reset LIST here — the tar must carry the object
+          # stores selected above, not just the per-project gitdirs. A gitdir
+          # whose "objects" symlink dangles (store not in the tar) forces a
+          # full re-clone at best and breaks repo sync at worst.
           while IFS= read -r d; do
-            link=$(readlink "$d/objects" 2>/dev/null) || continue
-            case "$link" in
+            # repo 2.x points projects/<path>.git/objects at the shared store
+            # with a relative symlink; older repo versions used an
+            # objects/info/alternates file. Support both so the snapshot
+            # survives a repo layout change.
+            target=""
+            if [ -L "$d/objects" ]; then
+              target=$(readlink "$d/objects")
+            elif [ -f "$d/objects/info/alternates" ]; then
+              target=$(head -n1 "$d/objects/info/alternates")
+            fi
+            case "$target" in
               *project-objects/*) ;;
               *) continue ;;
             esac
-            store=${link#*project-objects/}
+            store=${target#*project-objects/}
             store=${store%/objects}
             store=${store%/}
             case " $STORES " in
@@ -184,11 +217,12 @@ jobs:
           echo "ok=true" >> "$GITHUB_OUTPUT"
 
       - name: Save source cache
-        if: steps.srccache.outputs.cache-hit != 'true' && steps.srcsnap.outputs.ok == 'true'
+        if: steps.srcsnap.outputs.ok == 'true'
+        continue-on-error: true
         uses: actions/cache/save@v4
         with:
           path: aera-src-cache.tar.zst
-          key: aera-src-aera16-${{ steps.srckey.outputs.month }}
+          key: aera-src-aera16-${{ github.run_id }}
 
       - name: Checkout device tree
         uses: actions/checkout@v4
@@ -319,6 +353,7 @@ jobs:
 
       - name: Save ccache
         if: always()
+        continue-on-error: true
         uses: actions/cache/save@v4
         with:
           path: aera/out/ccache
@@ -361,3 +396,27 @@ jobs:
             build.log
             aera/out/error.log
           if-no-files-found: warn
+
+      - name: Prune stale caches
+        # actions/cache storage is 10 GB per repo. The per-run ccache keys
+        # used to pile up (3 GB each) until quota eviction ate the 6.2 GB
+        # source cache, forcing full re-syncs. Keep only the newest entry of
+        # each prefix: 6.2 GB source + 3 GB ccache = 9.2 GB, always in budget.
+        if: always()
+        continue-on-error: true
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for PREFIX in aera-src-aera16- ccache-aera16-v5-; do
+            curl -s -H "Authorization: Bearer $GH_TOKEN" \
+              "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/caches?key=$PREFIX&per_page=100" \
+              | python3 -c 'import sys, json; [print(c["id"], c["key"], c["size_in_bytes"]) for c in sorted(json.load(sys.stdin).get("actions_caches", []), key=lambda c: c["last_accessed_at"], reverse=True)[1:]]' \
+              | while read -r id key size; do
+                  echo "pruning $key ($size bytes)"
+                  curl -s -o /dev/null -X DELETE \
+                    -H "Authorization: Bearer $GH_TOKEN" \
+                    "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/caches/$id"
+                done || true
+          done
+          echo "cache pruning done"
