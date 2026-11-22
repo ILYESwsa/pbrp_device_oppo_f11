@@ -1,0 +1,36 @@
+== recovery.img: 67108864 bytes
+--header_version 2 --os_version 16.0.0 --os_patch_level 2099-12 --kernel <ub>/kernel --ramdisk <ub>/ramdisk --recovery_dtbo <ub>/recovery_dtbo --dtb <ub>/dtb --pagesize 0x00000800 --base 0x00000000 --kernel_offset 0x40080000 --ramdisk_offset 0x55000000 --second_offset 0x00000000 --tags_offset 0x54000000 --dtb_offset 0x0000000054000000 --board '' --cmdline bootopt=64S3,32N2,64N2
+== ramdisk file: 29738511 bytes, magic 1f8b0800
+== unpacked: 53718528 bytes, entries: 661
+== A/B or optional-tool artifacts in the ramdisk (want none of the A/B ones):
+1413200 sbin/bash
+1422 system/etc/bash.bashrc
+1498688 sbin/busybox
+== 25 biggest files:
+sort: write failed: 'standard output': Broken pipe
+sort: write error
+10413544 system/bin/recovery
+10201768 aera-runtime.tar.xz
+2694168 system/bin/init
+2163048 system/bin/linker64
+2106328 system/bin/adbd
+1498688 sbin/busybox
+1489184 system/lib64/libcrypto.so
+1413200 sbin/bash
+1322846 file_contexts.bin
+1188200 system/lib64/libc.so
+1049704 system/lib64/libc++.so
+884120 sbin/magiskboot
+855240 system/lib64/libperfetto_c.so
+746744 system/lib64/libbinder.so
+721514 sepolicy
+702672 system/lib64/libunwindstack.so
+685280 sbin/zip
+684264 system/lib64/libhidlbase.so
+655704 system/lib64/libvintf.so
+611800 system/lib64/libfs_mgr.so
+407343 system/usr/share/zoneinfo/tzdata
+351472 system/lib64/libprocessgroup.so
+338672 system/lib64/libpcre2.so
+293896 system/bin/sh
+291152 system/lib64/libadbd_auth.so
