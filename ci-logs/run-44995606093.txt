@@ -1,202 +1,258 @@
-== Sun Nov 22 07:38:36 UTC 2026 run=44995606093 sha=11a90fc4cff6ceb86659f9e4716e03a57c2f7e15
+== Sun Nov 22 07:40:37 UTC 2026 run=44995606093 sha=11a90fc4cff6ceb86659f9e4716e03a57c2f7e15
                total        used        free      shared  buff/cache   available
-Mem:           15988       12237        1757           8        1993        3396
-Swap:          28671         245       28426
-/dev/root       146G  135G   11G  93% /
+Mem:           15988        7275         182          10        8530        8355
+Swap:          28671         227       28444
+/dev/root       146G  137G  8.3G  95% /
 == oom/kill messages
 == last 250 lines of build.log
-07:10:15 ************************************************************
-07:10:15 You are building on a machine with 15.6GB of RAM
-07:10:15 
-07:10:15 The minimum required amount of free memory is around 16GB,
-07:10:15 and even with that, some configurations may not work.
-07:10:15 
-07:10:15 If you run into segfaults or other errors, try reducing your
-07:10:15 -j value.
-07:10:15 ************************************************************
-Running product configuration...
-============================================
-PLATFORM_VERSION_CODENAME=REL
-PLATFORM_VERSION=16
-TARGET_PRODUCT=twrp_CPH1911
-TARGET_BUILD_VARIANT=eng
-TARGET_ARCH=arm64
-TARGET_ARCH_VARIANT=armv8-a
-TARGET_CPU_VARIANT=generic
-TARGET_2ND_ARCH=arm
-TARGET_2ND_ARCH_VARIANT=armv8-a
-TARGET_2ND_CPU_VARIANT=generic
-HOST_OS=linux
-HOST_OS_EXTRA=Linux-6.8.0-1070-azure-x86_64-Ubuntu-22.04.5-LTS
-HOST_CROSS_OS=windows
-BUILD_ID=BP2A.250605.031.A2
-OUT_DIR=/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out
-SOONG_ONLY=false
-============================================
-[100% 1/1] bootstrap blueprint
-Running globs...
-[  1% 2/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-deptools/pkg/github.com/google/blueprint/deptools.a
-[  2% 3/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-gobtools/pkg/github.com/google/blueprint/gobtools.a
-[  3% 4/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-metrics/pkg/github.com/google/blueprint/metrics.a
-[  3% 5/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-optional/pkg/github.com/google/blueprint/optional.a
-[  4% 6/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/androidmk-parser/pkg/android/soong/androidmk/parser.a
-[  5% 7/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pathtools/pkg/github.com/google/blueprint/pathtools.a
-[  6% 8/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-pool/pkg/github.com/google/blueprint/pool.a
-[  6% 9/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-syncmap/pkg/github.com/google/blueprint/syncmap.a
-[  7% 10/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-uniquelist/pkg/github.com/google/blueprint/uniquelist.a
-[  8% 11/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-parser/pkg/github.com/google/blueprint/parser.a
-[  9% 12/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-depset/pkg/github.com/google/blueprint/depset.a
-[  9% 13/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-bpmodify/pkg/github.com/google/blueprint/bpmodify.a
-[ 10% 14/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-flags/pkg/github.com/google/go-cmp/cmp/internal/flags.a
-[ 11% 15/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-diff/pkg/github.com/google/go-cmp/cmp/internal/diff.a
-[ 12% 16/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-function/pkg/github.com/google/go-cmp/cmp/internal/function.a
-[ 12% 17/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-testprotos/pkg/github.com/google/go-cmp/cmp/internal/testprotos.a
-[ 13% 18/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-teststructs/pkg/github.com/google/go-cmp/cmp/internal/teststructs.a
-[ 14% 19/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp-internal-value/pkg/github.com/google/go-cmp/cmp/internal/value.a
-[ 15% 20/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/go-cmp/pkg/github.com/google/go-cmp/cmp.a
-[ 16% 21/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-detrand/pkg/google.golang.org/protobuf/internal/detrand.a
-[ 16% 22/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-android/pkg/google.golang.org/protobuf/android.a
-[ 17% 23/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-proptools/pkg/github.com/google/blueprint/proptools.a
-[ 18% 24/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-errors/pkg/google.golang.org/protobuf/internal/errors.a
-[ 19% 25/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-encoding-protowire/pkg/google.golang.org/protobuf/encoding/protowire.a
-[ 19% 26/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-flags/pkg/google.golang.org/protobuf/internal/flags.a
-[ 20% 27/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-pragma/pkg/google.golang.org/protobuf/internal/pragma.a
-[ 21% 28/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-set/pkg/google.golang.org/protobuf/internal/set.a
-[ 22% 29/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-version/pkg/google.golang.org/protobuf/internal/version.a
-[ 22% 30/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-reflect-protoreflect/pkg/google.golang.org/protobuf/reflect/protoreflect.a
-[ 23% 31/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-descfmt/pkg/google.golang.org/protobuf/internal/descfmt.a
-[ 24% 32/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-descopts/pkg/google.golang.org/protobuf/internal/descopts.a
-[ 25% 33/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-messageset/pkg/google.golang.org/protobuf/internal/encoding/messageset.a
-[ 25% 34/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-genid/pkg/google.golang.org/protobuf/internal/genid.a
-[ 26% 35/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-order/pkg/google.golang.org/protobuf/internal/order.a
-[ 27% 36/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-strs/pkg/google.golang.org/protobuf/internal/strs.a
-[ 28% 37/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-text/pkg/google.golang.org/protobuf/internal/encoding/text.a
-[ 29% 38/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-defval/pkg/google.golang.org/protobuf/internal/encoding/defval.a
-[ 29% 39/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-reflect-protoregistry/pkg/google.golang.org/protobuf/reflect/protoregistry.a
-[ 30% 40/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-runtime-protoiface/pkg/google.golang.org/protobuf/runtime/protoiface.a
-[ 31% 41/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-proto/pkg/google.golang.org/protobuf/proto.a
-[ 32% 42/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-encoding-prototext/pkg/google.golang.org/protobuf/encoding/prototext.a
-[ 32% 43/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint/pkg/github.com/google/blueprint.a
-[ 33% 44/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-filedesc/pkg/google.golang.org/protobuf/internal/filedesc.a
-[ 34% 45/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-bootstrap-bpdoc/pkg/github.com/google/blueprint/bootstrap/bpdoc.a
-[ 35% 46/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-encoding-tag/pkg/google.golang.org/protobuf/internal/encoding/tag.a
-[ 35% 47/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/blueprint-bootstrap/pkg/github.com/google/blueprint/bootstrap.a
-[ 36% 48/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/loadplugins/obj/loadplugins.a
-[ 37% 49/131] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/loadplugins/obj/loadplugins
-[ 38% 50/131] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/loadplugins
-[ 38% 51/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong/pkg/android/soong.a
-[ 39% 52/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-android-allowlists/pkg/android/soong/android/allowlists.a
-[ 40% 53/131] write /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a.embedcfg
-[ 41% 54/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-remoteexec/pkg/android/soong/remoteexec.a
-[ 41% 55/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-response/pkg/android/soong/response.a
-[ 42% 56/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-shared/pkg/android/soong/shared.a
-[ 43% 57/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-starlark-format/pkg/android/soong/starlark_fmt.a
-[ 44% 58/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-android-soongconfig/pkg/android/soong/android/soongconfig.a
-[ 45% 59/131] create /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/gen/plugin.go
-[ 45% 60/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-impl/pkg/google.golang.org/protobuf/internal/impl.a
-[ 46% 61/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-internal-filetype/pkg/google.golang.org/protobuf/internal/filetype.a
-[ 47% 62/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/golang-protobuf-runtime-protoimpl/pkg/google.golang.org/protobuf/runtime/protoimpl.a
-[ 48% 63/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-android_team_proto/pkg/android/soong/android/team_proto.a
-[ 48% 64/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/sbox_proto/pkg/android/soong/cmd/sbox/sbox_proto.a
-[ 49% 65/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-ui-metrics_proto/pkg/android/soong/ui/metrics/metrics_proto.a
-[ 50% 66/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-android/pkg/android/soong/android.a
-[ 51% 67/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/kernel-config-soong-rules/pkg/android/soong/kernel/configs.a
-[ 51% 68/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-aconfig/pkg/android/soong/aconfig.a
-[ 52% 69/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-aconfig-build_flags/pkg/android/soong/aconfig/build_flags.a
-[ 53% 70/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-aidl-library/pkg/android/soong/aidl_library.a
-[ 54% 71/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-bloaty/pkg/android/soong/bloaty.a
-[ 54% 72/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-ci-tests/pkg/android/soong/ci_tests.a
-[ 55% 73/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-cc-config/pkg/android/soong/cc/config.a
-[ 56% 74/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-compliance/pkg/android/soong/compliance.a
-[ 57% 75/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-dexpreopt/pkg/android/soong/dexpreopt.a
-[ 58% 76/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-etc/pkg/android/soong/etc.a
-[ 58% 77/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-fuzz/pkg/android/soong/fuzz.a
-[ 59% 78/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-golang/pkg/android/soong/golang.a
-[ 60% 79/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-genrule/pkg/android/soong/genrule.a
-[ 61% 80/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-icu/pkg/android/soong/icu.a
-[ 61% 81/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-fs_config/pkg/android/soong/fs_config.a
-[ 62% 82/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-java-config/pkg/android/soong/java/config.a
-[ 63% 83/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-java-config-error_prone/pkg/android/soong/java/config/error_prone.a
-[ 64% 84/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-libchrome/pkg/android/soong/external/libchrome.a
-[ 64% 85/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-phony/pkg/android/soong/phony.a
-[ 65% 86/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-provenance/pkg/android/soong/provenance.a
-[ 66% 87/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-rust-config/pkg/android/soong/rust/config.a
-[ 67% 88/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-snapshot/pkg/android/soong/snapshot.a
-[ 67% 89/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-tradefed/pkg/android/soong/tradefed.a
-[ 68% 90/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-twrp-generator/pkg/twrp/soong/generator.a
-[ 69% 91/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-xml/pkg/android/soong/xml.a
-[ 70% 92/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-cc/pkg/android/soong/cc.a
-[ 70% 93/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-aera_host_defaults/pkg/bootable/recovery/aeraui/build.a
-[ 71% 94/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-android-sdk/pkg/android/soong/android_sdk.a
-[ 72% 95/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-bpf/pkg/android/soong/bpf.a
-[ 73% 96/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-clang/pkg/android/soong/external/clang.a
-[ 74% 97/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-kernel/pkg/android/soong/kernel.a
-[ 74% 98/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-clang-prebuilts/pkg/android/soong/prebuilts/clang/host/linux-x86/clangprebuilts.a
-[ 75% 99/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-libaosprecovery_defaults/pkg/bootable/recovery/libaosprecovery.a
-[ 76% 100/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-libbpf/pkg/android/soong/bpf/libbpf.a
-[ 77% 101/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-libminuitwrp_defaults/pkg/bootable/recovery/minuitwrp.a
-[ 77% 102/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-linkerconfig/pkg/android/soong/linkerconfig.a
-[ 78% 103/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-llvm/pkg/android/soong/external/llvm.a
-[ 79% 104/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-noto-fonts/pkg/android/soong/external/noto-fonts.a
-[ 80% 105/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-python/pkg/android/soong/python.a
-[ 80% 106/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-rust/pkg/android/soong/rust.a
-[ 81% 107/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-rust-prebuilts/pkg/android/soong/prebuilts/rust/rustprebuilts.a
-[ 82% 108/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-vold_defaults/pkg/system/vold.a
-[ 83% 109/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-java/pkg/android/soong/java.a
-[ 83% 110/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/hidl-soong-rules/pkg/android/soong/hidl.a
-[ 84% 111/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/aidl-soong-rules/pkg/android/soong/aidl.a
-[ 85% 112/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-aconfig-codegen/pkg/android/soong/aconfig/codegen.a
-[ 86% 113/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-api/pkg/android/soong/api.a
-[ 87% 114/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-csuite/pkg/android/soong/csuite.a
-[ 87% 115/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-sh/pkg/android/soong/sh.a
-[ 88% 116/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-filesystem/pkg/android/soong/filesystem.a
-[ 89% 117/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-suite-harness/pkg/android/soong/tradefed/suite_harness.a
-[ 90% 118/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-fsgen/pkg/android/soong/fsgen.a
-[ 90% 119/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-sysprop/pkg/android/soong/sysprop.a
-[ 91% 120/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-apex/pkg/android/soong/apex.a
-[ 92% 121/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-art/pkg/android/soong/art.a
-[ 93% 122/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-selinux/pkg/android/soong/selinux.a
-[ 93% 123/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-systemfeatures/pkg/android/soong/systemfeatures.a
-[ 94% 124/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-sdk/pkg/android/soong/sdk.a
-[ 95% 125/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong-tradefed-modules/pkg/android/soong/tradefed_modules.a
-[ 96% 126/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/vintf-compatibility-matrix-soong-rules/pkg/android/soong/vintf-compatibility-matrix.a
-[ 96% 127/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/xsdc-soong-rules/pkg/android/soong/xsdc.a
-[ 97% 128/131] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build.a
-[ 98% 129/131] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/soong_build/obj/soong_build
-[ 99% 130/131] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/soong_build
-[100% 131/131] analyzing Android.bp files and generating ninja file at /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/build.twrp_CPH1911.ninja
-Warning: Module 'CameraExtensionsProxy' depends on non-existing optional_uses_libs 'androidx.camera.extensions.impl'
-Warning: Module 'androidx.test.uiautomator_uiautomator' depends on non-existing optional_uses_libs 'com.android.extensions.xr'
-Warning: Module 'androidx.wear_wear' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface-complications-data-source' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.watchface_watchface' depends on non-existing optional_uses_libs 'wear-sdk'
-Warning: Module 'androidx.wear.compose_compose-foundation' depends on non-existing optional_uses_libs 'wear-sdk'
-/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911-cleanspec.ninja is missing, regenerating...
-/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/build-twrp_CPH1911.ninja is missing, regenerating...
-[100% 132/132] initializing legacy Make module parser ...
-[ 91% 133/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/installs-twrp_CPH1911.mk ...
-[ 92% 134/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/Android-twrp_CPH1911.mk ...
-[ 93% 135/145] including build/make/target/board/android-info.mk ...
-[ 93% 136/145] including art/Android.mk ...
-[ 94% 137/145] including bootable/recovery/Android.mk ...
-bootable/recovery/aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
-bootable/recovery/prebuilt/Android.mk:486: warning: vendor_hw:  bootable/recovery/prebuilt/relink.sh /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/target/product/CPH1911/recovery/root/vendor/bin/hw 
-bootable/recovery/orscmd/../aera_build.mk:687: warning: "OF_MISCELLANEOUS_ROOT_DIRECTORY" is used. This is EXPERIMENTAL. Ensure that "/sdcard" will ALWAYS be accessible on the device
-[ 95% 138/145] including device/oppo/CPH1911/Android.mk ...
-[ 95% 139/145] including device/qcom/twrp-common/Android.mk ...
-[ 96% 140/145] including external/magisk-prebuilt/Android.mk ...
-[ 97% 141/145] including hardware/qcom/wlan/Android.mk ...
-[ 97% 142/145] including vendor/twrp/Android.mk ...
-[ 98% 143/145] including /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/late-twrp_CPH1911.mk ...
-[ 99% 144/145] finishing legacy Make module parsing ...
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed.jar has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-tradefed-tests.jar has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/catbox-tradefed has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/framework/catbox-report-lib.jar has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
-build/make/core/tasks/tools/compatibility.mk:75: warning: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/test-utils-script has no license metadata
+[  2% 796/27537] host Prebuilt: ndkstubgen (/home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/obj/EXECUTABLES/ndkstubgen_intermediates/ndkstubgen) (priority: 44)
+[  2% 797/27537] //external/rust/android-crates-io/crates/unicode-ident:libunicode_ident rustc src/lib.rs [linux_glibc] (priority: 48)
+[  2% 798/27537] //external/rust/android-crates-io/crates/byteorder:libbyteorder rustc src/lib.rs [linux_glibc] (priority: 44)
+[  2% 799/27537] //external/rust/android-crates-io/crates/cfg-if:libcfg_if rustc src/lib.rs [linux_glibc] (priority: 44)
+[  2% 800/27537] //external/rust/android-crates-io/crates/libc:liblibc rustc src/lib.rs [linux_glibc] (priority: 44)
+[  2% 801/27537] Install: /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/ndkstubgen (priority: 43)
+[  2% 802/27537] //external/rust/android-crates-io/crates/getrandom:libgetrandom rustc src/lib.rs [linux_glibc] (priority: 43)
+[  2% 803/27537] //external/rust/android-crates-io/crates/once_cell:libonce_cell rustc src/lib.rs [linux_glibc] (priority: 43)
+[  2% 804/27537] //external/rust/android-crates-io/crates/bitflags:libbitflags rustc src/lib.rs [linux_glibc] (priority: 42)
+[  2% 805/27537] //bionic/libc:libc generate stubs libc.map.txt (priority: 42)
+[  2% 806/27537] //external/rust/android-crates-io/crates/proc-macro2:libproc_macro2 rustc src/lib.rs [linux_glibc] (priority: 47)
+[  2% 807/27537] //external/rust/android-crates-io/crates/quote:libquote rustc src/lib.rs [linux_glibc] (priority: 46)
+[  2% 808/27537] //prebuilts/rust:libcore.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/core/src/lib.rs (priority: 42)
+[  2% 809/27537] //external/rust/android-crates-io/crates/syn:libsyn rustc src/lib.rs [linux_glibc] (priority: 45)
+[  2% 810/27537] //prebuilts/rust:libcore.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/core/src/lib.rs (priority: 42)
+[  2% 811/27537] //external/rust/android-crates-io/extra_versions/crates/zerocopy-derive:libzerocopy_derive-0.7.35 rustc src/lib.rs [linux_glibc] (priority: 44)
+[  2% 812/27537] //external/rust/android-crates-io/crates/thiserror-impl:libthiserror_impl rustc src/lib.rs [linux_glibc] (priority: 43)
+[  2% 813/27537] //external/rust/android-crates-io/extra_versions/crates/zerocopy:libzerocopy-0.7.35 rustc src/lib.rs [linux_glibc] (priority: 43)
+[  2% 814/27537] //external/rust/android-crates-io/crates/ahash:libahash rustc src/lib.rs [linux_glibc] (priority: 42)
+[  2% 815/27537] //bionic/libdl:libdl generate stubs libdl.map.txt (priority: 42)
+[  2% 816/27537] //external/rust/android-crates-io/crates/errno:liberrno rustc src/lib.rs [linux_glibc] (priority: 42)
+[  2% 817/27537] //bionic/libm:libm generate stubs libm.map.txt (priority: 42)
+[  2% 818/27537] //external/rust/android-crates-io/crates/thiserror:libthiserror rustc src/lib.rs [linux_glibc] (priority: 42)
+[  2% 819/27537] //bionic/libc:libc clang stub.c (priority: 41)
+[  2% 820/27537] //prebuilts/rust:libcompiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/compiler_builtins/src/lib.rs (priority: 41)
+[  2% 821/27537] //prebuilts/rust:libcompiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/compiler_builtins/src/lib.rs (priority: 41)
+[  2% 822/27537] //external/rust/android-crates-io/crates/serde_derive:libserde_derive rustc src/lib.rs [linux_glibc] (priority: 43)
+[  2% 823/27537] //external/rust/android-crates-io/crates/serde:libserde rustc src/lib.rs [linux_glibc] (priority: 42)
+[  2% 824/27537] //external/rust/android-crates-io/crates/bytes:libbytes rustc src/lib.rs [linux_glibc] (priority: 41)
+[  2% 825/27537] //bionic/libdl:libdl clang stub.c (priority: 41)
+[  2% 826/27537] //external/rust/android-crates-io/crates/either:libeither rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 827/27537] //external/rust/android-crates-io/crates/fastrand:libfastrand rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 828/27537] //external/rust/android-crates-io/extra_versions/crates/hashbrown:libhashbrown-0.12.3 rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 829/27537] //bionic/libm:libm clang stub.c (priority: 41)
+[  3% 830/27537] //external/rust/android-crates-io/crates/memchr:libmemchr rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 831/27537] //external/rust/android-crates-io/crates/protobuf-support:libprotobuf_support rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 832/27537] //external/rust/android-crates-io/crates/rustix:librustix rustc src/lib.rs [linux_glibc] (priority: 41)
+[  3% 833/27537] //external/rust/android-crates-io/crates/aho-corasick:libaho_corasick rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 834/27537] //external/rust/android-crates-io/crates/anyhow:libanyhow rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 835/27537] //bionic/libc:libc link libc.so (priority: 40)
+[  3% 836/27537] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/cfg-if/src/lib.rs (priority: 40)
+[  3% 837/27537] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/cfg-if/src/lib.rs (priority: 40)
+[  3% 838/27537] //bionic/libdl:libdl link libdl.so (priority: 40)
+[  3% 839/27537] //prebuilts/rust:libcore.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/core/src/lib.rs [arm] (priority: 41)
+[  3% 840/27537] //external/rust/android-crates-io/crates/indexmap:libindexmap rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 841/27537] //prebuilts/rust:liblibc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/libc/src/lib.rs (priority: 40)
+[  3% 842/27537] //prebuilts/rust:liblibc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/libc/src/lib.rs (priority: 40)
+[  3% 843/27537] //external/rust/android-crates-io/crates/log:liblog_rust rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 844/27537] //bionic/libm:libm link libm.so (priority: 40)
+[  3% 845/27537] //prebuilts/rust:libcompiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/compiler_builtins/src/lib.rs [arm] (priority: 40)
+[  3% 846/27537] //external/rust/android-crates-io/crates/regex-syntax:libregex_syntax rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 847/27537] //external/rust/android-crates-io/crates/tempfile:libtempfile rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 848/27537] //external/rust/android-crates-io/crates/which:libwhich rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 849/27537] //prebuilts/rust:liballoc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/alloc/src/lib.rs (priority: 39)
+[  3% 850/27537] //prebuilts/rust:liballoc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/alloc/src/lib.rs (priority: 39)
+[  3% 851/27537] //bionic/libc:libc generate toc libc.so (priority: 39)
+[  3% 852/27537] //bionic/libc:libc generate stubs libc.map.txt [arm] (priority: 39)
+[  3% 853/27537] //prebuilts/rust:libcfg_if.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/cfg-if/src/lib.rs [arm] (priority: 39)
+[  3% 854/27537] //bionic/libdl:libdl generate toc libdl.so (priority: 39)
+[  3% 855/27537] //bionic/libdl:libdl generate stubs libdl.map.txt [arm] (priority: 39)
+[  3% 856/27537] //prebuilts/rust:liblibc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/libc/src/lib.rs [arm] (priority: 39)
+[  3% 857/27537] //bionic/libm:libm generate toc libm.so (priority: 39)
+[  3% 858/27537] //bionic/libm:libm generate stubs libm.map.txt [arm] (priority: 39)
+[  3% 859/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/text_format.cc [linux_glibc] (priority: 39)
+[  3% 860/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/timestamp.pb.cc [linux_glibc] (priority: 39)
+[  3% 861/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/type.pb.cc [linux_glibc] (priority: 39)
+[  3% 862/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/unknown_field_set.cc [linux_glibc] (priority: 39)
+[  3% 863/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/delimited_message_util.cc [linux_glibc] (priority: 39)
+[  3% 864/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/field_comparator.cc [linux_glibc] (priority: 39)
+[  3% 865/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/field_mask_util.cc [linux_glibc] (priority: 39)
+[  3% 866/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/datapiece.cc [linux_glibc] (priority: 39)
+[  3% 867/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/default_value_objectwriter.cc [linux_glibc] (priority: 39)
+[  3% 868/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/error_listener.cc [linux_glibc] (priority: 39)
+[  3% 869/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/field_mask_utility.cc [linux_glibc] (priority: 39)
+[  3% 870/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_escaping.cc [linux_glibc] (priority: 39)
+[  3% 871/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_objectwriter.cc [linux_glibc] (priority: 39)
+[  3% 872/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/json_stream_parser.cc [linux_glibc] (priority: 39)
+[  3% 873/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/object_writer.cc [linux_glibc] (priority: 39)
+[  3% 874/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/proto_writer.cc [linux_glibc] (priority: 39)
+[  3% 875/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/protostream_objectsource.cc [linux_glibc] (priority: 39)
+[  3% 876/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/protostream_objectwriter.cc [linux_glibc] (priority: 39)
+[  3% 877/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/type_info.cc [linux_glibc] (priority: 39)
+[  3% 878/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/internal/utility.cc [linux_glibc] (priority: 39)
+[  3% 879/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/json_util.cc [linux_glibc] (priority: 39)
+[  3% 880/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/message_differencer.cc [linux_glibc] (priority: 39)
+[  3% 881/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/time_util.cc [linux_glibc] (priority: 39)
+[  3% 882/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/util/type_resolver_util.cc [linux_glibc] (priority: 39)
+[  3% 883/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/wire_format.cc [linux_glibc] (priority: 39)
+[  3% 884/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/wrappers.pb.cc [linux_glibc] (priority: 39)
+[  3% 885/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/code_generator.cc [linux_glibc] (priority: 39)
+[  3% 886/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/command_line_interface.cc [linux_glibc] (priority: 39)
+[  3% 887/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/enum.cc [linux_glibc] (priority: 39)
+[  3% 888/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/enum_field.cc [linux_glibc] (priority: 39)
+[  3% 889/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/extension.cc [linux_glibc] (priority: 39)
+[  3% 890/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/field.cc [linux_glibc] (priority: 39)
+[  3% 891/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/file.cc [linux_glibc] (priority: 39)
+[  3% 892/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/generator.cc [linux_glibc] (priority: 39)
+[  3% 893/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/helpers.cc [linux_glibc] (priority: 39)
+[  3% 894/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/map_field.cc [linux_glibc] (priority: 39)
+[  3% 895/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/message.cc [linux_glibc] (priority: 39)
+[  3% 896/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/message_field.cc [linux_glibc] (priority: 39)
+[  3% 897/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/padding_optimizer.cc [linux_glibc] (priority: 39)
+[  3% 898/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/parse_function_generator.cc [linux_glibc] (priority: 39)
+[  3% 899/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/primitive_field.cc [linux_glibc] (priority: 39)
+[  3% 900/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/service.cc [linux_glibc] (priority: 39)
+[  3% 901/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/cpp/string_field.cc [linux_glibc] (priority: 39)
+[  3% 902/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_doc_comment.cc [linux_glibc] (priority: 39)
+[  3% 903/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_enum.cc [linux_glibc] (priority: 39)
+[  3% 904/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_enum_field.cc [linux_glibc] (priority: 39)
+[  3% 905/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_field_base.cc [linux_glibc] (priority: 39)
+[  3% 906/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_generator.cc [linux_glibc] (priority: 39)
+[  3% 907/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_helpers.cc [linux_glibc] (priority: 39)
+[  3% 908/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_map_field.cc [linux_glibc] (priority: 39)
+[  3% 909/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_message.cc [linux_glibc] (priority: 39)
+[  3% 910/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_message_field.cc [linux_glibc] (priority: 39)
+[  3% 911/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_primitive_field.cc [linux_glibc] (priority: 39)
+[  3% 912/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_reflection_class.cc [linux_glibc] (priority: 39)
+[  3% 913/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc [linux_glibc] (priority: 39)
+[  3% 914/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc [linux_glibc] (priority: 39)
+[  3% 915/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc [linux_glibc] (priority: 39)
+[  3% 916/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc [linux_glibc] (priority: 39)
+[  3% 917/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc [linux_glibc] (priority: 39)
+[  3% 918/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/context.cc [linux_glibc] (priority: 39)
+[  3% 919/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/doc_comment.cc [linux_glibc] (priority: 39)
+[  3% 920/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum.cc [linux_glibc] (priority: 39)
+[  3% 921/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum_field.cc [linux_glibc] (priority: 39)
+[  3% 922/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum_field_lite.cc [linux_glibc] (priority: 39)
+[  3% 923/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/enum_lite.cc [linux_glibc] (priority: 39)
+[  3% 924/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/extension.cc [linux_glibc] (priority: 39)
+[  3% 925/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/extension_lite.cc [linux_glibc] (priority: 39)
+[  3% 926/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/field.cc [linux_glibc] (priority: 39)
+[  3% 927/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/file.cc [linux_glibc] (priority: 39)
+[  3% 928/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/generator.cc [linux_glibc] (priority: 39)
+[  3% 929/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/generator_factory.cc [linux_glibc] (priority: 39)
+[  3% 930/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/helpers.cc [linux_glibc] (priority: 39)
+[  3% 931/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/kotlin_generator.cc [linux_glibc] (priority: 39)
+[  3% 932/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/map_field.cc [linux_glibc] (priority: 39)
+[  3% 933/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/map_field_lite.cc [linux_glibc] (priority: 39)
+[  3% 934/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message.cc [linux_glibc] (priority: 39)
+[  3% 935/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_builder.cc [linux_glibc] (priority: 39)
+[  3% 936/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_builder_lite.cc [linux_glibc] (priority: 39)
+[  3% 937/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field.cc [linux_glibc] (priority: 39)
+[  3% 938/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_field_lite.cc [linux_glibc] (priority: 39)
+[  3% 939/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/message_lite.cc [linux_glibc] (priority: 39)
+[  3% 940/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/name_resolver.cc [linux_glibc] (priority: 39)
+[  3% 941/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field.cc [linux_glibc] (priority: 39)
+[  3% 942/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/primitive_field_lite.cc [linux_glibc] (priority: 39)
+[  3% 943/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/service.cc [linux_glibc] (priority: 39)
+[  3% 944/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/shared_code_generator.cc [linux_glibc] (priority: 39)
+[  3% 945/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field.cc [linux_glibc] (priority: 39)
+[  3% 946/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/java/string_field_lite.cc [linux_glibc] (priority: 39)
+[  3% 947/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_enum.cc [linux_glibc] (priority: 39)
+[  3% 948/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc [linux_glibc] (priority: 39)
+[  3% 949/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_extension.cc [linux_glibc] (priority: 39)
+[  3% 950/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_field.cc [linux_glibc] (priority: 39)
+[  3% 951/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_file.cc [linux_glibc] (priority: 39)
+[  3% 952/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_generator.cc [linux_glibc] (priority: 39)
+[  3% 953/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_helpers.cc [linux_glibc] (priority: 39)
+[  3% 954/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_map_field.cc [linux_glibc] (priority: 39)
+[  3% 955/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_message.cc [linux_glibc] (priority: 39)
+[  3% 956/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_message_field.cc [linux_glibc] (priority: 39)
+[  3% 957/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_oneof.cc [linux_glibc] (priority: 39)
+[  3% 958/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc [linux_glibc] (priority: 39)
+[  3% 959/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/php/php_generator.cc [linux_glibc] (priority: 39)
+[  3% 960/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/plugin.cc [linux_glibc] (priority: 39)
+[  3% 961/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/plugin.pb.cc [linux_glibc] (priority: 39)
+[  3% 962/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/python/generator.cc [linux_glibc] (priority: 39)
+[  3% 963/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/python/helpers.cc [linux_glibc] (priority: 39)
+[  3% 964/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/python/pyi_generator.cc [linux_glibc] (priority: 39)
+[  3% 965/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/ruby/ruby_generator.cc [linux_glibc] (priority: 39)
+[  3% 966/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/subprocess.cc [linux_glibc] (priority: 39)
+[  3% 967/27537] //external/protobuf:libprotoc clang++ src/google/protobuf/compiler/zip_writer.cc [linux_glibc] (priority: 39)
+[  3% 968/27537] //external/rust/android-crates-io/crates/regex:libregex rustc src/lib.rs [linux_glibc] (priority: 39)
+[  3% 969/27537] //prebuilts/rust:libunwind.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/unwind/src/lib.rs (priority: 39)
+[  3% 970/27537] //prebuilts/rust:libunwind.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/unwind/src/lib.rs (priority: 39)
+[  3% 971/27537] //external/zlib:libz clang adler32.c [linux_glibc] (priority: 39)
+[  3% 972/27537] //external/zlib:libz clang adler32_simd.c [linux_glibc] (priority: 39)
+[  3% 973/27537] //external/zlib:libz clang compress.c [linux_glibc] (priority: 39)
+[  3% 974/27537] //external/zlib:libz clang cpu_features.c [linux_glibc] (priority: 39)
+[  3% 975/27537] //external/zlib:libz clang crc32.c [linux_glibc] (priority: 39)
+[  3% 976/27537] //external/zlib:libz clang crc32_simd.c [linux_glibc] (priority: 39)
+[  3% 977/27537] //external/zlib:libz clang crc_folding.c [linux_glibc] (priority: 39)
+[  3% 978/27537] //external/zlib:libz clang deflate.c [linux_glibc] (priority: 39)
+[  3% 979/27537] //external/zlib:libz clang gzclose.c [linux_glibc] (priority: 39)
+[  3% 980/27537] //external/zlib:libz clang gzlib.c [linux_glibc] (priority: 39)
+[  3% 981/27537] //external/zlib:libz clang gzread.c [linux_glibc] (priority: 39)
+[  3% 982/27537] //external/zlib:libz clang gzwrite.c [linux_glibc] (priority: 39)
+[  3% 983/27537] //external/zlib:libz clang infback.c [linux_glibc] (priority: 39)
+[  3% 984/27537] //external/zlib:libz clang inffast.c [linux_glibc] (priority: 39)
+[  3% 985/27537] //external/zlib:libz clang inflate.c [linux_glibc] (priority: 39)
+[  3% 986/27537] //external/zlib:libz clang inftrees.c [linux_glibc] (priority: 39)
+[  3% 987/27537] //external/zlib:libz clang trees.c [linux_glibc] (priority: 39)
+[  3% 988/27537] //external/zlib:libz clang uncompr.c [linux_glibc] (priority: 39)
+[  3% 989/27537] //external/zlib:libz clang zutil.c [linux_glibc] (priority: 39)
+[  3% 990/27537] //external/protobuf:aprotoc clang++ src/google/protobuf/compiler/main.cc [linux_glibc] (priority: 38)
+[  3% 991/27537] //bionic/libc:crtbegin_so clang arch-common/bionic/crtbegin_so.c [arm] (priority: 38)
+[  3% 992/27537] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bionic/libc/crtbrand/android_arm_armv8-a/crtbrand.o (priority: 38)
+[  3% 993/27537] //bionic/libc:crtbrand clang arch-common/bionic/crtbrand.S (priority: 38)
+[  3% 994/27537] compile /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/dep_fixer/linux_glibc_x86_64/obj/dep_fixer.a (priority: 38)
+[  3% 995/27537] //prebuilts/rust:liballoc.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/alloc/src/lib.rs [arm] (priority: 38)
+[  3% 996/27537] //bionic/libc:libc clang stub.c [arm] (priority: 38)
+[  3% 997/27537] //bionic/libc:libc generate stubs libc.map.txt (priority: 38)
+[  3% 998/27537] //prebuilts/clang/host/linux-x86:libc++ strip libc++.so [arm] (priority: 38)
+[  3% 999/27537] //bionic/libdl:libdl clang stub.c [arm] (priority: 38)
+[  3% 1000/27537] //bionic/libdl:libdl generate stubs libdl.map.txt (priority: 38)
+[  3% 1001/27537] //external/rust/android-crates-io/crates/protobuf:libprotobuf rustc src/lib.rs [linux_glibc] (priority: 40)
+[  3% 1002/27537] //prebuilts/rust:libhashbrown.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/hashbrown/src/lib.rs (priority: 38)
+[  3% 1003/27537] //prebuilts/rust:libhashbrown.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/hashbrown/src/lib.rs (priority: 38)
+[  3% 1004/27537] //system/logging/liblog:liblog link liblog.so (priority: 38)
+[  3% 1005/27537] //bionic/libm:libm clang stub.c [arm] (priority: 38)
+[  3% 1006/27537] //bionic/libm:libm generate stubs libm.map.txt (priority: 38)
+[  3% 1007/27537] //prebuilts/rust:libpanic_abort.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/panic_abort/src/lib.rs (priority: 38)
+[  3% 1008/27537] //prebuilts/rust:libpanic_abort.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/panic_abort/src/lib.rs (priority: 38)
+[  3% 1009/27537] //prebuilts/rust:libprofiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/profiler_builtins/src/lib.rs (priority: 38)
+[  3% 1010/27537] //prebuilts/rust:libprofiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/profiler_builtins/src/lib.rs (priority: 38)
+[  3% 1011/27537] //external/protobuf:libprotoc static link libprotoc.a [linux_glibc] (priority: 38)
+[  3% 1012/27537] //prebuilts/rust:librustc_demangle.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/rustc-demangle/src/lib.rs (priority: 38)
+[  3% 1013/27537] //prebuilts/rust:librustc_demangle.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/rustc-demangle/src/lib.rs (priority: 38)
+[  3% 1014/27537] //prebuilts/rust:libstd_detect.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/lib.rs (priority: 38)
+[  3% 1015/27537] //prebuilts/rust:libstd_detect.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/lib.rs (priority: 38)
+[  3% 1016/27537] //external/rust/android-crates-io/crates/synstructure:libsynstructure rustc src/lib.rs [linux_glibc] (priority: 38)
+[  3% 1017/27537] //prebuilts/rust:libunwind.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/unwind/src/lib.rs [arm] (priority: 38)
+[  3% 1018/27537] //external/zlib:libz static link libz.a [linux_glibc] (priority: 38)
+[  3% 1019/27537] //external/protobuf:aprotoc link aprotoc [linux_glibc] (priority: 37)
+[  3% 1020/27537] //bionic/libc:crt_pad_segment clang arch-common/bionic/crt_pad_segment.S [arm] (priority: 37)
+[  3% 1021/27537] //bionic/libc:crtbegin_so link crtbegin_so.o [arm] (priority: 37)
+[  3% 1022/27537] //bionic/libc:crtbegin_so clang arch-common/bionic/crtbegin_so.c (priority: 37)
+[  3% 1023/27537] cp /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/soong/.intermediates/bionic/libc/crtbrand/android_recovery_arm64_armv8-a/crtbrand.o (priority: 37)
+[  3% 1024/27537] //bionic/libc:crtend_so clang arch-common/bionic/crtend_so.S [arm] (priority: 37)
+[  3% 1025/27537] link /home/runner/work/pbrp_device_oppo_f11/pbrp_device_oppo_f11/aera/out/host/linux-x86/bin/go/dep_fixer/linux_glibc_x86_64/obj/dep_fixer (priority: 37)
+[  3% 1026/27537] //external/fmtlib:fmtlib clang++ src/format.cc (priority: 37)
+[  3% 1027/27537] //system/tools/aidl:libaidl-common raw yacc.sbox.textproto [linux_glibc] (priority: 37)
+[  3% 1028/27537] //bionic/libc:libc link libc.so [arm] (priority: 37)
+[  3% 1029/27537] //bionic/libc:libc clang stub.c (priority: 37)
+[  3% 1030/27537] //prebuilts/clang/host/linux-x86:libc++ prebuilt shared library [arm] (priority: 37)
+[  3% 1031/27537] //prebuilts/clang/host/linux-x86:libc++ strip libc++.so (priority: 37)
+[  3% 1032/27537] //bionic/libdl:libdl link libdl.so [arm] (priority: 37)
+[  3% 1033/27537] //bionic/libdl:libdl clang stub.c (priority: 37)
+[  3% 1034/27537] //prebuilts/rust:libhashbrown.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/hashbrown/src/lib.rs [arm] (priority: 37)
+[  3% 1035/27537] //system/logging/liblog:liblog strip liblog.so (priority: 37)
+[  3% 1036/27537] //bionic/libm:libm link libm.so [arm] (priority: 37)
+[  3% 1037/27537] //bionic/libm:libm clang stub.c (priority: 37)
+[  3% 1038/27537] //prebuilts/rust:libpanic_abort.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/panic_abort/src/lib.rs [arm] (priority: 37)
+[  3% 1039/27537] //prebuilts/rust:libprofiler_builtins.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/profiler_builtins/src/lib.rs [arm] (priority: 37)
+[  3% 1040/27537] //prebuilts/rust:librustc_demangle.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/vendor/rustc-demangle/src/lib.rs [arm] (priority: 37)
+[  3% 1041/27537] //external/rust/android-crates-io/crates/protobuf-parse:libprotobuf_parse rustc src/lib.rs [linux_glibc] (priority: 39)
+[  3% 1042/27537] //prebuilts/rust:libstd rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/std/src/lib.rs (priority: 37)
+[  3% 1043/27537] //prebuilts/rust:libstd rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/std/src/lib.rs (priority: 37)
+[  3% 1044/27537] //prebuilts/rust:libstd_detect.rust_sysroot rustc linux-x86/1.83.0/lib/rustlib/src/rust/library/stdarch/crates/std_detect/src/lib.rs [arm] (priority: 37)
+[  3% 1045/27537] //external/rust/android-crates-io/crates/protobuf-codegen:libprotobuf_codegen rustc src/lib.rs [linux_glibc] (priority: 38)
 == out/error.log
