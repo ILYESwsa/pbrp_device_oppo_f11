@@ -32,6 +32,11 @@ if [ "$1" = "$FDEVICE" ] || [ "$AERA_BUILD_DEVICE" = "$FDEVICE" ]; then
     export AERA_ENABLE_ROOT_MANAGER=0
     export AERA_ALLOW_EARLY_SETTINGS_LOAD=1
     export AERA_USE_UPDATED_MAGISKBOOT=1
+    # Decryption (ported from the 12.1 OrangeFox tree's vendorsetup exports):
+    # keep the UI as-is after entering the PIN instead of reloading, and let
+    # the settings/misc dirs resolve through the decrypted /data media.
+    export AERA_NO_RELOAD_AFTER_DECRYPTION=1
+    export AERA_FIX_DECRYPTION_ON_DATA_MEDIA=1
     # Read by the vendor packaging script (AERA_A16.sh) from the ENVIRONMENT with a
     # strict `= 1` check — a BoardConfig make variable never reaches it. Same as marie.
     export AERA_EXCLUDE_NANO_EDITOR=1

@@ -1,4 +1,19 @@
-# Decryption is disabled in this branch: no TEE / keymaster / gatekeeper services.
+# OPPO F11 (CPH1911, MT6771) — Trustonic TEE crypto stack ported from the
+# android-12.1 tree. AERA's generic etc/init.rc already starts
+# servicemanager/hwservicemanager (on init) and keystore2 (late-init,
+# class early_hal); keystore2's km_compat layer enumerates the HIDL
+# keymaster 3.0 service registered by the trustonic blob below and wraps
+# it as an AIDL KeyMint device. vold then reaches it through keystore2.
+
+on init
+    # persist mount is needed by mobicore (mcRegistry) and keymaster blobs
+    mkdir /mnt/vendor/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    setprop persist.sys.firstlaunch false
+
+on fs
+    install_keyring
+    setprop crypto.ready 1
 
 on fs
     write /proc/touchpanel/tp_fw_update 0
@@ -35,3 +50,76 @@ service aera_dbglog /system/bin/sh /system/bin/aera_dbglog.sh
 
 on fs
     start aera_dbglog
+
+# --- Trustonic TEE + OPPO cryptoeng stack (from the android-12.1 tree).
+# All binaries live in the ramdisk under /system (the recovery root is
+# self-contained; nothing is read from the readonly stock vendor).
+# The trustlets (-r) list matches the 12.1 mobicore invocation exactly.
+
+service mobicore /vendor/bin/mcDriverDaemon --P1 /mnt/vendor/persist/mcRegistry \
+    -r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/05120000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/020b0000000000000000000000000000.drbin \
+    -r /odm/vendor/app/mcRegistry/05070000000000000000000000000000.drbin \
+    -r /odm/vendor/app/mcRegistry/030b0000000000000000000000000000.drbin \
+    -r /odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/07060000000000000000007169.drbin \
+    -r /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin \
+    -r /vendor/app/mcRegistry/06090000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/0f5eed3c3b5a47afacca69a84bf0efad.drbin \
+    -r /vendor/app/mcRegistry/07407000000000000000000000000000.drbin \
+    -r /vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin \
+    -r /vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin \
+    -r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin \
+    -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service hal_cryptoeng_oppo /system/bin/hw/vendor.oplus.hardware.cryptoeng@1.0-service
+    user root
+    group root drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service.trustonic
+    user root
+    group root drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
+service gatekeeper-1-0 /system/bin/hw/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+# Start the TEE stack once binder/hw services are up. hwservicemanager sets
+# hwservicemanager.ready=true when running; keystore2 (class early_hal) then
+# binds the HIDL keymaster 3.0 service through km_compat.
+on property:hwservicemanager.ready=true
+    start mobicore
+    start keymaster-3-0
+    start hal_cryptoeng_oppo
+    start gatekeeper-1-0
+
+# Tear everything down again once /data is decrypted (or on unencrypted /
+# unsupported devices) so the TEE does not keep running for nothing.
+on property:twrp.decrypt.done=true
+    stop hal_cryptoeng_oppo
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+
+on property:ro.crypto.state=unencrypted
+    stop hal_cryptoeng_oppo
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0
+
+on property:enable.fbe.service=0
+    stop hal_cryptoeng_oppo
+    stop mobicore
+    stop keymaster-3-0
+    stop gatekeeper-1-0

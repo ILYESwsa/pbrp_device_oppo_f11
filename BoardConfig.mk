@@ -137,10 +137,20 @@ AERA_OPTIONS_LIST_NUM := 6
 # MediaTek: the health-service battery path is broken on MTK (AERA build notes), use the legacy sysfs path
 TW_USE_LEGACY_BATTERY_SERVICES := true
 
-# Decryption: OFF (boot-only bring-up). Both flags must stay UNSET: any non-empty
-# value (including "false") is copied into TW_INCLUDE_CRYPTO by aera_config.mk and
-# Android.mk's `ifneq ($(TW_INCLUDE_CRYPTO),)` then still pulls keystore2,
-# vold_prepare_subdirs and fscryptpolicyget into the build. Unset = fully off.
+# Decryption: ON — Trustonic TEE stack ported from the android-12.1 tree
+# (keymaster 3.0 + mobicore + OPPO cryptoeng blobs under recovery/root/, rc
+# wiring in init.recovery.mt6771.rc). AERA_INCLUDE_CRYPTO pulls the keystore2 /
+# vold_prepare_subdirs / fscryptpolicyget modules into the build; keystore2's
+# km_compat layer wraps the HIDL keymaster 3.0 service as AIDL KeyMint.
+# The F11 shipped Android 9 with FBE v1 policies (fstab: aes-256-xts:aes-256-cts:v1).
+AERA_INCLUDE_CRYPTO := true
+AERA_INCLUDE_CRYPTO_FBE := true
+AERA_USE_FSCRYPT_POLICY := 1
+# Export the policy version into the Soong namespace that vold_defaults.go
+# actually reads (VendorConfig "twrpVarsPlugin"; getMakeVars in
+# bootable/recovery/soong/makevars.go). "1" -> -DUSE_FSCRYPT_POLICY_V1 in
+# system/vold, matching the stock ROM's fscrypt v1 policies.
+$(call soong_config_set,twrpVarsPlugin,TW_USE_FSCRYPT_POLICY,1)
 # AERA_EXCLUDE_NANO_EDITOR also lives in vendorsetup.sh (the vendor packaging
 # script reads it from the environment, not from here).
 

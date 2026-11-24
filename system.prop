@@ -10,3 +10,11 @@ ro.build.ab_update=false
 # mandatory). AERA itself reads the mounted ROM's own build.prop at runtime
 # (TWFunc::Has_System_Root); this prop advertises SAR to zip installers.
 ro.build.system_root_image=true
+
+# Crypto (ported from the android-12.1 tree): Trustonic TEE is present and
+# /data uses FBE with fscrypt v1 policies (aes-256-xts:aes-256-cts:v1 in the
+# fstab). ro.crypto.volume.filenames_mode + the fs ioc key ioctls steer
+# vold's FsCrypt down the legacy policy path, matching the stock ROM.
+ro.vendor.mtk_trustonic_tee_support=1
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.uses_fs_ioc_add_encryption_key=true
