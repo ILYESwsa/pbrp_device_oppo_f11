@@ -1,8 +1,8 @@
-== Sat Nov 28 12:32:21 UTC 2026 run=46140477219 sha=e823e47c0d384d290c45e0e8f5323029ce151830
+== Sat Nov 28 12:34:23 UTC 2026 run=46140477219 sha=e823e47c0d384d290c45e0e8f5323029ce151830
                total        used        free      shared  buff/cache   available
-Mem:           15988       15110         220          10         657         520
-Swap:          28671       14825       13846
-/dev/root       146G  133G   13G  92% /
+Mem:           15988       15529         211          13         248         150
+Swap:          28671       15049       13622
+/dev/root       146G  135G   12G  93% /
 == oom/kill messages
 == last 250 lines of build.log
 11:53:54 ************************************************************
