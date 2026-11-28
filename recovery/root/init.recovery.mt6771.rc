@@ -10,6 +10,11 @@ on init
     mkdir /mnt/vendor/persist
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
     setprop persist.sys.firstlaunch false
+    # 12.1's init_A.rc ran e2fsck on userdata/cache at init; the F11's dirty
+    # ext4 journal made the first /data mount in Setup_Data_Partition fail
+    # (mount(2) refused before journal replay), which skipped the whole FBE
+    # decrypt setup. Repair the journal early so the first mount succeeds.
+    exec - root root -- /system/bin/e2fsck -y /dev/block/by-name/userdata
 
 on fs
     install_keyring
